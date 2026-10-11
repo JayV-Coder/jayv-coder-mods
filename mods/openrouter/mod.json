@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "openrouter",
+  "kind": "llm",
+  "category": "agents",
+  "plan": "gatewayProviders",
+  "minApp": "0.94.0",
+  "docs": "gatewayProviders",
+  "homepage": "https://openrouter.ai",
+  "title": {
+    "en": "OpenRouter",
+    "pt-BR": "OpenRouter",
+    "es": "OpenRouter",
+    "zh-CN": "OpenRouter",
+    "hi": "OpenRouter",
+    "ar": "OpenRouter",
+    "fr": "OpenRouter",
+    "ru": "OpenRouter",
+    "ja": "OpenRouter",
+    "de": "OpenRouter"
+  },
+  "summary": {
+    "en": "Hundreds of models through one OpenRouter address and key. Answers with text: questions, analysis, review and planning.",
+    "pt-BR": "Centenas de modelos por um só endereço e uma só chave do OpenRouter. Responde com texto: perguntas, análise, revisão e planejamento.",
+    "es": "Cientos de modelos con una sola dirección y una sola clave de OpenRouter. Responde con texto: preguntas, análisis, revisión y planificación.",
+    "zh-CN": "通过 OpenRouter 的一个地址和一个密钥使用数百个模型。以文本作答：提问、分析、审查和规划。",
+    "hi": "OpenRouter के एक पते और एक कुंजी से सैकड़ों मॉडल। टेक्स्ट में जवाब देता है: प्रश्न, विश्लेषण, समीक्षा और योजना।",
+    "ar": "مئات النماذج عبر عنوان واحد ومفتاح واحد من OpenRouter. يجيب بالنص: أسئلة وتحليل ومراجعة وتخطيط.",
+    "fr": "Des centaines de modèles avec une seule adresse et une seule clé OpenRouter. Répond par du texte : questions, analyse, revue et planification.",
+    "ru": "Сотни моделей через один адрес и один ключ OpenRouter. Отвечает текстом: вопросы, анализ, ревью и планирование.",
+    "ja": "OpenRouter の1つのアドレスと1つのキーで数百のモデルを利用。テキストで答えます：質問、分析、レビュー、計画。",
+    "de": "Hunderte Modelle über eine Adresse und einen Schlüssel von OpenRouter. Antwortet mit Text: Fragen, Analyse, Review und Planung."
+  }
+}

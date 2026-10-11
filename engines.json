@@ -1,0 +1,22 @@
+{
+  "$comment": "Os motores que o app JayV sabe rodar. Um mod `llm` ou `feature` liga um destes motores; um motor novo chega com uma versão nova do app e só então entra aqui. Um motor sem manifesto em mods/ fica desligado para todo mundo: para fazer isso de propósito, ponha o id em `withdrawn`.",
+  "llm": ["claude", "codex", "copilot", "cursor", "kilo", "openrouter", "litellm"],
+  "feature": [
+    "stats",
+    "gateBoard",
+    "liveFiles",
+    "chatSearch",
+    "projectNotes",
+    "secondOpinion",
+    "planFirst",
+    "parallelTasks",
+    "answerRecall",
+    "leanCode",
+    "symbolIndex",
+    "mcp",
+    "skills",
+    "skillsHub",
+    "conversationFind"
+  ],
+  "withdrawn": []
+}

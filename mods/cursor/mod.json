@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "cursor",
+  "kind": "llm",
+  "category": "agents",
+  "plan": null,
+  "minApp": "0.94.0",
+  "docs": "agents",
+  "homepage": "https://cursor.com",
+  "title": {
+    "en": "Cursor",
+    "pt-BR": "Cursor",
+    "es": "Cursor",
+    "zh-CN": "Cursor",
+    "hi": "Cursor",
+    "ar": "Cursor",
+    "fr": "Cursor",
+    "ru": "Cursor",
+    "ja": "Cursor",
+    "de": "Cursor"
+  },
+  "summary": {
+    "en": "Cursor's command-line agent (cursor-agent): works on the project with the models of your Cursor account.",
+    "pt-BR": "O agente de linha de comando do Cursor (cursor-agent): trabalha no projeto com os modelos da sua conta do Cursor.",
+    "es": "El agente de línea de comandos de Cursor (cursor-agent): trabaja en el proyecto con los modelos de tu cuenta de Cursor.",
+    "zh-CN": "Cursor 的命令行代理（cursor-agent）：使用你的 Cursor 账户中的模型处理项目。",
+    "hi": "Cursor का कमांड-लाइन एजेंट (cursor-agent): आपके Cursor खाते के मॉडलों से प्रोजेक्ट पर काम करता है।",
+    "ar": "وكيل سطر الأوامر من Cursor ‏(cursor-agent): يعمل على المشروع بنماذج حسابك في Cursor.",
+    "fr": "L’agent en ligne de commande de Cursor (cursor-agent) : il travaille sur le projet avec les modèles de votre compte Cursor.",
+    "ru": "Агент командной строки Cursor (cursor-agent): работает с проектом на моделях вашей учётной записи Cursor.",
+    "ja": "Cursor のコマンドラインエージェント（cursor-agent）。Cursor アカウントのモデルでプロジェクトに取り組みます。",
+    "de": "Der Kommandozeilen-Agent von Cursor (cursor-agent): arbeitet am Projekt mit den Modellen Ihres Cursor-Kontos."
+  }
+}

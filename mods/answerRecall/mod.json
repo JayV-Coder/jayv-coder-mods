@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "answerRecall",
+  "kind": "feature",
+  "category": "chat",
+  "plan": "answerRecall",
+  "defaultOn": true,
+  "minApp": "0.94.0",
+  "docs": "answerRecall",
+  "title": {
+    "en": "Earlier answers",
+    "pt-BR": "Respostas anteriores",
+    "es": "Respuestas anteriores",
+    "zh-CN": "以往的回答",
+    "hi": "पिछले जवाब",
+    "ar": "الإجابات السابقة",
+    "fr": "Réponses précédentes",
+    "ru": "Прежние ответы",
+    "ja": "以前の回答",
+    "de": "Frühere Antworten"
+  },
+  "summary": {
+    "en": "A request almost identical to one already answered in another chat of the project starts from that answer.",
+    "pt-BR": "Um pedido quase igual a um já respondido em outro chat do projeto parte daquela resposta.",
+    "es": "Una solicitud casi idéntica a otra ya respondida en otro chat del proyecto parte de esa respuesta.",
+    "zh-CN": "与项目中另一个聊天里已回答过的请求几乎相同的请求，会从那个回答开始。",
+    "hi": "प्रोजेक्ट की किसी दूसरी चैट में पहले से जवाब दिए गए अनुरोध जैसा अनुरोध उसी जवाब से शुरू होता है।",
+    "ar": "الطلب المطابق تقريبًا لطلب أُجيب عنه في دردشة أخرى من المشروع يبدأ من تلك الإجابة.",
+    "fr": "Une demande presque identique à une autre déjà traitée dans un autre chat du projet part de cette réponse.",
+    "ru": "Запрос, почти совпадающий с уже отвеченным в другом чате проекта, начинается с того ответа.",
+    "ja": "プロジェクトの別のチャットで回答済みのリクエストとほぼ同じリクエストは、その回答から始めます。",
+    "de": "Eine Anfrage, die fast gleich einer bereits in einem anderen Chat des Projekts beantworteten ist, startet von dieser Antwort."
+  }
+}

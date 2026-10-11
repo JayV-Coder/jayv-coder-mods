@@ -1,0 +1,41 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "lm-studio",
+  "kind": "template",
+  "category": "agents",
+  "plan": "customMods",
+  "minApp": "0.94.0",
+  "docs": "llmMods",
+  "homepage": "https://lmstudio.ai",
+  "title": {
+    "en": "LM Studio",
+    "pt-BR": "LM Studio",
+    "es": "LM Studio",
+    "zh-CN": "LM Studio",
+    "hi": "LM Studio",
+    "ar": "LM Studio",
+    "fr": "LM Studio",
+    "ru": "LM Studio",
+    "ja": "LM Studio",
+    "de": "LM Studio"
+  },
+  "summary": {
+    "en": "Models loaded in LM Studio's local server, through its OpenAI-compatible address. No key, and the requests stay on the machine.",
+    "pt-BR": "Modelos carregados no servidor local do LM Studio, pelo endereço compatível com OpenAI. Sem chave, e os pedidos ficam na máquina.",
+    "es": "Modelos cargados en el servidor local de LM Studio, por su dirección compatible con OpenAI. Sin clave, y las solicitudes se quedan en la máquina.",
+    "zh-CN": "在 LM Studio 本地服务器中加载的模型，使用其兼容 OpenAI 的地址。无需密钥，请求不离开本机。",
+    "hi": "LM Studio के लोकल सर्वर में लोड किए गए मॉडल, उसके OpenAI-संगत पते से। कोई कुंजी नहीं, और अनुरोध मशीन पर ही रहते हैं।",
+    "ar": "نماذج محمّلة في الخادم المحلي لـ LM Studio، من خلال عنوانه المتوافق مع OpenAI. بلا مفتاح، وتبقى الطلبات على الجهاز.",
+    "fr": "Des modèles chargés dans le serveur local de LM Studio, par son adresse compatible OpenAI. Sans clé, et les demandes restent sur la machine.",
+    "ru": "Модели, загруженные в локальный сервер LM Studio, по его адресу, совместимому с OpenAI. Без ключа, запросы не покидают компьютер.",
+    "ja": "LM Studio のローカルサーバーに読み込んだモデルを、OpenAI 互換のアドレスで利用します。キー不要で、リクエストはマシンの外に出ません。",
+    "de": "Modelle, die im lokalen Server von LM Studio geladen sind, über seine OpenAI-kompatible Adresse. Ohne Schlüssel, und die Anfragen bleiben auf dem Rechner."
+  },
+  "template": {
+    "kind": "api",
+    "protocol": "openai",
+    "baseUrl": "http://localhost:1234/v1",
+    "keyRequired": false,
+    "models": []
+  }
+}

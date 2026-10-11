@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "gateBoard",
+  "kind": "feature",
+  "category": "gate",
+  "plan": "gateBoard",
+  "defaultOn": true,
+  "minApp": "0.94.0",
+  "docs": "gateBoard",
+  "title": {
+    "en": "Gatehouse board",
+    "pt-BR": "Painel da portaria",
+    "es": "Panel de la portería",
+    "zh-CN": "门卫面板",
+    "hi": "गेटहाउस बोर्ड",
+    "ar": "لوحة البوابة",
+    "fr": "Tableau du poste de garde",
+    "ru": "Панель проходной",
+    "ja": "ゲートハウスのボード",
+    "de": "Pförtner-Übersicht"
+  },
+  "summary": {
+    "en": "The page with everything Jev let through, asked about or blocked in the project.",
+    "pt-BR": "A página com tudo o que o Jev deixou passar, perguntou ou barrou no projeto.",
+    "es": "La página con todo lo que Jev dejó pasar, preguntó o bloqueó en el proyecto.",
+    "zh-CN": "显示 Jev 在项目中放行、询问或拦截的所有内容的页面。",
+    "hi": "वह पेज जिसमें प्रोजेक्ट में Jev ने जो कुछ पास किया, पूछा या रोका, सब दिखता है।",
+    "ar": "الصفحة التي تعرض كل ما سمح به Jev أو سأل عنه أو حظره في المشروع.",
+    "fr": "La page avec tout ce que Jev a laissé passer, questionné ou bloqué dans le projet.",
+    "ru": "Страница со всем, что Jev пропустил, уточнил или заблокировал в проекте.",
+    "ja": "プロジェクトで Jev が通した・確認した・止めたものをすべて表示するページ。",
+    "de": "Die Seite mit allem, was Jev im Projekt durchgelassen, nachgefragt oder blockiert hat."
+  }
+}

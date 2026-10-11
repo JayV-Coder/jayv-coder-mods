@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "planFirst",
+  "kind": "feature",
+  "category": "agents",
+  "plan": "planFirst",
+  "defaultOn": true,
+  "minApp": "0.94.0",
+  "docs": "planFirst",
+  "title": {
+    "en": "Plan before building",
+    "pt-BR": "Planejar antes de construir",
+    "es": "Planificar antes de construir",
+    "zh-CN": "先规划后构建",
+    "hi": "बनाने से पहले योजना",
+    "ar": "التخطيط قبل البناء",
+    "fr": "Planifier avant de construire",
+    "ru": "План перед сборкой",
+    "ja": "構築前に計画",
+    "de": "Erst planen, dann bauen"
+  },
+  "summary": {
+    "en": "On a complex build request, a reasoning model plans before the agent builds.",
+    "pt-BR": "Num pedido complexo do modo build, um modelo de raciocínio planeja antes de o agente construir.",
+    "es": "En una petición compleja del modo build, un modelo de razonamiento planifica antes de que el agente construya.",
+    "zh-CN": "对于复杂的构建请求，推理模型会在智能体构建前先做规划。",
+    "hi": "जटिल बिल्ड अनुरोध पर, एजेंट के बनाने से पहले एक तर्क मॉडल योजना बनाता है।",
+    "ar": "في طلب بناء معقد، يخطط نموذج استدلال قبل أن يبني الوكيل.",
+    "fr": "Pour une demande complexe en mode build, un modèle de raisonnement planifie avant que l'agent construise.",
+    "ru": "При сложном запросе в режиме сборки модель рассуждений составляет план до того, как агент начнёт работу.",
+    "ja": "複雑なビルド依頼では、エージェントが構築する前に推論モデルが計画を立てます。",
+    "de": "Bei einer komplexen Build-Anfrage plant ein Reasoning-Modell, bevor der Agent baut."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "copilot",
+  "kind": "llm",
+  "category": "agents",
+  "plan": null,
+  "minApp": "0.94.0",
+  "docs": "agents",
+  "homepage": "https://github.com/features/copilot",
+  "title": {
+    "en": "GitHub Copilot",
+    "pt-BR": "GitHub Copilot",
+    "es": "GitHub Copilot",
+    "zh-CN": "GitHub Copilot",
+    "hi": "GitHub Copilot",
+    "ar": "GitHub Copilot",
+    "fr": "GitHub Copilot",
+    "ru": "GitHub Copilot",
+    "ja": "GitHub Copilot",
+    "de": "GitHub Copilot"
+  },
+  "summary": {
+    "en": "GitHub Copilot's command-line agent: works on the project with the models of your Copilot plan.",
+    "pt-BR": "O agente de linha de comando do GitHub Copilot: trabalha no projeto com os modelos do seu plano do Copilot.",
+    "es": "El agente de línea de comandos de GitHub Copilot: trabaja en el proyecto con los modelos de tu plan de Copilot.",
+    "zh-CN": "GitHub Copilot 的命令行代理：使用你的 Copilot 套餐中的模型处理项目。",
+    "hi": "GitHub Copilot का कमांड-लाइन एजेंट: आपके Copilot प्लान के मॉडलों से प्रोजेक्ट पर काम करता है।",
+    "ar": "وكيل سطر الأوامر من GitHub Copilot: يعمل على المشروع بنماذج خطة Copilot الخاصة بك.",
+    "fr": "L’agent en ligne de commande de GitHub Copilot : il travaille sur le projet avec les modèles de votre offre Copilot.",
+    "ru": "Агент командной строки GitHub Copilot: работает с проектом на моделях вашего тарифа Copilot.",
+    "ja": "GitHub Copilot のコマンドラインエージェント。Copilot プランのモデルでプロジェクトに取り組みます。",
+    "de": "Der Kommandozeilen-Agent von GitHub Copilot: arbeitet am Projekt mit den Modellen Ihres Copilot-Tarifs."
+  }
+}

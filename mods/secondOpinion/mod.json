@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "secondOpinion",
+  "kind": "feature",
+  "category": "agents",
+  "plan": "secondOpinion",
+  "defaultOn": true,
+  "minApp": "0.94.0",
+  "docs": "secondOpinion",
+  "title": {
+    "en": "Second opinion",
+    "pt-BR": "Segunda opinião",
+    "es": "Segunda opinión",
+    "zh-CN": "第二意见",
+    "hi": "दूसरी राय",
+    "ar": "رأي ثانٍ",
+    "fr": "Second avis",
+    "ru": "Второе мнение",
+    "ja": "セカンドオピニオン",
+    "de": "Zweite Meinung"
+  },
+  "summary": {
+    "en": "An agent from another provider reviews what build mode changed.",
+    "pt-BR": "Um agente de outro provedor revisa o que o modo build mudou.",
+    "es": "Un agente de otro proveedor revisa lo que cambió el modo build.",
+    "zh-CN": "由另一家提供商的智能体审查构建模式所做的更改。",
+    "hi": "दूसरे प्रदाता का एजेंट बिल्ड मोड के बदलावों की समीक्षा करता है।",
+    "ar": "يراجع وكيل من مزوّد آخر ما غيّره وضع البناء.",
+    "fr": "Un agent d'un autre fournisseur relit ce que le mode build a modifié.",
+    "ru": "Агент другого провайдера проверяет изменения режима сборки.",
+    "ja": "別のプロバイダーのエージェントがビルドモードの変更をレビューします。",
+    "de": "Ein Agent eines anderen Anbieters prüft, was der Build-Modus geändert hat."
+  }
+}

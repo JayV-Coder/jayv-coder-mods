@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "mcp",
+  "kind": "feature",
+  "category": "agents",
+  "plan": "mcp",
+  "defaultOn": true,
+  "minApp": "0.94.0",
+  "docs": "mcp",
+  "title": {
+    "en": "MCP servers",
+    "pt-BR": "Servidores MCP",
+    "es": "Servidores MCP",
+    "zh-CN": "MCP 服务器",
+    "hi": "MCP सर्वर",
+    "ar": "خوادم MCP",
+    "fr": "Serveurs MCP",
+    "ru": "MCP-серверы",
+    "ja": "MCPサーバー",
+    "de": "MCP-Server"
+  },
+  "summary": {
+    "en": "Connect MCP servers to the agents: external tools, the MCP tab and the organization servers.",
+    "pt-BR": "Ligar servidores MCP aos agentes: ferramentas externas, a aba MCP e os servidores da organização.",
+    "es": "Conectar servidores MCP a los agentes: herramientas externas, la pestaña MCP y los servidores de la organización.",
+    "zh-CN": "为代理连接 MCP 服务器：外部工具、MCP 标签页和组织的服务器。",
+    "hi": "एजेंट से MCP सर्वर जोड़ें: बाहरी टूल, MCP टैब और संगठन के सर्वर।",
+    "ar": "ربط خوادم MCP بالوكلاء: أدوات خارجية وتبويب MCP وخوادم المؤسسة.",
+    "fr": "Connecter des serveurs MCP aux agents : outils externes, l'onglet MCP et les serveurs de l'organisation.",
+    "ru": "Подключение MCP-серверов к агентам: внешние инструменты, вкладка MCP и серверы организации.",
+    "ja": "エージェントにMCPサーバーを接続：外部ツール、MCPタブ、組織のサーバー。",
+    "de": "MCP-Server an die Agenten anbinden: externe Werkzeuge, der MCP-Tab und die Server der Organisation."
+  }
+}
