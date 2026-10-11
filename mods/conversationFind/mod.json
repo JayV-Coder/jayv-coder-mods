@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "conversationFind",
+  "kind": "feature",
+  "category": "chat",
+  "plan": "conversationFind",
+  "defaultOn": true,
+  "minApp": "0.94.0",
+  "docs": "conversationFind",
+  "title": {
+    "en": "Find in conversation",
+    "pt-BR": "Busca na conversa",
+    "es": "Buscar en la conversación",
+    "zh-CN": "对话内查找",
+    "hi": "बातचीत में खोजें",
+    "ar": "البحث في المحادثة",
+    "fr": "Recherche dans la conversation",
+    "ru": "Поиск в беседе",
+    "ja": "会話内検索",
+    "de": "Suche im Gespräch"
+  },
+  "summary": {
+    "en": "Ctrl/Cmd+F searches the open chat and highlights every match.",
+    "pt-BR": "Ctrl/Cmd+F procura texto no chat aberto e destaca cada ocorrência.",
+    "es": "Ctrl/Cmd+F busca texto en el chat abierto y resalta cada coincidencia.",
+    "zh-CN": "Ctrl/Cmd+F 在当前聊天中搜索文本并高亮每个匹配项。",
+    "hi": "Ctrl/Cmd+F खुली चैट में टेक्स्ट खोजता है और हर मिलान को हाइलाइट करता है।",
+    "ar": "Ctrl/Cmd+F يبحث في المحادثة المفتوحة ويميّز كل نتيجة.",
+    "fr": "Ctrl/Cmd+F cherche du texte dans le chat ouvert et surligne chaque occurrence.",
+    "ru": "Ctrl/Cmd+F ищет текст в открытом чате и подсвечивает каждое совпадение.",
+    "ja": "Ctrl/Cmd+Fで開いているチャット内を検索し、一致をハイライト。",
+    "de": "Ctrl/Cmd+F durchsucht den offenen Chat und markiert jeden Treffer."
+  }
+}

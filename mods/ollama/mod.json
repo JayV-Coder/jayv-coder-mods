@@ -1,0 +1,41 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "ollama",
+  "kind": "template",
+  "category": "agents",
+  "plan": "customMods",
+  "minApp": "0.94.0",
+  "docs": "llmMods",
+  "homepage": "https://ollama.com",
+  "title": {
+    "en": "Ollama",
+    "pt-BR": "Ollama",
+    "es": "Ollama",
+    "zh-CN": "Ollama",
+    "hi": "Ollama",
+    "ar": "Ollama",
+    "fr": "Ollama",
+    "ru": "Ollama",
+    "ja": "Ollama",
+    "de": "Ollama"
+  },
+  "summary": {
+    "en": "Models running on this computer with Ollama, through its OpenAI-compatible address. No key, and the requests stay on the machine.",
+    "pt-BR": "Modelos rodando neste computador com o Ollama, pelo endereço compatível com OpenAI. Sem chave, e os pedidos ficam na máquina.",
+    "es": "Modelos que se ejecutan en este equipo con Ollama, por su dirección compatible con OpenAI. Sin clave, y las solicitudes se quedan en la máquina.",
+    "zh-CN": "通过 Ollama 在本机运行的模型，使用其兼容 OpenAI 的地址。无需密钥，请求不离开本机。",
+    "hi": "इस कंप्यूटर पर Ollama से चलने वाले मॉडल, उसके OpenAI-संगत पते से। कोई कुंजी नहीं, और अनुरोध मशीन पर ही रहते हैं।",
+    "ar": "نماذج تعمل على هذا الجهاز عبر Ollama، من خلال عنوانه المتوافق مع OpenAI. بلا مفتاح، وتبقى الطلبات على الجهاز.",
+    "fr": "Des modèles qui tournent sur cet ordinateur avec Ollama, par son adresse compatible OpenAI. Sans clé, et les demandes restent sur la machine.",
+    "ru": "Модели, работающие на этом компьютере через Ollama, по его адресу, совместимому с OpenAI. Без ключа, запросы не покидают компьютер.",
+    "ja": "このコンピューターで Ollama により動くモデルを、OpenAI 互換のアドレスで利用します。キー不要で、リクエストはマシンの外に出ません。",
+    "de": "Modelle, die mit Ollama auf diesem Computer laufen, über seine OpenAI-kompatible Adresse. Ohne Schlüssel, und die Anfragen bleiben auf dem Rechner."
+  },
+  "template": {
+    "kind": "api",
+    "protocol": "openai",
+    "baseUrl": "http://localhost:11434/v1",
+    "keyRequired": false,
+    "models": []
+  }
+}

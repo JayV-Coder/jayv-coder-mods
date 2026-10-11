@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "kilo",
+  "kind": "llm",
+  "category": "agents",
+  "plan": "kiloCode",
+  "minApp": "0.94.0",
+  "docs": "kiloCode",
+  "homepage": "https://kilocode.ai",
+  "title": {
+    "en": "Kilo Code",
+    "pt-BR": "Kilo Code",
+    "es": "Kilo Code",
+    "zh-CN": "Kilo Code",
+    "hi": "Kilo Code",
+    "ar": "Kilo Code",
+    "fr": "Kilo Code",
+    "ru": "Kilo Code",
+    "ja": "Kilo Code",
+    "de": "Kilo Code"
+  },
+  "summary": {
+    "en": "Use Kilo Code as one of Jev's CLI agents, with its own tab in Settings.",
+    "pt-BR": "Usar o Kilo Code como agente de CLI do Jev, com a aba própria nas Configurações.",
+    "es": "Usar Kilo Code como agente de CLI de Jev, con su pestaña en Configuración.",
+    "zh-CN": "将 Kilo Code 用作 Jev 的 CLI 代理，并在设置中有专属标签页。",
+    "hi": "Kilo Code को Jev के CLI एजेंट के रूप में उपयोग करें, सेटिंग्स में अपने टैब के साथ।",
+    "ar": "استخدام Kilo Code كأحد وكلاء CLI لدى Jev مع تبويب خاص في الإعدادات.",
+    "fr": "Utiliser Kilo Code comme agent CLI de Jev, avec son propre onglet dans Réglages.",
+    "ru": "Использовать Kilo Code как один из CLI-агентов Jev с отдельной вкладкой в настройках.",
+    "ja": "Kilo CodeをJevのCLIエージェントとして使用。設定に専用タブがあります。",
+    "de": "Kilo Code als einen der CLI-Agenten von Jev nutzen, mit eigenem Tab in den Einstellungen."
+  }
+}

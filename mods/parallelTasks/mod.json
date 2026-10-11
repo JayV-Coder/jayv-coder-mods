@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "parallelTasks",
+  "kind": "feature",
+  "category": "agents",
+  "plan": "parallelTasks",
+  "defaultOn": true,
+  "minApp": "0.94.0",
+  "docs": "parallelTasks",
+  "title": {
+    "en": "Parallel agents",
+    "pt-BR": "Agentes em paralelo",
+    "es": "Agentes en paralelo",
+    "zh-CN": "并行智能体",
+    "hi": "समानांतर एजेंट",
+    "ar": "وكلاء بالتوازي",
+    "fr": "Agents en parallèle",
+    "ru": "Параллельные агенты",
+    "ja": "並列エージェント",
+    "de": "Parallele Agenten"
+  },
+  "summary": {
+    "en": "A large request is split among agents working at the same time in git worktrees.",
+    "pt-BR": "Um pedido grande é dividido entre agentes que trabalham ao mesmo tempo em git worktrees.",
+    "es": "Una petición grande se divide entre agentes que trabajan a la vez en git worktrees.",
+    "zh-CN": "大型请求会拆分给在 git worktree 中同时工作的多个智能体。",
+    "hi": "बड़ा अनुरोध उन एजेंटों में बाँटा जाता है जो git worktrees में एक साथ काम करते हैं।",
+    "ar": "يُقسَّم الطلب الكبير بين وكلاء يعملون في الوقت نفسه في git worktrees.",
+    "fr": "Une grosse demande est répartie entre des agents qui travaillent en même temps dans des git worktrees.",
+    "ru": "Большой запрос делится между агентами, которые работают одновременно в git worktree.",
+    "ja": "大きな依頼は、git worktree で同時に作業する複数のエージェントに分割されます。",
+    "de": "Eine große Anfrage wird auf Agenten verteilt, die gleichzeitig in Git-Worktrees arbeiten."
+  }
+}

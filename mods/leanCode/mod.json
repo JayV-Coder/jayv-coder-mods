@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "leanCode",
+  "kind": "feature",
+  "category": "agents",
+  "plan": "leanCode",
+  "defaultOn": true,
+  "minApp": "0.94.0",
+  "docs": "leanCode",
+  "title": {
+    "en": "Lean code",
+    "pt-BR": "Código enxuto",
+    "es": "Código mínimo",
+    "zh-CN": "精简代码",
+    "hi": "संक्षिप्त कोड",
+    "ar": "شيفرة مختصرة",
+    "fr": "Code minimal",
+    "ru": "Минимум кода",
+    "ja": "最小限のコード",
+    "de": "Schlanker Code"
+  },
+  "summary": {
+    "en": "In build mode the agent writes the least code that solves the task.",
+    "pt-BR": "No modo build o agente escreve o mínimo de código que resolve a tarefa.",
+    "es": "En modo build el agente escribe el mínimo código que resuelve la tarea.",
+    "zh-CN": "在构建模式下，代理只写解决任务所需的最少代码。",
+    "hi": "बिल्ड मोड में एजेंट काम हल करने के लिए कम से कम कोड लिखता है।",
+    "ar": "في وضع البناء يكتب الوكيل أقل قدر من الشيفرة يحل المهمة.",
+    "fr": "En mode build, l'agent écrit le moins de code possible pour accomplir la tâche.",
+    "ru": "В режиме сборки агент пишет минимум кода, который решает задачу.",
+    "ja": "ビルドモードでは、エージェントはタスクを解決する最小限のコードを書きます。",
+    "de": "Im Build-Modus schreibt der Agent so wenig Code wie nötig, um die Aufgabe zu lösen."
+  }
+}

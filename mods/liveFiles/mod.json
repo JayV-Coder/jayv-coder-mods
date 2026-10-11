@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "liveFiles",
+  "kind": "feature",
+  "category": "project",
+  "plan": "liveFiles",
+  "defaultOn": true,
+  "minApp": "0.94.0",
+  "docs": "liveFiles",
+  "title": {
+    "en": "Live files",
+    "pt-BR": "Arquivos ao vivo",
+    "es": "Archivos en vivo",
+    "zh-CN": "实时文件",
+    "hi": "लाइव फ़ाइलें",
+    "ar": "الملفات المباشرة",
+    "fr": "Fichiers en direct",
+    "ru": "Файлы в реальном времени",
+    "ja": "ライブファイル",
+    "de": "Live-Dateien"
+  },
+  "summary": {
+    "en": "The panel that shows the files the agent is changing, with the diff, while it works.",
+    "pt-BR": "O painel que mostra os arquivos que o agente está mudando, com o diff, enquanto ele trabalha.",
+    "es": "El panel que muestra los archivos que el agente está cambiando, con el diff, mientras trabaja.",
+    "zh-CN": "在智能体工作时显示其正在修改的文件及差异的面板。",
+    "hi": "वह पैनल जो एजेंट के काम करते समय बदली जा रही फ़ाइलें diff के साथ दिखाता है।",
+    "ar": "اللوحة التي تعرض الملفات التي يغيّرها الوكيل مع الفروق أثناء عمله.",
+    "fr": "Le panneau qui montre les fichiers que l'agent modifie, avec le diff, pendant qu'il travaille.",
+    "ru": "Панель, которая показывает файлы, изменяемые агентом, с diff, пока он работает.",
+    "ja": "エージェントの作業中に変更中のファイルと差分を表示するパネル。",
+    "de": "Das Panel, das die Dateien, die der Agent gerade ändert, mit Diff zeigt, während er arbeitet."
+  }
+}

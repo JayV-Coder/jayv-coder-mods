@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "litellm",
+  "kind": "llm",
+  "category": "agents",
+  "plan": "gatewayProviders",
+  "minApp": "0.94.0",
+  "docs": "gatewayProviders",
+  "homepage": "https://docs.litellm.ai",
+  "title": {
+    "en": "LiteLLM",
+    "pt-BR": "LiteLLM",
+    "es": "LiteLLM",
+    "zh-CN": "LiteLLM",
+    "hi": "LiteLLM",
+    "ar": "LiteLLM",
+    "fr": "LiteLLM",
+    "ru": "LiteLLM",
+    "ja": "LiteLLM",
+    "de": "LiteLLM"
+  },
+  "summary": {
+    "en": "Your LiteLLM proxy: the models it serves through one address. Answers with text: questions, analysis, review and planning.",
+    "pt-BR": "O seu proxy LiteLLM: os modelos que ele serve por um só endereço. Responde com texto: perguntas, análise, revisão e planejamento.",
+    "es": "Tu proxy LiteLLM: los modelos que sirve en una sola dirección. Responde con texto: preguntas, análisis, revisión y planificación.",
+    "zh-CN": "你的 LiteLLM 代理：通过一个地址使用它提供的模型。以文本作答：提问、分析、审查和规划。",
+    "hi": "आपका LiteLLM प्रॉक्सी: एक पते से उसके दिए मॉडल। टेक्स्ट में जवाब देता है: प्रश्न, विश्लेषण, समीक्षा और योजना।",
+    "ar": "وكيل LiteLLM الخاص بك: النماذج التي يقدّمها عبر عنوان واحد. يجيب بالنص: أسئلة وتحليل ومراجعة وتخطيط.",
+    "fr": "Votre proxy LiteLLM : les modèles qu’il sert par une seule adresse. Répond par du texte : questions, analyse, revue et planification.",
+    "ru": "Ваш прокси LiteLLM: модели, которые он отдаёт по одному адресу. Отвечает текстом: вопросы, анализ, ревью и планирование.",
+    "ja": "あなたの LiteLLM プロキシ。1つのアドレスで提供されるモデルを利用します。テキストで答えます：質問、分析、レビュー、計画。",
+    "de": "Ihr LiteLLM-Proxy: die Modelle, die er über eine Adresse bereitstellt. Antwortet mit Text: Fragen, Analyse, Review und Planung."
+  }
+}

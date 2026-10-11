@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "stats",
+  "kind": "feature",
+  "category": "project",
+  "plan": "stats",
+  "defaultOn": true,
+  "minApp": "0.94.0",
+  "docs": "stats",
+  "title": {
+    "en": "Statistics",
+    "pt-BR": "Estatísticas",
+    "es": "Estadísticas",
+    "zh-CN": "统计",
+    "hi": "आँकड़े",
+    "ar": "الإحصاءات",
+    "fr": "Statistiques",
+    "ru": "Статистика",
+    "ja": "統計",
+    "de": "Statistiken"
+  },
+  "summary": {
+    "en": "Token usage, cost, agent quotas and charts per project.",
+    "pt-BR": "Uso de tokens, custo, cotas dos agentes e gráficos por projeto.",
+    "es": "Uso de tokens, coste, cuotas de los agentes y gráficos por proyecto.",
+    "zh-CN": "令牌用量、成本、智能体配额和按项目的图表。",
+    "hi": "टोकन उपयोग, लागत, एजेंट कोटा और प्रोजेक्ट के अनुसार चार्ट।",
+    "ar": "استهلاك الرموز والتكلفة وحصص الوكلاء والرسوم البيانية لكل مشروع.",
+    "fr": "Consommation de jetons, coût, quotas des agents et graphiques par projet.",
+    "ru": "Расход токенов, стоимость, квоты агентов и графики по проектам.",
+    "ja": "トークン使用量、コスト、エージェントのクォータ、プロジェクト別のグラフ。",
+    "de": "Token-Verbrauch, Kosten, Agenten-Kontingente und Diagramme pro Projekt."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "skills",
+  "kind": "feature",
+  "category": "agents",
+  "plan": "skills",
+  "defaultOn": true,
+  "minApp": "0.94.0",
+  "docs": "skills",
+  "title": {
+    "en": "Skills",
+    "pt-BR": "Skills",
+    "es": "Skills",
+    "zh-CN": "技能",
+    "hi": "स्किल्स",
+    "ar": "المهارات",
+    "fr": "Skills",
+    "ru": "Навыки",
+    "ja": "スキル",
+    "de": "Skills"
+  },
+  "summary": {
+    "en": "SKILL.md folders that Jev picks per request, the Skills tab and the organization skills.",
+    "pt-BR": "Pastas SKILL.md que o Jev escolhe por pedido, a aba Skills e as skills da organização.",
+    "es": "Carpetas SKILL.md que Jev elige por solicitud, la pestaña Skills y las skills de la organización.",
+    "zh-CN": "Jev 按请求选择的 SKILL.md 文件夹、技能标签页和组织的技能。",
+    "hi": "SKILL.md फ़ोल्डर जिन्हें Jev हर अनुरोध पर चुनता है, स्किल्स टैब और संगठन की स्किल्स।",
+    "ar": "مجلدات SKILL.md التي يختار منها Jev لكل طلب، وتبويب المهارات ومهارات المؤسسة.",
+    "fr": "Dossiers SKILL.md que Jev choisit à chaque demande, l'onglet Skills et les skills de l'organisation.",
+    "ru": "Папки SKILL.md, из которых Jev выбирает под запрос, вкладка «Навыки» и навыки организации.",
+    "ja": "Jevがリクエストごとに選ぶSKILL.mdフォルダ、スキルタブ、組織のスキル。",
+    "de": "SKILL.md-Ordner, aus denen Jev pro Anfrage wählt, der Skills-Tab und die Skills der Organisation."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "skillsHub",
+  "kind": "feature",
+  "category": "agents",
+  "plan": "skillsHub",
+  "defaultOn": true,
+  "minApp": "0.94.0",
+  "docs": "skillsHub",
+  "title": {
+    "en": "skills.sh search",
+    "pt-BR": "Busca no skills.sh",
+    "es": "Búsqueda en skills.sh",
+    "zh-CN": "skills.sh 搜索",
+    "hi": "skills.sh खोज",
+    "ar": "البحث في skills.sh",
+    "fr": "Recherche sur skills.sh",
+    "ru": "Поиск на skills.sh",
+    "ja": "skills.sh検索",
+    "de": "skills.sh-Suche"
+  },
+  "summary": {
+    "en": "Search and install skills from skills.sh right in Settings › Skills.",
+    "pt-BR": "Pesquisar e instalar skills do skills.sh direto em Configurações › Skills.",
+    "es": "Buscar e instalar skills de skills.sh en Configuración › Skills.",
+    "zh-CN": "直接在“设置 › 技能”中搜索并安装 skills.sh 的技能。",
+    "hi": "सेटिंग्स › स्किल्स में ही skills.sh से स्किल्स खोजें और इंस्टॉल करें।",
+    "ar": "ابحث عن مهارات skills.sh وثبّتها مباشرة من الإعدادات › المهارات.",
+    "fr": "Rechercher et installer des skills de skills.sh dans Réglages › Skills.",
+    "ru": "Поиск и установка навыков с skills.sh прямо в Настройки › Навыки.",
+    "ja": "設定 › スキルからskills.shのスキルを検索してインストール。",
+    "de": "Skills von skills.sh direkt in Einstellungen › Skills suchen und installieren."
+  }
+}

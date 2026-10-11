@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "projectNotes",
+  "kind": "feature",
+  "category": "project",
+  "plan": "projectNotes",
+  "defaultOn": true,
+  "minApp": "0.94.0",
+  "docs": "projectNotes",
+  "title": {
+    "en": "Project notes",
+    "pt-BR": "Notas do projeto",
+    "es": "Notas del proyecto",
+    "zh-CN": "项目笔记",
+    "hi": "प्रोजेक्ट नोट्स",
+    "ar": "ملاحظات المشروع",
+    "fr": "Notes du projet",
+    "ru": "Заметки проекта",
+    "ja": "プロジェクトノート",
+    "de": "Projektnotizen"
+  },
+  "summary": {
+    "en": "What the agent should remember about the project in every new conversation.",
+    "pt-BR": "O que o agente deve lembrar sobre o projeto em toda conversa nova.",
+    "es": "Lo que el agente debe recordar del proyecto en cada conversación nueva.",
+    "zh-CN": "智能体在每次新对话中都应记住的项目信息。",
+    "hi": "प्रोजेक्ट के बारे में वह जानकारी जो एजेंट को हर नई बातचीत में याद रखनी चाहिए।",
+    "ar": "ما يجب أن يتذكره الوكيل عن المشروع في كل محادثة جديدة.",
+    "fr": "Ce que l'agent doit retenir du projet à chaque nouvelle conversation.",
+    "ru": "То, что агент должен помнить о проекте в каждой новой беседе.",
+    "ja": "新しい会話のたびにエージェントが覚えておくべきプロジェクトの情報。",
+    "de": "Was der Agent in jeder neuen Unterhaltung über das Projekt wissen soll."
+  }
+}

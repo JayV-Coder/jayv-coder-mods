@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "chatSearch",
+  "kind": "feature",
+  "category": "chat",
+  "plan": "chatSearch",
+  "defaultOn": true,
+  "minApp": "0.94.0",
+  "docs": "chatSearch",
+  "title": {
+    "en": "Chat search",
+    "pt-BR": "Busca nos chats",
+    "es": "Búsqueda en los chats",
+    "zh-CN": "聊天搜索",
+    "hi": "चैट खोज",
+    "ar": "البحث في الدردشات",
+    "fr": "Recherche dans les chats",
+    "ru": "Поиск по чатам",
+    "ja": "チャット検索",
+    "de": "Chat-Suche"
+  },
+  "summary": {
+    "en": "Search for words across every conversation of the project.",
+    "pt-BR": "Procurar palavras em todas as conversas do projeto.",
+    "es": "Buscar palabras en todas las conversaciones del proyecto.",
+    "zh-CN": "在项目的所有对话中搜索文字。",
+    "hi": "प्रोजेक्ट की सभी बातचीत में शब्द खोजें।",
+    "ar": "البحث عن كلمات في كل محادثات المشروع.",
+    "fr": "Chercher des mots dans toutes les conversations du projet.",
+    "ru": "Поиск слов во всех беседах проекта.",
+    "ja": "プロジェクトのすべての会話から語句を検索します。",
+    "de": "Wörter in allen Unterhaltungen des Projekts suchen."
+  }
+}

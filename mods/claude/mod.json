@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "claude",
+  "kind": "llm",
+  "category": "agents",
+  "plan": null,
+  "minApp": "0.94.0",
+  "docs": "agents",
+  "homepage": "https://docs.anthropic.com/en/docs/claude-code",
+  "title": {
+    "en": "Claude Code",
+    "pt-BR": "Claude Code",
+    "es": "Claude Code",
+    "zh-CN": "Claude Code",
+    "hi": "Claude Code",
+    "ar": "Claude Code",
+    "fr": "Claude Code",
+    "ru": "Claude Code",
+    "ja": "Claude Code",
+    "de": "Claude Code"
+  },
+  "summary": {
+    "en": "Anthropic's coding agent in the terminal: edits the project, runs commands and keeps its session in each chat.",
+    "pt-BR": "O agente de código da Anthropic no terminal: edita o projeto, roda comandos e mantém a sessão em cada chat.",
+    "es": "El agente de código de Anthropic en la terminal: edita el proyecto, ejecuta comandos y mantiene su sesión en cada chat.",
+    "zh-CN": "Anthropic 的终端编程代理：编辑项目、运行命令，并在每个聊天中保留会话。",
+    "hi": "टर्मिनल में Anthropic का कोडिंग एजेंट: प्रोजेक्ट संपादित करता है, कमांड चलाता है और हर चैट में अपना सत्र रखता है।",
+    "ar": "وكيل البرمجة من Anthropic في الطرفية: يعدّل المشروع ويشغّل الأوامر ويحتفظ بجلسته في كل دردشة.",
+    "fr": "L’agent de code d’Anthropic dans le terminal : il modifie le projet, exécute des commandes et garde sa session dans chaque chat.",
+    "ru": "Агент для кода от Anthropic в терминале: редактирует проект, выполняет команды и сохраняет сессию в каждом чате.",
+    "ja": "ターミナルで動く Anthropic のコーディングエージェント。プロジェクトを編集し、コマンドを実行し、チャットごとにセッションを保ちます。",
+    "de": "Der Coding-Agent von Anthropic im Terminal: bearbeitet das Projekt, führt Befehle aus und behält seine Sitzung in jedem Chat."
+  }
+}
