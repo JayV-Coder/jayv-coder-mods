@@ -1,11 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "chatSearch",
-  "kind": "feature",
+  "version": "1.0.0",
   "category": "chat",
   "plan": "chatSearch",
-  "defaultOn": true,
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "chatSearch",
   "title": {
     "en": "Chat search",
@@ -30,5 +31,10 @@
     "ru": "Поиск слов во всех беседах проекта.",
     "ja": "プロジェクトのすべての会話から語句を検索します。",
     "de": "Wörter in allen Unterhaltungen des Projekts suchen."
+  },
+  "contributes": {
+    "features": [
+      "chatSearch"
+    ]
   }
 }

@@ -1,10 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "copilot",
-  "kind": "llm",
+  "version": "1.0.0",
   "category": "agents",
   "plan": null,
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "agents",
   "homepage": "https://github.com/features/copilot",
   "title": {
@@ -30,5 +32,10 @@
     "ru": "Агент командной строки GitHub Copilot: работает с проектом на моделях вашего тарифа Copilot.",
     "ja": "GitHub Copilot のコマンドラインエージェント。Copilot プランのモデルでプロジェクトに取り組みます。",
     "de": "Der Kommandozeilen-Agent von GitHub Copilot: arbeitet am Projekt mit den Modellen Ihres Copilot-Tarifs."
+  },
+  "contributes": {
+    "llmEngines": [
+      "copilot"
+    ]
   }
 }

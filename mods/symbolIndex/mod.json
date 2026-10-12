@@ -1,11 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "symbolIndex",
-  "kind": "feature",
+  "version": "1.0.0",
   "category": "agents",
   "plan": "symbolIndex",
-  "defaultOn": true,
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "symbolIndex",
   "title": {
     "en": "Symbol index for Claude",
@@ -30,5 +31,10 @@
     "ru": "Claude Code спрашивает у индекса символов JayV, где что находится, вместо сканирования папки.",
     "ja": "Claude Code はフォルダを走査する代わりに、JayV のシンボルインデックスに場所を尋ねます。",
     "de": "Claude Code fragt den Symbolindex von JayV, wo etwas liegt, statt den Ordner zu durchsuchen."
+  },
+  "contributes": {
+    "features": [
+      "symbolIndex"
+    ]
   }
 }

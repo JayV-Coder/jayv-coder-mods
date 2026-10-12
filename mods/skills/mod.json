@@ -1,11 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "skills",
-  "kind": "feature",
+  "version": "1.0.0",
   "category": "agents",
   "plan": "skills",
-  "defaultOn": true,
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "skills",
   "title": {
     "en": "Skills",
@@ -30,5 +31,10 @@
     "ru": "Папки SKILL.md, из которых Jev выбирает под запрос, вкладка «Навыки» и навыки организации.",
     "ja": "Jevがリクエストごとに選ぶSKILL.mdフォルダ、スキルタブ、組織のスキル。",
     "de": "SKILL.md-Ordner, aus denen Jev pro Anfrage wählt, der Skills-Tab und die Skills der Organisation."
+  },
+  "contributes": {
+    "features": [
+      "skills"
+    ]
   }
 }

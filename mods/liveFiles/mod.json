@@ -1,11 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "liveFiles",
-  "kind": "feature",
+  "version": "1.0.0",
   "category": "project",
   "plan": "liveFiles",
-  "defaultOn": true,
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "liveFiles",
   "title": {
     "en": "Live files",
@@ -30,5 +31,10 @@
     "ru": "Панель, которая показывает файлы, изменяемые агентом, с diff, пока он работает.",
     "ja": "エージェントの作業中に変更中のファイルと差分を表示するパネル。",
     "de": "Das Panel, das die Dateien, die der Agent gerade ändert, mit Diff zeigt, während er arbeitet."
+  },
+  "contributes": {
+    "features": [
+      "liveFiles"
+    ]
   }
 }

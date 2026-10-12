@@ -1,10 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "codex",
-  "kind": "llm",
+  "version": "1.0.0",
   "category": "agents",
   "plan": null,
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "agents",
   "homepage": "https://github.com/openai/codex",
   "title": {
@@ -30,5 +32,10 @@
     "ru": "Агент для кода от OpenAI в терминале: редактирует проект и выполняет команды в собственной песочнице.",
     "ja": "ターミナルで動く OpenAI のコーディングエージェント。独自のサンドボックスでプロジェクトを編集し、コマンドを実行します。",
     "de": "Der Coding-Agent von OpenAI im Terminal: bearbeitet das Projekt und führt Befehle in seiner eigenen Sandbox aus."
+  },
+  "contributes": {
+    "llmEngines": [
+      "codex"
+    ]
   }
 }

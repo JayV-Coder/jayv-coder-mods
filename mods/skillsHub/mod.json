@@ -1,11 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "skillsHub",
-  "kind": "feature",
+  "version": "1.0.0",
   "category": "agents",
   "plan": "skillsHub",
-  "defaultOn": true,
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "skillsHub",
   "title": {
     "en": "skills.sh search",
@@ -30,5 +31,10 @@
     "ru": "Поиск и установка навыков с skills.sh прямо в Настройки › Навыки.",
     "ja": "設定 › スキルからskills.shのスキルを検索してインストール。",
     "de": "Skills von skills.sh direkt in Einstellungen › Skills suchen und installieren."
+  },
+  "contributes": {
+    "features": [
+      "skillsHub"
+    ]
   }
 }

@@ -1,11 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "secondOpinion",
-  "kind": "feature",
+  "version": "1.0.0",
   "category": "agents",
   "plan": "secondOpinion",
-  "defaultOn": true,
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "secondOpinion",
   "title": {
     "en": "Second opinion",
@@ -30,5 +31,10 @@
     "ru": "Агент другого провайдера проверяет изменения режима сборки.",
     "ja": "別のプロバイダーのエージェントがビルドモードの変更をレビューします。",
     "de": "Ein Agent eines anderen Anbieters prüft, was der Build-Modus geändert hat."
+  },
+  "contributes": {
+    "features": [
+      "secondOpinion"
+    ]
   }
 }

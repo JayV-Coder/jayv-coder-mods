@@ -1,11 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "projectNotes",
-  "kind": "feature",
+  "version": "1.0.0",
   "category": "project",
   "plan": "projectNotes",
-  "defaultOn": true,
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "projectNotes",
   "title": {
     "en": "Project notes",
@@ -30,5 +31,10 @@
     "ru": "То, что агент должен помнить о проекте в каждой новой беседе.",
     "ja": "新しい会話のたびにエージェントが覚えておくべきプロジェクトの情報。",
     "de": "Was der Agent in jeder neuen Unterhaltung über das Projekt wissen soll."
+  },
+  "contributes": {
+    "features": [
+      "projectNotes"
+    ]
   }
 }

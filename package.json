@@ -2,7 +2,7 @@
   "name": "jayv-coder-mods",
   "private": true,
   "type": "module",
-  "description": "The mods of JayV: one manifest per mod and the catalog the app and the site download.",
+  "description": "The mods of JayV: one manifest per mod and the catalogs the app and the site download.",
   "scripts": {
     "check": "node scripts/catalog.mjs check",
     "build": "node scripts/catalog.mjs build",

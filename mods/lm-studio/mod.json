@@ -1,10 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "lm-studio",
-  "kind": "template",
+  "version": "1.0.0",
   "category": "agents",
   "plan": "customMods",
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "llmMods",
   "homepage": "https://lmstudio.ai",
   "title": {
@@ -31,11 +33,15 @@
     "ja": "LM Studio のローカルサーバーに読み込んだモデルを、OpenAI 互換のアドレスで利用します。キー不要で、リクエストはマシンの外に出ません。",
     "de": "Modelle, die im lokalen Server von LM Studio geladen sind, über seine OpenAI-kompatible Adresse. Ohne Schlüssel, und die Anfragen bleiben auf dem Rechner."
   },
-  "template": {
-    "kind": "api",
-    "protocol": "openai",
-    "baseUrl": "http://localhost:1234/v1",
-    "keyRequired": false,
-    "models": []
+  "contributes": {
+    "agents": [
+      {
+        "kind": "api",
+        "protocol": "openai",
+        "baseUrl": "http://localhost:1234/v1",
+        "keyRequired": false,
+        "models": []
+      }
+    ]
   }
 }
