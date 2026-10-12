@@ -2,23 +2,62 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/JayV-Coder/jayv-coder-mods/schema/mod.schema.json",
   "title": "JayV mod",
-  "description": "One mod of JayV. scripts/catalog.mjs is the authority: this schema only helps editors.",
+  "description": "One mod of JayV: what it is and what it adds to each extension point of the app (contributes). scripts/catalog.mjs is the authority: this schema only helps editors.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "kind", "category", "plan", "minApp", "title", "summary"],
+  "required": ["id", "version", "category", "plan", "minApp", "title", "summary", "contributes"],
   "properties": {
     "$schema": { "type": "string" },
-    "id": { "type": "string", "pattern": "^[a-z][A-Za-z0-9-]{1,39}$" },
-    "kind": { "enum": ["llm", "feature", "template"] },
+    "id": { "type": "string", "pattern": "^[a-z][A-Za-z0-9-]{1,39}$", "description": "The folder name. A mod with agents uses lowercase letters, digits and - (up to 28)." },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$", "description": "The version of the mod itself." },
     "category": { "enum": ["start", "chat", "agents", "gate", "privacy", "project", "team", "account", "app"] },
-    "plan": { "type": ["string", "null"], "pattern": "^[a-z][A-Za-z]{1,39}$" },
-    "defaultOn": { "type": "boolean" },
-    "minApp": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "plan": { "type": ["string", "null"], "pattern": "^[a-z][A-Za-z]{1,39}$", "description": "The plan feature the mod needs, or null." },
+    "minApp": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$", "description": "The oldest app that runs the mod; at least the version of every extension point it uses." },
+    "preinstalled": { "type": "boolean", "description": "Installed, and on, when the person signs in; if they uninstall it, it does not come back." },
+    "requires": { "type": "array", "maxItems": 16, "uniqueItems": true, "items": { "type": "string", "pattern": "^[a-z][A-Za-z0-9-]{1,39}$" }, "description": "Other mods this one needs installed and on." },
+    "author": { "type": "string", "minLength": 1, "maxLength": 60 },
     "docs": { "type": "string", "pattern": "^[A-Za-z][A-Za-z0-9]{0,63}$" },
     "homepage": { "type": "string", "pattern": "^https://" },
     "title": { "$ref": "#/$defs/texts" },
     "summary": { "$ref": "#/$defs/texts" },
-    "template": {
+    "contributes": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "description": "What the mod adds to each extension point of the app.",
+      "properties": {
+        "llmEngines": { "$ref": "#/$defs/engines", "description": "LLM integration engines of the app it turns on (engines.json › llm)." },
+        "features": { "$ref": "#/$defs/engines", "description": "Optional features of the app it turns on (engines.json › feature)." },
+        "agents": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "description": "Command-line or API agents installed as agents of the person (mod-<id>, mod-<id>-2…).",
+          "items": { "$ref": "#/$defs/agent" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "texts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "pt-BR", "es", "zh-CN", "hi", "ar", "fr", "ru", "ja", "de"],
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "pt-BR": { "type": "string", "minLength": 1 },
+        "es": { "type": "string", "minLength": 1 },
+        "zh-CN": { "type": "string", "minLength": 1 },
+        "hi": { "type": "string", "minLength": 1 },
+        "ar": { "type": "string", "minLength": 1 },
+        "fr": { "type": "string", "minLength": 1 },
+        "ru": { "type": "string", "minLength": 1 },
+        "ja": { "type": "string", "minLength": 1 },
+        "de": { "type": "string", "minLength": 1 }
+      }
+    },
+    "engines": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "pattern": "^[a-z][A-Za-z0-9]{1,39}$" } },
+    "agent": {
       "oneOf": [
         {
           "type": "object",
@@ -46,25 +85,6 @@
           }
         }
       ]
-    }
-  },
-  "$defs": {
-    "texts": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["en", "pt-BR", "es", "zh-CN", "hi", "ar", "fr", "ru", "ja", "de"],
-      "properties": {
-        "en": { "type": "string", "minLength": 1 },
-        "pt-BR": { "type": "string", "minLength": 1 },
-        "es": { "type": "string", "minLength": 1 },
-        "zh-CN": { "type": "string", "minLength": 1 },
-        "hi": { "type": "string", "minLength": 1 },
-        "ar": { "type": "string", "minLength": 1 },
-        "fr": { "type": "string", "minLength": 1 },
-        "ru": { "type": "string", "minLength": 1 },
-        "ja": { "type": "string", "minLength": 1 },
-        "de": { "type": "string", "minLength": 1 }
-      }
     },
     "line": { "type": "array", "maxItems": 64, "items": { "type": "string", "minLength": 1, "maxLength": 1000 } },
     "models": { "type": "array", "maxItems": 50, "uniqueItems": true, "items": { "type": "string", "pattern": "^[A-Za-z0-9._:/@\\[\\]-]{1,120}$" } }

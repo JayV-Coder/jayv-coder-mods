@@ -1,11 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "planFirst",
-  "kind": "feature",
+  "version": "1.0.0",
   "category": "agents",
   "plan": "planFirst",
-  "defaultOn": true,
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "planFirst",
   "title": {
     "en": "Plan before building",
@@ -30,5 +31,10 @@
     "ru": "При сложном запросе в режиме сборки модель рассуждений составляет план до того, как агент начнёт работу.",
     "ja": "複雑なビルド依頼では、エージェントが構築する前に推論モデルが計画を立てます。",
     "de": "Bei einer komplexen Build-Anfrage plant ein Reasoning-Modell, bevor der Agent baut."
+  },
+  "contributes": {
+    "features": [
+      "planFirst"
+    ]
   }
 }

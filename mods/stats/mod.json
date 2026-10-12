@@ -1,11 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "stats",
-  "kind": "feature",
+  "version": "1.0.0",
   "category": "project",
   "plan": "stats",
-  "defaultOn": true,
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "stats",
   "title": {
     "en": "Statistics",
@@ -30,5 +31,10 @@
     "ru": "Расход токенов, стоимость, квоты агентов и графики по проектам.",
     "ja": "トークン使用量、コスト、エージェントのクォータ、プロジェクト別のグラフ。",
     "de": "Token-Verbrauch, Kosten, Agenten-Kontingente und Diagramme pro Projekt."
+  },
+  "contributes": {
+    "features": [
+      "stats"
+    ]
   }
 }

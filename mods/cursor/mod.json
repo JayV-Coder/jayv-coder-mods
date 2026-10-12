@@ -1,10 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "cursor",
-  "kind": "llm",
+  "version": "1.0.0",
   "category": "agents",
   "plan": null,
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "agents",
   "homepage": "https://cursor.com",
   "title": {
@@ -30,5 +32,10 @@
     "ru": "Агент командной строки Cursor (cursor-agent): работает с проектом на моделях вашей учётной записи Cursor.",
     "ja": "Cursor のコマンドラインエージェント（cursor-agent）。Cursor アカウントのモデルでプロジェクトに取り組みます。",
     "de": "Der Kommandozeilen-Agent von Cursor (cursor-agent): arbeitet am Projekt mit den Modellen Ihres Cursor-Kontos."
+  },
+  "contributes": {
+    "llmEngines": [
+      "cursor"
+    ]
   }
 }

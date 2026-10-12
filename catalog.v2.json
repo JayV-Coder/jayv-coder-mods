@@ -1,0 +1,962 @@
+{
+  "schema": 2,
+  "mods": [
+    {
+      "id": "claude",
+      "version": "1.0.0",
+      "category": "agents",
+      "plan": null,
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "agents",
+      "homepage": "https://docs.anthropic.com/en/docs/claude-code",
+      "title": {
+        "en": "Claude Code",
+        "pt-BR": "Claude Code",
+        "es": "Claude Code",
+        "zh-CN": "Claude Code",
+        "hi": "Claude Code",
+        "ar": "Claude Code",
+        "fr": "Claude Code",
+        "ru": "Claude Code",
+        "ja": "Claude Code",
+        "de": "Claude Code"
+      },
+      "summary": {
+        "en": "Anthropic's coding agent in the terminal: edits the project, runs commands and keeps its session in each chat.",
+        "pt-BR": "O agente de código da Anthropic no terminal: edita o projeto, roda comandos e mantém a sessão em cada chat.",
+        "es": "El agente de código de Anthropic en la terminal: edita el proyecto, ejecuta comandos y mantiene su sesión en cada chat.",
+        "zh-CN": "Anthropic 的终端编程代理：编辑项目、运行命令，并在每个聊天中保留会话。",
+        "hi": "टर्मिनल में Anthropic का कोडिंग एजेंट: प्रोजेक्ट संपादित करता है, कमांड चलाता है और हर चैट में अपना सत्र रखता है।",
+        "ar": "وكيل البرمجة من Anthropic في الطرفية: يعدّل المشروع ويشغّل الأوامر ويحتفظ بجلسته في كل دردشة.",
+        "fr": "L’agent de code d’Anthropic dans le terminal : il modifie le projet, exécute des commandes et garde sa session dans chaque chat.",
+        "ru": "Агент для кода от Anthropic в терминале: редактирует проект, выполняет команды и сохраняет сессию в каждом чате.",
+        "ja": "ターミナルで動く Anthropic のコーディングエージェント。プロジェクトを編集し、コマンドを実行し、チャットごとにセッションを保ちます。",
+        "de": "Der Coding-Agent von Anthropic im Terminal: bearbeitet das Projekt, führt Befehle aus und behält seine Sitzung in jedem Chat."
+      },
+      "contributes": {
+        "llmEngines": [
+          "claude"
+        ]
+      }
+    },
+    {
+      "id": "codex",
+      "version": "1.0.0",
+      "category": "agents",
+      "plan": null,
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "agents",
+      "homepage": "https://github.com/openai/codex",
+      "title": {
+        "en": "Codex",
+        "pt-BR": "Codex",
+        "es": "Codex",
+        "zh-CN": "Codex",
+        "hi": "Codex",
+        "ar": "Codex",
+        "fr": "Codex",
+        "ru": "Codex",
+        "ja": "Codex",
+        "de": "Codex"
+      },
+      "summary": {
+        "en": "OpenAI's coding agent in the terminal: edits the project and runs commands in its own sandbox.",
+        "pt-BR": "O agente de código da OpenAI no terminal: edita o projeto e roda comandos na própria sandbox.",
+        "es": "El agente de código de OpenAI en la terminal: edita el proyecto y ejecuta comandos en su propio sandbox.",
+        "zh-CN": "OpenAI 的终端编程代理：在自己的沙箱中编辑项目并运行命令。",
+        "hi": "टर्मिनल में OpenAI का कोडिंग एजेंट: अपने सैंडबॉक्स में प्रोजेक्ट संपादित करता है और कमांड चलाता है।",
+        "ar": "وكيل البرمجة من OpenAI في الطرفية: يعدّل المشروع ويشغّل الأوامر داخل بيئته المعزولة.",
+        "fr": "L’agent de code d’OpenAI dans le terminal : il modifie le projet et exécute des commandes dans son propre bac à sable.",
+        "ru": "Агент для кода от OpenAI в терминале: редактирует проект и выполняет команды в собственной песочнице.",
+        "ja": "ターミナルで動く OpenAI のコーディングエージェント。独自のサンドボックスでプロジェクトを編集し、コマンドを実行します。",
+        "de": "Der Coding-Agent von OpenAI im Terminal: bearbeitet das Projekt und führt Befehle in seiner eigenen Sandbox aus."
+      },
+      "contributes": {
+        "llmEngines": [
+          "codex"
+        ]
+      }
+    },
+    {
+      "id": "copilot",
+      "version": "1.0.0",
+      "category": "agents",
+      "plan": null,
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "agents",
+      "homepage": "https://github.com/features/copilot",
+      "title": {
+        "en": "GitHub Copilot",
+        "pt-BR": "GitHub Copilot",
+        "es": "GitHub Copilot",
+        "zh-CN": "GitHub Copilot",
+        "hi": "GitHub Copilot",
+        "ar": "GitHub Copilot",
+        "fr": "GitHub Copilot",
+        "ru": "GitHub Copilot",
+        "ja": "GitHub Copilot",
+        "de": "GitHub Copilot"
+      },
+      "summary": {
+        "en": "GitHub Copilot's command-line agent: works on the project with the models of your Copilot plan.",
+        "pt-BR": "O agente de linha de comando do GitHub Copilot: trabalha no projeto com os modelos do seu plano do Copilot.",
+        "es": "El agente de línea de comandos de GitHub Copilot: trabaja en el proyecto con los modelos de tu plan de Copilot.",
+        "zh-CN": "GitHub Copilot 的命令行代理：使用你的 Copilot 套餐中的模型处理项目。",
+        "hi": "GitHub Copilot का कमांड-लाइन एजेंट: आपके Copilot प्लान के मॉडलों से प्रोजेक्ट पर काम करता है।",
+        "ar": "وكيل سطر الأوامر من GitHub Copilot: يعمل على المشروع بنماذج خطة Copilot الخاصة بك.",
+        "fr": "L’agent en ligne de commande de GitHub Copilot : il travaille sur le projet avec les modèles de votre offre Copilot.",
+        "ru": "Агент командной строки GitHub Copilot: работает с проектом на моделях вашего тарифа Copilot.",
+        "ja": "GitHub Copilot のコマンドラインエージェント。Copilot プランのモデルでプロジェクトに取り組みます。",
+        "de": "Der Kommandozeilen-Agent von GitHub Copilot: arbeitet am Projekt mit den Modellen Ihres Copilot-Tarifs."
+      },
+      "contributes": {
+        "llmEngines": [
+          "copilot"
+        ]
+      }
+    },
+    {
+      "id": "cursor",
+      "version": "1.0.0",
+      "category": "agents",
+      "plan": null,
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "agents",
+      "homepage": "https://cursor.com",
+      "title": {
+        "en": "Cursor",
+        "pt-BR": "Cursor",
+        "es": "Cursor",
+        "zh-CN": "Cursor",
+        "hi": "Cursor",
+        "ar": "Cursor",
+        "fr": "Cursor",
+        "ru": "Cursor",
+        "ja": "Cursor",
+        "de": "Cursor"
+      },
+      "summary": {
+        "en": "Cursor's command-line agent (cursor-agent): works on the project with the models of your Cursor account.",
+        "pt-BR": "O agente de linha de comando do Cursor (cursor-agent): trabalha no projeto com os modelos da sua conta do Cursor.",
+        "es": "El agente de línea de comandos de Cursor (cursor-agent): trabaja en el proyecto con los modelos de tu cuenta de Cursor.",
+        "zh-CN": "Cursor 的命令行代理（cursor-agent）：使用你的 Cursor 账户中的模型处理项目。",
+        "hi": "Cursor का कमांड-लाइन एजेंट (cursor-agent): आपके Cursor खाते के मॉडलों से प्रोजेक्ट पर काम करता है।",
+        "ar": "وكيل سطر الأوامر من Cursor ‏(cursor-agent): يعمل على المشروع بنماذج حسابك في Cursor.",
+        "fr": "L’agent en ligne de commande de Cursor (cursor-agent) : il travaille sur le projet avec les modèles de votre compte Cursor.",
+        "ru": "Агент командной строки Cursor (cursor-agent): работает с проектом на моделях вашей учётной записи Cursor.",
+        "ja": "Cursor のコマンドラインエージェント（cursor-agent）。Cursor アカウントのモデルでプロジェクトに取り組みます。",
+        "de": "Der Kommandozeilen-Agent von Cursor (cursor-agent): arbeitet am Projekt mit den Modellen Ihres Cursor-Kontos."
+      },
+      "contributes": {
+        "llmEngines": [
+          "cursor"
+        ]
+      }
+    },
+    {
+      "id": "kilo",
+      "version": "1.0.0",
+      "category": "agents",
+      "plan": "kiloCode",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "kiloCode",
+      "homepage": "https://kilocode.ai",
+      "title": {
+        "en": "Kilo Code",
+        "pt-BR": "Kilo Code",
+        "es": "Kilo Code",
+        "zh-CN": "Kilo Code",
+        "hi": "Kilo Code",
+        "ar": "Kilo Code",
+        "fr": "Kilo Code",
+        "ru": "Kilo Code",
+        "ja": "Kilo Code",
+        "de": "Kilo Code"
+      },
+      "summary": {
+        "en": "Use Kilo Code as one of Jev's CLI agents, with its own tab in Settings.",
+        "pt-BR": "Usar o Kilo Code como agente de CLI do Jev, com a aba própria nas Configurações.",
+        "es": "Usar Kilo Code como agente de CLI de Jev, con su pestaña en Configuración.",
+        "zh-CN": "将 Kilo Code 用作 Jev 的 CLI 代理，并在设置中有专属标签页。",
+        "hi": "Kilo Code को Jev के CLI एजेंट के रूप में उपयोग करें, सेटिंग्स में अपने टैब के साथ।",
+        "ar": "استخدام Kilo Code كأحد وكلاء CLI لدى Jev مع تبويب خاص في الإعدادات.",
+        "fr": "Utiliser Kilo Code comme agent CLI de Jev, avec son propre onglet dans Réglages.",
+        "ru": "Использовать Kilo Code как один из CLI-агентов Jev с отдельной вкладкой в настройках.",
+        "ja": "Kilo CodeをJevのCLIエージェントとして使用。設定に専用タブがあります。",
+        "de": "Kilo Code als einen der CLI-Agenten von Jev nutzen, mit eigenem Tab in den Einstellungen."
+      },
+      "contributes": {
+        "llmEngines": [
+          "kilo"
+        ]
+      }
+    },
+    {
+      "id": "openrouter",
+      "version": "1.0.0",
+      "category": "agents",
+      "plan": "gatewayProviders",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "gatewayProviders",
+      "homepage": "https://openrouter.ai",
+      "title": {
+        "en": "OpenRouter",
+        "pt-BR": "OpenRouter",
+        "es": "OpenRouter",
+        "zh-CN": "OpenRouter",
+        "hi": "OpenRouter",
+        "ar": "OpenRouter",
+        "fr": "OpenRouter",
+        "ru": "OpenRouter",
+        "ja": "OpenRouter",
+        "de": "OpenRouter"
+      },
+      "summary": {
+        "en": "Hundreds of models through one OpenRouter address and key. Answers with text: questions, analysis, review and planning.",
+        "pt-BR": "Centenas de modelos por um só endereço e uma só chave do OpenRouter. Responde com texto: perguntas, análise, revisão e planejamento.",
+        "es": "Cientos de modelos con una sola dirección y una sola clave de OpenRouter. Responde con texto: preguntas, análisis, revisión y planificación.",
+        "zh-CN": "通过 OpenRouter 的一个地址和一个密钥使用数百个模型。以文本作答：提问、分析、审查和规划。",
+        "hi": "OpenRouter के एक पते और एक कुंजी से सैकड़ों मॉडल। टेक्स्ट में जवाब देता है: प्रश्न, विश्लेषण, समीक्षा और योजना।",
+        "ar": "مئات النماذج عبر عنوان واحد ومفتاح واحد من OpenRouter. يجيب بالنص: أسئلة وتحليل ومراجعة وتخطيط.",
+        "fr": "Des centaines de modèles avec une seule adresse et une seule clé OpenRouter. Répond par du texte : questions, analyse, revue et planification.",
+        "ru": "Сотни моделей через один адрес и один ключ OpenRouter. Отвечает текстом: вопросы, анализ, ревью и планирование.",
+        "ja": "OpenRouter の1つのアドレスと1つのキーで数百のモデルを利用。テキストで答えます：質問、分析、レビュー、計画。",
+        "de": "Hunderte Modelle über eine Adresse und einen Schlüssel von OpenRouter. Antwortet mit Text: Fragen, Analyse, Review und Planung."
+      },
+      "contributes": {
+        "llmEngines": [
+          "openrouter"
+        ]
+      }
+    },
+    {
+      "id": "litellm",
+      "version": "1.0.0",
+      "category": "agents",
+      "plan": "gatewayProviders",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "gatewayProviders",
+      "homepage": "https://docs.litellm.ai",
+      "title": {
+        "en": "LiteLLM",
+        "pt-BR": "LiteLLM",
+        "es": "LiteLLM",
+        "zh-CN": "LiteLLM",
+        "hi": "LiteLLM",
+        "ar": "LiteLLM",
+        "fr": "LiteLLM",
+        "ru": "LiteLLM",
+        "ja": "LiteLLM",
+        "de": "LiteLLM"
+      },
+      "summary": {
+        "en": "Your LiteLLM proxy: the models it serves through one address. Answers with text: questions, analysis, review and planning.",
+        "pt-BR": "O seu proxy LiteLLM: os modelos que ele serve por um só endereço. Responde com texto: perguntas, análise, revisão e planejamento.",
+        "es": "Tu proxy LiteLLM: los modelos que sirve en una sola dirección. Responde con texto: preguntas, análisis, revisión y planificación.",
+        "zh-CN": "你的 LiteLLM 代理：通过一个地址使用它提供的模型。以文本作答：提问、分析、审查和规划。",
+        "hi": "आपका LiteLLM प्रॉक्सी: एक पते से उसके दिए मॉडल। टेक्स्ट में जवाब देता है: प्रश्न, विश्लेषण, समीक्षा और योजना।",
+        "ar": "وكيل LiteLLM الخاص بك: النماذج التي يقدّمها عبر عنوان واحد. يجيب بالنص: أسئلة وتحليل ومراجعة وتخطيط.",
+        "fr": "Votre proxy LiteLLM : les modèles qu’il sert par une seule adresse. Répond par du texte : questions, analyse, revue et planification.",
+        "ru": "Ваш прокси LiteLLM: модели, которые он отдаёт по одному адресу. Отвечает текстом: вопросы, анализ, ревью и планирование.",
+        "ja": "あなたの LiteLLM プロキシ。1つのアドレスで提供されるモデルを利用します。テキストで答えます：質問、分析、レビュー、計画。",
+        "de": "Ihr LiteLLM-Proxy: die Modelle, die er über eine Adresse bereitstellt. Antwortet mit Text: Fragen, Analyse, Review und Planung."
+      },
+      "contributes": {
+        "llmEngines": [
+          "litellm"
+        ]
+      }
+    },
+    {
+      "id": "stats",
+      "version": "1.0.0",
+      "category": "project",
+      "plan": "stats",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "stats",
+      "title": {
+        "en": "Statistics",
+        "pt-BR": "Estatísticas",
+        "es": "Estadísticas",
+        "zh-CN": "统计",
+        "hi": "आँकड़े",
+        "ar": "الإحصاءات",
+        "fr": "Statistiques",
+        "ru": "Статистика",
+        "ja": "統計",
+        "de": "Statistiken"
+      },
+      "summary": {
+        "en": "Token usage, cost, agent quotas and charts per project.",
+        "pt-BR": "Uso de tokens, custo, cotas dos agentes e gráficos por projeto.",
+        "es": "Uso de tokens, coste, cuotas de los agentes y gráficos por proyecto.",
+        "zh-CN": "令牌用量、成本、智能体配额和按项目的图表。",
+        "hi": "टोकन उपयोग, लागत, एजेंट कोटा और प्रोजेक्ट के अनुसार चार्ट।",
+        "ar": "استهلاك الرموز والتكلفة وحصص الوكلاء والرسوم البيانية لكل مشروع.",
+        "fr": "Consommation de jetons, coût, quotas des agents et graphiques par projet.",
+        "ru": "Расход токенов, стоимость, квоты агентов и графики по проектам.",
+        "ja": "トークン使用量、コスト、エージェントのクォータ、プロジェクト別のグラフ。",
+        "de": "Token-Verbrauch, Kosten, Agenten-Kontingente und Diagramme pro Projekt."
+      },
+      "contributes": {
+        "features": [
+          "stats"
+        ]
+      }
+    },
+    {
+      "id": "gateBoard",
+      "version": "1.0.0",
+      "category": "gate",
+      "plan": "gateBoard",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "gateBoard",
+      "title": {
+        "en": "Gatehouse board",
+        "pt-BR": "Painel da portaria",
+        "es": "Panel de la portería",
+        "zh-CN": "门卫面板",
+        "hi": "गेटहाउस बोर्ड",
+        "ar": "لوحة البوابة",
+        "fr": "Tableau du poste de garde",
+        "ru": "Панель проходной",
+        "ja": "ゲートハウスのボード",
+        "de": "Pförtner-Übersicht"
+      },
+      "summary": {
+        "en": "The page with everything Jev let through, asked about or blocked in the project.",
+        "pt-BR": "A página com tudo o que o Jev deixou passar, perguntou ou barrou no projeto.",
+        "es": "La página con todo lo que Jev dejó pasar, preguntó o bloqueó en el proyecto.",
+        "zh-CN": "显示 Jev 在项目中放行、询问或拦截的所有内容的页面。",
+        "hi": "वह पेज जिसमें प्रोजेक्ट में Jev ने जो कुछ पास किया, पूछा या रोका, सब दिखता है।",
+        "ar": "الصفحة التي تعرض كل ما سمح به Jev أو سأل عنه أو حظره في المشروع.",
+        "fr": "La page avec tout ce que Jev a laissé passer, questionné ou bloqué dans le projet.",
+        "ru": "Страница со всем, что Jev пропустил, уточнил или заблокировал в проекте.",
+        "ja": "プロジェクトで Jev が通した・確認した・止めたものをすべて表示するページ。",
+        "de": "Die Seite mit allem, was Jev im Projekt durchgelassen, nachgefragt oder blockiert hat."
+      },
+      "contributes": {
+        "features": [
+          "gateBoard"
+        ]
+      }
+    },
+    {
+      "id": "liveFiles",
+      "version": "1.0.0",
+      "category": "project",
+      "plan": "liveFiles",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "liveFiles",
+      "title": {
+        "en": "Live files",
+        "pt-BR": "Arquivos ao vivo",
+        "es": "Archivos en vivo",
+        "zh-CN": "实时文件",
+        "hi": "लाइव फ़ाइलें",
+        "ar": "الملفات المباشرة",
+        "fr": "Fichiers en direct",
+        "ru": "Файлы в реальном времени",
+        "ja": "ライブファイル",
+        "de": "Live-Dateien"
+      },
+      "summary": {
+        "en": "The panel that shows the files the agent is changing, with the diff, while it works.",
+        "pt-BR": "O painel que mostra os arquivos que o agente está mudando, com o diff, enquanto ele trabalha.",
+        "es": "El panel que muestra los archivos que el agente está cambiando, con el diff, mientras trabaja.",
+        "zh-CN": "在智能体工作时显示其正在修改的文件及差异的面板。",
+        "hi": "वह पैनल जो एजेंट के काम करते समय बदली जा रही फ़ाइलें diff के साथ दिखाता है।",
+        "ar": "اللوحة التي تعرض الملفات التي يغيّرها الوكيل مع الفروق أثناء عمله.",
+        "fr": "Le panneau qui montre les fichiers que l'agent modifie, avec le diff, pendant qu'il travaille.",
+        "ru": "Панель, которая показывает файлы, изменяемые агентом, с diff, пока он работает.",
+        "ja": "エージェントの作業中に変更中のファイルと差分を表示するパネル。",
+        "de": "Das Panel, das die Dateien, die der Agent gerade ändert, mit Diff zeigt, während er arbeitet."
+      },
+      "contributes": {
+        "features": [
+          "liveFiles"
+        ]
+      }
+    },
+    {
+      "id": "chatSearch",
+      "version": "1.0.0",
+      "category": "chat",
+      "plan": "chatSearch",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "chatSearch",
+      "title": {
+        "en": "Chat search",
+        "pt-BR": "Busca nos chats",
+        "es": "Búsqueda en los chats",
+        "zh-CN": "聊天搜索",
+        "hi": "चैट खोज",
+        "ar": "البحث في الدردشات",
+        "fr": "Recherche dans les chats",
+        "ru": "Поиск по чатам",
+        "ja": "チャット検索",
+        "de": "Chat-Suche"
+      },
+      "summary": {
+        "en": "Search for words across every conversation of the project.",
+        "pt-BR": "Procurar palavras em todas as conversas do projeto.",
+        "es": "Buscar palabras en todas las conversaciones del proyecto.",
+        "zh-CN": "在项目的所有对话中搜索文字。",
+        "hi": "प्रोजेक्ट की सभी बातचीत में शब्द खोजें।",
+        "ar": "البحث عن كلمات في كل محادثات المشروع.",
+        "fr": "Chercher des mots dans toutes les conversations du projet.",
+        "ru": "Поиск слов во всех беседах проекта.",
+        "ja": "プロジェクトのすべての会話から語句を検索します。",
+        "de": "Wörter in allen Unterhaltungen des Projekts suchen."
+      },
+      "contributes": {
+        "features": [
+          "chatSearch"
+        ]
+      }
+    },
+    {
+      "id": "projectNotes",
+      "version": "1.0.0",
+      "category": "project",
+      "plan": "projectNotes",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "projectNotes",
+      "title": {
+        "en": "Project notes",
+        "pt-BR": "Notas do projeto",
+        "es": "Notas del proyecto",
+        "zh-CN": "项目笔记",
+        "hi": "प्रोजेक्ट नोट्स",
+        "ar": "ملاحظات المشروع",
+        "fr": "Notes du projet",
+        "ru": "Заметки проекта",
+        "ja": "プロジェクトノート",
+        "de": "Projektnotizen"
+      },
+      "summary": {
+        "en": "What the agent should remember about the project in every new conversation.",
+        "pt-BR": "O que o agente deve lembrar sobre o projeto em toda conversa nova.",
+        "es": "Lo que el agente debe recordar del proyecto en cada conversación nueva.",
+        "zh-CN": "智能体在每次新对话中都应记住的项目信息。",
+        "hi": "प्रोजेक्ट के बारे में वह जानकारी जो एजेंट को हर नई बातचीत में याद रखनी चाहिए।",
+        "ar": "ما يجب أن يتذكره الوكيل عن المشروع في كل محادثة جديدة.",
+        "fr": "Ce que l'agent doit retenir du projet à chaque nouvelle conversation.",
+        "ru": "То, что агент должен помнить о проекте в каждой новой беседе.",
+        "ja": "新しい会話のたびにエージェントが覚えておくべきプロジェクトの情報。",
+        "de": "Was der Agent in jeder neuen Unterhaltung über das Projekt wissen soll."
+      },
+      "contributes": {
+        "features": [
+          "projectNotes"
+        ]
+      }
+    },
+    {
+      "id": "secondOpinion",
+      "version": "1.0.0",
+      "category": "agents",
+      "plan": "secondOpinion",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "secondOpinion",
+      "title": {
+        "en": "Second opinion",
+        "pt-BR": "Segunda opinião",
+        "es": "Segunda opinión",
+        "zh-CN": "第二意见",
+        "hi": "दूसरी राय",
+        "ar": "رأي ثانٍ",
+        "fr": "Second avis",
+        "ru": "Второе мнение",
+        "ja": "セカンドオピニオン",
+        "de": "Zweite Meinung"
+      },
+      "summary": {
+        "en": "An agent from another provider reviews what build mode changed.",
+        "pt-BR": "Um agente de outro provedor revisa o que o modo build mudou.",
+        "es": "Un agente de otro proveedor revisa lo que cambió el modo build.",
+        "zh-CN": "由另一家提供商的智能体审查构建模式所做的更改。",
+        "hi": "दूसरे प्रदाता का एजेंट बिल्ड मोड के बदलावों की समीक्षा करता है।",
+        "ar": "يراجع وكيل من مزوّد آخر ما غيّره وضع البناء.",
+        "fr": "Un agent d'un autre fournisseur relit ce que le mode build a modifié.",
+        "ru": "Агент другого провайдера проверяет изменения режима сборки.",
+        "ja": "別のプロバイダーのエージェントがビルドモードの変更をレビューします。",
+        "de": "Ein Agent eines anderen Anbieters prüft, was der Build-Modus geändert hat."
+      },
+      "contributes": {
+        "features": [
+          "secondOpinion"
+        ]
+      }
+    },
+    {
+      "id": "planFirst",
+      "version": "1.0.0",
+      "category": "agents",
+      "plan": "planFirst",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "planFirst",
+      "title": {
+        "en": "Plan before building",
+        "pt-BR": "Planejar antes de construir",
+        "es": "Planificar antes de construir",
+        "zh-CN": "先规划后构建",
+        "hi": "बनाने से पहले योजना",
+        "ar": "التخطيط قبل البناء",
+        "fr": "Planifier avant de construire",
+        "ru": "План перед сборкой",
+        "ja": "構築前に計画",
+        "de": "Erst planen, dann bauen"
+      },
+      "summary": {
+        "en": "On a complex build request, a reasoning model plans before the agent builds.",
+        "pt-BR": "Num pedido complexo do modo build, um modelo de raciocínio planeja antes de o agente construir.",
+        "es": "En una petición compleja del modo build, un modelo de razonamiento planifica antes de que el agente construya.",
+        "zh-CN": "对于复杂的构建请求，推理模型会在智能体构建前先做规划。",
+        "hi": "जटिल बिल्ड अनुरोध पर, एजेंट के बनाने से पहले एक तर्क मॉडल योजना बनाता है।",
+        "ar": "في طلب بناء معقد، يخطط نموذج استدلال قبل أن يبني الوكيل.",
+        "fr": "Pour une demande complexe en mode build, un modèle de raisonnement planifie avant que l'agent construise.",
+        "ru": "При сложном запросе в режиме сборки модель рассуждений составляет план до того, как агент начнёт работу.",
+        "ja": "複雑なビルド依頼では、エージェントが構築する前に推論モデルが計画を立てます。",
+        "de": "Bei einer komplexen Build-Anfrage plant ein Reasoning-Modell, bevor der Agent baut."
+      },
+      "contributes": {
+        "features": [
+          "planFirst"
+        ]
+      }
+    },
+    {
+      "id": "parallelTasks",
+      "version": "1.0.0",
+      "category": "agents",
+      "plan": "parallelTasks",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "parallelTasks",
+      "title": {
+        "en": "Parallel agents",
+        "pt-BR": "Agentes em paralelo",
+        "es": "Agentes en paralelo",
+        "zh-CN": "并行智能体",
+        "hi": "समानांतर एजेंट",
+        "ar": "وكلاء بالتوازي",
+        "fr": "Agents en parallèle",
+        "ru": "Параллельные агенты",
+        "ja": "並列エージェント",
+        "de": "Parallele Agenten"
+      },
+      "summary": {
+        "en": "A large request is split among agents working at the same time in git worktrees.",
+        "pt-BR": "Um pedido grande é dividido entre agentes que trabalham ao mesmo tempo em git worktrees.",
+        "es": "Una petición grande se divide entre agentes que trabajan a la vez en git worktrees.",
+        "zh-CN": "大型请求会拆分给在 git worktree 中同时工作的多个智能体。",
+        "hi": "बड़ा अनुरोध उन एजेंटों में बाँटा जाता है जो git worktrees में एक साथ काम करते हैं।",
+        "ar": "يُقسَّم الطلب الكبير بين وكلاء يعملون في الوقت نفسه في git worktrees.",
+        "fr": "Une grosse demande est répartie entre des agents qui travaillent en même temps dans des git worktrees.",
+        "ru": "Большой запрос делится между агентами, которые работают одновременно в git worktree.",
+        "ja": "大きな依頼は、git worktree で同時に作業する複数のエージェントに分割されます。",
+        "de": "Eine große Anfrage wird auf Agenten verteilt, die gleichzeitig in Git-Worktrees arbeiten."
+      },
+      "contributes": {
+        "features": [
+          "parallelTasks"
+        ]
+      }
+    },
+    {
+      "id": "answerRecall",
+      "version": "1.0.0",
+      "category": "chat",
+      "plan": "answerRecall",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "answerRecall",
+      "title": {
+        "en": "Earlier answers",
+        "pt-BR": "Respostas anteriores",
+        "es": "Respuestas anteriores",
+        "zh-CN": "以往的回答",
+        "hi": "पिछले जवाब",
+        "ar": "الإجابات السابقة",
+        "fr": "Réponses précédentes",
+        "ru": "Прежние ответы",
+        "ja": "以前の回答",
+        "de": "Frühere Antworten"
+      },
+      "summary": {
+        "en": "A request almost identical to one already answered in another chat of the project starts from that answer.",
+        "pt-BR": "Um pedido quase igual a um já respondido em outro chat do projeto parte daquela resposta.",
+        "es": "Una solicitud casi idéntica a otra ya respondida en otro chat del proyecto parte de esa respuesta.",
+        "zh-CN": "与项目中另一个聊天里已回答过的请求几乎相同的请求，会从那个回答开始。",
+        "hi": "प्रोजेक्ट की किसी दूसरी चैट में पहले से जवाब दिए गए अनुरोध जैसा अनुरोध उसी जवाब से शुरू होता है।",
+        "ar": "الطلب المطابق تقريبًا لطلب أُجيب عنه في دردشة أخرى من المشروع يبدأ من تلك الإجابة.",
+        "fr": "Une demande presque identique à une autre déjà traitée dans un autre chat du projet part de cette réponse.",
+        "ru": "Запрос, почти совпадающий с уже отвеченным в другом чате проекта, начинается с того ответа.",
+        "ja": "プロジェクトの別のチャットで回答済みのリクエストとほぼ同じリクエストは、その回答から始めます。",
+        "de": "Eine Anfrage, die fast gleich einer bereits in einem anderen Chat des Projekts beantworteten ist, startet von dieser Antwort."
+      },
+      "contributes": {
+        "features": [
+          "answerRecall"
+        ]
+      }
+    },
+    {
+      "id": "leanCode",
+      "version": "1.0.0",
+      "category": "agents",
+      "plan": "leanCode",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "leanCode",
+      "title": {
+        "en": "Lean code",
+        "pt-BR": "Código enxuto",
+        "es": "Código mínimo",
+        "zh-CN": "精简代码",
+        "hi": "संक्षिप्त कोड",
+        "ar": "شيفرة مختصرة",
+        "fr": "Code minimal",
+        "ru": "Минимум кода",
+        "ja": "最小限のコード",
+        "de": "Schlanker Code"
+      },
+      "summary": {
+        "en": "In build mode the agent writes the least code that solves the task.",
+        "pt-BR": "No modo build o agente escreve o mínimo de código que resolve a tarefa.",
+        "es": "En modo build el agente escribe el mínimo código que resuelve la tarea.",
+        "zh-CN": "在构建模式下，代理只写解决任务所需的最少代码。",
+        "hi": "बिल्ड मोड में एजेंट काम हल करने के लिए कम से कम कोड लिखता है।",
+        "ar": "في وضع البناء يكتب الوكيل أقل قدر من الشيفرة يحل المهمة.",
+        "fr": "En mode build, l'agent écrit le moins de code possible pour accomplir la tâche.",
+        "ru": "В режиме сборки агент пишет минимум кода, который решает задачу.",
+        "ja": "ビルドモードでは、エージェントはタスクを解決する最小限のコードを書きます。",
+        "de": "Im Build-Modus schreibt der Agent so wenig Code wie nötig, um die Aufgabe zu lösen."
+      },
+      "contributes": {
+        "features": [
+          "leanCode"
+        ]
+      }
+    },
+    {
+      "id": "symbolIndex",
+      "version": "1.0.0",
+      "category": "agents",
+      "plan": "symbolIndex",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "symbolIndex",
+      "title": {
+        "en": "Symbol index for Claude",
+        "pt-BR": "Índice de símbolos para o Claude",
+        "es": "Índice de símbolos para Claude",
+        "zh-CN": "供 Claude 使用的符号索引",
+        "hi": "Claude के लिए सिंबल इंडेक्स",
+        "ar": "فهرس الرموز لـ Claude",
+        "fr": "Index des symboles pour Claude",
+        "ru": "Индекс символов для Claude",
+        "ja": "Claude 用のシンボルインデックス",
+        "de": "Symbolindex für Claude"
+      },
+      "summary": {
+        "en": "Claude Code asks JayV's symbol index where things live instead of scanning the folder.",
+        "pt-BR": "O Claude Code pergunta ao índice de símbolos do JayV onde as coisas moram em vez de varrer a pasta.",
+        "es": "Claude Code pregunta al índice de símbolos de JayV dónde está cada cosa en lugar de recorrer la carpeta.",
+        "zh-CN": "Claude Code 会询问 JayV 的符号索引东西在哪里，而不是扫描整个文件夹。",
+        "hi": "Claude Code फ़ोल्डर खँगालने के बजाय JayV के सिंबल इंडेक्स से पूछता है कि चीज़ें कहाँ हैं।",
+        "ar": "يسأل Claude Code فهرس رموز JayV عن مكان الأشياء بدلًا من مسح المجلد.",
+        "fr": "Claude Code demande à l'index des symboles de JayV où se trouvent les choses au lieu de parcourir le dossier.",
+        "ru": "Claude Code спрашивает у индекса символов JayV, где что находится, вместо сканирования папки.",
+        "ja": "Claude Code はフォルダを走査する代わりに、JayV のシンボルインデックスに場所を尋ねます。",
+        "de": "Claude Code fragt den Symbolindex von JayV, wo etwas liegt, statt den Ordner zu durchsuchen."
+      },
+      "contributes": {
+        "features": [
+          "symbolIndex"
+        ]
+      }
+    },
+    {
+      "id": "mcp",
+      "version": "1.0.0",
+      "category": "agents",
+      "plan": "mcp",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "mcp",
+      "title": {
+        "en": "MCP servers",
+        "pt-BR": "Servidores MCP",
+        "es": "Servidores MCP",
+        "zh-CN": "MCP 服务器",
+        "hi": "MCP सर्वर",
+        "ar": "خوادم MCP",
+        "fr": "Serveurs MCP",
+        "ru": "MCP-серверы",
+        "ja": "MCPサーバー",
+        "de": "MCP-Server"
+      },
+      "summary": {
+        "en": "Connect MCP servers to the agents: external tools, the MCP tab and the organization servers.",
+        "pt-BR": "Ligar servidores MCP aos agentes: ferramentas externas, a aba MCP e os servidores da organização.",
+        "es": "Conectar servidores MCP a los agentes: herramientas externas, la pestaña MCP y los servidores de la organización.",
+        "zh-CN": "为代理连接 MCP 服务器：外部工具、MCP 标签页和组织的服务器。",
+        "hi": "एजेंट से MCP सर्वर जोड़ें: बाहरी टूल, MCP टैब और संगठन के सर्वर।",
+        "ar": "ربط خوادم MCP بالوكلاء: أدوات خارجية وتبويب MCP وخوادم المؤسسة.",
+        "fr": "Connecter des serveurs MCP aux agents : outils externes, l'onglet MCP et les serveurs de l'organisation.",
+        "ru": "Подключение MCP-серверов к агентам: внешние инструменты, вкладка MCP и серверы организации.",
+        "ja": "エージェントにMCPサーバーを接続：外部ツール、MCPタブ、組織のサーバー。",
+        "de": "MCP-Server an die Agenten anbinden: externe Werkzeuge, der MCP-Tab und die Server der Organisation."
+      },
+      "contributes": {
+        "features": [
+          "mcp"
+        ]
+      }
+    },
+    {
+      "id": "skills",
+      "version": "1.0.0",
+      "category": "agents",
+      "plan": "skills",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "skills",
+      "title": {
+        "en": "Skills",
+        "pt-BR": "Skills",
+        "es": "Skills",
+        "zh-CN": "技能",
+        "hi": "स्किल्स",
+        "ar": "المهارات",
+        "fr": "Skills",
+        "ru": "Навыки",
+        "ja": "スキル",
+        "de": "Skills"
+      },
+      "summary": {
+        "en": "SKILL.md folders that Jev picks per request, the Skills tab and the organization skills.",
+        "pt-BR": "Pastas SKILL.md que o Jev escolhe por pedido, a aba Skills e as skills da organização.",
+        "es": "Carpetas SKILL.md que Jev elige por solicitud, la pestaña Skills y las skills de la organización.",
+        "zh-CN": "Jev 按请求选择的 SKILL.md 文件夹、技能标签页和组织的技能。",
+        "hi": "SKILL.md फ़ोल्डर जिन्हें Jev हर अनुरोध पर चुनता है, स्किल्स टैब और संगठन की स्किल्स।",
+        "ar": "مجلدات SKILL.md التي يختار منها Jev لكل طلب، وتبويب المهارات ومهارات المؤسسة.",
+        "fr": "Dossiers SKILL.md que Jev choisit à chaque demande, l'onglet Skills et les skills de l'organisation.",
+        "ru": "Папки SKILL.md, из которых Jev выбирает под запрос, вкладка «Навыки» и навыки организации.",
+        "ja": "Jevがリクエストごとに選ぶSKILL.mdフォルダ、スキルタブ、組織のスキル。",
+        "de": "SKILL.md-Ordner, aus denen Jev pro Anfrage wählt, der Skills-Tab und die Skills der Organisation."
+      },
+      "contributes": {
+        "features": [
+          "skills"
+        ]
+      }
+    },
+    {
+      "id": "skillsHub",
+      "version": "1.0.0",
+      "category": "agents",
+      "plan": "skillsHub",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "skillsHub",
+      "title": {
+        "en": "skills.sh search",
+        "pt-BR": "Busca no skills.sh",
+        "es": "Búsqueda en skills.sh",
+        "zh-CN": "skills.sh 搜索",
+        "hi": "skills.sh खोज",
+        "ar": "البحث في skills.sh",
+        "fr": "Recherche sur skills.sh",
+        "ru": "Поиск на skills.sh",
+        "ja": "skills.sh検索",
+        "de": "skills.sh-Suche"
+      },
+      "summary": {
+        "en": "Search and install skills from skills.sh right in Settings › Skills.",
+        "pt-BR": "Pesquisar e instalar skills do skills.sh direto em Configurações › Skills.",
+        "es": "Buscar e instalar skills de skills.sh en Configuración › Skills.",
+        "zh-CN": "直接在“设置 › 技能”中搜索并安装 skills.sh 的技能。",
+        "hi": "सेटिंग्स › स्किल्स में ही skills.sh से स्किल्स खोजें और इंस्टॉल करें।",
+        "ar": "ابحث عن مهارات skills.sh وثبّتها مباشرة من الإعدادات › المهارات.",
+        "fr": "Rechercher et installer des skills de skills.sh dans Réglages › Skills.",
+        "ru": "Поиск и установка навыков с skills.sh прямо в Настройки › Навыки.",
+        "ja": "設定 › スキルからskills.shのスキルを検索してインストール。",
+        "de": "Skills von skills.sh direkt in Einstellungen › Skills suchen und installieren."
+      },
+      "contributes": {
+        "features": [
+          "skillsHub"
+        ]
+      }
+    },
+    {
+      "id": "conversationFind",
+      "version": "1.0.0",
+      "category": "chat",
+      "plan": "conversationFind",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "conversationFind",
+      "title": {
+        "en": "Find in conversation",
+        "pt-BR": "Busca na conversa",
+        "es": "Buscar en la conversación",
+        "zh-CN": "对话内查找",
+        "hi": "बातचीत में खोजें",
+        "ar": "البحث في المحادثة",
+        "fr": "Recherche dans la conversation",
+        "ru": "Поиск в беседе",
+        "ja": "会話内検索",
+        "de": "Suche im Gespräch"
+      },
+      "summary": {
+        "en": "Ctrl/Cmd+F searches the open chat and highlights every match.",
+        "pt-BR": "Ctrl/Cmd+F procura texto no chat aberto e destaca cada ocorrência.",
+        "es": "Ctrl/Cmd+F busca texto en el chat abierto y resalta cada coincidencia.",
+        "zh-CN": "Ctrl/Cmd+F 在当前聊天中搜索文本并高亮每个匹配项。",
+        "hi": "Ctrl/Cmd+F खुली चैट में टेक्स्ट खोजता है और हर मिलान को हाइलाइट करता है।",
+        "ar": "Ctrl/Cmd+F يبحث في المحادثة المفتوحة ويميّز كل نتيجة.",
+        "fr": "Ctrl/Cmd+F cherche du texte dans le chat ouvert et surligne chaque occurrence.",
+        "ru": "Ctrl/Cmd+F ищет текст в открытом чате и подсвечивает каждое совпадение.",
+        "ja": "Ctrl/Cmd+Fで開いているチャット内を検索し、一致をハイライト。",
+        "de": "Ctrl/Cmd+F durchsucht den offenen Chat und markiert jeden Treffer."
+      },
+      "contributes": {
+        "features": [
+          "conversationFind"
+        ]
+      }
+    },
+    {
+      "id": "lm-studio",
+      "version": "1.0.0",
+      "category": "agents",
+      "plan": "customMods",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "llmMods",
+      "homepage": "https://lmstudio.ai",
+      "title": {
+        "en": "LM Studio",
+        "pt-BR": "LM Studio",
+        "es": "LM Studio",
+        "zh-CN": "LM Studio",
+        "hi": "LM Studio",
+        "ar": "LM Studio",
+        "fr": "LM Studio",
+        "ru": "LM Studio",
+        "ja": "LM Studio",
+        "de": "LM Studio"
+      },
+      "summary": {
+        "en": "Models loaded in LM Studio's local server, through its OpenAI-compatible address. No key, and the requests stay on the machine.",
+        "pt-BR": "Modelos carregados no servidor local do LM Studio, pelo endereço compatível com OpenAI. Sem chave, e os pedidos ficam na máquina.",
+        "es": "Modelos cargados en el servidor local de LM Studio, por su dirección compatible con OpenAI. Sin clave, y las solicitudes se quedan en la máquina.",
+        "zh-CN": "在 LM Studio 本地服务器中加载的模型，使用其兼容 OpenAI 的地址。无需密钥，请求不离开本机。",
+        "hi": "LM Studio के लोकल सर्वर में लोड किए गए मॉडल, उसके OpenAI-संगत पते से। कोई कुंजी नहीं, और अनुरोध मशीन पर ही रहते हैं।",
+        "ar": "نماذج محمّلة في الخادم المحلي لـ LM Studio، من خلال عنوانه المتوافق مع OpenAI. بلا مفتاح، وتبقى الطلبات على الجهاز.",
+        "fr": "Des modèles chargés dans le serveur local de LM Studio, par son adresse compatible OpenAI. Sans clé, et les demandes restent sur la machine.",
+        "ru": "Модели, загруженные в локальный сервер LM Studio, по его адресу, совместимому с OpenAI. Без ключа, запросы не покидают компьютер.",
+        "ja": "LM Studio のローカルサーバーに読み込んだモデルを、OpenAI 互換のアドレスで利用します。キー不要で、リクエストはマシンの外に出ません。",
+        "de": "Modelle, die im lokalen Server von LM Studio geladen sind, über seine OpenAI-kompatible Adresse. Ohne Schlüssel, und die Anfragen bleiben auf dem Rechner."
+      },
+      "contributes": {
+        "agents": [
+          {
+            "kind": "api",
+            "protocol": "openai",
+            "baseUrl": "http://localhost:1234/v1",
+            "keyRequired": false,
+            "models": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "ollama",
+      "version": "1.0.0",
+      "category": "agents",
+      "plan": "customMods",
+      "minApp": "0.94.0",
+      "preinstalled": true,
+      "author": "JayV",
+      "docs": "llmMods",
+      "homepage": "https://ollama.com",
+      "title": {
+        "en": "Ollama",
+        "pt-BR": "Ollama",
+        "es": "Ollama",
+        "zh-CN": "Ollama",
+        "hi": "Ollama",
+        "ar": "Ollama",
+        "fr": "Ollama",
+        "ru": "Ollama",
+        "ja": "Ollama",
+        "de": "Ollama"
+      },
+      "summary": {
+        "en": "Models running on this computer with Ollama, through its OpenAI-compatible address. No key, and the requests stay on the machine.",
+        "pt-BR": "Modelos rodando neste computador com o Ollama, pelo endereço compatível com OpenAI. Sem chave, e os pedidos ficam na máquina.",
+        "es": "Modelos que se ejecutan en este equipo con Ollama, por su dirección compatible con OpenAI. Sin clave, y las solicitudes se quedan en la máquina.",
+        "zh-CN": "通过 Ollama 在本机运行的模型，使用其兼容 OpenAI 的地址。无需密钥，请求不离开本机。",
+        "hi": "इस कंप्यूटर पर Ollama से चलने वाले मॉडल, उसके OpenAI-संगत पते से। कोई कुंजी नहीं, और अनुरोध मशीन पर ही रहते हैं।",
+        "ar": "نماذج تعمل على هذا الجهاز عبر Ollama، من خلال عنوانه المتوافق مع OpenAI. بلا مفتاح، وتبقى الطلبات على الجهاز.",
+        "fr": "Des modèles qui tournent sur cet ordinateur avec Ollama, par son adresse compatible OpenAI. Sans clé, et les demandes restent sur la machine.",
+        "ru": "Модели, работающие на этом компьютере через Ollama, по его адресу, совместимому с OpenAI. Без ключа, запросы не покидают компьютер.",
+        "ja": "このコンピューターで Ollama により動くモデルを、OpenAI 互換のアドレスで利用します。キー不要で、リクエストはマシンの外に出ません。",
+        "de": "Modelle, die mit Ollama auf diesem Computer laufen, über seine OpenAI-kompatible Adresse. Ohne Schlüssel, und die Anfragen bleiben auf dem Rechner."
+      },
+      "contributes": {
+        "agents": [
+          {
+            "kind": "api",
+            "protocol": "openai",
+            "baseUrl": "http://localhost:11434/v1",
+            "keyRequired": false,
+            "models": []
+          }
+        ]
+      }
+    }
+  ]
+}

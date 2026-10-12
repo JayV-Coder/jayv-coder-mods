@@ -1,10 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "kilo",
-  "kind": "llm",
+  "version": "1.0.0",
   "category": "agents",
   "plan": "kiloCode",
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "kiloCode",
   "homepage": "https://kilocode.ai",
   "title": {
@@ -30,5 +32,10 @@
     "ru": "Использовать Kilo Code как один из CLI-агентов Jev с отдельной вкладкой в настройках.",
     "ja": "Kilo CodeをJevのCLIエージェントとして使用。設定に専用タブがあります。",
     "de": "Kilo Code als einen der CLI-Agenten von Jev nutzen, mit eigenem Tab in den Einstellungen."
+  },
+  "contributes": {
+    "llmEngines": [
+      "kilo"
+    ]
   }
 }

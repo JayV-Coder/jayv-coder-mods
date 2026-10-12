@@ -1,11 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "gateBoard",
-  "kind": "feature",
+  "version": "1.0.0",
   "category": "gate",
   "plan": "gateBoard",
-  "defaultOn": true,
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "gateBoard",
   "title": {
     "en": "Gatehouse board",
@@ -30,5 +31,10 @@
     "ru": "Страница со всем, что Jev пропустил, уточнил или заблокировал в проекте.",
     "ja": "プロジェクトで Jev が通した・確認した・止めたものをすべて表示するページ。",
     "de": "Die Seite mit allem, was Jev im Projekt durchgelassen, nachgefragt oder blockiert hat."
+  },
+  "contributes": {
+    "features": [
+      "gateBoard"
+    ]
   }
 }

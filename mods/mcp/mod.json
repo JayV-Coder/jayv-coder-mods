@@ -1,11 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "mcp",
-  "kind": "feature",
+  "version": "1.0.0",
   "category": "agents",
   "plan": "mcp",
-  "defaultOn": true,
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "mcp",
   "title": {
     "en": "MCP servers",
@@ -30,5 +31,10 @@
     "ru": "Подключение MCP-серверов к агентам: внешние инструменты, вкладка MCP и серверы организации.",
     "ja": "エージェントにMCPサーバーを接続：外部ツール、MCPタブ、組織のサーバー。",
     "de": "MCP-Server an die Agenten anbinden: externe Werkzeuge, der MCP-Tab und die Server der Organisation."
+  },
+  "contributes": {
+    "features": [
+      "mcp"
+    ]
   }
 }

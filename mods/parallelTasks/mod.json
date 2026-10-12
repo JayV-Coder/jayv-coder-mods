@@ -1,11 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "parallelTasks",
-  "kind": "feature",
+  "version": "1.0.0",
   "category": "agents",
   "plan": "parallelTasks",
-  "defaultOn": true,
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "parallelTasks",
   "title": {
     "en": "Parallel agents",
@@ -30,5 +31,10 @@
     "ru": "Большой запрос делится между агентами, которые работают одновременно в git worktree.",
     "ja": "大きな依頼は、git worktree で同時に作業する複数のエージェントに分割されます。",
     "de": "Eine große Anfrage wird auf Agenten verteilt, die gleichzeitig in Git-Worktrees arbeiten."
+  },
+  "contributes": {
+    "features": [
+      "parallelTasks"
+    ]
   }
 }

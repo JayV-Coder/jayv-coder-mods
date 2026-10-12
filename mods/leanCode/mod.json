@@ -1,11 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "leanCode",
-  "kind": "feature",
+  "version": "1.0.0",
   "category": "agents",
   "plan": "leanCode",
-  "defaultOn": true,
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "leanCode",
   "title": {
     "en": "Lean code",
@@ -30,5 +31,10 @@
     "ru": "В режиме сборки агент пишет минимум кода, который решает задачу.",
     "ja": "ビルドモードでは、エージェントはタスクを解決する最小限のコードを書きます。",
     "de": "Im Build-Modus schreibt der Agent so wenig Code wie nötig, um die Aufgabe zu lösen."
+  },
+  "contributes": {
+    "features": [
+      "leanCode"
+    ]
   }
 }

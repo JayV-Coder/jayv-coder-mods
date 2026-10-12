@@ -1,10 +1,16 @@
 #!/usr/bin/env node
 // O catálogo dos mods do JayV. Cada mod é um `mods/<id>/mod.json`; este script
-// confere todos e monta o `catalog.json` que a função `mods` do Supabase
-// entrega ao app e ao site.
+// confere todos e monta os dois catálogos que a função `mods` do Supabase
+// entrega ao app e ao site:
 //
-//   node scripts/catalog.mjs check   confere os manifestos e se o catalog.json está em dia
-//   node scripts/catalog.mjs build   confere e grava o catalog.json
+//   catalog.v2.json  o formato genérico (SCHEMA 2): cada mod diz o que traz
+//                    para cada ponto de extensão do app (`contributes`).
+//   catalog.json     o formato antigo (SCHEMA 1), tirado do v2, para o app
+//                    0.94 e o site 2.12, que só o conhecem. Um mod que não
+//                    cabe nele (dependências, mais de um ponto) fica de fora.
+//
+//   node scripts/catalog.mjs check   confere os manifestos e se os catálogos estão em dia
+//   node scripts/catalog.mjs build   confere e grava os dois catálogos
 //
 // Sem dependências: roda com o Node puro, no Actions e na máquina de quem edita.
 
@@ -12,39 +18,42 @@ import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
-/** A versão do formato do catálogo. O app e o site ignoram um catálogo de
- * formato que não conhecem e ficam com o último que entenderam. */
-export const SCHEMA = 1;
+/** A versão do formato do catálogo genérico. O app e o site ignoram um
+ * catálogo de formato que não conhecem e ficam com o último que entenderam. */
+export const SCHEMA = 2;
+/** O formato antigo, que o `catalog.json` continua seguindo. */
+export const LEGACY_SCHEMA = 1;
 
 /** Os idiomas do app (`public.locales`): todo texto de mod vem nos dez. */
 export const LOCALES = ["en", "pt-BR", "es", "zh-CN", "hi", "ar", "fr", "ru", "ja", "de"];
 
-/** `llm`: liga um motor de integração com LLM do app (Claude Code, Codex…).
- * `feature`: liga um recurso do app (estatísticas, portaria, MCP…).
- * `template`: um mod pronto que a pessoa instala como um mod seu (um programa
- * de linha de comando ou uma API compatível com OpenAI ou Anthropic). */
-export const KINDS = ["llm", "feature", "template"];
-
 /** As categorias do manual do app (`docs/manual/index.json`). */
 export const CATEGORIES = ["start", "chat", "agents", "gate", "privacy", "project", "team", "account", "app"];
 
-/** A ordem dos campos no catálogo; um campo fora daqui é erro de digitação. */
-const FIELDS = ["$schema", "id", "kind", "category", "plan", "defaultOn", "minApp", "docs", "homepage", "title", "summary", "template"];
-const TEMPLATE_FIELDS = {
+/** A ordem dos campos no manifesto e no catálogo; um campo fora daqui é erro
+ * de digitação. */
+const FIELDS = ["$schema", "id", "version", "category", "plan", "minApp", "preinstalled", "requires", "author", "docs", "homepage", "title", "summary", "contributes"];
+/** A ordem dos campos do formato antigo. */
+const LEGACY_FIELDS = ["id", "kind", "category", "plan", "defaultOn", "minApp", "docs", "homepage", "title", "summary", "template"];
+const AGENT_FIELDS = {
   api: ["kind", "protocol", "baseUrl", "keyRequired", "models"],
   cli: ["kind", "command", "args", "planArgs", "edits", "models"],
 };
 
+const ID = /^[a-z][A-Za-z0-9-]{1,39}$/;
 const ENGINE_ID = /^[a-z][A-Za-z0-9]{1,39}$/;
-/** O mod pronto vira o agente `mod-<id>` no app: o id segue o slug dos mods
- * criados (`mods::custom`), com até 28 caracteres. */
-const TEMPLATE_ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const TEMPLATE_ID_MAX = 28;
+/** O mod que traz agentes vira os agentes `mod-<id>`, `mod-<id>-2`… no app:
+ * o id segue o slug dos mods criados (`mods::custom`), com até 28 caracteres. */
+const AGENT_MOD_ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const AGENT_MOD_ID_MAX = 28;
+const MAX_AGENTS = 4;
 const PLAN = /^[a-z][A-Za-z]{1,39}$/;
 const VERSION = /^\d+\.\d+\.\d+$/;
 const DOCS = /^[A-Za-z][A-Za-z0-9]{0,63}$/;
 const TITLE_MAX = 60;
 const SUMMARY_MAX = 400;
+const AUTHOR_MAX = 60;
+const MAX_REQUIRES = 16;
 const MODEL = /^[A-Za-z0-9._:/@[\]-]{1,120}$/;
 const MAX_MODELS = 50;
 const MAX_ARGS = 64;
@@ -53,6 +62,17 @@ const PLACEHOLDER = /\{[A-Za-z0-9_]+\}/g;
 
 const isObject = (value) => typeof value === "object" && value !== null && !Array.isArray(value);
 const isText = (value) => typeof value === "string" && value.trim().length > 0;
+
+/** `1.2.3` em números, para comparar versões. */
+const parts = (version) => version.split(".").map(Number);
+export function compareVersions(a, b) {
+  const [x, y] = [parts(a), parts(b)];
+  for (let index = 0; index < 3; index++) if (x[index] !== y[index]) return x[index] - y[index];
+  return 0;
+}
+
+/** O id do agente que a entrada `index` do ponto `agents` vira no app. */
+export const agentIdOf = (modId, index) => (index === 0 ? `mod-${modId}` : `mod-${modId}-${index + 1}`);
 
 /** Os textos de um campo: os dez idiomas, nenhum vazio, nenhum a mais. */
 function textProblems(where, field, value, max) {
@@ -70,95 +90,199 @@ function textProblems(where, field, value, max) {
 /** A mesma conferência que o app faz numa linha de comando de mod
  * (`mods::custom`): argumentos não vazios, sem quebra de linha, e só
  * `{model}` (em qualquer parte) e `{prompt}` (sozinho num argumento). */
-function lineProblems(where, field, args) {
-  if (!Array.isArray(args)) return [`${where}: template.${field} must be a list of arguments`];
-  if (args.length > MAX_ARGS) return [`${where}: template.${field} takes at most ${MAX_ARGS} arguments`];
+function lineProblems(label, args) {
+  if (!Array.isArray(args)) return [`${label} must be a list of arguments`];
+  if (args.length > MAX_ARGS) return [`${label} takes at most ${MAX_ARGS} arguments`];
   const found = [];
   for (const arg of args) {
     // eslint-disable-next-line no-control-regex
     if (typeof arg !== "string" || arg === "" || arg.length > MAX_ARG || /[\u0000-\u001f\u007f]/.test(arg)) {
-      found.push(`${where}: template.${field} has an empty, multi-line or too long argument`);
+      found.push(`${label} has an empty, multi-line or too long argument`);
       continue;
     }
     const rest = arg === "{prompt}" ? "" : arg.replaceAll("{model}", "");
-    for (const token of rest.match(PLACEHOLDER) ?? []) found.push(`${where}: template.${field} uses ${token}; only {model} and {prompt} (alone in an argument) are accepted`);
+    for (const token of rest.match(PLACEHOLDER) ?? []) found.push(`${label} uses ${token}; only {model} and {prompt} (alone in an argument) are accepted`);
   }
   return found;
 }
 
-function templateProblems(where, template) {
-  if (!isObject(template)) return [`${where}: a template mod needs the template object`];
-  const fields = TEMPLATE_FIELDS[template.kind];
-  if (!fields) return [`${where}: template.kind must be api or cli`];
+/** Um agente de linha de comando ou de API: a definição de um mod criado, sem
+ * o que é da máquina (a chave, a aprovação dos servidores MCP). */
+function agentProblems(where, agent) {
+  if (!isObject(agent)) return [`${where} must be an object`];
+  const fields = AGENT_FIELDS[agent.kind];
+  if (!fields) return [`${where}.kind must be api or cli`];
   const found = [];
-  for (const key of Object.keys(template)) if (!fields.includes(key)) found.push(`${where}: template.${key} is not a field of a ${template.kind} template`);
-  const models = template.models ?? [];
+  for (const key of Object.keys(agent)) if (!fields.includes(key)) found.push(`${where}.${key} is not a field of a ${agent.kind} agent`);
+  const models = agent.models ?? [];
   if (!Array.isArray(models) || models.length > MAX_MODELS || models.some((model) => typeof model !== "string" || !MODEL.test(model))) {
-    found.push(`${where}: template.models must be a list of up to ${MAX_MODELS} model ids`);
+    found.push(`${where}.models must be a list of up to ${MAX_MODELS} model ids`);
   } else if (new Set(models).size !== models.length) {
-    found.push(`${where}: template.models repeats a model`);
+    found.push(`${where}.models repeats a model`);
   }
-  if (template.kind === "api") {
-    if (!["openai", "anthropic"].includes(template.protocol)) found.push(`${where}: template.protocol must be openai or anthropic`);
-    if (typeof template.baseUrl !== "string" || !/^https?:\/\/[^\s/@]+/i.test(template.baseUrl)) found.push(`${where}: template.baseUrl must be an http(s) address`);
-    if (typeof template.keyRequired !== "boolean") found.push(`${where}: template.keyRequired must be true or false`);
+  if (agent.kind === "api") {
+    if (!["openai", "anthropic"].includes(agent.protocol)) found.push(`${where}.protocol must be openai or anthropic`);
+    if (typeof agent.baseUrl !== "string" || !/^https?:\/\/[^\s/@]+/i.test(agent.baseUrl)) found.push(`${where}.baseUrl must be an http(s) address`);
+    if (typeof agent.keyRequired !== "boolean") found.push(`${where}.keyRequired must be true or false`);
   } else {
-    if (typeof template.command !== "string" || !template.command.trim() || /\s/.test(template.command)) found.push(`${where}: template.command must be the program name, without arguments`);
-    found.push(...lineProblems(where, "args", template.args ?? []));
-    found.push(...lineProblems(where, "planArgs", template.planArgs ?? []));
-    if (typeof (template.edits ?? false) !== "boolean") found.push(`${where}: template.edits must be true or false`);
-    if (template.edits === true && (template.planArgs ?? []).length === 0) found.push(`${where}: a template that writes to the project needs planArgs that do not`);
+    if (typeof agent.command !== "string" || !agent.command.trim() || /\s/.test(agent.command)) found.push(`${where}.command must be the program name, without arguments`);
+    found.push(...lineProblems(`${where}.args`, agent.args ?? []));
+    found.push(...lineProblems(`${where}.planArgs`, agent.planArgs ?? []));
+    if (typeof (agent.edits ?? false) !== "boolean") found.push(`${where}.edits must be true or false`);
+    if (agent.edits === true && (agent.planArgs ?? []).length === 0) found.push(`${where}: an agent that writes to the project needs planArgs that do not`);
   }
   return found;
 }
 
-/** Tudo que está errado num manifesto. `folder` é o nome da pasta, que tem
- * de ser o id. */
+/** Uma lista de motores do app de um tipo, sem repetir. */
+function engineListProblems(where, value, engines, kind) {
+  if (!Array.isArray(value) || value.length === 0) return [`${where} must be a non-empty list of ${kind} engines`];
+  const found = [];
+  for (const id of value) {
+    if (typeof id !== "string" || !ENGINE_ID.test(id)) found.push(`${where} has an invalid id`);
+    else if (!engines[kind].includes(id)) found.push(`${where}: ${id} is not a ${kind} engine of the app (engines.json)`);
+  }
+  if (new Set(value).size !== value.length) found.push(`${where} repeats an engine`);
+  return found;
+}
+
+/**
+ * Os pontos de extensão do app: o que um mod pode trazer. Cada um é uma chave
+ * de `contributes`, e `since` é a versão do app que o conhece — um mod que usa
+ * um ponto pede pelo menos essa versão (`minApp`). Ponto novo só chega com uma
+ * versão nova do app: primeiro o app aprende a aplicá-lo, depois ele entra
+ * aqui. `legacy` diz como o mod de um ponto só aparece no formato antigo (nulo:
+ * não aparece).
+ *
+ * - `features`   liga recursos opcionais do app (engines.json › feature).
+ * - `llmEngines` liga motores de integração com LLM do app (engines.json › llm).
+ * - `agents`     instala agentes de linha de comando ou de API como agentes de
+ *                quem instala (`mod-<id>`, `mod-<id>-2`…).
+ */
+export const POINTS = {
+  llmEngines: {
+    since: "0.94.0",
+    problems: (where, value, { engines }) => engineListProblems(where, value, engines, "llm"),
+    engines: (value) => value,
+    legacy: (mod, value) => (value.length === 1 && value[0] === mod.id ? { kind: "llm" } : null),
+  },
+  features: {
+    since: "0.94.0",
+    problems: (where, value, { engines }) => engineListProblems(where, value, engines, "feature"),
+    engines: (value) => value,
+    legacy: (mod, value) => (value.length === 1 && value[0] === mod.id ? { kind: "feature", defaultOn: mod.preinstalled === true } : null),
+  },
+  agents: {
+    since: "0.94.0",
+    problems: (where, value, { id }) => {
+      if (!Array.isArray(value) || value.length === 0 || value.length > MAX_AGENTS) return [`${where} must be a list of 1 to ${MAX_AGENTS} agents`];
+      const found = [];
+      if (typeof id !== "string" || !AGENT_MOD_ID.test(id) || id.length > AGENT_MOD_ID_MAX) found.push(`${where}: a mod with agents has an id of lowercase letters, digits and -, up to ${AGENT_MOD_ID_MAX} characters`);
+      value.forEach((agent, index) => found.push(...agentProblems(`${where}[${index}]`, agent)));
+      return found;
+    },
+    engines: () => [],
+    legacy: (_mod, value) => (value.length === 1 ? { kind: "template", template: value[0] } : null),
+  },
+};
+
+/** A ordem em que os pontos aparecem (e a ordem dos mods no catálogo). */
+const POINT_ORDER = ["llmEngines", "features", "agents"];
+
+/** Tudo que está errado num manifesto, sozinho. `folder` é o nome da pasta,
+ * que tem de ser o id. As dependências (`requires`) são conferidas com o
+ * catálogo inteiro, em `buildCatalog`. */
 export function manifestProblems(manifest, folder, engines) {
   const where = `mods/${folder}/mod.json`;
   if (!isObject(manifest)) return [`${where}: must be a JSON object`];
   const found = [];
   for (const key of Object.keys(manifest)) if (!FIELDS.includes(key)) found.push(`${where}: ${key} is not a field of a mod`);
-  const { id, kind } = manifest;
+  const { id } = manifest;
   if (id !== folder) found.push(`${where}: id must be the folder name (${folder})`);
-  if (!KINDS.includes(kind)) return [...found, `${where}: kind must be one of ${KINDS.join(", ")}`];
-  if (kind === "template") {
-    if (typeof id !== "string" || !TEMPLATE_ID.test(id) || id.length > TEMPLATE_ID_MAX) found.push(`${where}: a template id is lowercase letters, digits and -, up to ${TEMPLATE_ID_MAX} characters`);
-    if (engines.llm.includes(id) || engines.feature.includes(id)) found.push(`${where}: ${id} is the id of an engine of the app`);
-    found.push(...templateProblems(where, manifest.template));
-  } else {
-    if (typeof id !== "string" || !ENGINE_ID.test(id)) found.push(`${where}: invalid id`);
-    else if (!engines[kind].includes(id)) found.push(`${where}: ${id} is not a ${kind} engine of the app (engines.json)`);
-    if ("template" in manifest) found.push(`${where}: only a template mod has template`);
-  }
+  if (typeof id !== "string" || !ID.test(id)) found.push(`${where}: invalid id`);
+  if (typeof manifest.version !== "string" || !VERSION.test(manifest.version)) found.push(`${where}: version must be the version of the mod, like 1.0.0`);
   if (!CATEGORIES.includes(manifest.category)) found.push(`${where}: category must be one of ${CATEGORIES.join(", ")}`);
   if (manifest.plan !== null && (typeof manifest.plan !== "string" || !PLAN.test(manifest.plan))) found.push(`${where}: plan must be a plan feature key or null`);
-  if (kind === "feature") {
-    if (typeof manifest.defaultOn !== "boolean") found.push(`${where}: a feature mod says defaultOn (true or false)`);
-  } else if ("defaultOn" in manifest) {
-    found.push(`${where}: only a feature mod has defaultOn`);
+  const minApp = typeof manifest.minApp === "string" && VERSION.test(manifest.minApp) ? manifest.minApp : null;
+  if (!minApp) found.push(`${where}: minApp must be a version like 0.95.0`);
+  if ("preinstalled" in manifest && typeof manifest.preinstalled !== "boolean") found.push(`${where}: preinstalled must be true or false`);
+  if ("requires" in manifest) {
+    const requires = manifest.requires;
+    if (!Array.isArray(requires) || requires.length > MAX_REQUIRES || requires.some((other) => typeof other !== "string" || !ID.test(other))) found.push(`${where}: requires must be a list of up to ${MAX_REQUIRES} mod ids`);
+    else if (new Set(requires).size !== requires.length) found.push(`${where}: requires repeats a mod`);
+    else if (requires.includes(id)) found.push(`${where}: a mod cannot require itself`);
   }
-  if (typeof manifest.minApp !== "string" || !VERSION.test(manifest.minApp)) found.push(`${where}: minApp must be a version like 0.94.0`);
+  if ("author" in manifest && (!isText(manifest.author) || manifest.author.length > AUTHOR_MAX || manifest.author !== manifest.author.trim())) found.push(`${where}: author must be a name of up to ${AUTHOR_MAX} characters`);
   if ("docs" in manifest && (typeof manifest.docs !== "string" || !DOCS.test(manifest.docs))) found.push(`${where}: docs must be the id of a page of the manual`);
   if ("homepage" in manifest && (typeof manifest.homepage !== "string" || !/^https:\/\/[^\s/@]+/i.test(manifest.homepage))) found.push(`${where}: homepage must be an https address`);
   found.push(...textProblems(where, "title", manifest.title, TITLE_MAX));
   found.push(...textProblems(where, "summary", manifest.summary, SUMMARY_MAX));
+
+  const contributes = manifest.contributes;
+  if (!isObject(contributes) || Object.keys(contributes).length === 0) return [...found, `${where}: contributes must say what the mod adds to at least one extension point (${POINT_ORDER.join(", ")})`];
+  for (const [key, value] of Object.entries(contributes)) {
+    const point = POINTS[key];
+    if (!point) { found.push(`${where}: contributes.${key} is not an extension point of the app (${POINT_ORDER.join(", ")})`); continue; }
+    found.push(...point.problems(`${where}: contributes.${key}`, value, { engines, id }));
+    if (minApp && compareVersions(minApp, point.since) < 0) found.push(`${where}: contributes.${key} needs minApp ${point.since} or newer`);
+  }
+  // O mod com o nome de um motor do app é o mod daquele motor: ele o traz.
+  for (const kind of ["llm", "feature"]) {
+    const key = kind === "llm" ? "llmEngines" : "features";
+    if (engines[kind].includes(id) && !(Array.isArray(contributes[key]) && contributes[key].includes(id))) found.push(`${where}: ${id} is the id of a ${kind} engine of the app, so the mod must bring it in contributes.${key}`);
+  }
   return found;
 }
 
-/** O manifesto como vai no catálogo: sem o `$schema` e com os campos na
- * ordem de sempre, para o catálogo só mudar quando um mod muda. */
+/** O manifesto como vai no catálogo genérico: sem o `$schema` e com os campos
+ * na ordem de sempre, para o catálogo só mudar quando um mod muda. */
 function entry(manifest) {
   const out = {};
   for (const key of FIELDS) if (key !== "$schema" && key in manifest) out[key] = manifest[key];
+  const contributes = {};
+  for (const key of POINT_ORDER) if (key in manifest.contributes) contributes[key] = manifest.contributes[key];
+  out.contributes = contributes;
   return out;
 }
 
-const ORDER = (engines) => (a, b) => {
-  const kind = KINDS.indexOf(a.kind) - KINDS.indexOf(b.kind);
-  if (kind) return kind;
-  if (a.kind === "template") return a.id.localeCompare(b.id);
-  return engines[a.kind].indexOf(a.id) - engines[b.kind].indexOf(b.id);
+/** O mod no formato antigo, ou nulo quando ele não cabe nele: dependências,
+ * mais de um ponto ou um ponto que o formato antigo não diz. */
+export function legacyEntry(mod) {
+  const keys = Object.keys(mod.contributes);
+  if (keys.length !== 1 || (mod.requires ?? []).length > 0) return null;
+  const shape = POINTS[keys[0]].legacy(mod, mod.contributes[keys[0]]);
+  if (!shape) return null;
+  const full = { ...mod, ...shape };
+  if (shape.kind !== "feature") delete full.defaultOn;
+  const out = {};
+  for (const key of LEGACY_FIELDS) if (key in full && full[key] !== undefined) out[key] = full[key];
+  return out;
+}
+
+/** O grupo de um mod na ordem do catálogo: o primeiro ponto que ele usa, na
+ * ordem dos pontos, e a posição do motor (ou o id). */
+const ORDER = (engines) => {
+  const rank = (mod) => {
+    const key = POINT_ORDER.find((point) => point in mod.contributes) ?? "";
+    const group = POINT_ORDER.indexOf(key);
+    const engine = key === "llmEngines" ? engines.llm.indexOf(mod.id) : key === "features" ? engines.feature.indexOf(mod.id) : -1;
+    return { group, engine: engine === -1 ? Number.MAX_SAFE_INTEGER : engine };
+  };
+  return (a, b) => {
+    const [x, y] = [rank(a), rank(b)];
+    return x.group - y.group || x.engine - y.engine || a.id.localeCompare(b.id);
+  };
+};
+
+/** A ordem do formato antigo, a mesma de antes: llm, feature, template. */
+const LEGACY_ORDER = (engines) => {
+  const kinds = ["llm", "feature", "template"];
+  return (a, b) => {
+    const kind = kinds.indexOf(a.kind) - kinds.indexOf(b.kind);
+    if (kind) return kind;
+    if (a.kind === "template") return a.id.localeCompare(b.id);
+    return engines[a.kind].indexOf(a.id) - engines[b.kind].indexOf(b.id);
+  };
 };
 
 /** Os motores do app, conferidos. */
@@ -171,10 +295,35 @@ export function readEngines(root) {
   return { engines, problems: found };
 }
 
-/** Lê e confere todos os mods. Devolve o catálogo e o que está errado. */
+/** As dependências: todo mod pedido existe, sem ciclo, e o mod que se instala
+ * sozinho só pede mods que também se instalam sozinhos. */
+function requiresProblems(mods) {
+  const byId = new Map(mods.map((mod) => [mod.id, mod]));
+  const found = [];
+  for (const mod of mods) {
+    for (const other of mod.requires ?? []) {
+      const target = byId.get(other);
+      if (!target) found.push(`mods/${mod.id}/mod.json: requires ${other}, which is not in mods/`);
+      else if (mod.preinstalled && !target.preinstalled) found.push(`mods/${mod.id}/mod.json: is preinstalled but requires ${other}, which is not`);
+    }
+  }
+  // Um ciclo deixaria os dois mods esperando um pelo outro para sempre.
+  const state = new Map();
+  const visit = (id, path) => {
+    if (state.get(id) === "done") return;
+    if (state.get(id) === "open") { found.push(`requires has a cycle: ${[...path, id].join(" → ")}`); return; }
+    state.set(id, "open");
+    for (const other of byId.get(id)?.requires ?? []) if (byId.has(other)) visit(other, [...path, id]);
+    state.set(id, "done");
+  };
+  for (const mod of mods) visit(mod.id, []);
+  return found;
+}
+
+/** Lê e confere todos os mods. Devolve os dois catálogos e o que está errado. */
 export function buildCatalog(root) {
   const { engines, problems } = readEngines(root);
-  if (problems.length) return { catalog: null, problems };
+  if (problems.length) return { catalog: null, legacy: null, problems };
   const found = [];
   const folders = readdirSync(join(root, "mods"), { withFileTypes: true }).filter((item) => item.isDirectory()).map((item) => item.name).sort();
   const mods = [];
@@ -192,19 +341,42 @@ export function buildCatalog(root) {
     if (problems.length) found.push(...problems);
     else mods.push(entry(manifest));
   }
-  // Todo motor tem o seu mod, a não ser que a retirada seja de propósito.
+  found.push(...requiresProblems(mods));
+  // Dois mods não podem virar o mesmo agente no app.
+  const agents = new Map();
+  for (const mod of mods) {
+    (mod.contributes.agents ?? []).forEach((_agent, index) => {
+      const agent = agentIdOf(mod.id, index);
+      if (agents.has(agent)) found.push(`mods/${mod.id}/mod.json: agent ${agent} is also an agent of mods/${agents.get(agent)}`);
+      else agents.set(agent, mod.id);
+    });
+  }
+  const legacy = mods.map(legacyEntry).filter((mod) => mod !== null);
+  // Todo motor tem quem o traga, a não ser que a retirada seja de propósito —
+  // no catálogo genérico e no antigo, que o app 0.94 ainda lê: um motor sem
+  // mod ali sai do ar para quem não atualizou.
   for (const kind of ["llm", "feature"]) {
+    const key = kind === "llm" ? "llmEngines" : "features";
     for (const id of engines[kind]) {
-      const has = mods.some((mod) => mod.kind === kind && mod.id === id);
-      if (!has && !engines.withdrawn.includes(id) && !folders.includes(id)) found.push(`engine ${id} has no mod in mods/; to withdraw it from everyone, list it in engines.json withdrawn`);
+      const brought = mods.some((mod) => POINTS[key].engines(mod.contributes[key] ?? []).includes(id));
+      if (engines.withdrawn.includes(id)) {
+        if (brought) found.push(`engines.json: ${id} is withdrawn but a mod still brings it`);
+        continue;
+      }
+      if (!brought) found.push(`engine ${id} has no mod that brings it; to withdraw it from everyone, list it in engines.json withdrawn`);
+      else if (!legacy.some((mod) => mod.kind === kind && mod.id === id)) found.push(`engine ${id} has no mod the old format can say (a mod named ${id} that brings only it): the app 0.94 would turn it off`);
     }
   }
-  for (const id of engines.withdrawn) if (folders.includes(id)) found.push(`engines.json: ${id} is withdrawn but mods/${id} still exists`);
+  if (found.length) return { catalog: null, legacy: null, problems: found };
   mods.sort(ORDER(engines));
-  return { catalog: found.length ? null : { schema: SCHEMA, mods }, problems: found };
+  legacy.sort(LEGACY_ORDER(engines));
+  return { catalog: { schema: SCHEMA, mods }, legacy: { schema: LEGACY_SCHEMA, mods: legacy }, problems: [] };
 }
 
 export const serialize = (catalog) => `${JSON.stringify(catalog, null, 2)}\n`;
+
+/** Os arquivos que o build grava, com o conteúdo de cada um. */
+export const outputs = ({ catalog, legacy }) => [["catalog.v2.json", serialize(catalog)], ["catalog.json", serialize(legacy)]];
 
 function main() {
   const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -213,24 +385,28 @@ function main() {
     console.error("usage: node scripts/catalog.mjs check|build");
     process.exit(2);
   }
-  const { catalog, problems } = buildCatalog(root);
-  if (problems.length) {
-    for (const problem of problems) console.error(`✗ ${problem}`);
+  const built = buildCatalog(root);
+  if (built.problems.length) {
+    for (const problem of built.problems) console.error(`✗ ${problem}`);
     process.exit(1);
   }
-  const target = join(root, "catalog.json");
-  const text = serialize(catalog);
+  const files = outputs(built);
   if (command === "build") {
-    writeFileSync(target, text);
-    console.log(`catalog.json: ${catalog.mods.length} mods`);
+    for (const [name, text] of files) writeFileSync(join(root, name), text);
+    console.log(`catalog.v2.json: ${built.catalog.mods.length} mods; catalog.json: ${built.legacy.mods.length} mods`);
     return;
   }
-  const current = existsSync(target) ? readFileSync(target, "utf8") : "";
-  if (current !== text) {
-    console.error("✗ catalog.json is out of date: run node scripts/catalog.mjs build and commit it");
-    process.exit(1);
+  let stale = false;
+  for (const [name, text] of files) {
+    const target = join(root, name);
+    const current = existsSync(target) ? readFileSync(target, "utf8") : "";
+    if (current !== text) {
+      console.error(`✗ ${name} is out of date: run node scripts/catalog.mjs build and commit it`);
+      stale = true;
+    }
   }
-  console.log(`catalog.json: ok, ${catalog.mods.length} mods`);
+  if (stale) process.exit(1);
+  console.log(`catalog.v2.json: ok, ${built.catalog.mods.length} mods; catalog.json: ok, ${built.legacy.mods.length} mods`);
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) main();

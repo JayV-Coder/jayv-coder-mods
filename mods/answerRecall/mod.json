@@ -1,11 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "answerRecall",
-  "kind": "feature",
+  "version": "1.0.0",
   "category": "chat",
   "plan": "answerRecall",
-  "defaultOn": true,
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "answerRecall",
   "title": {
     "en": "Earlier answers",
@@ -30,5 +31,10 @@
     "ru": "Запрос, почти совпадающий с уже отвеченным в другом чате проекта, начинается с того ответа.",
     "ja": "プロジェクトの別のチャットで回答済みのリクエストとほぼ同じリクエストは、その回答から始めます。",
     "de": "Eine Anfrage, die fast gleich einer bereits in einem anderen Chat des Projekts beantworteten ist, startet von dieser Antwort."
+  },
+  "contributes": {
+    "features": [
+      "answerRecall"
+    ]
   }
 }

@@ -1,11 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "conversationFind",
-  "kind": "feature",
+  "version": "1.0.0",
   "category": "chat",
   "plan": "conversationFind",
-  "defaultOn": true,
   "minApp": "0.94.0",
+  "preinstalled": true,
+  "author": "JayV",
   "docs": "conversationFind",
   "title": {
     "en": "Find in conversation",
@@ -30,5 +31,10 @@
     "ru": "Ctrl/Cmd+F ищет текст в открытом чате и подсвечивает каждое совпадение.",
     "ja": "Ctrl/Cmd+Fで開いているチャット内を検索し、一致をハイライト。",
     "de": "Ctrl/Cmd+F durchsucht den offenen Chat und markiert jeden Treffer."
+  },
+  "contributes": {
+    "features": [
+      "conversationFind"
+    ]
   }
 }
