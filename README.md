@@ -67,6 +67,10 @@ stay in their account; they are not part of this repository.
 }
 ```
 
+- `required`: essential — JayV needs it. Always installed and on; nobody
+  turns it off or uninstalls it (the plan still applies to what it brings).
+  Implies `preinstalled`. The app's features are required; the LLM engines
+  and the agents are not.
 - `preinstalled`: installed, and on, when the person signs in. If they
   uninstall it, it does not come back.
 - `requires`: mods this one needs installed and on; installing it brings them.

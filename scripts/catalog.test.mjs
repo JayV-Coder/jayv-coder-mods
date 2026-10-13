@@ -36,10 +36,15 @@ test("the published catalogs are valid and up to date", () => {
   assert.equal(built.legacy.schema, 1);
 });
 
-/** Os mods de hoje se instalam sozinhos, no login de quem os vê. */
-test("the mods of today are preinstalled and readable by the old app", () => {
+/** Os mods de hoje se instalam sozinhos, no login de quem os vê. Os recursos
+ * do app são essenciais; os motores de LLM e os agentes, não (regra do dono). */
+test("the mods of today are preinstalled, the features required, and readable by the old app", () => {
   const { catalog, legacy } = buildCatalog(root);
   assert.ok(catalog.mods.every((mod) => mod.preinstalled === true));
+  const required = catalog.mods.filter((mod) => mod.required === true).map((mod) => mod.id).sort();
+  const features = catalog.mods.filter((mod) => "features" in mod.contributes).map((mod) => mod.id).sort();
+  assert.deepEqual(required, features, "todo recurso é essencial");
+  assert.ok(catalog.mods.filter((mod) => !mod.required).every((mod) => "llmEngines" in mod.contributes || "agents" in mod.contributes), "motores e agentes se desligam");
   assert.equal(legacy.mods.length, catalog.mods.length, "todos cabem no formato antigo");
   assert.ok(legacy.mods.filter((mod) => mod.kind === "feature").every((mod) => mod.defaultOn === true));
 });
@@ -90,6 +95,9 @@ test("unknown and malformed fields are refused", () => {
   assert.ok(manifestProblems(stats({ preinstalled: "yes" }), "stats", engines).some((problem) => problem.includes("preinstalled")));
   assert.ok(manifestProblems(stats({ requires: ["stats"] }), "stats", engines).some((problem) => problem.includes("itself")));
   assert.ok(manifestProblems(stats({ author: " x" }), "stats", engines).some((problem) => problem.includes("author")));
+  assert.ok(manifestProblems(stats({ required: "yes" }), "stats", engines).some((problem) => problem.includes("required must")));
+  assert.ok(manifestProblems(stats({ required: true, preinstalled: false }), "stats", engines).some((problem) => problem.includes("also preinstalled")));
+  assert.deepEqual(manifestProblems(stats({ required: true }), "stats", engines), []);
 });
 
 test("a command-line agent follows the rules of the app", () => {
@@ -103,6 +111,7 @@ test("a command-line agent follows the rules of the app", () => {
 test("the old format gets the mods it can say", () => {
   assert.deepEqual(legacyEntry(stats()), { id: "stats", kind: "feature", category: "project", plan: "stats", defaultOn: true, minApp: "0.94.0", title: texts("stats"), summary: texts("stats.") });
   assert.equal(legacyEntry(stats({ preinstalled: false })).defaultOn, false, "o que não se instala sozinho nasce desligado no app antigo");
+  assert.ok(!("required" in legacyEntry(stats({ required: true }))), "o formato antigo não diz o essencial");
   assert.deepEqual(legacyEntry(localAi()).template, api);
   assert.equal(legacyEntry(localAi()).kind, "template");
   assert.equal(legacyEntry(base("pack", { features: ["stats", "mcp"] })), null, "dois recursos não cabem");
@@ -128,6 +137,7 @@ test("requires points at existing mods, without cycles", () => {
   assert.ok(buildCatalog(folder([...essentials(), needs("aa", ["ghost"])])).problems.some((problem) => problem.includes("ghost")));
   assert.ok(buildCatalog(folder([...essentials(), needs("aa", ["bb"]), needs("bb", ["aa"])])).problems.some((problem) => problem.includes("cycle")));
   assert.ok(buildCatalog(folder([...essentials(), needs("aa", ["bb"], { preinstalled: true }), needs("bb", [])])).problems.some((problem) => problem.includes("preinstalled but requires bb")));
+  assert.ok(buildCatalog(folder([...essentials(), needs("aa", ["bb"], { preinstalled: true, required: true }), needs("bb", [], { preinstalled: true })])).problems.some((problem) => problem.includes("required but requires bb")), "o essencial só depende de essenciais");
 });
 
 test("two mods never become the same agent", () => {

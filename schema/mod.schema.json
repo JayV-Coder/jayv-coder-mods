@@ -14,6 +14,7 @@
     "plan": { "type": ["string", "null"], "pattern": "^[a-z][A-Za-z]{1,39}$", "description": "The plan feature the mod needs, or null." },
     "minApp": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$", "description": "The oldest app that runs the mod; at least the version of every extension point it uses." },
     "preinstalled": { "type": "boolean", "description": "Installed, and on, when the person signs in; if they uninstall it, it does not come back." },
+    "required": { "type": "boolean", "description": "Essential: JayV needs it. Always installed and on; nobody turns it off or uninstalls it. Implies preinstalled." },
     "requires": { "type": "array", "maxItems": 16, "uniqueItems": true, "items": { "type": "string", "pattern": "^[a-z][A-Za-z0-9-]{1,39}$" }, "description": "Other mods this one needs installed and on." },
     "author": { "type": "string", "minLength": 1, "maxLength": 60 },
     "docs": { "type": "string", "pattern": "^[A-Za-z][A-Za-z0-9]{0,63}$" },
