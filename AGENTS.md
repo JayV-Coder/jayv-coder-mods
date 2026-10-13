@@ -44,6 +44,11 @@ todo mundo: o `catalog.mjs` só aceita isso com o id em `engines.json` ›
 
 - `preinstalled`: o mod se instala, ligado, no login de quem ainda não o tem.
   Quem o desinstalou não o recebe de volta.
+- `required`: essencial — o app precisa dele. Fica sempre instalado e ligado;
+  ninguém o desliga nem o desinstala, no app ou no site (o plano continua
+  mandando no recurso que ele traz). Pede `preinstalled`, e só depende de
+  outros essenciais. Regra do dono: os recursos do app são essenciais; os
+  motores de LLM e os agentes (Ollama, LM Studio) se desligam e desinstalam.
 - `requires`: os mods de que ele precisa instalados e ligados. Instalar puxa
   as dependências; um mod que se instala sozinho só pede mods que também se
   instalam sozinhos; ciclo é erro.

@@ -283,11 +283,12 @@
     },
     {
       "id": "stats",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "project",
       "plan": "stats",
       "minApp": "0.94.0",
       "preinstalled": true,
+      "required": true,
       "author": "JayV",
       "docs": "stats",
       "title": {
@@ -322,11 +323,12 @@
     },
     {
       "id": "gateBoard",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "gate",
       "plan": "gateBoard",
       "minApp": "0.94.0",
       "preinstalled": true,
+      "required": true,
       "author": "JayV",
       "docs": "gateBoard",
       "title": {
@@ -361,11 +363,12 @@
     },
     {
       "id": "liveFiles",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "project",
       "plan": "liveFiles",
       "minApp": "0.94.0",
       "preinstalled": true,
+      "required": true,
       "author": "JayV",
       "docs": "liveFiles",
       "title": {
@@ -400,11 +403,12 @@
     },
     {
       "id": "chatSearch",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "chat",
       "plan": "chatSearch",
       "minApp": "0.94.0",
       "preinstalled": true,
+      "required": true,
       "author": "JayV",
       "docs": "chatSearch",
       "title": {
@@ -439,11 +443,12 @@
     },
     {
       "id": "projectNotes",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "project",
       "plan": "projectNotes",
       "minApp": "0.94.0",
       "preinstalled": true,
+      "required": true,
       "author": "JayV",
       "docs": "projectNotes",
       "title": {
@@ -478,11 +483,12 @@
     },
     {
       "id": "secondOpinion",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "agents",
       "plan": "secondOpinion",
       "minApp": "0.94.0",
       "preinstalled": true,
+      "required": true,
       "author": "JayV",
       "docs": "secondOpinion",
       "title": {
@@ -517,11 +523,12 @@
     },
     {
       "id": "planFirst",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "agents",
       "plan": "planFirst",
       "minApp": "0.94.0",
       "preinstalled": true,
+      "required": true,
       "author": "JayV",
       "docs": "planFirst",
       "title": {
@@ -556,11 +563,12 @@
     },
     {
       "id": "parallelTasks",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "agents",
       "plan": "parallelTasks",
       "minApp": "0.94.0",
       "preinstalled": true,
+      "required": true,
       "author": "JayV",
       "docs": "parallelTasks",
       "title": {
@@ -595,11 +603,12 @@
     },
     {
       "id": "answerRecall",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "chat",
       "plan": "answerRecall",
       "minApp": "0.94.0",
       "preinstalled": true,
+      "required": true,
       "author": "JayV",
       "docs": "answerRecall",
       "title": {
@@ -634,11 +643,12 @@
     },
     {
       "id": "leanCode",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "agents",
       "plan": "leanCode",
       "minApp": "0.94.0",
       "preinstalled": true,
+      "required": true,
       "author": "JayV",
       "docs": "leanCode",
       "title": {
@@ -673,11 +683,12 @@
     },
     {
       "id": "symbolIndex",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "agents",
       "plan": "symbolIndex",
       "minApp": "0.94.0",
       "preinstalled": true,
+      "required": true,
       "author": "JayV",
       "docs": "symbolIndex",
       "title": {
@@ -712,11 +723,12 @@
     },
     {
       "id": "mcp",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "agents",
       "plan": "mcp",
       "minApp": "0.94.0",
       "preinstalled": true,
+      "required": true,
       "author": "JayV",
       "docs": "mcp",
       "title": {
@@ -751,11 +763,12 @@
     },
     {
       "id": "skills",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "agents",
       "plan": "skills",
       "minApp": "0.94.0",
       "preinstalled": true,
+      "required": true,
       "author": "JayV",
       "docs": "skills",
       "title": {
@@ -790,11 +803,12 @@
     },
     {
       "id": "skillsHub",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "agents",
       "plan": "skillsHub",
       "minApp": "0.94.0",
       "preinstalled": true,
+      "required": true,
       "author": "JayV",
       "docs": "skillsHub",
       "title": {
@@ -829,11 +843,12 @@
     },
     {
       "id": "conversationFind",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "chat",
       "plan": "conversationFind",
       "minApp": "0.94.0",
       "preinstalled": true,
+      "required": true,
       "author": "JayV",
       "docs": "conversationFind",
       "title": {

@@ -1,11 +1,12 @@
 {
   "$schema": "../../schema/mod.schema.json",
   "id": "conversationFind",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "category": "chat",
   "plan": "conversationFind",
   "minApp": "0.94.0",
   "preinstalled": true,
+  "required": true,
   "author": "JayV",
   "docs": "conversationFind",
   "title": {

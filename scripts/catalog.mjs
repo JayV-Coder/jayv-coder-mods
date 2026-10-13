@@ -32,7 +32,7 @@ export const CATEGORIES = ["start", "chat", "agents", "gate", "privacy", "projec
 
 /** A ordem dos campos no manifesto e no catálogo; um campo fora daqui é erro
  * de digitação. */
-const FIELDS = ["$schema", "id", "version", "category", "plan", "minApp", "preinstalled", "requires", "author", "docs", "homepage", "title", "summary", "contributes"];
+const FIELDS = ["$schema", "id", "version", "category", "plan", "minApp", "preinstalled", "required", "requires", "author", "docs", "homepage", "title", "summary", "contributes"];
 /** A ordem dos campos do formato antigo. */
 const LEGACY_FIELDS = ["id", "kind", "category", "plan", "defaultOn", "minApp", "docs", "homepage", "title", "summary", "template"];
 const AGENT_FIELDS = {
@@ -206,6 +206,10 @@ export function manifestProblems(manifest, folder, engines) {
   const minApp = typeof manifest.minApp === "string" && VERSION.test(manifest.minApp) ? manifest.minApp : null;
   if (!minApp) found.push(`${where}: minApp must be a version like 0.95.0`);
   if ("preinstalled" in manifest && typeof manifest.preinstalled !== "boolean") found.push(`${where}: preinstalled must be true or false`);
+  // Essencial: o app precisa dele. Vem instalado e ligado e ninguém o
+  // desliga nem desinstala — então também se instala sozinho.
+  if ("required" in manifest && typeof manifest.required !== "boolean") found.push(`${where}: required must be true or false`);
+  else if (manifest.required === true && manifest.preinstalled !== true) found.push(`${where}: a required mod is also preinstalled`);
   if ("requires" in manifest) {
     const requires = manifest.requires;
     if (!Array.isArray(requires) || requires.length > MAX_REQUIRES || requires.some((other) => typeof other !== "string" || !ID.test(other))) found.push(`${where}: requires must be a list of up to ${MAX_REQUIRES} mod ids`);
@@ -305,6 +309,7 @@ function requiresProblems(mods) {
       const target = byId.get(other);
       if (!target) found.push(`mods/${mod.id}/mod.json: requires ${other}, which is not in mods/`);
       else if (mod.preinstalled && !target.preinstalled) found.push(`mods/${mod.id}/mod.json: is preinstalled but requires ${other}, which is not`);
+      else if (mod.required && !target.required) found.push(`mods/${mod.id}/mod.json: is required but requires ${other}, which could be turned off`);
     }
   }
   // Um ciclo deixaria os dois mods esperando um pelo outro para sempre.
