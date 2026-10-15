@@ -1,0 +1,47 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "After a request changes the project in build mode, an agent from another provider reads the diff, without editing anything, and lists the problems it finds.",
+    "pt-BR": "Depois que um pedido muda o projeto no modo desenvolvimento, um agente de outro provedor lê o diff, sem editar nada, e lista os problemas que encontrar.",
+    "es": "Después de que una solicitud cambia el proyecto en el modo de desarrollo, un agente de otro proveedor lee el diff, sin editar nada, y lista los problemas que encuentra.",
+    "zh-CN": "当一个请求在开发模式下修改了项目后，另一家提供商的代理会在不做任何编辑的情况下阅读 diff，并列出它发现的问题。",
+    "hi": "जब कोई अनुरोध डेवलपमेंट मोड में प्रोजेक्ट बदल देता है, तो किसी दूसरे प्रदाता का एजेंट बिना कुछ बदले diff पढ़ता है और मिली समस्याओं की सूची देता है।",
+    "ar": "بعد أن يغيّر طلبٌ المشروع في وضع التطوير، يقرأ وكيل من مزوّد آخر الفروق دون تعديل أي شيء، ويسرد المشكلات التي يجدها.",
+    "fr": "Après qu’une demande a modifié le projet en mode développement, un agent d’un autre fournisseur lit le diff, sans rien modifier, et liste les problèmes qu’il trouve.",
+    "ru": "После того как запрос изменил проект в режиме разработки, агент другого поставщика читает diff, ничего не меняя, и перечисляет найденные проблемы.",
+    "ja": "開発モードの依頼がプロジェクトを変更した後、別のプロバイダーのエージェントが何も編集せずに差分を読み、見つけた問題を一覧にします。",
+    "de": "Nachdem eine Anfrage das Projekt im Entwicklungsmodus geändert hat, liest ein Agent eines anderen Anbieters den Diff, ohne etwas zu ändern, und listet die gefundenen Probleme auf."
+  },
+  "use": [
+    {
+      "text": {
+        "en": "Turn on Second opinion from another agent in Settings › Jev › Routing. It needs at least two agents.",
+        "pt-BR": "Ligue Segunda opinião de outro agente em Configuração › Jev › Roteamento. É preciso ter pelo menos dois agentes.",
+        "es": "Activa Segunda opinión de otro agente en Configuración › Jev › Enrutamiento. Necesita al menos dos agentes.",
+        "zh-CN": "在“设置 › Jev › 路由”中开启“由另一个代理提供第二意见”。至少需要两个代理。",
+        "hi": "सेटिंग्स › Jev › रूटिंग में दूसरे एजेंट की दूसरी राय चालू करें। इसके लिए कम से कम दो एजेंट चाहिए।",
+        "ar": "فعّل «رأي ثانٍ من وكيل آخر» في الإعدادات › Jev › التوجيه. يحتاج ذلك إلى وكيلين على الأقل.",
+        "fr": "Activez Deuxième avis d’un autre agent dans Configuration › Jev › Routage. Il faut au moins deux agents.",
+        "ru": "Включите «Второе мнение другого агента» в Настройки › Jev › Маршрутизация. Нужны хотя бы два агента.",
+        "ja": "設定 › Jev › ルーティングで「別のエージェントによるセカンドオピニオン」をオンにします。エージェントが 2 つ以上必要です。",
+        "de": "Schalten Sie Zweite Meinung von einem anderen Agenten unter Einstellungen › Jev › Routing ein. Dafür braucht es mindestens zwei Agenten."
+      },
+      "image": "settings"
+    },
+    {
+      "text": {
+        "en": "The answer arrives first, and the review follows in its own message. It is the reading of another model, not a test.",
+        "pt-BR": "A resposta chega primeiro, e a revisão vem logo depois, numa mensagem própria. É a leitura de outro modelo, não um teste.",
+        "es": "La respuesta llega primero, y la revisión llega después en su propio mensaje. Es la lectura de otro modelo, no una prueba.",
+        "zh-CN": "回答先到，审查随后作为单独的消息送达。这是另一个模型的解读，而不是测试。",
+        "hi": "पहले उत्तर आता है, और समीक्षा उसके बाद अपने अलग संदेश में आती है। यह किसी दूसरे मॉडल का आकलन है, टेस्ट नहीं।",
+        "ar": "تصل الإجابة أولًا، ثم تتبعها المراجعة في رسالة مستقلة. إنها قراءة نموذج آخر، وليست اختبارًا.",
+        "fr": "La réponse arrive d’abord, et la relecture suit dans son propre message. C’est la lecture d’un autre modèle, pas un test.",
+        "ru": "Сначала приходит ответ, а ревью — следом, отдельным сообщением. Это прочтение другой модели, а не тест.",
+        "ja": "まず回答が届き、レビューはその後に別のメッセージで届きます。これは別のモデルの読み取りであり、テストではありません。",
+        "de": "Zuerst kommt die Antwort, die Prüfung folgt in einer eigenen Nachricht. Es ist die Lesart eines anderen Modells, kein Test."
+      },
+      "image": "chat"
+    }
+  ]
+}

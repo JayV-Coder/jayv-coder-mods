@@ -1,0 +1,47 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "In a complex build request, your strongest reasoning model writes a plan first, and the agent picked to build receives it with the request.",
+    "pt-BR": "Num pedido complexo do modo desenvolvimento, o seu modelo de raciocínio mais forte escreve um plano primeiro, e o agente escolhido para construir o recebe junto do pedido.",
+    "es": "En una solicitud compleja del modo de desarrollo, tu modelo de razonamiento más fuerte escribe primero un plan, y el agente elegido para construir lo recibe junto con la solicitud.",
+    "zh-CN": "在开发模式下的复杂请求中，你最强的推理模型先写出计划，被选中负责构建的代理会连同请求一起收到它。",
+    "hi": "डेवलपमेंट मोड के किसी जटिल अनुरोध में आपका सबसे मज़बूत तर्क मॉडल पहले योजना लिखता है, और बनाने के लिए चुना गया एजेंट उसे अनुरोध के साथ पाता है।",
+    "ar": "في الطلب المعقد في وضع التطوير، يكتب أقوى نموذج استدلال لديك خطة أولًا، ويتلقاها الوكيل المختار للبناء مع الطلب.",
+    "fr": "Dans une demande complexe en mode développement, votre modèle de raisonnement le plus fort écrit d’abord un plan, et l’agent choisi pour construire le reçoit avec la demande.",
+    "ru": "В сложном запросе в режиме разработки ваша самая сильная модель рассуждения сначала пишет план, и агент, выбранный для сборки, получает его вместе с запросом.",
+    "ja": "開発モードの複雑な依頼では、いちばん強い推論モデルがまず計画を書き、構築に選ばれたエージェントが依頼と一緒にそれを受け取ります。",
+    "de": "Bei einer komplexen Anfrage im Entwicklungsmodus schreibt Ihr stärkstes Denkmodell zuerst einen Plan, und der Agent, der baut, erhält ihn zusammen mit der Anfrage."
+  },
+  "use": [
+    {
+      "text": {
+        "en": "Turn on Plan with one model, build with another in Settings › Jev › Routing.",
+        "pt-BR": "Ligue Planejar com um modelo, construir com outro em Configuração › Jev › Roteamento.",
+        "es": "Activa Planificar con un modelo, construir con otro en Configuración › Jev › Enrutamiento.",
+        "zh-CN": "在“设置 › Jev › 路由”中开启“用一个模型规划,用另一个模型构建”。",
+        "hi": "सेटिंग्स › Jev › रूटिंग में एक मॉडल से योजना, दूसरे से निर्माण चालू करें।",
+        "ar": "فعّل «التخطيط بنموذج والبناء بآخر» في الإعدادات › Jev › التوجيه.",
+        "fr": "Activez Planifier avec un modèle, construire avec un autre dans Configuration › Jev › Routage.",
+        "ru": "Включите «Планировать одной моделью, строить другой» в Настройки › Jev › Маршрутизация.",
+        "ja": "設定 › Jev › ルーティングで「あるモデルで計画し、別のモデルで構築」をオンにします。",
+        "de": "Schalten Sie Mit einem Modell planen, mit einem anderen bauen unter Einstellungen › Jev › Routing ein."
+      },
+      "image": "settings"
+    },
+    {
+      "text": {
+        "en": "The plan appears in the Progress panel while it is written. If planning fails, the build goes ahead as before.",
+        "pt-BR": "O plano aparece no painel Andamento enquanto é escrito. Se o planejamento falhar, a construção segue como antes.",
+        "es": "El plan aparece en el panel Progreso mientras se escribe. Si la planificación falla, la construcción sigue como antes.",
+        "zh-CN": "计划在编写过程中会显示在进度面板中。如果规划失败，构建照常进行。",
+        "hi": "योजना लिखे जाते समय प्रगति पैनल में दिखती है। अगर योजना विफल हो जाए, तो निर्माण पहले की तरह चलता रहता है।",
+        "ar": "تظهر الخطة في لوحة التقدّم أثناء كتابتها. وإذا فشل التخطيط، يستمر البناء كما كان.",
+        "fr": "Le plan apparaît dans le panneau Progression pendant qu’il s’écrit. Si la planification échoue, la construction continue comme avant.",
+        "ru": "План появляется на панели «Ход работы», пока пишется. Если планирование не удалось, сборка идёт как раньше.",
+        "ja": "計画は書かれている間、進行状況パネルに表示されます。計画に失敗しても、構築はこれまでどおり進みます。",
+        "de": "Der Plan erscheint im Fortschritt-Panel, während er geschrieben wird. Scheitert die Planung, wird wie bisher gebaut."
+      },
+      "image": "chat"
+    }
+  ]
+}

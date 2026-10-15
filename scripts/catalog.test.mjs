@@ -5,7 +5,7 @@ import { mkdirSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { agentIdOf, buildCatalog, legacyEntry, LOCALES, manifestProblems, outputs, POINTS } from "./catalog.mjs";
+import { agentIdOf, buildCatalog, legacyEntry, LOCALES, manifestProblems, outputs, pageProblems, POINTS } from "./catalog.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const engines = { llm: ["claude"], feature: ["stats", "mcp"], withdrawn: [] };
@@ -15,13 +15,22 @@ const stats = (patch = {}) => base("stats", { features: ["stats"] }, { plan: "st
 const api = { kind: "api", protocol: "openai", baseUrl: "http://localhost:8080/v1", keyRequired: false, models: [] };
 const localAi = (patch = {}) => base("local-ai", { agents: [api] }, { category: "agents", plan: "customMods", ...patch });
 
-/** Uma pasta de mods de mentira, com `engines.json` e um `mod.json` por mod. */
-function folder(mods, withEngines = engines) {
+/** A página mínima de um mod: o que ele faz e um passo de uso. */
+const page = (patch = {}) => ({ about: texts("Does things."), use: [{ text: texts("Use it.") }], ...patch });
+
+/** Uma pasta de mods de mentira, com `engines.json` e, por mod, o `mod.json`,
+ * a `page.json` e os arquivos extras (`files`: caminho → conteúdo). */
+function folder(mods, withEngines = engines, { pages = {}, files = {} } = {}) {
   const dir = mkdtempSync(join(tmpdir(), "mods-"));
   writeFileSync(join(dir, "engines.json"), JSON.stringify(withEngines));
   for (const mod of mods) {
     mkdirSync(join(dir, "mods", mod.id), { recursive: true });
     writeFileSync(join(dir, "mods", mod.id, "mod.json"), JSON.stringify(mod));
+    if (pages[mod.id] !== null) writeFileSync(join(dir, "mods", mod.id, "page.json"), JSON.stringify(pages[mod.id] ?? page()));
+  }
+  for (const [path, content] of Object.entries(files)) {
+    mkdirSync(dirname(join(dir, path)), { recursive: true });
+    writeFileSync(join(dir, path), content);
   }
   return dir;
 }
@@ -44,8 +53,9 @@ test("the mods of today are preinstalled, the features required, and readable by
   const required = catalog.mods.filter((mod) => mod.required === true).map((mod) => mod.id).sort();
   const features = catalog.mods.filter((mod) => "features" in mod.contributes).map((mod) => mod.id).sort();
   assert.deepEqual(required, features, "todo recurso é essencial");
-  assert.ok(catalog.mods.filter((mod) => !mod.required).every((mod) => "llmEngines" in mod.contributes || "agents" in mod.contributes), "motores e agentes se desligam");
-  assert.equal(legacy.mods.length, catalog.mods.length, "todos cabem no formato antigo");
+  assert.ok(catalog.mods.filter((mod) => !mod.required).every((mod) => "llmEngines" in mod.contributes || "agents" in mod.contributes || "skills" in mod.contributes), "motores, agentes e skills se desligam");
+  const old = catalog.mods.filter((mod) => !("skills" in mod.contributes));
+  assert.equal(legacy.mods.length, old.length, "todos os de antes cabem no formato antigo; o de skill fica de fora");
   assert.ok(legacy.mods.filter((mod) => mod.kind === "feature").every((mod) => mod.defaultOn === true));
 });
 
@@ -146,4 +156,74 @@ test("two mods never become the same agent", () => {
   const twin = base("aa", { agents: [api, api] });
   const clash = base("aa-2", { agents: [api] });
   assert.ok(buildCatalog(folder([...essentials(), twin, clash])).problems.some((problem) => problem.includes("mod-aa-2")));
+});
+
+const skill = (patch = {}) => ({ name: "reverse-engineering", description: "Inspect a compiled program without its source.", instructions: "Open the binary first.", ...patch });
+const rea = (contributes = { skills: [skill()] }, patch = {}) => base("rea", contributes, { category: "agents", minApp: "0.103.0", ...patch });
+
+test("a skill follows the rules of the app, and its MCP servers too", () => {
+  assert.deepEqual(manifestProblems(rea(), "rea", engines), []);
+  const server = { name: "rea", command: "npx", args: ["-y", "rea-agents@1.0.0", "--mcp"] };
+  assert.deepEqual(manifestProblems(rea({ skills: [skill({ mcpServers: [server, { name: "docs", transport: "http", url: "https://mcp.example.com/mcp" }] })] }), "rea", engines), []);
+  assert.ok(manifestProblems(rea({ skills: [skill()] }, { minApp: "0.102.0" }), "rea", engines).some((problem) => problem.includes("needs minApp 0.103.0")));
+  const broken = [
+    [skill({ name: "bad name" }), "name"],
+    [skill({ description: "x".repeat(401) }), "description"],
+    [(({ instructions: _gone, ...rest }) => rest)(skill()), "either instructions or file"],
+    [skill({ file: "rea.md" }), "either instructions or file"],
+    [skill({ mcpServers: [{ ...server, name: "jayv" }] }), "not jayv"],
+    [skill({ mcpServers: [{ ...server, command: "npx -y" }] }), "without arguments"],
+    [skill({ mcpServers: [server, server] }), "repeats a server"],
+    [skill({ mcpServers: [{ name: "x", transport: "http", url: "ftp://x" }] }), "http(s)"],
+  ];
+  for (const [value, word] of broken) assert.ok(manifestProblems(rea({ skills: [value] }), "rea", engines).some((problem) => problem.includes(word)), word);
+  assert.ok(manifestProblems(rea({ skills: [skill(), skill()] }), "rea", engines).some((problem) => problem.includes("repeats a skill")));
+});
+
+test("the instructions of a skill can live in a .md file of the mod, and two mods never bring the same skill", () => {
+  const fromFile = rea({ skills: [{ name: "reverse-engineering", description: "Inspect programs.", file: "rea.md" }] });
+  const { catalog, legacy, pages, problems } = buildCatalog(folder([...essentials(), fromFile], engines, { files: { "mods/rea/rea.md": "# Steps\n\nOpen the binary first.\n" } }));
+  assert.deepEqual(problems, []);
+  assert.equal(catalog.mods.find((mod) => mod.id === "rea").contributes.skills[0].instructions, "# Steps\n\nOpen the binary first.");
+  assert.ok(!("file" in catalog.mods.find((mod) => mod.id === "rea").contributes.skills[0]));
+  assert.ok(!legacy.mods.some((mod) => mod.id === "rea"), "o app antigo não tem skills de mod");
+  assert.ok(pages.pages.rea);
+  assert.ok(buildCatalog(folder([...essentials(), fromFile])).problems.some((problem) => problem.includes("rea.md is not in the folder")));
+  const twin = base("other", { skills: [skill()] }, { minApp: "0.103.0" });
+  assert.ok(buildCatalog(folder([...essentials(), rea(), twin])).problems.some((problem) => /skill reverse-engineering is also a skill of mods\/(rea|other)/.test(problem)));
+});
+
+test("every mod has a page, in the ten locales, with prints that exist", () => {
+  const images = (entries) => new Map(Object.entries(entries));
+  assert.deepEqual(pageProblems(page(), "stats", images({})), []);
+  assert.ok(pageProblems(page({ about: { en: "Only English." } }), "stats", images({})).some((problem) => problem.includes("about.pt-BR")));
+  assert.ok(pageProblems(page({ use: [] }), "stats", images({})).some((problem) => problem.includes("use must be a list of 1 to 6")));
+  assert.ok(pageProblems(page({ use: [{ text: texts("x"), image: "chat" }] }), "stats", images({})).some((problem) => problem.includes("needs media/chat.en.webp")));
+  assert.ok(pageProblems(page({ use: [{ text: texts("x"), image: "chat" }] }), "stats", images({ chat: ["pt-BR"] })).some((problem) => problem.includes("needs media/chat.en.webp")));
+  assert.deepEqual(pageProblems(page({ use: [{ text: texts("x"), image: "chat" }] }), "stats", images({ chat: ["en", "ja"] })), []);
+  assert.ok(pageProblems(page(), "stats", images({ old: ["en"] })).some((problem) => problem.includes("old is not used")));
+  assert.ok(pageProblems(page({ use: [{ text: texts("x"), image: "enable" }] }), "stats", images({ enable: ["en"] })).some((problem) => problem.includes("(not enable)")));
+  assert.ok(pageProblems(page({ extra: 1 }), "stats", images({})).some((problem) => problem.includes("extra is not a field")));
+  assert.ok(buildCatalog(folder(essentials(), engines, { pages: { stats: null } })).problems.some((problem) => problem.includes("mods/stats: missing page.json")));
+});
+
+test("pages.json lists the prints of each page with their locales and a mark of the content", () => {
+  const withShots = page({ requirements: texts("A key."), setup: [{ text: texts("Paste the key."), image: "settings" }], use: [{ text: texts("Ask."), image: "chat" }] });
+  const files = {
+    "mods/stats/media/enable.en.webp": "e", "mods/stats/media/enable.pt-BR.webp": "e2",
+    "mods/stats/media/settings.en.webp": "s", "mods/stats/media/chat.en.webp": "c", "mods/stats/media/chat.ja.webp": "c2",
+  };
+  const { pages, problems } = buildCatalog(folder(essentials(), engines, { pages: { stats: withShots }, files }));
+  assert.deepEqual(problems, []);
+  const built = pages.pages.stats;
+  assert.equal(pages.schema, 1);
+  assert.equal(built.version, "1.0.0");
+  assert.deepEqual(built.enable.locales, ["en", "pt-BR"]);
+  assert.deepEqual(built.use[0].image.locales, ["en", "ja"], "na ordem dos idiomas do app");
+  assert.match(built.use[0].image.v, /^[0-9a-f]{10}$/);
+  assert.equal(built.setup[0].image.name, "settings");
+  assert.deepEqual(built.requirements, texts("A key."));
+  assert.equal(pages.pages.claude.enable, null, "sem print, sem imagem");
+  const bad = buildCatalog(folder(essentials(), engines, { files: { "mods/stats/media/enable.xx.webp": "e", "mods/stats/media/Shot.en.png": "p" } }));
+  assert.ok(bad.problems.some((problem) => problem.includes("enable.xx.webp")) && bad.problems.some((problem) => problem.includes("Shot.en.png")));
 });

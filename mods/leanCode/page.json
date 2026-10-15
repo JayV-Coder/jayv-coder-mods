@@ -1,0 +1,32 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "In build mode the agent writes the least code that solves the task and reuses what the language, the platform or an installed library already does. Validation, error handling, security and accessibility are never cut.",
+    "pt-BR": "No modo desenvolvimento, o agente escreve o mínimo de código que resolve a tarefa e aproveita o que a linguagem, a plataforma ou uma biblioteca instalada já fazem. Validação, tratamento de erros, segurança e acessibilidade nunca são cortados.",
+    "es": "En el modo de desarrollo, el agente escribe el mínimo código que resuelve la tarea y reutiliza lo que ya hacen el lenguaje, la plataforma o una biblioteca instalada. La validación, el manejo de errores, la seguridad y la accesibilidad nunca se recortan.",
+    "zh-CN": "在开发模式下，代理用最少的代码解决任务，并复用语言、平台或已安装的库已经能做的事。输入校验、错误处理、安全性和无障碍从不删减。",
+    "hi": "डेवलपमेंट मोड में एजेंट काम हल करने के लिए कम से कम कोड लिखता है और वही दोबारा इस्तेमाल करता है जो भाषा, प्लेटफ़ॉर्म या इंस्टॉल की हुई लाइब्रेरी पहले से करती है। वैलिडेशन, एरर हैंडलिंग, सुरक्षा और सुलभता में कभी कटौती नहीं होती।",
+    "ar": "في وضع التطوير، يكتب الوكيل أقل قدر من الكود يحل المهمة، ويعيد استخدام ما تفعله اللغة أو المنصة أو مكتبة مثبّتة بالفعل. ولا يُختصر أبدًا التحقق من المدخلات ولا معالجة الأخطاء ولا الأمان ولا إمكانية الوصول.",
+    "fr": "En mode développement, l’agent écrit le moins de code possible pour résoudre la tâche et réutilise ce que le langage, la plateforme ou une bibliothèque installée font déjà. La validation, la gestion des erreurs, la sécurité et l’accessibilité ne sont jamais sacrifiées.",
+    "ru": "В режиме разработки агент пишет минимум кода, решающего задачу, и использует то, что уже умеют язык, платформа или установленная библиотека. Проверка входных данных, обработка ошибок, безопасность и доступность никогда не урезаются.",
+    "ja": "開発モードでは、エージェントは課題を解決する最小限のコードを書き、言語、プラットフォーム、インストール済みのライブラリがすでにできることを活用します。入力検証、エラー処理、セキュリティ、アクセシビリティは決して削りません。",
+    "de": "Im Entwicklungsmodus schreibt der Agent so wenig Code wie möglich, um die Aufgabe zu lösen, und nutzt, was Sprache, Plattform oder eine installierte Bibliothek schon können. Validierung, Fehlerbehandlung, Sicherheit und Barrierefreiheit werden nie gekürzt."
+  },
+  "use": [
+    {
+      "text": {
+        "en": "It is on by default. To turn it off, open your Profile page and change it under Your level.",
+        "pt-BR": "Vem ligado. Para desligar, abra a sua página de Perfil e mude em Seu nível.",
+        "es": "Viene activado. Para desactivarlo, abre tu página de Perfil y cámbialo en Tu nivel.",
+        "zh-CN": "默认开启。要关闭它，请打开你的“个人资料”页面，在“你的级别”中更改。",
+        "hi": "यह पहले से चालू है। बंद करने के लिए अपना प्रोफ़ाइल पेज खोलें और आपका स्तर में बदलें।",
+        "ar": "تأتي مفعّلة. لتعطيلها، افتح صفحة ملفك الشخصي وغيّرها في «مستواك».",
+        "fr": "Activé par défaut. Pour le désactiver, ouvrez votre page Profil et changez-le sous Votre niveau.",
+        "ru": "Включено по умолчанию. Чтобы выключить, откройте страницу «Профиль» и измените это в разделе «Ваш уровень».",
+        "ja": "最初からオンです。オフにするには、プロフィールページを開き、「あなたのレベル」で変更します。",
+        "de": "Standardmäßig eingeschaltet. Zum Ausschalten öffnen Sie Ihre Profilseite und ändern es unter Ihr Level."
+      },
+      "image": "profile"
+    }
+  ]
+}

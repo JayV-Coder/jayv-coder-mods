@@ -1,0 +1,75 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "Ollama runs open models on your own computer. This mod adds an Ollama agent that talks to it through its OpenAI-compatible address: no key, and the requests never leave the machine.",
+    "pt-BR": "O Ollama roda modelos abertos no seu próprio computador. Este mod adiciona um agente Ollama que fala com ele pelo endereço compatível com a OpenAI: sem chave, e os pedidos nunca saem da máquina.",
+    "es": "Ollama ejecuta modelos abiertos en tu propio equipo. Este mod añade un agente Ollama que habla con él por su dirección compatible con OpenAI: sin clave, y las solicitudes nunca salen de la máquina.",
+    "zh-CN": "Ollama 在你自己的电脑上运行开放模型。这个模组添加一个 Ollama 代理，通过其兼容 OpenAI 的地址与它通信：无需密钥，请求永远不会离开这台机器。",
+    "hi": "Ollama आपके अपने कंप्यूटर पर ओपन मॉडल चलाता है। यह मॉड एक Ollama एजेंट जोड़ता है जो उसके OpenAI-संगत पते से उससे बात करता है: कोई कुंजी नहीं, और अनुरोध कभी मशीन से बाहर नहीं जाते।",
+    "ar": "يشغّل Ollama النماذج المفتوحة على جهازك. تضيف هذه الإضافة وكيل Ollama يتحدث إليه عبر عنوانه المتوافق مع OpenAI: بلا مفتاح، ولا تغادر الطلبات الجهاز أبدًا.",
+    "fr": "Ollama fait tourner des modèles ouverts sur votre propre ordinateur. Ce mod ajoute un agent Ollama qui lui parle par son adresse compatible OpenAI : sans clé, et les demandes ne quittent jamais la machine.",
+    "ru": "Ollama запускает открытые модели на вашем компьютере. Этот мод добавляет агента Ollama, который общается с ним по адресу, совместимому с OpenAI: без ключа, и запросы никогда не покидают компьютер.",
+    "ja": "Ollama はオープンなモデルをあなたのコンピューター上で動かします。この Mod は、OpenAI 互換のアドレスで Ollama と話す Ollama エージェントを追加します。キーは不要で、依頼がマシンの外に出ることはありません。",
+    "de": "Ollama führt offene Modelle auf Ihrem eigenen Computer aus. Dieser Mod fügt einen Ollama-Agenten hinzu, der über dessen OpenAI-kompatible Adresse mit ihm spricht: ohne Schlüssel, und die Anfragen verlassen den Rechner nie."
+  },
+  "requirements": {
+    "en": "Ollama installed and running on this computer, with at least one model downloaded (for example, ollama pull llama3.2).",
+    "pt-BR": "O Ollama instalado e rodando neste computador, com pelo menos um modelo baixado (por exemplo, ollama pull llama3.2).",
+    "es": "Ollama instalado y en ejecución en este equipo, con al menos un modelo descargado (por ejemplo, ollama pull llama3.2).",
+    "zh-CN": "这台电脑上已安装并运行 Ollama，且至少下载了一个模型（例如 ollama pull llama3.2）。",
+    "hi": "इस कंप्यूटर पर Ollama इंस्टॉल हो और चल रहा हो, कम से कम एक मॉडल डाउनलोड किया हुआ (जैसे ollama pull llama3.2)।",
+    "ar": "أن يكون Ollama مثبّتًا ويعمل على هذا الجهاز، مع نموذج واحد على الأقل منزَّل (مثلًا ollama pull llama3.2).",
+    "fr": "Ollama installé et lancé sur cet ordinateur, avec au moins un modèle téléchargé (par exemple, ollama pull llama3.2).",
+    "ru": "Ollama, установленный и запущенный на этом компьютере, хотя бы с одной скачанной моделью (например, ollama pull llama3.2).",
+    "ja": "このコンピューターに Ollama がインストールされて動いており、モデルが 1 つ以上ダウンロードされていること（例: ollama pull llama3.2）。",
+    "de": "Ollama auf diesem Computer installiert und gestartet, mit mindestens einem heruntergeladenen Modell (zum Beispiel ollama pull llama3.2)."
+  },
+  "setup": [
+    {
+      "text": {
+        "en": "Install Ollama and download a model with ollama pull.",
+        "pt-BR": "Instale o Ollama e baixe um modelo com ollama pull.",
+        "es": "Instala Ollama y descarga un modelo con ollama pull.",
+        "zh-CN": "安装 Ollama，并用 ollama pull 下载一个模型。",
+        "hi": "Ollama इंस्टॉल करें और ollama pull से कोई मॉडल डाउनलोड करें।",
+        "ar": "ثبّت Ollama ونزّل نموذجًا باستخدام ollama pull.",
+        "fr": "Installez Ollama et téléchargez un modèle avec ollama pull.",
+        "ru": "Установите Ollama и скачайте модель командой ollama pull.",
+        "ja": "Ollama をインストールし、ollama pull でモデルをダウンロードします。",
+        "de": "Installieren Sie Ollama und laden Sie mit ollama pull ein Modell herunter."
+      }
+    },
+    {
+      "text": {
+        "en": "In Settings › Ollama, load the models of the local server and turn on the ones Jev may use.",
+        "pt-BR": "Em Configuração › Ollama, carregue os modelos do servidor local e ligue os que o Jev pode usar.",
+        "es": "En Configuración › Ollama, carga los modelos del servidor local y activa los que Jev puede usar.",
+        "zh-CN": "在“设置 › Ollama”中加载本地服务器的模型，并开启 Jev 可以使用的那些。",
+        "hi": "सेटिंग्स › Ollama में लोकल सर्वर के मॉडल लोड करें और वे चालू करें जिन्हें Jev इस्तेमाल कर सकता है।",
+        "ar": "في الإعدادات › Ollama، حمّل نماذج الخادم المحلي وفعّل ما يُسمح لـ Jev باستخدامه.",
+        "fr": "Dans Configuration › Ollama, chargez les modèles du serveur local et activez ceux que Jev peut utiliser.",
+        "ru": "В Настройки › Ollama загрузите модели локального сервера и включите те, которые может использовать Jev.",
+        "ja": "設定 › Ollama でローカルサーバーのモデルを読み込み、Jev が使ってよいものをオンにします。",
+        "de": "Laden Sie unter Einstellungen › Ollama die Modelle des lokalen Servers und schalten Sie die ein, die Jev nutzen darf."
+      },
+      "image": "settings"
+    }
+  ],
+  "use": [
+    {
+      "text": {
+        "en": "Ask in a chat. When Jev picks a local model, the answer says which one, and nothing goes to the internet.",
+        "pt-BR": "Pergunte num chat. Quando o Jev escolhe um modelo local, a resposta diz qual, e nada vai para a internet.",
+        "es": "Pregunta en un chat. Cuando Jev elige un modelo local, la respuesta dice cuál, y nada sale a internet.",
+        "zh-CN": "在对话中提问。当 Jev 选择本地模型时，回答会注明是哪一个，而且不会有任何内容发到互联网。",
+        "hi": "चैट में पूछें। जब Jev कोई लोकल मॉडल चुनता है, तो उत्तर बताता है कि कौन-सा, और इंटरनेट पर कुछ नहीं जाता।",
+        "ar": "اسأل في محادثة. عندما يختار Jev نموذجًا محليًا، تذكر الإجابة أيّه، ولا يخرج شيء إلى الإنترنت.",
+        "fr": "Posez votre question dans un chat. Quand Jev choisit un modèle local, la réponse indique lequel, et rien ne part sur internet.",
+        "ru": "Спросите в чате. Когда Jev выбирает локальную модель, в ответе указано, какую, и ничего не уходит в интернет.",
+        "ja": "チャットで質問してください。Jev がローカルモデルを選ぶと回答にどのモデルかが示され、インターネットには何も送られません。",
+        "de": "Fragen Sie in einem Chat. Wenn Jev ein lokales Modell wählt, nennt die Antwort es, und nichts geht ins Internet."
+      },
+      "image": "chat"
+    }
+  ]
+}

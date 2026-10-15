@@ -1,0 +1,46 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "JayV maps where each function, type and class of the project is defined, on your computer and without spending tokens, and Claude Code asks that map instead of scanning the folder.",
+    "pt-BR": "O JayV mapeia onde cada função, tipo e classe do projeto é definida, no seu computador e sem gastar tokens, e o Claude Code consulta esse mapa em vez de vasculhar a pasta.",
+    "es": "JayV mapea dónde se define cada función, tipo y clase del proyecto, en tu equipo y sin gastar tokens, y Claude Code consulta ese mapa en lugar de recorrer la carpeta.",
+    "zh-CN": "JayV 在你的电脑上、不花费任何令牌地记录项目中每个函数、类型和类的定义位置，Claude Code 会查询这张图，而不是翻遍整个文件夹。",
+    "hi": "JayV आपके कंप्यूटर पर, बिना टोकन ख़र्च किए, यह नक्शा बनाता है कि प्रोजेक्ट का हर फ़ंक्शन, टाइप और क्लास कहाँ परिभाषित है, और Claude Code फ़ोल्डर खँगालने के बजाय इसी नक्शे से पूछता है।",
+    "ar": "يرسم JayV خريطة لمكان تعريف كل دالة ونوع وصنف في المشروع، على جهازك ودون إنفاق رموز، ويسأل Claude Code هذه الخريطة بدلًا من تفتيش المجلد.",
+    "fr": "JayV repère où chaque fonction, type et classe du projet est défini, sur votre ordinateur et sans dépenser de tokens, et Claude Code interroge cette carte au lieu de parcourir le dossier.",
+    "ru": "JayV составляет карту того, где определены функции, типы и классы проекта, — на вашем компьютере и без расхода токенов, — и Claude Code обращается к этой карте вместо обхода папки.",
+    "ja": "JayV はプロジェクトの各関数、型、クラスが定義されている場所を、あなたのコンピューター上でトークンを使わずに索引化し、Claude Code はフォルダーを探し回る代わりにその索引に問い合わせます。",
+    "de": "JayV erfasst, wo jede Funktion, jeder Typ und jede Klasse des Projekts definiert ist – auf Ihrem Computer und ohne Tokens zu verbrauchen –, und Claude Code fragt diese Karte, statt den Ordner zu durchsuchen."
+  },
+  "use": [
+    {
+      "text": {
+        "en": "Turn on JayV symbol tools in the Claude Code tab of Settings.",
+        "pt-BR": "Ligue Ferramentas de símbolos do JayV na aba Claude Code da Configuração.",
+        "es": "Activa Herramientas de símbolos de JayV en la pestaña Claude Code de la Configuración.",
+        "zh-CN": "在“设置”的 Claude Code 标签页中开启“JayV 符号工具”。",
+        "hi": "सेटिंग्स के Claude Code टैब में JayV सिंबल टूल चालू करें।",
+        "ar": "فعّل «أدوات الرموز في JayV» في تبويب Claude Code في الإعدادات.",
+        "fr": "Activez Outils de symboles de JayV dans l’onglet Claude Code de la Configuration.",
+        "ru": "Включите «Инструменты символов JayV» на вкладке Claude Code в Настройках.",
+        "ja": "設定の Claude Code タブで「JayV シンボルツール」をオンにします。",
+        "de": "Schalten Sie JayV-Symbolwerkzeuge im Tab Claude Code der Einstellungen ein."
+      },
+      "image": "settings"
+    },
+    {
+      "text": {
+        "en": "Any other agent can use the same index through the jayv mcp command.",
+        "pt-BR": "Qualquer outro agente pode usar o mesmo índice pelo comando jayv mcp.",
+        "es": "Cualquier otro agente puede usar el mismo índice con el comando jayv mcp.",
+        "zh-CN": "其他任何代理都可以通过 jayv mcp 命令使用同一个索引。",
+        "hi": "कोई भी दूसरा एजेंट jayv mcp कमांड से यही इंडेक्स इस्तेमाल कर सकता है।",
+        "ar": "يمكن لأي وكيل آخر استخدام الفهرس نفسه عبر الأمر jayv mcp.",
+        "fr": "N’importe quel autre agent peut utiliser le même index avec la commande jayv mcp.",
+        "ru": "Любой другой агент может пользоваться тем же индексом через команду jayv mcp.",
+        "ja": "ほかのエージェントも jayv mcp コマンドで同じ索引を使えます。",
+        "de": "Jeder andere Agent kann denselben Index über den Befehl jayv mcp nutzen."
+      }
+    }
+  ]
+}

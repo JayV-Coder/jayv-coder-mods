@@ -1,0 +1,75 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "Kilo Code is an open-source coding agent for the terminal that works with many model providers. With this mod, Jev can send requests to it like to any other agent.",
+    "pt-BR": "O Kilo Code é um agente de programação de código aberto para o terminal que funciona com muitos provedores de modelos. Com este mod, o Jev pode mandar pedidos para ele como para qualquer outro agente.",
+    "es": "Kilo Code es un agente de programación de código abierto para la terminal que funciona con muchos proveedores de modelos. Con este mod, Jev puede enviarle solicitudes como a cualquier otro agente.",
+    "zh-CN": "Kilo Code 是一个开源的终端编程代理，可配合多家模型提供商使用。有了这个模组，Jev 可以像对待其他代理一样把请求发给它。",
+    "hi": "Kilo Code टर्मिनल के लिए एक ओपन-सोर्स कोडिंग एजेंट है जो कई मॉडल प्रदाताओं के साथ काम करता है। इस मॉड से Jev उसे किसी भी दूसरे एजेंट की तरह अनुरोध भेज सकता है।",
+    "ar": "Kilo Code وكيل برمجة مفتوح المصدر للطرفية يعمل مع كثير من مزوّدي النماذج. بهذه الإضافة يستطيع Jev إرسال الطلبات إليه كأي وكيل آخر.",
+    "fr": "Kilo Code est un agent de programmation open source pour le terminal qui fonctionne avec de nombreux fournisseurs de modèles. Avec ce mod, Jev peut lui envoyer des demandes comme à n’importe quel autre agent.",
+    "ru": "Kilo Code — агент для программирования в терминале с открытым исходным кодом, который работает со многими поставщиками моделей. С этим модом Jev может отправлять ему запросы, как любому другому агенту.",
+    "ja": "Kilo Code は、多くのモデルプロバイダーで動くオープンソースのターミナル用コーディングエージェントです。この Mod があると、Jev はほかのエージェントと同じように依頼を Kilo Code に送れます。",
+    "de": "Kilo Code ist ein quelloffener Coding-Agent für das Terminal, der mit vielen Modellanbietern arbeitet. Mit diesem Mod kann Jev Anfragen an ihn schicken wie an jeden anderen Agenten."
+  },
+  "requirements": {
+    "en": "The Kilo Code CLI installed on this computer, with a model provider set up in it.",
+    "pt-BR": "O Kilo Code CLI instalado neste computador, com um provedor de modelos configurado nele.",
+    "es": "Kilo Code CLI instalado en este equipo, con un proveedor de modelos configurado en él.",
+    "zh-CN": "这台电脑上已安装 Kilo Code CLI，并在其中配置好一个模型提供商。",
+    "hi": "इस कंप्यूटर पर Kilo Code CLI इंस्टॉल हो, और उसमें कोई मॉडल प्रदाता सेट हो।",
+    "ar": "أن تكون Kilo Code CLI مثبّتة على هذا الجهاز، مع مزوّد نماذج مُعدّ فيها.",
+    "fr": "Kilo Code CLI installé sur cet ordinateur, avec un fournisseur de modèles configuré.",
+    "ru": "Kilo Code CLI, установленный на этом компьютере, с настроенным в нём поставщиком моделей.",
+    "ja": "このコンピューターに Kilo Code CLI がインストールされ、モデルプロバイダーが設定されていること。",
+    "de": "Die Kilo Code CLI auf diesem Computer installiert, mit einem darin eingerichteten Modellanbieter."
+  },
+  "setup": [
+    {
+      "text": {
+        "en": "Install the Kilo Code CLI and set up a model provider in it.",
+        "pt-BR": "Instale o Kilo Code CLI e configure nele um provedor de modelos.",
+        "es": "Instala Kilo Code CLI y configura en él un proveedor de modelos.",
+        "zh-CN": "安装 Kilo Code CLI，并在其中配置一个模型提供商。",
+        "hi": "Kilo Code CLI इंस्टॉल करें और उसमें एक मॉडल प्रदाता सेट करें।",
+        "ar": "ثبّت Kilo Code CLI وأعِدّ فيها مزوّد نماذج.",
+        "fr": "Installez Kilo Code CLI et configurez-y un fournisseur de modèles.",
+        "ru": "Установите Kilo Code CLI и настройте в нём поставщика моделей.",
+        "ja": "Kilo Code CLI をインストールし、モデルプロバイダーを設定します。",
+        "de": "Installieren Sie die Kilo Code CLI und richten Sie darin einen Modellanbieter ein."
+      }
+    },
+    {
+      "text": {
+        "en": "In Settings › Kilo Code, check the program and turn on the models Jev may use.",
+        "pt-BR": "Em Configuração › Kilo Code, confira o programa e ligue os modelos que o Jev pode usar.",
+        "es": "En Configuración › Kilo Code, comprueba el programa y activa los modelos que Jev puede usar.",
+        "zh-CN": "在“设置 › Kilo Code”中确认程序，并开启 Jev 可以使用的模型。",
+        "hi": "सेटिंग्स › Kilo Code में प्रोग्राम जाँचें और वे मॉडल चालू करें जिन्हें Jev इस्तेमाल कर सकता है।",
+        "ar": "في الإعدادات › Kilo Code، تحقق من البرنامج وفعّل النماذج التي يُسمح لـ Jev باستخدامها.",
+        "fr": "Dans Configuration › Kilo Code, vérifiez le programme et activez les modèles que Jev peut utiliser.",
+        "ru": "В Настройки › Kilo Code проверьте программу и включите модели, которые может использовать Jev.",
+        "ja": "設定 › Kilo Code でプログラムを確認し、Jev が使ってよいモデルをオンにします。",
+        "de": "Prüfen Sie unter Einstellungen › Kilo Code das Programm und schalten Sie die Modelle ein, die Jev nutzen darf."
+      },
+      "image": "settings"
+    }
+  ],
+  "use": [
+    {
+      "text": {
+        "en": "Write the request in a chat. The Progress panel shows when Jev picks Kilo Code.",
+        "pt-BR": "Escreva o pedido num chat. O painel Andamento mostra quando o Jev escolhe o Kilo Code.",
+        "es": "Escribe la solicitud en un chat. El panel Progreso muestra cuándo Jev elige Kilo Code.",
+        "zh-CN": "在对话中写下请求。进度面板会显示 Jev 何时选择 Kilo Code。",
+        "hi": "चैट में अनुरोध लिखें। प्रगति पैनल दिखाता है कि Jev ने कब Kilo Code चुना।",
+        "ar": "اكتب الطلب في محادثة. تعرض لوحة التقدّم متى يختار Jev ‏Kilo Code.",
+        "fr": "Écrivez la demande dans un chat. Le panneau Progression montre quand Jev choisit Kilo Code.",
+        "ru": "Напишите запрос в чате. Панель «Ход работы» показывает, когда Jev выбирает Kilo Code.",
+        "ja": "チャットで依頼を書いてください。Jev が Kilo Code を選ぶと、進行状況パネルに表示されます。",
+        "de": "Schreiben Sie die Anfrage in einen Chat. Das Fortschritt-Panel zeigt, wann Jev Kilo Code wählt."
+      },
+      "image": "chat"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "LiteLLM is a proxy that puts many model providers behind one OpenAI-compatible address, often run by a team. With this mod, Jev can send requests to the models of your proxy; they answer as text, without editing the project.",
+    "pt-BR": "O LiteLLM é um proxy que coloca muitos provedores de modelos atrás de um só endereço compatível com a OpenAI, muitas vezes mantido por uma equipe. Com este mod, o Jev pode mandar pedidos para os modelos do seu proxy; eles respondem em texto, sem editar o projeto.",
+    "es": "LiteLLM es un proxy que pone muchos proveedores de modelos detrás de una sola dirección compatible con OpenAI, a menudo mantenido por un equipo. Con este mod, Jev puede enviar solicitudes a los modelos de tu proxy; responden con texto, sin editar el proyecto.",
+    "zh-CN": "LiteLLM 是一个代理服务器，把众多模型提供商放在一个兼容 OpenAI 的地址之后，通常由团队维护。有了这个模组，Jev 可以把请求发给你的 LiteLLM 中的模型；它们以文本作答，不编辑项目。",
+    "hi": "LiteLLM एक प्रॉक्सी है जो कई मॉडल प्रदाताओं को OpenAI-संगत एक ही पते के पीछे रखता है, और अक्सर कोई टीम इसे चलाती है। इस मॉड से Jev आपके प्रॉक्सी के मॉडल को अनुरोध भेज सकता है; वे प्रोजेक्ट बदले बिना पाठ में जवाब देते हैं।",
+    "ar": "LiteLLM وسيط يضع كثيرًا من مزوّدي النماذج خلف عنوان واحد متوافق مع OpenAI، وغالبًا ما يديره فريق. بهذه الإضافة يستطيع Jev إرسال الطلبات إلى نماذج الوسيط الخاص بك؛ وهي تجيب نصًا دون تعديل المشروع.",
+    "fr": "LiteLLM est un proxy qui place de nombreux fournisseurs de modèles derrière une seule adresse compatible OpenAI, souvent géré par une équipe. Avec ce mod, Jev peut envoyer des demandes aux modèles de votre proxy ; ils répondent en texte, sans modifier le projet.",
+    "ru": "LiteLLM — прокси, который собирает многих поставщиков моделей за одним адресом, совместимым с OpenAI; часто его держит команда. С этим модом Jev может отправлять запросы моделям вашего прокси; они отвечают текстом, не правя проект.",
+    "ja": "LiteLLM は、多くのモデルプロバイダーを OpenAI 互換の 1 つのアドレスにまとめるプロキシで、チームで運用されることがよくあります。この Mod があると、Jev はあなたのプロキシのモデルに依頼を送れます。モデルはプロジェクトを編集せずテキストで答えます。",
+    "de": "LiteLLM ist ein Proxy, der viele Modellanbieter hinter einer einzigen OpenAI-kompatiblen Adresse bündelt, oft von einem Team betrieben. Mit diesem Mod kann Jev Anfragen an die Modelle Ihres Proxys schicken; sie antworten als Text, ohne das Projekt zu bearbeiten."
+  },
+  "requirements": {
+    "en": "The address of a LiteLLM proxy and, if it asks for one, a key.",
+    "pt-BR": "O endereço de um proxy LiteLLM e, se ele pedir, uma chave.",
+    "es": "La dirección de un proxy LiteLLM y, si la pide, una clave.",
+    "zh-CN": "LiteLLM 服务的地址，以及（如果需要）一个密钥。",
+    "hi": "किसी LiteLLM प्रॉक्सी का पता और, अगर वह माँगे, तो एक कुंजी।",
+    "ar": "عنوان وسيط LiteLLM، ومفتاح إذا طلبه.",
+    "fr": "L’adresse d’un proxy LiteLLM et, s’il en demande une, une clé.",
+    "ru": "Адрес прокси LiteLLM и, если он требует, ключ.",
+    "ja": "LiteLLM プロキシのアドレスと、求められる場合はキー。",
+    "de": "Die Adresse eines LiteLLM-Proxys und, falls er einen verlangt, ein Schlüssel."
+  },
+  "setup": [
+    {
+      "text": {
+        "en": "In Settings › LiteLLM, enter the address of the proxy and the key, if it needs one, and check the connection. Then turn on the models Jev may use.",
+        "pt-BR": "Em Configuração › LiteLLM, informe o endereço do proxy e a chave, se ele precisar de uma, e confira a conexão. Depois ligue os modelos que o Jev pode usar.",
+        "es": "En Configuración › LiteLLM, introduce la dirección del proxy y la clave, si la necesita, y comprueba la conexión. Después activa los modelos que Jev puede usar.",
+        "zh-CN": "在“设置 › LiteLLM”中填写服务地址和密钥（如果需要），并检查连接。然后开启 Jev 可以使用的模型。",
+        "hi": "सेटिंग्स › LiteLLM में प्रॉक्सी का पता और ज़रूरत हो तो कुंजी डालें, और कनेक्शन जाँचें। फिर वे मॉडल चालू करें जिन्हें Jev इस्तेमाल कर सकता है।",
+        "ar": "في الإعدادات › LiteLLM، أدخل عنوان الوسيط والمفتاح إن كان يحتاج إليه، وافحص الاتصال. ثم فعّل النماذج التي يُسمح لـ Jev باستخدامها.",
+        "fr": "Dans Configuration › LiteLLM, saisissez l’adresse du proxy et la clé, s’il en faut une, puis vérifiez la connexion. Activez ensuite les modèles que Jev peut utiliser.",
+        "ru": "В Настройки › LiteLLM укажите адрес прокси и ключ, если он нужен, и проверьте подключение. Затем включите модели, которые может использовать Jev.",
+        "ja": "設定 › LiteLLM でプロキシのアドレスと、必要ならキーを入力し、接続を確認します。その後、Jev が使ってよいモデルをオンにします。",
+        "de": "Geben Sie unter Einstellungen › LiteLLM die Adresse des Proxys und, falls nötig, den Schlüssel ein und prüfen Sie die Verbindung. Schalten Sie dann die Modelle ein, die Jev nutzen darf."
+      },
+      "image": "settings"
+    }
+  ],
+  "use": [
+    {
+      "text": {
+        "en": "Ask in a chat. When Jev picks a model of the proxy, the Progress panel shows the route and the answer names the model.",
+        "pt-BR": "Pergunte num chat. Quando o Jev escolhe um modelo do proxy, o painel Andamento mostra a rota e a resposta diz o modelo.",
+        "es": "Pregunta en un chat. Cuando Jev elige un modelo del proxy, el panel Progreso muestra la ruta y la respuesta indica el modelo.",
+        "zh-CN": "在对话中提问。当 Jev 选择该服务中的模型时，进度面板会显示路由，回答会注明模型。",
+        "hi": "चैट में पूछें। जब Jev प्रॉक्सी का कोई मॉडल चुनता है, तो प्रगति पैनल रूट दिखाता है और उत्तर में मॉडल का नाम होता है।",
+        "ar": "اسأل في محادثة. عندما يختار Jev نموذجًا من الوسيط، تعرض لوحة التقدّم المسار وتذكر الإجابة النموذج.",
+        "fr": "Posez votre question dans un chat. Quand Jev choisit un modèle du proxy, le panneau Progression montre la route et la réponse indique le modèle.",
+        "ru": "Спросите в чате. Когда Jev выбирает модель прокси, панель «Ход работы» показывает маршрут, а в ответе указана модель.",
+        "ja": "チャットで質問してください。Jev がプロキシのモデルを選ぶと、進行状況パネルにルートが表示され、回答にモデル名が示されます。",
+        "de": "Fragen Sie in einem Chat. Wenn Jev ein Modell des Proxys wählt, zeigt das Fortschritt-Panel die Route und die Antwort nennt das Modell."
+      },
+      "image": "chat"
+    }
+  ]
+}

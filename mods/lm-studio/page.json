@@ -1,0 +1,75 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "LM Studio runs open models on your own computer with a desktop app. This mod adds an LM Studio agent that talks to its local server: no key, and the requests stay on the machine.",
+    "pt-BR": "O LM Studio roda modelos abertos no seu próprio computador, com um app de desktop. Este mod adiciona um agente LM Studio que fala com o servidor local dele: sem chave, e os pedidos ficam na máquina.",
+    "es": "LM Studio ejecuta modelos abiertos en tu propio equipo con una app de escritorio. Este mod añade un agente LM Studio que habla con su servidor local: sin clave, y las solicitudes se quedan en la máquina.",
+    "zh-CN": "LM Studio 通过桌面应用在你自己的电脑上运行开放模型。这个模组添加一个 LM Studio 代理，与它的本地服务器通信：无需密钥，请求留在这台机器上。",
+    "hi": "LM Studio एक डेस्कटॉप ऐप के साथ आपके अपने कंप्यूटर पर ओपन मॉडल चलाता है। यह मॉड एक LM Studio एजेंट जोड़ता है जो उसके लोकल सर्वर से बात करता है: कोई कुंजी नहीं, और अनुरोध मशीन पर ही रहते हैं।",
+    "ar": "يشغّل LM Studio النماذج المفتوحة على جهازك عبر تطبيق لسطح المكتب. تضيف هذه الإضافة وكيل LM Studio يتحدث إلى خادمه المحلي: بلا مفتاح، وتبقى الطلبات على الجهاز.",
+    "fr": "LM Studio fait tourner des modèles ouverts sur votre propre ordinateur avec une app de bureau. Ce mod ajoute un agent LM Studio qui parle à son serveur local : sans clé, et les demandes restent sur la machine.",
+    "ru": "LM Studio запускает открытые модели на вашем компьютере через настольное приложение. Этот мод добавляет агента LM Studio, который общается с его локальным сервером: без ключа, и запросы остаются на компьютере.",
+    "ja": "LM Studio は、デスクトップアプリでオープンなモデルをあなたのコンピューター上で動かします。この Mod は、そのローカルサーバーと話す LM Studio エージェントを追加します。キーは不要で、依頼はマシンの中にとどまります。",
+    "de": "LM Studio führt offene Modelle mit einer Desktop-App auf Ihrem eigenen Computer aus. Dieser Mod fügt einen LM-Studio-Agenten hinzu, der mit dessen lokalem Server spricht: ohne Schlüssel, und die Anfragen bleiben auf dem Rechner."
+  },
+  "requirements": {
+    "en": "LM Studio installed, with a model loaded and the local server started (port 1234).",
+    "pt-BR": "O LM Studio instalado, com um modelo carregado e o servidor local iniciado (porta 1234).",
+    "es": "LM Studio instalado, con un modelo cargado y el servidor local iniciado (puerto 1234).",
+    "zh-CN": "已安装 LM Studio，加载了一个模型并启动了本地服务器（端口 1234）。",
+    "hi": "LM Studio इंस्टॉल हो, कोई मॉडल लोड हो और लोकल सर्वर चालू हो (पोर्ट 1234)।",
+    "ar": "أن يكون LM Studio مثبّتًا، مع نموذج محمَّل وخادم محلي يعمل (المنفذ 1234).",
+    "fr": "LM Studio installé, avec un modèle chargé et le serveur local démarré (port 1234).",
+    "ru": "LM Studio, установленный, с загруженной моделью и запущенным локальным сервером (порт 1234).",
+    "ja": "LM Studio がインストールされ、モデルが読み込まれ、ローカルサーバーが起動していること（ポート 1234）。",
+    "de": "LM Studio installiert, mit einem geladenen Modell und gestartetem lokalen Server (Port 1234)."
+  },
+  "setup": [
+    {
+      "text": {
+        "en": "In LM Studio, load a model and start the local server.",
+        "pt-BR": "No LM Studio, carregue um modelo e inicie o servidor local.",
+        "es": "En LM Studio, carga un modelo e inicia el servidor local.",
+        "zh-CN": "在 LM Studio 中加载一个模型并启动本地服务器。",
+        "hi": "LM Studio में कोई मॉडल लोड करें और लोकल सर्वर शुरू करें।",
+        "ar": "في LM Studio، حمّل نموذجًا وشغّل الخادم المحلي.",
+        "fr": "Dans LM Studio, chargez un modèle et démarrez le serveur local.",
+        "ru": "В LM Studio загрузите модель и запустите локальный сервер.",
+        "ja": "LM Studio でモデルを読み込み、ローカルサーバーを起動します。",
+        "de": "Laden Sie in LM Studio ein Modell und starten Sie den lokalen Server."
+      }
+    },
+    {
+      "text": {
+        "en": "In Settings › LM Studio, load the models and turn on the ones Jev may use.",
+        "pt-BR": "Em Configuração › LM Studio, carregue os modelos e ligue os que o Jev pode usar.",
+        "es": "En Configuración › LM Studio, carga los modelos y activa los que Jev puede usar.",
+        "zh-CN": "在“设置 › LM Studio”中加载模型，并开启 Jev 可以使用的那些。",
+        "hi": "सेटिंग्स › LM Studio में मॉडल लोड करें और वे चालू करें जिन्हें Jev इस्तेमाल कर सकता है।",
+        "ar": "في الإعدادات › LM Studio، حمّل النماذج وفعّل ما يُسمح لـ Jev باستخدامه.",
+        "fr": "Dans Configuration › LM Studio, chargez les modèles et activez ceux que Jev peut utiliser.",
+        "ru": "В Настройки › LM Studio загрузите модели и включите те, которые может использовать Jev.",
+        "ja": "設定 › LM Studio でモデルを読み込み、Jev が使ってよいものをオンにします。",
+        "de": "Laden Sie unter Einstellungen › LM Studio die Modelle und schalten Sie die ein, die Jev nutzen darf."
+      },
+      "image": "settings"
+    }
+  ],
+  "use": [
+    {
+      "text": {
+        "en": "Ask in a chat. When Jev picks the LM Studio model, the answer says which one.",
+        "pt-BR": "Pergunte num chat. Quando o Jev escolhe o modelo do LM Studio, a resposta diz qual.",
+        "es": "Pregunta en un chat. Cuando Jev elige el modelo de LM Studio, la respuesta dice cuál.",
+        "zh-CN": "在对话中提问。当 Jev 选择 LM Studio 的模型时，回答会注明是哪一个。",
+        "hi": "चैट में पूछें। जब Jev LM Studio का मॉडल चुनता है, तो उत्तर बताता है कि कौन-सा।",
+        "ar": "اسأل في محادثة. عندما يختار Jev نموذج LM Studio، تذكر الإجابة أيّه.",
+        "fr": "Posez votre question dans un chat. Quand Jev choisit le modèle de LM Studio, la réponse indique lequel.",
+        "ru": "Спросите в чате. Когда Jev выбирает модель LM Studio, в ответе указано, какую.",
+        "ja": "チャットで質問してください。Jev が LM Studio のモデルを選ぶと、回答にどのモデルかが示されます。",
+        "de": "Fragen Sie in einem Chat. Wenn Jev das Modell von LM Studio wählt, nennt die Antwort es."
+      },
+      "image": "chat"
+    }
+  ]
+}

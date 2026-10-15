@@ -16,6 +16,7 @@ not tied to any one subject: it says, in `contributes`, what it adds to each
 | `llmEngines` | LLM integration engines of the app (Claude Code, Codex, GitHub Copilot, Cursor, Kilo Code, OpenRouter, LiteLLM) |
 | `features` | Optional features of the app (statistics, gatehouse board, MCP, skills…); the plan still applies |
 | `agents` | Command-line programs or APIs compatible with OpenAI or Anthropic, installed as the person's own agents (Ollama, LM Studio) |
+| `skills` | Skills Jev picks by the request, with the MCP servers each one needs; the servers reach the agent only in the request where the skill applies (REA, for reverse engineering) |
 
 A mod is a manifest, not code: the app's core is compiled into the installer
 and runs nothing it downloads. New extension points arrive with new versions of
@@ -29,9 +30,15 @@ stay in their account; they are not part of this repository.
 1. Edit or create `mods/<id>/mod.json` (the `$schema` line gives your editor
    completion from `schema/mod.schema.json`). Titles and summaries come in the
    ten languages of the app.
-2. Run `node scripts/catalog.mjs build` and commit `catalog.v2.json` and
-   `catalog.json` with it.
-3. Open a pull request: the workflow runs the validator tests and
+2. Write its page in `mods/<id>/page.json` (`schema/page.schema.json`): what
+   it does, what else it needs, the setup steps and how to use it, in the ten
+   languages. Screenshots go in `mods/<id>/media/<name>.<locale>.webp` and a
+   step points at one with `image`; they come from the app's real screens,
+   made by `node tools/mod-shots/shoot.mjs --only <id>` in the app repository.
+   Each mod's page is on the site at `/mods/<id>`.
+3. Run `node scripts/catalog.mjs build` and commit `catalog.v2.json`,
+   `catalog.json` and `pages.json` with it.
+4. Open a pull request: the workflow runs the validator tests and
    `node scripts/catalog.mjs check`.
 
 `catalog.v2.json` is the generic format the app reads since 0.95.0;
@@ -77,3 +84,7 @@ stay in their account; they are not part of this repository.
 - A command-line agent uses `"kind": "cli"` with `command`, `args` (where
   `{model}` becomes the model Jev picked and `{prompt}`, alone in an argument,
   the request), `planArgs` and `edits`.
+- A skill (`"skills"`, app 0.103+) has a `name`, a `description` in English
+  that tells Jev when to use it (up to 400 characters), its instructions in
+  `instructions` or in a `.md` file of the mod's folder (`file`), and up to
+  four `mcpServers`. See `mods/rea` for a complete one.

@@ -1,0 +1,32 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "Shows where the tokens and the money go: usage and cost per day, per agent, per model, per project and per chat, and how much of each agent's plan limit is left.",
+    "pt-BR": "Mostra para onde vão os tokens e o dinheiro: uso e custo por dia, por agente, por modelo, por projeto e por chat, e quanto sobra do limite do plano de cada agente.",
+    "es": "Muestra adónde van los tokens y el dinero: uso y coste por día, por agente, por modelo, por proyecto y por chat, y cuánto queda del límite del plan de cada agente.",
+    "zh-CN": "显示令牌和费用的去向：按天、按代理、按模型、按项目和按对话的用量与成本，以及每个代理的套餐限额还剩多少。",
+    "hi": "दिखाता है कि टोकन और पैसा कहाँ जाते हैं: दिन, एजेंट, मॉडल, प्रोजेक्ट और चैट के हिसाब से उपयोग और लागत, और हर एजेंट की प्लान सीमा में से कितना बाकी है।",
+    "ar": "تُظهر أين تذهب الرموز والأموال: الاستهلاك والتكلفة لكل يوم ولكل وكيل ولكل نموذج ولكل مشروع ولكل محادثة، وما تبقّى من حد خطة كل وكيل.",
+    "fr": "Montre où partent les tokens et l’argent : consommation et coût par jour, par agent, par modèle, par projet et par chat, et ce qui reste de la limite du forfait de chaque agent.",
+    "ru": "Показывает, куда уходят токены и деньги: расход и стоимость по дням, агентам, моделям, проектам и чатам, а также сколько осталось от лимита тарифа каждого агента.",
+    "ja": "トークンとお金の行き先を示します。日別、エージェント別、モデル別、プロジェクト別、チャット別の使用量とコスト、そして各エージェントのプラン上限の残りです。",
+    "de": "Zeigt, wohin die Tokens und das Geld gehen: Verbrauch und Kosten pro Tag, pro Agent, pro Modell, pro Projekt und pro Chat, und wie viel vom Tariflimit jedes Agenten übrig ist."
+  },
+  "use": [
+    {
+      "text": {
+        "en": "Open Statistics in the side menu or press Ctrl+3 (⌘3 on Mac). Choose the period and the scope; the charts and the tables follow.",
+        "pt-BR": "Abra Estatísticas no menu lateral ou aperte Ctrl+3 (⌘3 no Mac). Escolha o período e o escopo; os gráficos e as tabelas acompanham.",
+        "es": "Abre Estadísticas en el menú lateral o pulsa Ctrl+3 (⌘3 en Mac). Elige el periodo y el alcance; los gráficos y las tablas se actualizan.",
+        "zh-CN": "在侧边菜单中打开“统计”，或按 Ctrl+3（Mac 上为 ⌘3）。选择时间段和范围，图表和表格会随之变化。",
+        "hi": "साइड मेनू में आँकड़े खोलें या Ctrl+3 (Mac पर ⌘3) दबाएँ। अवधि और दायरा चुनें; चार्ट और तालिकाएँ उसके हिसाब से बदलती हैं।",
+        "ar": "افتح الإحصاءات من القائمة الجانبية أو اضغط Ctrl+3 ‏(⌘3 على Mac). اختر الفترة والنطاق؛ وتتبعهما الرسوم البيانية والجداول.",
+        "fr": "Ouvrez Statistiques dans le menu latéral ou appuyez sur Ctrl+3 (⌘3 sur Mac). Choisissez la période et la portée ; les graphiques et les tableaux suivent.",
+        "ru": "Откройте «Статистика» в боковом меню или нажмите Ctrl+3 (⌘3 на Mac). Выберите период и охват; графики и таблицы обновятся.",
+        "ja": "サイドメニューの統計を開くか、Ctrl+3（Mac では ⌘3）を押します。期間と範囲を選ぶと、グラフと表が切り替わります。",
+        "de": "Öffnen Sie Statistiken im Seitenmenü oder drücken Sie Strg+3 (⌘3 auf dem Mac). Wählen Sie Zeitraum und Bereich; Diagramme und Tabellen folgen."
+      },
+      "image": "stats"
+    }
+  ]
+}

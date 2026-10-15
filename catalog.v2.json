@@ -972,6 +972,65 @@
           }
         ]
       }
+    },
+    {
+      "id": "rea",
+      "version": "1.0.0",
+      "category": "agents",
+      "plan": "skills",
+      "minApp": "0.103.0",
+      "preinstalled": true,
+      "requires": [
+        "skills",
+        "mcp"
+      ],
+      "author": "JayV",
+      "docs": "skills",
+      "homepage": "https://rea.tools",
+      "title": {
+        "en": "REA — reverse engineering",
+        "pt-BR": "REA — engenharia reversa",
+        "es": "REA — ingeniería inversa",
+        "zh-CN": "REA — 逆向工程",
+        "hi": "REA — रिवर्स इंजीनियरिंग",
+        "ar": "REA — الهندسة العكسية",
+        "fr": "REA — rétro-ingénierie",
+        "ru": "REA — обратная разработка",
+        "ja": "REA — リバースエンジニアリング",
+        "de": "REA — Reverse Engineering"
+      },
+      "summary": {
+        "en": "Jev hands the request to REA when it asks how an app, a binary, an .asar, a website or a process works without its source code. The agent gets REA's tools only for that request and answers with the evidence.",
+        "pt-BR": "O Jev passa o pedido ao REA quando ele pergunta como funciona um app, um binário, um .asar, um site ou um processo sem o código-fonte. O agente recebe as ferramentas do REA só naquele pedido e responde com as evidências.",
+        "es": "Jev pasa la solicitud a REA cuando pregunta cómo funciona una app, un binario, un .asar, un sitio web o un proceso sin su código fuente. El agente recibe las herramientas de REA solo en esa solicitud y responde con las evidencias.",
+        "zh-CN": "当请求询问某个应用、二进制文件、.asar、网站或进程在没有源代码时如何工作，Jev 会把请求交给 REA。智能体只在这次请求中获得 REA 的工具，并附上证据作答。",
+        "hi": "जब अनुरोध पूछता है कि कोई ऐप, बाइनरी, .asar, वेबसाइट या प्रोसेस अपने सोर्स कोड के बिना कैसे काम करता है, तो Jev उसे REA को सौंपता है। एजेंट को REA के टूल सिर्फ़ उसी अनुरोध के लिए मिलते हैं और वह सबूतों के साथ जवाब देता है।",
+        "ar": "يسلّم Jev الطلب إلى REA عندما يسأل عن طريقة عمل تطبيق أو ملف ثنائي أو ملف ‎.asar أو موقع أو عملية دون الشيفرة المصدرية. يحصل الوكيل على أدوات REA في ذلك الطلب فقط ويجيب مع الأدلة.",
+        "fr": "Jev confie la demande à REA quand elle porte sur le fonctionnement d'une app, d'un binaire, d'un .asar, d'un site ou d'un processus sans son code source. L'agent reçoit les outils de REA pour cette demande seulement et répond avec les preuves.",
+        "ru": "Jev передаёт запрос REA, когда в нём спрашивают, как устроено приложение, бинарный файл, .asar, сайт или процесс без исходного кода. Агент получает инструменты REA только для этого запроса и отвечает с доказательствами.",
+        "ja": "アプリ、バイナリ、.asar、Web サイト、プロセスがソースコードなしでどう動くかを尋ねる依頼のとき、Jev はその依頼を REA に任せます。エージェントはその依頼のときだけ REA のツールを受け取り、根拠を示して答えます。",
+        "de": "Jev übergibt die Anfrage an REA, wenn sie fragt, wie eine App, eine Binärdatei, eine .asar-Datei, eine Website oder ein Prozess ohne Quellcode funktioniert. Der Agent erhält die Werkzeuge von REA nur für diese Anfrage und antwortet mit den Belegen."
+      },
+      "contributes": {
+        "skills": [
+          {
+            "name": "reverse-engineering",
+            "description": "Reverse engineer existing software without its source code with REA: native executables and libraries (Mach-O, ELF, PE, .app), JavaScript/Electron apps and .asar files, .NET, Android APKs, websites and running processes. Use when the request asks how an app, binary or page works inside, for evidence of its behavior, or to rebuild a feature seen in it.",
+            "instructions": "# Reverse engineering with REA\n\nREA (Reverse Engineer Anything, MIT, https://rea.tools) inspects software without its source code and answers with evidence: the file, the address or function, the string, the reference that shows each fact. Use it to explain how an existing program works, to collect evidence of a behavior, or to rebuild a similar feature in the developer's project from what the program does. It never recovers the original source code and must not be used to copy it.\n\n## Tools\n\n- **MCP server `rea`** (tools named `mcp__rea__*` in Claude Code): connected for this request when the agent's MCP servers are approved in JayV. Prefer it.\n- **Command line** when the MCP tools are not available and you can run commands: `npx -y rea-agents@6.4.0 <command> ... --format md` (or `--format json`). `npx -y rea-agents@6.4.0 doctor --format md` says what is ready on this computer.\n- If neither is possible, say so, explain what REA would look at, and tell the developer how to enable it: turn on **Approve MCP servers** in the agent's tab in JayV's Settings (Node.js 22.19 or newer is needed for `npx rea-agents`).\n\n## How to investigate\n\n1. **Pin the target.** Get the exact path of the app, executable, library, package (`.app`, `.exe`, `.dll`, `.so`, `.dylib`, `.apk`, `.ipa`, `.asar`, an extracted folder) or the page. Ask for it when the request does not give it; never guess a path outside the project without saying so.\n2. **Overview first.** `inspect_artifact` (CLI `inspect-artifact <path>`) identifies the format and suggests the next probes. Then, by kind:\n   - native code: `binary_overview`, `search_strings` / `search_procedures` (CLI `analyze <path>`, `search <path> <text>`), `inspect_macho`, `inspect_signature`, `inspect_plist`, `inspect_pe_resources`, `inspect_binary_layout`;\n   - JavaScript and Electron (`.asar` or app folder): `analyze_javascript_application` (CLI `analyze-javascript-application <path>`) maps modules, routes, IPC and native dependencies without running the code;\n   - .NET: `inspect_managed_artifact`, `inspect_managed_members`;\n   - Android: `inspect_android_package`, `search_android_classes`, `inspect_android_method`;\n   - websites: the developer starts a browser with remote debugging on a loopback address (for example `--remote-debugging-port=9222`); then `list_browser_targets` and `inspect_web_page`, which observe passively.\n3. **Follow the feature.** From a visible string, menu label, error message or route, use `trace_feature` (CLI `trace <path> <text>`), `xrefs`, `procedure_callers` / `procedure_callees` and `get_call_graph` to reach the code that does the work. Decompile (`analyze_function`, `procedure_pseudo_code`, CLI `function` / `decompile`) only the routines that matter, not the whole program.\n4. **Runtime only when needed, and only with permission.** Process, browser or Electron captures (`capture_process_scenario`, `capture_browser_scenario`, `observe_javascript_runtime`) run the target with the developer's permissions. Ask before launching any program, and never run one the developer did not name.\n5. **Native deep analysis** (decompiling machine code) needs Hopper or Ghidra 12.1 with JDK 21. Without them, say so and keep to what works without them: identification, strings, symbols, layout, signatures, resources, JavaScript, .NET metadata and Android packages.\n\n## How to answer\n\n- State each finding with its evidence (path, address or function, string, reference) and keep what you observed apart from what you infer; list what is still unknown.\n- When the developer wants the feature in their project, write new code for the project from the observed behavior. Do not paste decompiled code or assets of the inspected program.\n- Inspect only software the developer may lawfully analyze. Do not help to bypass licensing, DRM or other protections, or to pull keys, passwords or personal data out of a program.",
+            "mcpServers": [
+              {
+                "name": "rea",
+                "command": "npx",
+                "args": [
+                  "-y",
+                  "rea-agents@6.4.0",
+                  "--mcp"
+                ]
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

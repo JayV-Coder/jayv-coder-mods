@@ -23,10 +23,11 @@ um mod pode trazer vários pontos de uma vez.
 | `llmEngines` | motores de integração com LLM do app (`claude`, `codex`, …) |
 | `features` | recursos opcionais do app (`stats`, `mcp`, …); o plano continua mandando |
 | `agents` | agentes de linha de comando ou de API, instalados como agentes de quem instala (`mod-<id>`, `mod-<id>-2`…) |
+| `skills` | skills que o Jev escolhe pelo pedido (como as que a pessoa instala), com os servidores MCP de cada uma; os servidores só vão ao agente no pedido em que a skill vale (app 0.103+) |
 
 O núcleo do app é Rust compilado no instalador e não executa nada baixado: um
 ponto de extensão é o app sabendo aplicar um tipo de contribuição. Ponto novo
-(servidores MCP, skills, comandos, temas…) chega assim:
+(comandos, temas…) chega assim:
 
 1. o app aprende a aplicá-lo (um ponto em `jayv-mods`, ligado no registro do
    núcleo, e a tela);
@@ -56,7 +57,38 @@ todo mundo: o `catalog.mjs` só aceita isso com o id em `engines.json` ›
 - `plan`: o recurso do plano que o mod pede; fora do plano ele aparece
   travado.
 
-## Os dois catálogos
+## Skills
+
+Uma skill de mod tem `name` (letras, dígitos, `-` e `_`), `description` (em
+inglês, até 400 caracteres: é o que o Jev lê para decidir se o pedido é dela),
+as instruções (em inglês, para o modelo) em `instructions` ou num `.md` da
+pasta do mod (`file`, que o build põe no catálogo como texto) e, se precisar,
+até quatro `mcpServers` (`stdio` com `command` sem argumentos e `args`, ou
+`http` com `url`). Dois mods não trazem a mesma skill. Um servidor que baixa e
+roda um programa de terceiros fixa a versão exata (`pacote@1.2.3`), e o mod não
+é `required`: quem usa pode desligá-lo e desinstalá-lo.
+
+## A página de cada mod no site
+
+Todo mod tem uma página no site (`/mods/<id>`), com busca e categorias em
+`/mods`. O conteúdo mora com o mod:
+
+- `mods/<id>/page.json` (`schema/page.schema.json`): `about` (o que o mod faz),
+  `requirements` (o que mais precisa para funcionar, opcional), `setup` (os
+  passos depois de instalar, até seis) e `use` (como usar, de um a seis
+  passos), todos nos dez idiomas. Os passos de instalar e ligar o site escreve
+  igual para todo mod.
+- `mods/<id>/media/<print>.<idioma>.webp`: os prints. Um passo cita o print por
+  `image` (o nome, sem idioma); o inglês é obrigatório e o idioma sem print
+  mostra o inglês. O print `enable` é a aba Mods com o mod e acompanha os
+  passos de instalar. Até 600 kB cada; print que nenhum passo cita é erro.
+
+Os prints saem da tela de verdade do app, com dados de exemplo, pelo estúdio de
+`JayV-Coder/jayv-coder` (`tools/mod-shots`): `node tools/mod-shots/shoot.mjs
+--only <id>` grava os dez idiomas na pasta do mod. Mod novo ganha uma cena lá
+quando precisa de um print além do `enable`.
+
+## Os catálogos e as páginas
 
 `node scripts/catalog.mjs build` grava:
 
@@ -66,6 +98,9 @@ todo mundo: o `catalog.mjs` só aceita isso com o id em `engines.json` ›
   0.94 e o site 2.12. Só entra nele o mod que traz um ponto só, sem
   dependências, e cujo nome é o do motor que ele traz (ou um agente só). Todo
   motor precisa de um mod ali, senão o app antigo o desliga — o build recusa.
+- `pages.json` — a página de cada mod (`PAGES_SCHEMA` 1), com os prints de
+  cada passo, os idiomas que cada um tem e uma marca do conteúdo (`v`), para o
+  cache de quem vê trocar junto com o print. O build recusa mod sem página.
 
 ## Regras
 
@@ -74,8 +109,9 @@ todo mundo: o `catalog.mjs` só aceita isso com o id em `engines.json` ›
 - Título e resumo vêm nos dez idiomas do app (`en`, `pt-BR`, `es`, `zh-CN`,
   `hi`, `ar`, `fr`, `ru`, `ja`, `de`), sem espaço nas pontas. Nada de texto
   de um projeto específico: os exemplos usam nomes genéricos.
-- Depois de mexer em qualquer manifesto, rode `node scripts/catalog.mjs build`
-  e commite os dois catálogos juntos. O Actions roda `check` e recusa o PR com
+- Depois de mexer em qualquer manifesto, página ou print, rode
+  `node scripts/catalog.mjs build` e commite os catálogos e o `pages.json`
+  juntos. O Actions roda `check` e recusa o PR com
   um catálogo fora de dia.
 - `node --test scripts/catalog.test.mjs` antes de mudar o `catalog.mjs`.
 - Identificadores em inglês; comentários podem ser em português.

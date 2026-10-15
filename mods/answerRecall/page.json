@@ -1,0 +1,32 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "A request almost identical to one already answered in another chat of the same project starts from that answer, instead of exploring everything again: less waiting and fewer tokens.",
+    "pt-BR": "Um pedido quase igual a outro já respondido em outro chat do mesmo projeto começa daquela resposta, em vez de explorar tudo de novo: menos espera e menos tokens.",
+    "es": "Una solicitud casi idéntica a otra ya respondida en otro chat del mismo proyecto parte de esa respuesta, en lugar de explorarlo todo de nuevo: menos espera y menos tokens.",
+    "zh-CN": "与同一项目另一个对话中已回答过的请求几乎相同的请求，会从那个回答开始，而不是从头再探索一遍：等待更少，令牌也更少。",
+    "hi": "जो अनुरोध उसी प्रोजेक्ट की किसी दूसरी चैट में पहले से जवाब दिए गए अनुरोध जैसा लगभग हूबहू हो, वह सब कुछ फिर से खोजने के बजाय उसी जवाब से शुरू होता है: कम इंतज़ार और कम टोकन।",
+    "ar": "الطلب الذي يكاد يطابق طلبًا أُجيب عنه في محادثة أخرى من المشروع نفسه يبدأ من تلك الإجابة بدلًا من استكشاف كل شيء من جديد: انتظار أقل ورموز أقل.",
+    "fr": "Une demande presque identique à une autre déjà répondue dans un autre chat du même projet part de cette réponse, au lieu de tout explorer à nouveau : moins d’attente et moins de tokens.",
+    "ru": "Запрос, почти совпадающий с уже отвеченным в другом чате того же проекта, начинается с того ответа, а не исследует всё заново: меньше ожидания и меньше токенов.",
+    "ja": "同じプロジェクトの別のチャットですでに回答された依頼とほぼ同じ依頼は、すべてを調べ直す代わりにその回答から始めます。待ち時間もトークンも減ります。",
+    "de": "Eine Anfrage, die fast genauso schon in einem anderen Chat desselben Projekts beantwortet wurde, startet von dieser Antwort, statt alles neu zu erkunden: weniger Warten und weniger Tokens."
+  },
+  "use": [
+    {
+      "text": {
+        "en": "There is nothing to set up: it works whenever your plan includes it. Each earlier answer reused is counted in the Jev panel of Statistics.",
+        "pt-BR": "Não há nada para configurar: funciona sempre que o seu plano inclui o recurso. Cada resposta anterior aproveitada é contada no painel do Jev, nas Estatísticas.",
+        "es": "No hay nada que configurar: funciona siempre que tu plan lo incluye. Cada respuesta anterior reutilizada se cuenta en el panel de Jev de Estadísticas.",
+        "zh-CN": "无需任何设置：只要你的套餐包含它就会生效。每次复用过往回答，都会在“统计”的 Jev 面板中计数。",
+        "hi": "कुछ सेट करने की ज़रूरत नहीं: जब तक आपके प्लान में यह शामिल है, यह काम करता है। दोबारा इस्तेमाल हुआ हर पिछला उत्तर आँकड़े के Jev पैनल में गिना जाता है।",
+        "ar": "لا شيء لإعداده: تعمل ما دامت خطتك تتضمنها. وكل إجابة سابقة يُعاد استخدامها تُحسب في لوحة Jev في الإحصاءات.",
+        "fr": "Il n’y a rien à configurer : ça fonctionne dès que votre forfait l’inclut. Chaque réponse précédente réutilisée est comptée dans le panneau de Jev, dans Statistiques.",
+        "ru": "Настраивать ничего не нужно: работает, если ваш тариф это включает. Каждый повторно использованный ответ учитывается на панели Jev в разделе «Статистика».",
+        "ja": "設定は不要です。プランに含まれていれば自動で動きます。再利用された過去の回答は、統計の Jev パネルで数えられます。",
+        "de": "Es gibt nichts einzurichten: Es funktioniert, sobald Ihr Tarif es enthält. Jede wiederverwendete frühere Antwort wird im Jev-Panel unter Statistiken gezählt."
+      },
+      "image": "stats"
+    }
+  ]
+}
