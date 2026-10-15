@@ -5,10 +5,11 @@
   "category": "agents",
   "plan": "customMods",
   "minApp": "0.94.0",
-  "preinstalled": true,
+  "preinstalled": false,
   "author": "JayV",
   "docs": "llmMods",
   "homepage": "https://lmstudio.ai",
+  "icon": "icon.svg",
   "title": {
     "en": "LM Studio",
     "pt-BR": "LM Studio",

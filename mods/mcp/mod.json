@@ -9,6 +9,7 @@
   "required": true,
   "author": "JayV",
   "docs": "mcp",
+  "icon": "icon.svg",
   "title": {
     "en": "MCP servers",
     "pt-BR": "Servidores MCP",

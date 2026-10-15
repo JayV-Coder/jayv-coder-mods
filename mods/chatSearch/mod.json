@@ -9,6 +9,7 @@
   "required": true,
   "author": "JayV",
   "docs": "chatSearch",
+  "icon": "icon.svg",
   "title": {
     "en": "Chat search",
     "pt-BR": "Busca nos chats",

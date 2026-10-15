@@ -39,7 +39,7 @@ export const CATEGORIES = ["start", "chat", "agents", "gate", "privacy", "projec
 
 /** A ordem dos campos no manifesto e no catálogo; um campo fora daqui é erro
  * de digitação. */
-const FIELDS = ["$schema", "id", "version", "category", "plan", "minApp", "preinstalled", "required", "requires", "author", "docs", "homepage", "title", "summary", "contributes"];
+const FIELDS = ["$schema", "id", "version", "category", "plan", "minApp", "preinstalled", "required", "requires", "author", "docs", "homepage", "icon", "title", "summary", "contributes"];
 /** A ordem dos campos do formato antigo. */
 const LEGACY_FIELDS = ["id", "kind", "category", "plan", "defaultOn", "minApp", "docs", "homepage", "title", "summary", "template"];
 const AGENT_FIELDS = {
@@ -78,6 +78,12 @@ const SERVER_NAME = /^[A-Za-z0-9_-]{1,40}$/;
 const SERVER_FIELDS = ["name", "transport", "command", "args", "env", "url", "headers"];
 const ENV_KEY = /^[A-Za-z0-9_]+$/;
 const SKILL_FILE = /^[A-Za-z0-9][A-Za-z0-9._-]{0,63}\.md$/;
+/** O ícone do mod: um SVG da pasta dele, que o build põe no catálogo como
+ * texto. O app e o site o mostram como imagem (`<img>` ou máscara), nunca
+ * dentro da página, então nada nele roda; mesmo assim só passa o desenho. */
+const ICON_FILE = /^[A-Za-z0-9][A-Za-z0-9._-]{0,63}\.svg$/;
+const ICON_MAX_BYTES = 16_000;
+const ICON_ELEMENTS = new Set(["svg", "g", "path", "rect", "circle", "ellipse", "line", "polyline", "polygon", "defs", "linearGradient", "radialGradient", "stop", "clipPath", "mask", "title", "desc", "image", "use", "symbol"]);
 
 const isObject = (value) => typeof value === "object" && value !== null && !Array.isArray(value);
 const isText = (value) => typeof value === "string" && value.trim().length > 0;
@@ -270,6 +276,37 @@ export const POINTS = {
 /** A ordem em que os pontos aparecem (e a ordem dos mods no catálogo). */
 const POINT_ORDER = ["llmEngines", "features", "agents", "skills"];
 
+/** O que está errado no SVG de um ícone: só o desenho (os elementos de
+ * `ICON_ELEMENTS`), com `viewBox`, sem script, estilo, evento ou endereço de
+ * fora — uma imagem embutida só em `data:` PNG, JPEG ou WebP. */
+export function iconProblems(where, text) {
+  const found = [];
+  if (Buffer.byteLength(text, "utf8") > ICON_MAX_BYTES) found.push(`${where} is larger than ${ICON_MAX_BYTES / 1000} kB`);
+  const body = text.replace(/<!--[\s\S]*?-->/g, "").replace(/<\?xml[^>]*\?>/, "").trim();
+  if (!/^<svg\b[^>]*>[\s\S]*<\/svg>$/.test(body)) return [...found, `${where} must be one <svg> element`];
+  if (!/^<svg\b[^>]*\sviewBox="[^"]+"/.test(body)) found.push(`${where}: the <svg> needs a viewBox`);
+  if (/<!|<\?|\son[a-z]+\s*=|javascript:|@import/i.test(body)) found.push(`${where} has a script, an event or a declaration: only the drawing goes in an icon`);
+  for (const [, name] of body.matchAll(/<([A-Za-z][\w:-]*)/g)) if (!ICON_ELEMENTS.has(name)) found.push(`${where}: <${name}> is not allowed in an icon`);
+  for (const [, value] of body.matchAll(/\s(?:xlink:)?href\s*=\s*"([^"]*)"/g)) {
+    if (!value.startsWith("#") && !/^data:image\/(png|jpeg|webp);base64,[A-Za-z0-9+/=]+$/.test(value)) found.push(`${where}: href may only point inside the icon or to a data: image`);
+  }
+  for (const [, value] of body.matchAll(/url\(\s*([^)]*)\)/g)) if (!value.trim().startsWith("#")) found.push(`${where}: url() may only point inside the icon`);
+  return [...new Set(found)];
+}
+
+/** O SVG como vai no catálogo: sem comentários nem a declaração XML, sem
+ * `class`, `width` e `height` (quem mostra decide o tamanho) e sem as quebras
+ * de linha entre as tags. */
+export function cleanIcon(text) {
+  return text
+    .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(/<\?xml[^>]*\?>/, "")
+    .replace(/<svg\b[^>]*>/, (open) => open.replace(/\s(class|width|height)="[^"]*"/g, "").replace(/\s+/g, " ").replace(/\s>$/, ">"))
+    .replace(/>\s+</g, "><")
+    .replace(/\s+\/>/g, "/>")
+    .trim();
+}
+
 /** Tudo que está errado num manifesto, sozinho. `folder` é o nome da pasta,
  * que tem de ser o id. As dependências (`requires`) são conferidas com o
  * catálogo inteiro, em `buildCatalog`. */
@@ -300,6 +337,9 @@ export function manifestProblems(manifest, folder, engines, dir = null) {
   if ("author" in manifest && (!isText(manifest.author) || manifest.author.length > AUTHOR_MAX || manifest.author !== manifest.author.trim())) found.push(`${where}: author must be a name of up to ${AUTHOR_MAX} characters`);
   if ("docs" in manifest && (typeof manifest.docs !== "string" || !DOCS.test(manifest.docs))) found.push(`${where}: docs must be the id of a page of the manual`);
   if ("homepage" in manifest && (typeof manifest.homepage !== "string" || !/^https:\/\/[^\s/@]+/i.test(manifest.homepage))) found.push(`${where}: homepage must be an https address`);
+  if (typeof manifest.icon !== "string" || !ICON_FILE.test(manifest.icon)) found.push(`${where}: icon must be an .svg file in the folder of the mod (every mod has an icon)`);
+  else if (dir && !existsSync(join(dir, manifest.icon))) found.push(`${where}: icon: ${manifest.icon} is not in the folder of the mod`);
+  else if (dir) found.push(...iconProblems(`mods/${folder}/${manifest.icon}`, readFileSync(join(dir, manifest.icon), "utf8")));
   found.push(...textProblems(where, "title", manifest.title, TITLE_MAX));
   found.push(...textProblems(where, "summary", manifest.summary, SUMMARY_MAX));
 
@@ -325,6 +365,8 @@ export function manifestProblems(manifest, folder, engines, dir = null) {
 function entry(manifest, dir = null) {
   const out = {};
   for (const key of FIELDS) if (key !== "$schema" && key in manifest) out[key] = manifest[key];
+  // O nome do arquivo vira o desenho: quem lê o catálogo não lê a pasta.
+  if (dir && typeof manifest.icon === "string") out.icon = cleanIcon(readFileSync(join(dir, manifest.icon), "utf8"));
   const contributes = {};
   for (const key of POINT_ORDER) if (key in manifest.contributes) contributes[key] = manifest.contributes[key];
   if (contributes.skills) {

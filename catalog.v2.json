@@ -11,6 +11,7 @@
       "author": "JayV",
       "docs": "agents",
       "homepage": "https://docs.anthropic.com/en/docs/claude-code",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path fill=\"#D97757\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20.998 10.949H24v3.102h-3v3.028h-1.487V20H18v-2.921h-1.487V20H15v-2.921H9V20H7.488v-2.921H6V20H4.487v-2.921H3V14.05H0V10.95h3V5h17.998v5.949zM6 10.949h1.488V8.102H6v2.847zm10.51 0H18V8.102h-1.49v2.847z\"/></svg>",
       "title": {
         "en": "Claude Code",
         "pt-BR": "Claude Code",
@@ -51,6 +52,7 @@
       "author": "JayV",
       "docs": "agents",
       "homepage": "https://github.com/openai/codex",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><defs><linearGradient id=\"g\" gradientUnits=\"userSpaceOnUse\" x1=\"12\" x2=\"12\" y1=\"3\" y2=\"21\"><stop stop-color=\"#B1A7FF\"/><stop offset=\".5\" stop-color=\"#7A9DFF\"/><stop offset=\"1\" stop-color=\"#3941FF\"/></linearGradient></defs><path fill=\"#fff\" d=\"M19.503 0H4.496A4.496 4.496 0 0 0 0 4.496v15.007A4.496 4.496 0 0 0 4.496 24h15.007A4.496 4.496 0 0 0 24 19.503V4.496A4.496 4.496 0 0 0 19.503 0z\"/><path fill=\"url(#g)\" d=\"M9.064 3.344a4.578 4.578 0 012.285-.312c1 .115 1.891.54 2.673 1.275.01.01.024.017.037.021a.09.09 0 00.043 0 4.55 4.55 0 013.046.275l.047.022.116.057a4.581 4.581 0 012.188 2.399c.209.51.313 1.041.315 1.595a4.24 4.24 0 01-.134 1.223.123.123 0 00.03.115c.594.607.988 1.33 1.183 2.17.289 1.425-.007 2.71-.887 3.854l-.136.166a4.548 4.548 0 01-2.201 1.388.123.123 0 00-.081.076c-.191.551-.383 1.023-.74 1.494-.9 1.187-2.222 1.846-3.711 1.838-1.187-.006-2.239-.44-3.157-1.302a.107.107 0 00-.105-.024c-.388.125-.78.143-1.204.138a4.441 4.441 0 01-1.945-.466 4.544 4.544 0 01-1.61-1.335c-.152-.202-.303-.392-.414-.617a5.81 5.81 0 01-.37-.961 4.582 4.582 0 01-.014-2.298.124.124 0 00.006-.056.085.085 0 00-.027-.048 4.467 4.467 0 01-1.034-1.651 3.896 3.896 0 01-.251-1.192 5.189 5.189 0 01.141-1.6c.337-1.112.982-1.985 1.933-2.618.212-.141.413-.251.601-.33.215-.089.43-.164.646-.227a.098.098 0 00.065-.066 4.51 4.51 0 01.829-1.615 4.535 4.535 0 011.837-1.388zm3.482 10.565a.637.637 0 000 1.272h3.636a.637.637 0 100-1.272h-3.636zM8.462 9.23a.637.637 0 00-1.106.631l1.272 2.224-1.266 2.136a.636.636 0 101.095.649l1.454-2.455a.636.636 0 00.005-.64L8.462 9.23z\"/></svg>",
       "title": {
         "en": "Codex",
         "pt-BR": "Codex",
@@ -87,10 +89,11 @@
       "category": "agents",
       "plan": null,
       "minApp": "0.94.0",
-      "preinstalled": true,
+      "preinstalled": false,
       "author": "JayV",
       "docs": "agents",
       "homepage": "https://github.com/features/copilot",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M3.5 13.5c0-2 .6-3.6 1.6-4.6M20.5 13.5c0-2-.6-3.6-1.6-4.6\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><path d=\"M3.5 13.2v3.1c0 .7.4 1.3 1 1.6 2.3 1.2 4.8 1.8 7.5 1.8s5.2-.6 7.5-1.8c.6-.3 1-.9 1-1.6v-3.1\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/><rect x=\"4.6\" y=\"5\" width=\"6.6\" height=\"6.2\" rx=\"3\" stroke=\"currentColor\" stroke-width=\"1.5\"/><rect x=\"12.8\" y=\"5\" width=\"6.6\" height=\"6.2\" rx=\"3\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M10 14.2v2M14 14.2v2\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"/></svg>",
       "title": {
         "en": "GitHub Copilot",
         "pt-BR": "GitHub Copilot",
@@ -127,10 +130,11 @@
       "category": "agents",
       "plan": null,
       "minApp": "0.94.0",
-      "preinstalled": true,
+      "preinstalled": false,
       "author": "JayV",
       "docs": "agents",
       "homepage": "https://cursor.com",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 2.6 20.2 7.3v9.4L12 21.4l-8.2-4.7V7.3z\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/><path d=\"M3.8 7.3 12 12l8.2-4.7M12 12v9.4\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/><path d=\"M12 12 20.2 7.3 12 2.6z\" fill=\"currentColor\" opacity=\".35\"/></svg>",
       "title": {
         "en": "Cursor",
         "pt-BR": "Cursor",
@@ -167,10 +171,11 @@
       "category": "agents",
       "plan": "kiloCode",
       "minApp": "0.94.0",
-      "preinstalled": true,
+      "preinstalled": false,
       "author": "JayV",
       "docs": "kiloCode",
       "homepage": "https://kilocode.ai",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" fill-rule=\"evenodd\"><path d=\"M0 0v24h24V0H0zm22.222 22.222H1.778V1.778h20.444v20.444zm-7.555-4.964h2.222v1.778h-2.794L12.89 17.83v-2.794h1.778v2.222zm4 0h-1.778v-2.222h-2.222v-1.778h2.793l1.207 1.207v2.793zm-7.556-2.591H9.333v-1.778h1.778v1.778zm-5.778-1.778h1.778v4h4v1.778H6.54L5.333 17.46V12.89zm13.334-3.556v1.778h-5.778V9.333h1.987V7.111h-1.987V5.333h2.558l1.206 1.207v2.793h2.014zm-11.556-2h2.222l1.778 1.778v2H9.333v-2H7.111v2H5.333V5.333h1.778v2zm4 0H9.333v-2h1.778v2z\"/></svg>",
       "title": {
         "en": "Kilo Code",
         "pt-BR": "Kilo Code",
@@ -207,10 +212,11 @@
       "category": "agents",
       "plan": "gatewayProviders",
       "minApp": "0.94.0",
-      "preinstalled": true,
+      "preinstalled": false,
       "author": "JayV",
       "docs": "gatewayProviders",
       "homepage": "https://openrouter.ai",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" fill-rule=\"evenodd\"><path d=\"M18.654 3.87a5.087 5.087 0 110 10.174L23.7 19.09c.64.641.187 1.737-.72 1.737H8.48a8.479 8.479 0 010-16.958h10.175zM8.479 7.26a5.087 5.087 0 100 10.176 5.087 5.087 0 000-10.175z\"/></svg>",
       "title": {
         "en": "OpenRouter",
         "pt-BR": "OpenRouter",
@@ -247,10 +253,11 @@
       "category": "agents",
       "plan": "gatewayProviders",
       "minApp": "0.94.0",
-      "preinstalled": true,
+      "preinstalled": false,
       "author": "JayV",
       "docs": "gatewayProviders",
       "homepage": "https://docs.litellm.ai",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\"><image width=\"48\" height=\"48\" href=\"data:image/png;base64,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\"/></svg>",
       "title": {
         "en": "LiteLLM",
         "pt-BR": "LiteLLM",
@@ -291,6 +298,7 @@
       "required": true,
       "author": "JayV",
       "docs": "stats",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 3v16a2 2 0 0 0 2 2h16\"/><path d=\"M18 17V9\"/><path d=\"M13 17V5\"/><path d=\"M8 17v-3\"/></svg>",
       "title": {
         "en": "Statistics",
         "pt-BR": "Estatísticas",
@@ -331,6 +339,7 @@
       "required": true,
       "author": "JayV",
       "docs": "gateBoard",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M10 21H2\"/><path d=\"M10 3H7a2 2 0 00-2 2v16\"/><path d=\"M14 12h.01\"/><path d=\"M19 21V5a2 2 0 00-1.675-1.974l-6.163-1.013A1 1 0 0010 3v18a1 1 0 001.124.992z\"/><path d=\"M22 21h-3\"/></svg>",
       "title": {
         "en": "Gatehouse board",
         "pt-BR": "Painel da portaria",
@@ -371,6 +380,7 @@
       "required": true,
       "author": "JayV",
       "docs": "liveFiles",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z\"/><path d=\"M9 10h6\"/><path d=\"M12 13V7\"/><path d=\"M9 17h6\"/></svg>",
       "title": {
         "en": "Live files",
         "pt-BR": "Arquivos ao vivo",
@@ -411,6 +421,7 @@
       "required": true,
       "author": "JayV",
       "docs": "chatSearch",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m21 21-4.34-4.34\"/><circle cx=\"11\" cy=\"11\" r=\"8\"/></svg>",
       "title": {
         "en": "Chat search",
         "pt-BR": "Busca nos chats",
@@ -451,6 +462,7 @@
       "required": true,
       "author": "JayV",
       "docs": "projectNotes",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 18V5\"/><path d=\"M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4\"/><path d=\"M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5\"/><path d=\"M17.997 5.125a4 4 0 0 1 2.526 5.77\"/><path d=\"M18 18a4 4 0 0 0 2-7.464\"/><path d=\"M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517\"/><path d=\"M6 18a4 4 0 0 1-2-7.464\"/><path d=\"M6.003 5.125a4 4 0 0 0-2.526 5.77\"/></svg>",
       "title": {
         "en": "Project notes",
         "pt-BR": "Notas do projeto",
@@ -491,6 +503,7 @@
       "required": true,
       "author": "JayV",
       "docs": "secondOpinion",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 7V5a2 2 0 0 1 2-2h2\"/><path d=\"M17 3h2a2 2 0 0 1 2 2v2\"/><path d=\"M21 17v2a2 2 0 0 1-2 2h-2\"/><path d=\"M7 21H5a2 2 0 0 1-2-2v-2\"/><circle cx=\"12\" cy=\"12\" r=\"1\"/><path d=\"M18.944 12.33a1 1 0 0 0 0-.66 7.5 7.5 0 0 0-13.888 0 1 1 0 0 0 0 .66 7.5 7.5 0 0 0 13.888 0\"/></svg>",
       "title": {
         "en": "Second opinion",
         "pt-BR": "Segunda opinião",
@@ -531,6 +544,7 @@
       "required": true,
       "author": "JayV",
       "docs": "planFirst",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z\"/><path d=\"M15 5.764v15\"/><path d=\"M9 3.236v15\"/></svg>",
       "title": {
         "en": "Plan before building",
         "pt-BR": "Planejar antes de construir",
@@ -571,6 +585,7 @@
       "required": true,
       "author": "JayV",
       "docs": "parallelTasks",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"18\" r=\"3\"/><circle cx=\"6\" cy=\"6\" r=\"3\"/><circle cx=\"18\" cy=\"6\" r=\"3\"/><path d=\"M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9\"/><path d=\"M12 12v3\"/></svg>",
       "title": {
         "en": "Parallel agents",
         "pt-BR": "Agentes em paralelo",
@@ -611,6 +626,7 @@
       "required": true,
       "author": "JayV",
       "docs": "answerRecall",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"/><path d=\"M3 3v5h5\"/><path d=\"M12 7v5l4 2\"/></svg>",
       "title": {
         "en": "Earlier answers",
         "pt-BR": "Respostas anteriores",
@@ -651,6 +667,7 @@
       "required": true,
       "author": "JayV",
       "docs": "leanCode",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"6\" cy=\"6\" r=\"3\"/><path d=\"M8.12 8.12 12 12\"/><path d=\"M20 4 8.12 15.88\"/><circle cx=\"6\" cy=\"18\" r=\"3\"/><path d=\"M14.8 14.8 20 20\"/></svg>",
       "title": {
         "en": "Lean code",
         "pt-BR": "Código enxuto",
@@ -691,6 +708,7 @@
       "required": true,
       "author": "JayV",
       "docs": "symbolIndex",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1\"/><path d=\"M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1\"/></svg>",
       "title": {
         "en": "Symbol index for Claude",
         "pt-BR": "Índice de símbolos para o Claude",
@@ -731,6 +749,7 @@
       "required": true,
       "author": "JayV",
       "docs": "mcp",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 22v-5\"/><path d=\"M15 8V2\"/><path d=\"M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z\"/><path d=\"M9 8V2\"/></svg>",
       "title": {
         "en": "MCP servers",
         "pt-BR": "Servidores MCP",
@@ -771,6 +790,7 @@
       "required": true,
       "author": "JayV",
       "docs": "skills",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z\"/><path d=\"M20 2v4\"/><path d=\"M22 4h-4\"/><circle cx=\"4\" cy=\"20\" r=\"2\"/></svg>",
       "title": {
         "en": "Skills",
         "pt-BR": "Skills",
@@ -811,6 +831,7 @@
       "required": true,
       "author": "JayV",
       "docs": "skillsHub",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 22V12\"/><path d=\"M20.27 18.27 22 20\"/><path d=\"M21 10.498V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l.98-.559\"/><path d=\"M3.29 7 12 12l8.71-5\"/><path d=\"m7.5 4.27 8.997 5.148\"/><circle cx=\"18.5\" cy=\"16.5\" r=\"2.5\"/></svg>",
       "title": {
         "en": "skills.sh search",
         "pt-BR": "Busca no skills.sh",
@@ -851,6 +872,7 @@
       "required": true,
       "author": "JayV",
       "docs": "conversationFind",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 5H3\"/><path d=\"M10 12H3\"/><path d=\"M10 19H3\"/><circle cx=\"17\" cy=\"15\" r=\"3\"/><path d=\"m21 19-1.9-1.9\"/></svg>",
       "title": {
         "en": "Find in conversation",
         "pt-BR": "Busca na conversa",
@@ -887,10 +909,11 @@
       "category": "agents",
       "plan": "customMods",
       "minApp": "0.94.0",
-      "preinstalled": true,
+      "preinstalled": false,
       "author": "JayV",
       "docs": "llmMods",
       "homepage": "https://lmstudio.ai",
+      "icon": "<svg fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M14.025 0c3.492 0 5.237 0 6.571.68a6.24 6.24 0 0 1 2.725 2.724C24 4.738 24 6.484 24 9.975v4.05c0 3.492 0 5.237-.68 6.571a6.24 6.24 0 0 1-2.724 2.725c-1.334.679-3.08.679-6.571.679h-4.05c-3.492 0-5.237 0-6.571-.68A6.24 6.24 0 0 1 .68 20.597C0 19.262 0 17.516 0 14.025v-4.05c0-3.492 0-5.237.68-6.571A6.23 6.23 0 0 1 3.404.68C4.738 0 6.484 0 9.975 0zM7.688 16.313a1.313 1.313 0 0 0 0 2.625h11.625a1.313 1.313 0 0 0 0-2.625zm-3-3.75a1.313 1.313 0 0 0 0 2.624h11.625a1.313 1.313 0 0 0 0-2.624zm3-3.75a1.313 1.313 0 0 0 0 2.624h11.625a1.313 1.313 0 0 0 0-2.624zm-3-3.75a1.313 1.313 0 0 0 0 2.625h11.625a1.313 1.313 0 0 0 0-2.625z\"/></svg>",
       "title": {
         "en": "LM Studio",
         "pt-BR": "LM Studio",
@@ -937,6 +960,7 @@
       "author": "JayV",
       "docs": "llmMods",
       "homepage": "https://ollama.com",
+      "icon": "<svg fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M16.361 10.26a.894.894 0 0 0-.558.47l-.072.148.001.207c0 .193.004.217.059.353.076.193.152.312.291.448.24.238.51.3.872.205a.86.86 0 0 0 .517-.436.752.752 0 0 0 .08-.498c-.064-.453-.33-.782-.724-.897a1.06 1.06 0 0 0-.466 0zm-9.203.005c-.305.096-.533.32-.65.639a1.187 1.187 0 0 0-.06.52c.057.309.31.59.598.667.362.095.632.033.872-.205.14-.136.215-.255.291-.448.055-.136.059-.16.059-.353l.001-.207-.072-.148a.894.894 0 0 0-.565-.472 1.02 1.02 0 0 0-.474.007Zm4.184 2c-.131.071-.223.25-.195.383.031.143.157.288.353.407.105.063.112.072.117.136.004.038-.01.146-.029.243-.02.094-.036.194-.036.222.002.074.07.195.143.253.064.052.076.054.255.059.164.005.198.001.264-.03.169-.082.212-.234.15-.525-.052-.243-.042-.28.087-.355.137-.08.281-.219.324-.314a.365.365 0 0 0-.175-.48.394.394 0 0 0-.181-.033c-.126 0-.207.03-.355.124l-.085.053-.053-.032c-.219-.13-.259-.145-.391-.143a.396.396 0 0 0-.193.032zm.39-2.195c-.373.036-.475.05-.654.086-.291.06-.68.195-.951.328-.94.46-1.589 1.226-1.787 2.114-.04.176-.045.234-.045.53 0 .294.005.357.043.524.264 1.16 1.332 2.017 2.714 2.173.3.033 1.596.033 1.896 0 1.11-.125 2.064-.727 2.493-1.571.114-.226.169-.372.22-.602.039-.167.044-.23.044-.523 0-.297-.005-.355-.045-.531-.288-1.29-1.539-2.304-3.072-2.497a6.873 6.873 0 0 0-.855-.031zm.645.937a3.283 3.283 0 0 1 1.44.514c.223.148.537.458.671.662.166.251.26.508.303.82.02.143.01.251-.043.482-.08.345-.332.705-.672.957a3.115 3.115 0 0 1-.689.348c-.382.122-.632.144-1.525.138-.582-.006-.686-.01-.853-.042-.57-.107-1.022-.334-1.35-.68-.264-.28-.385-.535-.45-.946-.03-.192.025-.509.137-.776.136-.326.488-.73.836-.963.403-.269.934-.46 1.422-.512.187-.02.586-.02.773-.002zm-5.503-11a1.653 1.653 0 0 0-.683.298C5.617.74 5.173 1.666 4.985 2.819c-.07.436-.119 1.04-.119 1.503 0 .544.064 1.24.155 1.721.02.107.031.202.023.208a8.12 8.12 0 0 1-.187.152 5.324 5.324 0 0 0-.949 1.02 5.49 5.49 0 0 0-.94 2.339 6.625 6.625 0 0 0-.023 1.357c.091.78.325 1.438.727 2.04l.13.195-.037.064c-.269.452-.498 1.105-.605 1.732-.084.496-.095.629-.095 1.294 0 .67.009.803.088 1.266.095.555.288 1.143.503 1.534.071.128.243.393.264.407.007.003-.014.067-.046.141a7.405 7.405 0 0 0-.548 1.873c-.062.417-.071.552-.071.991 0 .56.031.832.148 1.279L3.42 24h1.478l-.05-.091c-.297-.552-.325-1.575-.068-2.597.117-.472.25-.819.498-1.296l.148-.29v-.177c0-.165-.003-.184-.057-.293a.915.915 0 0 0-.194-.25 1.74 1.74 0 0 1-.385-.543c-.424-.92-.506-2.286-.208-3.451.124-.486.329-.918.544-1.154a.787.787 0 0 0 .223-.531c0-.195-.07-.355-.224-.522a3.136 3.136 0 0 1-.817-1.729c-.14-.96.114-2.005.69-2.834.563-.814 1.353-1.336 2.237-1.475.199-.033.57-.028.776.01.226.04.367.028.512-.041.179-.085.268-.19.374-.431.093-.215.165-.333.36-.576.234-.29.46-.489.822-.729.413-.27.884-.467 1.352-.561.17-.035.25-.04.569-.04.319 0 .398.005.569.04a4.07 4.07 0 0 1 1.914.997c.117.109.398.457.488.602.034.057.095.177.132.267.105.241.195.346.374.43.14.068.286.082.503.045.343-.058.607-.053.943.016 1.144.23 2.14 1.173 2.581 2.437.385 1.108.276 2.267-.296 3.153-.097.15-.193.27-.333.419-.301.322-.301.722-.001 1.053.493.539.801 1.866.708 3.036-.062.772-.26 1.463-.533 1.854a2.096 2.096 0 0 1-.224.258.916.916 0 0 0-.194.25c-.054.109-.057.128-.057.293v.178l.148.29c.248.476.38.823.498 1.295.253 1.008.231 2.01-.059 2.581a.845.845 0 0 0-.044.098c0 .006.329.009.732.009h.73l.02-.074.036-.134c.019-.076.057-.3.088-.516.029-.217.029-1.016 0-1.258-.11-.875-.295-1.57-.597-2.226-.032-.074-.053-.138-.046-.141.008-.005.057-.074.108-.152.376-.569.607-1.284.724-2.228.031-.26.031-1.378 0-1.628-.083-.645-.182-1.082-.348-1.525a6.083 6.083 0 0 0-.329-.7l-.038-.064.131-.194c.402-.604.636-1.262.727-2.04a6.625 6.625 0 0 0-.024-1.358 5.512 5.512 0 0 0-.939-2.339 5.325 5.325 0 0 0-.95-1.02 8.097 8.097 0 0 1-.186-.152.692.692 0 0 1 .023-.208c.208-1.087.201-2.443-.017-3.503-.19-.924-.535-1.658-.98-2.082-.354-.338-.716-.482-1.15-.455-.996.059-1.8 1.205-2.116 3.01a6.805 6.805 0 0 0-.097.726c0 .036-.007.066-.015.066a.96.96 0 0 1-.149-.078A4.857 4.857 0 0 0 12 3.03c-.832 0-1.687.243-2.456.698a.958.958 0 0 1-.148.078c-.008 0-.015-.03-.015-.066a6.71 6.71 0 0 0-.097-.725C8.997 1.392 8.337.319 7.46.048a2.096 2.096 0 0 0-.585-.041Zm.293 1.402c.248.197.523.759.682 1.388.03.113.06.244.069.292.007.047.026.152.041.233.067.365.098.76.102 1.24l.002.475-.12.175-.118.178h-.278c-.324 0-.646.041-.954.124l-.238.06c-.033.007-.038-.003-.057-.144a8.438 8.438 0 0 1 .016-2.323c.124-.788.413-1.501.696-1.711.067-.05.079-.049.157.013zm9.825-.012c.17.126.358.46.498.888.28.854.36 2.028.212 3.145-.019.14-.024.151-.057.144l-.238-.06a3.693 3.693 0 0 0-.954-.124h-.278l-.119-.178-.119-.175.002-.474c.004-.669.066-1.19.214-1.772.157-.623.434-1.185.68-1.382.078-.062.09-.063.159-.012z\"/></svg>",
       "title": {
         "en": "Ollama",
         "pt-BR": "Ollama",
@@ -979,7 +1003,7 @@
       "category": "agents",
       "plan": "skills",
       "minApp": "0.103.0",
-      "preinstalled": true,
+      "preinstalled": false,
       "requires": [
         "skills",
         "mcp"
@@ -987,6 +1011,7 @@
       "author": "JayV",
       "docs": "skills",
       "homepage": "https://rea.tools",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 7V5a2 2 0 0 1 2-2h2\"/><path d=\"M17 3h2a2 2 0 0 1 2 2v2\"/><path d=\"M21 17v2a2 2 0 0 1-2 2h-2\"/><path d=\"M7 21H5a2 2 0 0 1-2-2v-2\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"m16 16-1.9-1.9\"/></svg>",
       "title": {
         "en": "REA — reverse engineering",
         "pt-BR": "REA — engenharia reversa",

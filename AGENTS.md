@@ -44,7 +44,15 @@ todo mundo: o `catalog.mjs` só aceita isso com o id em `engines.json` ›
 ## Campos que mudam o comportamento
 
 - `preinstalled`: o mod se instala, ligado, no login de quem ainda não o tem.
-  Quem o desinstalou não o recebe de volta.
+  Quem o desinstalou não o recebe de volta. Regra do dono: só os essenciais e
+  Claude Code, Codex e Ollama vêm instalados; os outros mods esperam quem
+  quiser instalar (um teste do validador confere a lista).
+- `icon`: o ícone do mod, um `.svg` da pasta dele (obrigatório). O build põe o
+  desenho no catálogo; o app e o site o mostram como imagem. Só o desenho:
+  nada de script, estilo, evento ou endereço de fora (imagem embutida, só em
+  `data:` PNG, JPEG ou WebP), até 16 kB e com `viewBox`. Ícone monocromático
+  usa `currentColor` e segue a cor do texto e o tema; o colorido fica com as
+  cores dele. Os créditos dos desenhos de terceiros ficam em `mods/ICONS.md`.
 - `required`: essencial — o app precisa dele. Fica sempre instalado e ligado;
   ninguém o desliga nem o desinstala, no app ou no site (o plano continua
   mandando no recurso que ele traz). Pede `preinstalled`, e só depende de

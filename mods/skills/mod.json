@@ -9,6 +9,7 @@
   "required": true,
   "author": "JayV",
   "docs": "skills",
+  "icon": "icon.svg",
   "title": {
     "en": "Skills",
     "pt-BR": "Skills",

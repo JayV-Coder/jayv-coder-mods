@@ -5,10 +5,11 @@
   "category": "agents",
   "plan": "kiloCode",
   "minApp": "0.94.0",
-  "preinstalled": true,
+  "preinstalled": false,
   "author": "JayV",
   "docs": "kiloCode",
   "homepage": "https://kilocode.ai",
+  "icon": "icon.svg",
   "title": {
     "en": "Kilo Code",
     "pt-BR": "Kilo Code",

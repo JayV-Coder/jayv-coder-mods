@@ -9,6 +9,7 @@
   "author": "JayV",
   "docs": "agents",
   "homepage": "https://github.com/openai/codex",
+  "icon": "icon.svg",
   "title": {
     "en": "Codex",
     "pt-BR": "Codex",

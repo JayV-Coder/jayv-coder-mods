@@ -5,10 +5,11 @@
   "category": "agents",
   "plan": null,
   "minApp": "0.94.0",
-  "preinstalled": true,
+  "preinstalled": false,
   "author": "JayV",
   "docs": "agents",
   "homepage": "https://github.com/features/copilot",
+  "icon": "icon.svg",
   "title": {
     "en": "GitHub Copilot",
     "pt-BR": "GitHub Copilot",

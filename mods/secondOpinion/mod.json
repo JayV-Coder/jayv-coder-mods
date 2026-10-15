@@ -9,6 +9,7 @@
   "required": true,
   "author": "JayV",
   "docs": "secondOpinion",
+  "icon": "icon.svg",
   "title": {
     "en": "Second opinion",
     "pt-BR": "Segunda opinião",

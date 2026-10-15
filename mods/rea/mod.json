@@ -5,11 +5,12 @@
   "category": "agents",
   "plan": "skills",
   "minApp": "0.103.0",
-  "preinstalled": true,
+  "preinstalled": false,
   "requires": ["skills", "mcp"],
   "author": "JayV",
   "docs": "skills",
   "homepage": "https://rea.tools",
+  "icon": "icon.svg",
   "title": {
     "en": "REA — reverse engineering",
     "pt-BR": "REA — engenharia reversa",

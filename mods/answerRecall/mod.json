@@ -9,6 +9,7 @@
   "required": true,
   "author": "JayV",
   "docs": "answerRecall",
+  "icon": "icon.svg",
   "title": {
     "en": "Earlier answers",
     "pt-BR": "Respostas anteriores",

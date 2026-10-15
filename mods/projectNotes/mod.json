@@ -9,6 +9,7 @@
   "required": true,
   "author": "JayV",
   "docs": "projectNotes",
+  "icon": "icon.svg",
   "title": {
     "en": "Project notes",
     "pt-BR": "Notas do projeto",

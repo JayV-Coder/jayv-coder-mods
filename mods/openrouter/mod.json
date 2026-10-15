@@ -5,10 +5,11 @@
   "category": "agents",
   "plan": "gatewayProviders",
   "minApp": "0.94.0",
-  "preinstalled": true,
+  "preinstalled": false,
   "author": "JayV",
   "docs": "gatewayProviders",
   "homepage": "https://openrouter.ai",
+  "icon": "icon.svg",
   "title": {
     "en": "OpenRouter",
     "pt-BR": "OpenRouter",

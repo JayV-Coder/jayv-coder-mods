@@ -29,7 +29,7 @@
           "ja",
           "de"
         ],
-        "v": "cd4194a00c"
+        "v": "1084846c7d"
       },
       "setup": [],
       "use": [
@@ -60,7 +60,7 @@
               "ja",
               "de"
             ],
-            "v": "50fcc0b126"
+            "v": "7d70db2dac"
           }
         }
       ]
@@ -93,7 +93,7 @@
           "ja",
           "de"
         ],
-        "v": "74ecc9d215"
+        "v": "640f40cf47"
       },
       "setup": [],
       "use": [
@@ -124,7 +124,7 @@
               "ja",
               "de"
             ],
-            "v": "24ccbdfe09"
+            "v": "c735e10767"
           }
         }
       ]
@@ -169,7 +169,7 @@
           "ja",
           "de"
         ],
-        "v": "fd3f153867"
+        "v": "216ad875dd"
       },
       "setup": [
         {
@@ -213,7 +213,7 @@
               "ja",
               "de"
             ],
-            "v": "b1bb11f04b"
+            "v": "73c1e8ba2b"
           }
         }
       ],
@@ -245,7 +245,7 @@
               "ja",
               "de"
             ],
-            "v": "3adf58f1f6"
+            "v": "1c885c6ae1"
           }
         }
       ]
@@ -290,7 +290,7 @@
           "ja",
           "de"
         ],
-        "v": "3a01df61d0"
+        "v": "868e8bad25"
       },
       "setup": [
         {
@@ -334,7 +334,7 @@
               "ja",
               "de"
             ],
-            "v": "4a402ca3ad"
+            "v": "4385709222"
           }
         }
       ],
@@ -366,7 +366,7 @@
               "ja",
               "de"
             ],
-            "v": "e0f9b1af95"
+            "v": "658e8aa19e"
           }
         }
       ]
@@ -399,7 +399,7 @@
           "ja",
           "de"
         ],
-        "v": "6c1a83388e"
+        "v": "ffcde17520"
       },
       "setup": [],
       "use": [
@@ -430,7 +430,7 @@
               "ja",
               "de"
             ],
-            "v": "1b1478ea5c"
+            "v": "1808bec811"
           }
         }
       ]
@@ -475,7 +475,7 @@
           "ja",
           "de"
         ],
-        "v": "63a39fd7a0"
+        "v": "a20d8ef571"
       },
       "setup": [
         {
@@ -519,7 +519,7 @@
               "ja",
               "de"
             ],
-            "v": "423308c734"
+            "v": "cf2580ec24"
           }
         }
       ],
@@ -551,7 +551,7 @@
               "ja",
               "de"
             ],
-            "v": "0e3a3a1975"
+            "v": "58b9317c11"
           }
         }
       ]
@@ -596,7 +596,7 @@
           "ja",
           "de"
         ],
-        "v": "a1c7f3e4bc"
+        "v": "5711ecfae7"
       },
       "setup": [
         {
@@ -640,7 +640,7 @@
               "ja",
               "de"
             ],
-            "v": "e9a9a8bc7b"
+            "v": "20da3f10c3"
           }
         }
       ],
@@ -672,7 +672,7 @@
               "ja",
               "de"
             ],
-            "v": "e79db955ce"
+            "v": "c8027e8aaa"
           }
         }
       ]
@@ -705,7 +705,7 @@
           "ja",
           "de"
         ],
-        "v": "2b670d83c3"
+        "v": "9f78408442"
       },
       "setup": [],
       "use": [
@@ -736,7 +736,7 @@
               "ja",
               "de"
             ],
-            "v": "5cac69b3d7"
+            "v": "f87390e71c"
           }
         },
         {
@@ -795,7 +795,7 @@
           "ja",
           "de"
         ],
-        "v": "522194ed03"
+        "v": "36c01fc427"
       },
       "setup": [
         {
@@ -839,7 +839,7 @@
               "ja",
               "de"
             ],
-            "v": "c6b36be5c0"
+            "v": "a036d63c80"
           }
         }
       ],
@@ -871,7 +871,7 @@
               "ja",
               "de"
             ],
-            "v": "17cfe228ee"
+            "v": "78c299f9a2"
           }
         }
       ]
@@ -904,7 +904,7 @@
           "ja",
           "de"
         ],
-        "v": "ffdae17895"
+        "v": "fff713fe9c"
       },
       "setup": [],
       "use": [
@@ -935,7 +935,7 @@
               "ja",
               "de"
             ],
-            "v": "483c2dab75"
+            "v": "4c46866c28"
           }
         }
       ]
@@ -980,7 +980,7 @@
           "ja",
           "de"
         ],
-        "v": "f8ab5d1580"
+        "v": "5cfbf1a3b7"
       },
       "setup": [
         {
@@ -1010,7 +1010,7 @@
               "ja",
               "de"
             ],
-            "v": "20f23b9158"
+            "v": "db96940d40"
           }
         }
       ],
@@ -1042,7 +1042,7 @@
               "ja",
               "de"
             ],
-            "v": "23e289b4d1"
+            "v": "85e09f27ff"
           }
         }
       ]
@@ -1050,16 +1050,16 @@
     "liveFiles": {
       "version": "1.1.0",
       "about": {
-        "en": "While an agent works, a panel beside the conversation lists every file the request changes, newest first, with the diff of each one as it is written.",
-        "pt-BR": "Enquanto um agente trabalha, um painel ao lado da conversa lista cada arquivo que o pedido muda, do mais recente para o mais antigo, com o diff de cada um enquanto ele é escrito.",
-        "es": "Mientras un agente trabaja, un panel junto a la conversación lista cada archivo que cambia la solicitud, del más reciente al más antiguo, con el diff de cada uno mientras se escribe.",
-        "zh-CN": "代理工作时，对话旁边的面板会列出请求改动的每个文件，最新的在前，并在写入过程中显示每个文件的 diff。",
-        "hi": "जब कोई एजेंट काम करता है, तो बातचीत के बगल का पैनल हर वह फ़ाइल दिखाता है जिसे अनुरोध बदलता है, सबसे नई पहले, और लिखे जाते समय हर फ़ाइल का diff।",
-        "ar": "أثناء عمل الوكيل، تعرض لوحة بجانب المحادثة كل ملف يغيّره الطلب، الأحدث أولًا، مع الفروق في كل ملف أثناء كتابته.",
-        "fr": "Pendant qu’un agent travaille, un panneau à côté de la conversation liste chaque fichier que la demande modifie, du plus récent au plus ancien, avec le diff de chacun au fil de l’écriture.",
-        "ru": "Пока агент работает, панель рядом с разговором показывает каждый файл, который меняет запрос, начиная с самого нового, с diff каждого файла прямо во время записи.",
-        "ja": "エージェントが作業している間、会話の横のパネルに、依頼が変更するファイルを新しい順にすべて表示し、書き込まれていく各ファイルの差分を見せます。",
-        "de": "Während ein Agent arbeitet, listet ein Panel neben dem Gespräch jede Datei, die die Anfrage ändert, die neueste zuerst, mit dem Diff jeder Datei, während sie geschrieben wird."
+        "en": "While an agent works, the Files tab of the Code panel, beside the conversation, lists every file the request changes, newest first, with the diff of each one as it is written.",
+        "pt-BR": "Enquanto um agente trabalha, a aba Arquivos do painel Código, ao lado da conversa, lista cada arquivo que o pedido muda, do mais recente para o mais antigo, com o diff de cada um enquanto ele é escrito.",
+        "es": "Mientras un agente trabaja, la pestaña Archivos del panel Código, junto a la conversación, lista cada archivo que cambia la solicitud, del más reciente al más antiguo, con el diff de cada uno mientras se escribe.",
+        "zh-CN": "代理工作时，对话旁“代码”面板的“文件”标签页会列出请求改动的每个文件，最新的在前，并在写入过程中显示每个文件的 diff。",
+        "hi": "जब कोई एजेंट काम करता है, तो बातचीत के बगल के कोड पैनल का फ़ाइलें टैब हर वह फ़ाइल दिखाता है जिसे अनुरोध बदलता है, सबसे नई पहले, और लिखे जाते समय हर फ़ाइल का diff।",
+        "ar": "أثناء عمل الوكيل، يعرض تبويب «الملفات» في لوحة «الشيفرة» بجانب المحادثة كل ملف يغيّره الطلب، الأحدث أولًا، مع الفروق في كل ملف أثناء كتابته.",
+        "fr": "Pendant qu’un agent travaille, l’onglet Fichiers du panneau Code, à côté de la conversation, liste chaque fichier que la demande modifie, du plus récent au plus ancien, avec le diff de chacun au fil de l’écriture.",
+        "ru": "Пока агент работает, вкладка «Файлы» панели «Код» рядом с разговором показывает каждый файл, который меняет запрос, начиная с самого нового, с diff каждого файла прямо во время записи.",
+        "ja": "エージェントが作業している間、会話の横の「コード」パネルの「ファイル」タブに、依頼が変更するファイルを新しい順にすべて表示し、書き込まれていく各ファイルの差分を見せます。",
+        "de": "Während ein Agent arbeitet, listet der Tab Dateien des Code-Panels neben dem Gespräch jede Datei, die die Anfrage ändert, die neueste zuerst, mit dem Diff jeder Datei, während sie geschrieben wird."
       },
       "enable": {
         "name": "enable",
@@ -1075,22 +1075,22 @@
           "ja",
           "de"
         ],
-        "v": "e8781b7d6f"
+        "v": "bb00e94dee"
       },
       "setup": [],
       "use": [
         {
           "text": {
-            "en": "Click Live in the chat header; it also opens by itself on the first change. Pick a file to see what changed, or follow the agent from file to file.",
-            "pt-BR": "Clique em Ao vivo no cabeçalho do chat; ele também abre sozinho na primeira mudança. Escolha um arquivo para ver o que mudou, ou acompanhe o agente de arquivo em arquivo.",
-            "es": "Haz clic en En vivo en la cabecera del chat; también se abre solo con el primer cambio. Elige un archivo para ver qué cambió, o sigue al agente de archivo en archivo.",
-            "zh-CN": "在对话标题栏中点击“实时”；第一次有改动时它也会自动打开。选择一个文件查看改了什么，或跟随代理逐个文件查看。",
-            "hi": "चैट के हेडर में लाइव पर क्लिक करें; पहले बदलाव पर यह अपने-आप भी खुलता है। क्या बदला यह देखने के लिए कोई फ़ाइल चुनें, या एजेंट के साथ एक फ़ाइल से दूसरी पर चलें।",
-            "ar": "انقر «مباشر» في رأس المحادثة؛ وتفتح اللوحة وحدها أيضًا عند أول تغيير. اختر ملفًا لترى ما تغيّر، أو تابع الوكيل من ملف إلى آخر.",
-            "fr": "Cliquez sur En direct dans l’en-tête du chat ; il s’ouvre aussi tout seul au premier changement. Choisissez un fichier pour voir ce qui a changé, ou suivez l’agent de fichier en fichier.",
-            "ru": "Нажмите «В реальном времени» в заголовке чата; панель также открывается сама при первом изменении. Выберите файл, чтобы увидеть изменения, или следите за агентом от файла к файлу.",
-            "ja": "チャットのヘッダーでライブをクリックします。最初の変更で自動的に開くこともあります。ファイルを選ぶと変更内容がわかり、エージェントを追ってファイルからファイルへ移ることもできます。",
-            "de": "Klicken Sie im Chat-Kopf auf Live; das Panel öffnet sich bei der ersten Änderung auch von selbst. Wählen Sie eine Datei, um zu sehen, was sich geändert hat, oder folgen Sie dem Agenten von Datei zu Datei."
+            "en": "Click Code in the chat header; it also opens by itself, in Files, on the first change. Pick a file to see what changed, or follow the agent from file to file.",
+            "pt-BR": "Clique em Código no cabeçalho do chat; ele também abre sozinho, em Arquivos, na primeira mudança. Escolha um arquivo para ver o que mudou, ou acompanhe o agente de arquivo em arquivo.",
+            "es": "Haz clic en Código en la cabecera del chat; también se abre solo, en Archivos, con el primer cambio. Elige un archivo para ver qué cambió, o sigue al agente de archivo en archivo.",
+            "zh-CN": "在对话标题栏中点击“代码”；第一次有改动时它也会自动打开到“文件”。选择一个文件查看改了什么，或跟随代理逐个文件查看。",
+            "hi": "चैट के हेडर में कोड पर क्लिक करें; पहले बदलाव पर यह अपने-आप भी फ़ाइलें में खुलता है। क्या बदला यह देखने के लिए कोई फ़ाइल चुनें, या एजेंट के साथ एक फ़ाइल से दूसरी पर चलें।",
+            "ar": "انقر «الشيفرة» في رأس المحادثة؛ وتفتح اللوحة وحدها أيضًا، على «الملفات»، عند أول تغيير. اختر ملفًا لترى ما تغيّر، أو تابع الوكيل من ملف إلى آخر.",
+            "fr": "Cliquez sur Code dans l’en-tête du chat ; il s’ouvre aussi tout seul, sur Fichiers, au premier changement. Choisissez un fichier pour voir ce qui a changé, ou suivez l’agent de fichier en fichier.",
+            "ru": "Нажмите «Код» в заголовке чата; при первом изменении панель открывается и сама, на вкладке «Файлы». Выберите файл, чтобы увидеть изменения, или следите за агентом от файла к файлу.",
+            "ja": "チャットのヘッダーで「コード」をクリックします。最初の変更で「ファイル」が自動的に開くこともあります。ファイルを選ぶと変更内容がわかり、エージェントを追ってファイルからファイルへ移ることもできます。",
+            "de": "Klicken Sie im Chat-Kopf auf Code; das Panel öffnet sich bei der ersten Änderung auch von selbst, im Tab Dateien. Wählen Sie eine Datei, um zu sehen, was sich geändert hat, oder folgen Sie dem Agenten von Datei zu Datei."
           },
           "image": {
             "name": "live",
@@ -1106,7 +1106,37 @@
               "ja",
               "de"
             ],
-            "v": "8a2296a433"
+            "v": "545fef8994"
+          }
+        },
+        {
+          "text": {
+            "en": "The Repositories tab of the same panel shows the git status of each repository in the chat's folder: the branch, how far it is ahead of or behind the remote and how many files changed. When git cannot read one, the line says why and how to fix it.",
+            "pt-BR": "A aba Repositórios do mesmo painel mostra o git status de cada repositório da pasta do chat: o branch, quanto ele está à frente ou atrás do remoto e quantos arquivos mudaram. Quando o git não consegue ler um, a linha diz por quê e como resolver.",
+            "es": "La pestaña Repositorios del mismo panel muestra el git status de cada repositorio de la carpeta del chat: la rama, cuánto va por delante o por detrás del remoto y cuántos archivos cambiaron. Cuando git no puede leer uno, la línea dice por qué y cómo resolverlo.",
+            "zh-CN": "同一面板的“仓库”标签页显示聊天文件夹中每个仓库的 git 状态：分支、领先或落后远程多少，以及改动了多少文件。git 无法读取某个仓库时，该行会说明原因和解决方法。",
+            "hi": "उसी पैनल का रिपॉज़िटरी टैब चैट के फ़ोल्डर के हर रिपॉज़िटरी का git status दिखाता है: branch, remote से कितना आगे या पीछे है और कितनी फ़ाइलें बदलीं। जब git किसी को नहीं पढ़ पाता, तो पंक्ति बताती है क्यों और इसे कैसे ठीक करें।",
+            "ar": "يعرض تبويب «المستودعات» في اللوحة نفسها حالة git لكل مستودع في مجلد المحادثة: الفرع، وكم يسبق الـremote أو يتأخر عنه، وعدد الملفات التي تغيّرت. وحين لا يستطيع git قراءة أحدها، يقول السطر السبب وطريقة الحل.",
+            "fr": "L’onglet Dépôts du même panneau montre le git status de chaque dépôt du dossier du chat : la branche, son avance ou son retard sur le remote et le nombre de fichiers modifiés. Quand git ne peut pas en lire un, la ligne dit pourquoi et comment corriger.",
+            "ru": "Вкладка «Репозитории» той же панели показывает git status каждого репозитория в папке чата: ветку, насколько он впереди или позади remote и сколько файлов изменилось. Когда git не может прочитать репозиторий, строка объясняет причину и как её устранить.",
+            "ja": "同じパネルの「リポジトリ」タブには、チャットのフォルダー内の各リポジトリの git status が表示されます：ブランチ、remote より進んでいる/遅れている数、変更ファイル数。git が読み取れないときは、その理由と直し方が行に表示されます。",
+            "de": "Der Tab Repositorys desselben Panels zeigt den Git-Status jedes Repositorys im Ordner des Chats: den Branch, wie weit es dem Remote voraus oder hinterher ist und wie viele Dateien sich geändert haben. Wenn Git eines nicht lesen kann, sagt die Zeile, warum und wie es sich beheben lässt."
+          },
+          "image": {
+            "name": "repos",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "ac24d90210"
           }
         }
       ]
@@ -1151,7 +1181,7 @@
           "ja",
           "de"
         ],
-        "v": "eb875322f8"
+        "v": "a91b4397ef"
       },
       "setup": [
         {
@@ -1195,7 +1225,7 @@
               "ja",
               "de"
             ],
-            "v": "0d56a3f956"
+            "v": "b5eff24d27"
           }
         }
       ],
@@ -1227,7 +1257,7 @@
               "ja",
               "de"
             ],
-            "v": "27429b0df2"
+            "v": "07b7a5eebb"
           }
         }
       ]
@@ -1260,7 +1290,7 @@
           "ja",
           "de"
         ],
-        "v": "7ed4d095fd"
+        "v": "27be0052c1"
       },
       "setup": [],
       "use": [
@@ -1291,7 +1321,7 @@
               "ja",
               "de"
             ],
-            "v": "e735d567e2"
+            "v": "49ef0f000c"
           }
         },
         {
@@ -1321,7 +1351,7 @@
               "ja",
               "de"
             ],
-            "v": "5c41f11574"
+            "v": "de1ae452f1"
           }
         }
       ]
@@ -1366,7 +1396,7 @@
           "ja",
           "de"
         ],
-        "v": "c22ab6c2f7"
+        "v": "543e8a3047"
       },
       "setup": [
         {
@@ -1410,7 +1440,7 @@
               "ja",
               "de"
             ],
-            "v": "185b353c9b"
+            "v": "621e6575bc"
           }
         }
       ],
@@ -1442,7 +1472,7 @@
               "ja",
               "de"
             ],
-            "v": "6d7496a489"
+            "v": "717ad98e89"
           }
         }
       ]
@@ -1487,7 +1517,7 @@
           "ja",
           "de"
         ],
-        "v": "d0c9eb4cbc"
+        "v": "e3a003c9f5"
       },
       "setup": [
         {
@@ -1517,7 +1547,7 @@
               "ja",
               "de"
             ],
-            "v": "81a7a55572"
+            "v": "79e4ca5887"
           }
         }
       ],
@@ -1549,7 +1579,7 @@
               "ja",
               "de"
             ],
-            "v": "62ec55544f"
+            "v": "d8793a948a"
           }
         }
       ]
@@ -1582,7 +1612,7 @@
           "ja",
           "de"
         ],
-        "v": "7ef46f6287"
+        "v": "bc2aaaec02"
       },
       "setup": [],
       "use": [
@@ -1613,7 +1643,7 @@
               "ja",
               "de"
             ],
-            "v": "8ffb7b8a0c"
+            "v": "bc9973f6be"
           }
         },
         {
@@ -1643,7 +1673,7 @@
               "ja",
               "de"
             ],
-            "v": "68c0dc0ba9"
+            "v": "87a15360ee"
           }
         }
       ]
@@ -1676,7 +1706,7 @@
           "ja",
           "de"
         ],
-        "v": "368550ba50"
+        "v": "41961e116c"
       },
       "setup": [],
       "use": [
@@ -1707,7 +1737,7 @@
               "ja",
               "de"
             ],
-            "v": "7d4b9f7747"
+            "v": "b5a3941120"
           }
         },
         {
@@ -1737,7 +1767,7 @@
               "ja",
               "de"
             ],
-            "v": "afd1d8d85a"
+            "v": "025512c82c"
           }
         }
       ]
@@ -1770,7 +1800,7 @@
           "ja",
           "de"
         ],
-        "v": "53952fe8ee"
+        "v": "40629cee5b"
       },
       "setup": [],
       "use": [
@@ -1801,7 +1831,7 @@
               "ja",
               "de"
             ],
-            "v": "15d8222609"
+            "v": "488b5d5e2b"
           }
         }
       ]
@@ -1846,7 +1876,7 @@
           "ja",
           "de"
         ],
-        "v": "2a1d74cb7b"
+        "v": "6b6f45c567"
       },
       "setup": [
         {
@@ -1876,7 +1906,7 @@
               "ja",
               "de"
             ],
-            "v": "5c41f11574"
+            "v": "de1ae452f1"
           }
         }
       ],
@@ -1908,7 +1938,7 @@
               "ja",
               "de"
             ],
-            "v": "e999b907e2"
+            "v": "09b472a695"
           }
         },
         {
@@ -1955,7 +1985,7 @@
           "ja",
           "de"
         ],
-        "v": "bc8825215f"
+        "v": "1009b627d1"
       },
       "setup": [],
       "use": [
@@ -1986,7 +2016,7 @@
               "ja",
               "de"
             ],
-            "v": "a52c6703cf"
+            "v": "91aa737785"
           }
         },
         {
@@ -2016,7 +2046,7 @@
               "ja",
               "de"
             ],
-            "v": "d3486ccd03"
+            "v": "c898391828"
           }
         }
       ]
@@ -2049,7 +2079,7 @@
           "ja",
           "de"
         ],
-        "v": "f8436f419f"
+        "v": "6d5b138fd3"
       },
       "setup": [],
       "use": [
@@ -2080,7 +2110,7 @@
               "ja",
               "de"
             ],
-            "v": "461bcf7f00"
+            "v": "32e8b7e979"
           }
         },
         {
@@ -2110,7 +2140,7 @@
               "ja",
               "de"
             ],
-            "v": "df6ac4fe96"
+            "v": "08c95dba5f"
           }
         }
       ]
@@ -2143,7 +2173,7 @@
           "ja",
           "de"
         ],
-        "v": "68879f926a"
+        "v": "675541fb74"
       },
       "setup": [],
       "use": [
@@ -2174,7 +2204,7 @@
               "ja",
               "de"
             ],
-            "v": "4b54f636d5"
+            "v": "5716950b5b"
           }
         }
       ]
@@ -2207,7 +2237,7 @@
           "ja",
           "de"
         ],
-        "v": "457f1ee0bb"
+        "v": "89fb225209"
       },
       "setup": [],
       "use": [
@@ -2238,7 +2268,7 @@
               "ja",
               "de"
             ],
-            "v": "098a5038e0"
+            "v": "cf04c3bb34"
           }
         }
       ]
@@ -2271,7 +2301,7 @@
           "ja",
           "de"
         ],
-        "v": "541706da1f"
+        "v": "52a0bed86e"
       },
       "setup": [],
       "use": [
@@ -2302,7 +2332,7 @@
               "ja",
               "de"
             ],
-            "v": "139c3aaf14"
+            "v": "a4953a8236"
           }
         },
         {

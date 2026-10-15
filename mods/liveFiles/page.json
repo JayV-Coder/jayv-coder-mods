@@ -1,32 +1,47 @@
 {
   "$schema": "../../schema/page.schema.json",
   "about": {
-    "en": "While an agent works, a panel beside the conversation lists every file the request changes, newest first, with the diff of each one as it is written.",
-    "pt-BR": "Enquanto um agente trabalha, um painel ao lado da conversa lista cada arquivo que o pedido muda, do mais recente para o mais antigo, com o diff de cada um enquanto ele é escrito.",
-    "es": "Mientras un agente trabaja, un panel junto a la conversación lista cada archivo que cambia la solicitud, del más reciente al más antiguo, con el diff de cada uno mientras se escribe.",
-    "zh-CN": "代理工作时，对话旁边的面板会列出请求改动的每个文件，最新的在前，并在写入过程中显示每个文件的 diff。",
-    "hi": "जब कोई एजेंट काम करता है, तो बातचीत के बगल का पैनल हर वह फ़ाइल दिखाता है जिसे अनुरोध बदलता है, सबसे नई पहले, और लिखे जाते समय हर फ़ाइल का diff।",
-    "ar": "أثناء عمل الوكيل، تعرض لوحة بجانب المحادثة كل ملف يغيّره الطلب، الأحدث أولًا، مع الفروق في كل ملف أثناء كتابته.",
-    "fr": "Pendant qu’un agent travaille, un panneau à côté de la conversation liste chaque fichier que la demande modifie, du plus récent au plus ancien, avec le diff de chacun au fil de l’écriture.",
-    "ru": "Пока агент работает, панель рядом с разговором показывает каждый файл, который меняет запрос, начиная с самого нового, с diff каждого файла прямо во время записи.",
-    "ja": "エージェントが作業している間、会話の横のパネルに、依頼が変更するファイルを新しい順にすべて表示し、書き込まれていく各ファイルの差分を見せます。",
-    "de": "Während ein Agent arbeitet, listet ein Panel neben dem Gespräch jede Datei, die die Anfrage ändert, die neueste zuerst, mit dem Diff jeder Datei, während sie geschrieben wird."
+    "en": "While an agent works, the Files tab of the Code panel, beside the conversation, lists every file the request changes, newest first, with the diff of each one as it is written.",
+    "pt-BR": "Enquanto um agente trabalha, a aba Arquivos do painel Código, ao lado da conversa, lista cada arquivo que o pedido muda, do mais recente para o mais antigo, com o diff de cada um enquanto ele é escrito.",
+    "es": "Mientras un agente trabaja, la pestaña Archivos del panel Código, junto a la conversación, lista cada archivo que cambia la solicitud, del más reciente al más antiguo, con el diff de cada uno mientras se escribe.",
+    "zh-CN": "代理工作时，对话旁“代码”面板的“文件”标签页会列出请求改动的每个文件，最新的在前，并在写入过程中显示每个文件的 diff。",
+    "hi": "जब कोई एजेंट काम करता है, तो बातचीत के बगल के कोड पैनल का फ़ाइलें टैब हर वह फ़ाइल दिखाता है जिसे अनुरोध बदलता है, सबसे नई पहले, और लिखे जाते समय हर फ़ाइल का diff।",
+    "ar": "أثناء عمل الوكيل، يعرض تبويب «الملفات» في لوحة «الشيفرة» بجانب المحادثة كل ملف يغيّره الطلب، الأحدث أولًا، مع الفروق في كل ملف أثناء كتابته.",
+    "fr": "Pendant qu’un agent travaille, l’onglet Fichiers du panneau Code, à côté de la conversation, liste chaque fichier que la demande modifie, du plus récent au plus ancien, avec le diff de chacun au fil de l’écriture.",
+    "ru": "Пока агент работает, вкладка «Файлы» панели «Код» рядом с разговором показывает каждый файл, который меняет запрос, начиная с самого нового, с diff каждого файла прямо во время записи.",
+    "ja": "エージェントが作業している間、会話の横の「コード」パネルの「ファイル」タブに、依頼が変更するファイルを新しい順にすべて表示し、書き込まれていく各ファイルの差分を見せます。",
+    "de": "Während ein Agent arbeitet, listet der Tab Dateien des Code-Panels neben dem Gespräch jede Datei, die die Anfrage ändert, die neueste zuerst, mit dem Diff jeder Datei, während sie geschrieben wird."
   },
   "use": [
     {
       "text": {
-        "en": "Click Live in the chat header; it also opens by itself on the first change. Pick a file to see what changed, or follow the agent from file to file.",
-        "pt-BR": "Clique em Ao vivo no cabeçalho do chat; ele também abre sozinho na primeira mudança. Escolha um arquivo para ver o que mudou, ou acompanhe o agente de arquivo em arquivo.",
-        "es": "Haz clic en En vivo en la cabecera del chat; también se abre solo con el primer cambio. Elige un archivo para ver qué cambió, o sigue al agente de archivo en archivo.",
-        "zh-CN": "在对话标题栏中点击“实时”；第一次有改动时它也会自动打开。选择一个文件查看改了什么，或跟随代理逐个文件查看。",
-        "hi": "चैट के हेडर में लाइव पर क्लिक करें; पहले बदलाव पर यह अपने-आप भी खुलता है। क्या बदला यह देखने के लिए कोई फ़ाइल चुनें, या एजेंट के साथ एक फ़ाइल से दूसरी पर चलें।",
-        "ar": "انقر «مباشر» في رأس المحادثة؛ وتفتح اللوحة وحدها أيضًا عند أول تغيير. اختر ملفًا لترى ما تغيّر، أو تابع الوكيل من ملف إلى آخر.",
-        "fr": "Cliquez sur En direct dans l’en-tête du chat ; il s’ouvre aussi tout seul au premier changement. Choisissez un fichier pour voir ce qui a changé, ou suivez l’agent de fichier en fichier.",
-        "ru": "Нажмите «В реальном времени» в заголовке чата; панель также открывается сама при первом изменении. Выберите файл, чтобы увидеть изменения, или следите за агентом от файла к файлу.",
-        "ja": "チャットのヘッダーでライブをクリックします。最初の変更で自動的に開くこともあります。ファイルを選ぶと変更内容がわかり、エージェントを追ってファイルからファイルへ移ることもできます。",
-        "de": "Klicken Sie im Chat-Kopf auf Live; das Panel öffnet sich bei der ersten Änderung auch von selbst. Wählen Sie eine Datei, um zu sehen, was sich geändert hat, oder folgen Sie dem Agenten von Datei zu Datei."
+        "en": "Click Code in the chat header; it also opens by itself, in Files, on the first change. Pick a file to see what changed, or follow the agent from file to file.",
+        "pt-BR": "Clique em Código no cabeçalho do chat; ele também abre sozinho, em Arquivos, na primeira mudança. Escolha um arquivo para ver o que mudou, ou acompanhe o agente de arquivo em arquivo.",
+        "es": "Haz clic en Código en la cabecera del chat; también se abre solo, en Archivos, con el primer cambio. Elige un archivo para ver qué cambió, o sigue al agente de archivo en archivo.",
+        "zh-CN": "在对话标题栏中点击“代码”；第一次有改动时它也会自动打开到“文件”。选择一个文件查看改了什么，或跟随代理逐个文件查看。",
+        "hi": "चैट के हेडर में कोड पर क्लिक करें; पहले बदलाव पर यह अपने-आप भी फ़ाइलें में खुलता है। क्या बदला यह देखने के लिए कोई फ़ाइल चुनें, या एजेंट के साथ एक फ़ाइल से दूसरी पर चलें।",
+        "ar": "انقر «الشيفرة» في رأس المحادثة؛ وتفتح اللوحة وحدها أيضًا، على «الملفات»، عند أول تغيير. اختر ملفًا لترى ما تغيّر، أو تابع الوكيل من ملف إلى آخر.",
+        "fr": "Cliquez sur Code dans l’en-tête du chat ; il s’ouvre aussi tout seul, sur Fichiers, au premier changement. Choisissez un fichier pour voir ce qui a changé, ou suivez l’agent de fichier en fichier.",
+        "ru": "Нажмите «Код» в заголовке чата; при первом изменении панель открывается и сама, на вкладке «Файлы». Выберите файл, чтобы увидеть изменения, или следите за агентом от файла к файлу.",
+        "ja": "チャットのヘッダーで「コード」をクリックします。最初の変更で「ファイル」が自動的に開くこともあります。ファイルを選ぶと変更内容がわかり、エージェントを追ってファイルからファイルへ移ることもできます。",
+        "de": "Klicken Sie im Chat-Kopf auf Code; das Panel öffnet sich bei der ersten Änderung auch von selbst, im Tab Dateien. Wählen Sie eine Datei, um zu sehen, was sich geändert hat, oder folgen Sie dem Agenten von Datei zu Datei."
       },
       "image": "live"
+    },
+    {
+      "text": {
+        "en": "The Repositories tab of the same panel shows the git status of each repository in the chat's folder: the branch, how far it is ahead of or behind the remote and how many files changed. When git cannot read one, the line says why and how to fix it.",
+        "pt-BR": "A aba Repositórios do mesmo painel mostra o git status de cada repositório da pasta do chat: o branch, quanto ele está à frente ou atrás do remoto e quantos arquivos mudaram. Quando o git não consegue ler um, a linha diz por quê e como resolver.",
+        "es": "La pestaña Repositorios del mismo panel muestra el git status de cada repositorio de la carpeta del chat: la rama, cuánto va por delante o por detrás del remoto y cuántos archivos cambiaron. Cuando git no puede leer uno, la línea dice por qué y cómo resolverlo.",
+        "zh-CN": "同一面板的“仓库”标签页显示聊天文件夹中每个仓库的 git 状态：分支、领先或落后远程多少，以及改动了多少文件。git 无法读取某个仓库时，该行会说明原因和解决方法。",
+        "hi": "उसी पैनल का रिपॉज़िटरी टैब चैट के फ़ोल्डर के हर रिपॉज़िटरी का git status दिखाता है: branch, remote से कितना आगे या पीछे है और कितनी फ़ाइलें बदलीं। जब git किसी को नहीं पढ़ पाता, तो पंक्ति बताती है क्यों और इसे कैसे ठीक करें।",
+        "ar": "يعرض تبويب «المستودعات» في اللوحة نفسها حالة git لكل مستودع في مجلد المحادثة: الفرع، وكم يسبق الـremote أو يتأخر عنه، وعدد الملفات التي تغيّرت. وحين لا يستطيع git قراءة أحدها، يقول السطر السبب وطريقة الحل.",
+        "fr": "L’onglet Dépôts du même panneau montre le git status de chaque dépôt du dossier du chat : la branche, son avance ou son retard sur le remote et le nombre de fichiers modifiés. Quand git ne peut pas en lire un, la ligne dit pourquoi et comment corriger.",
+        "ru": "Вкладка «Репозитории» той же панели показывает git status каждого репозитория в папке чата: ветку, насколько он впереди или позади remote и сколько файлов изменилось. Когда git не может прочитать репозиторий, строка объясняет причину и как её устранить.",
+        "ja": "同じパネルの「リポジトリ」タブには、チャットのフォルダー内の各リポジトリの git status が表示されます：ブランチ、remote より進んでいる/遅れている数、変更ファイル数。git が読み取れないときは、その理由と直し方が行に表示されます。",
+        "de": "Der Tab Repositorys desselben Panels zeigt den Git-Status jedes Repositorys im Ordner des Chats: den Branch, wie weit es dem Remote voraus oder hinterher ist und wie viele Dateien sich geändert haben. Wenn Git eines nicht lesen kann, sagt die Zeile, warum und wie es sich beheben lässt."
+      },
+      "image": "repos"
     }
   ]
 }
