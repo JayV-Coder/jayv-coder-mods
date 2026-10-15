@@ -9,12 +9,17 @@
 //                    0.94 e o site 2.12, que só o conhecem. Um mod que não
 //                    cabe nele (dependências, mais de um ponto) fica de fora.
 //
-//   node scripts/catalog.mjs check   confere os manifestos e se os catálogos estão em dia
-//   node scripts/catalog.mjs build   confere e grava os dois catálogos
+//   pages.json       a página de cada mod no site (`mods/<id>/page.json`): o
+//                    que ele faz, o que mais pede para funcionar e como usar,
+//                    nos dez idiomas, com os prints de `mods/<id>/media/`.
+//
+//   node scripts/catalog.mjs check   confere os manifestos, as páginas e se os arquivos estão em dia
+//   node scripts/catalog.mjs build   confere e grava os dois catálogos e as páginas
 //
 // Sem dependências: roda com o Node puro, no Actions e na máquina de quem edita.
 
-import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -23,6 +28,8 @@ import { fileURLToPath } from "node:url";
 export const SCHEMA = 2;
 /** O formato antigo, que o `catalog.json` continua seguindo. */
 export const LEGACY_SCHEMA = 1;
+/** O formato das páginas (`pages.json`). */
+export const PAGES_SCHEMA = 1;
 
 /** Os idiomas do app (`public.locales`): todo texto de mod vem nos dez. */
 export const LOCALES = ["en", "pt-BR", "es", "zh-CN", "hi", "ar", "fr", "ru", "ja", "de"];
@@ -59,6 +66,18 @@ const MAX_MODELS = 50;
 const MAX_ARGS = 64;
 const MAX_ARG = 1000;
 const PLACEHOLDER = /\{[A-Za-z0-9_]+\}/g;
+/** As skills que um mod traz: o nome vira a skill no app (o Jev a escolhe pelo
+ * pedido) e a descrição é o que o Jev lê — ele vê até 400 caracteres dela. */
+const MAX_SKILLS = 4;
+const SKILL_NAME = /^[A-Za-z0-9_-]{1,64}$/;
+const SKILL_DESCRIPTION_MAX = 400;
+const SKILL_INSTRUCTIONS_MAX = 16_000;
+const SKILL_FIELDS = ["name", "description", "instructions", "file", "mcpServers"];
+const MAX_SERVERS = 4;
+const SERVER_NAME = /^[A-Za-z0-9_-]{1,40}$/;
+const SERVER_FIELDS = ["name", "transport", "command", "args", "env", "url", "headers"];
+const ENV_KEY = /^[A-Za-z0-9_]+$/;
+const SKILL_FILE = /^[A-Za-z0-9][A-Za-z0-9._-]{0,63}\.md$/;
 
 const isObject = (value) => typeof value === "object" && value !== null && !Array.isArray(value);
 const isText = (value) => typeof value === "string" && value.trim().length > 0;
@@ -134,6 +153,52 @@ function agentProblems(where, agent) {
   return found;
 }
 
+/** Um servidor MCP de uma skill, como a tela de MCP do app o aceita: `stdio`
+ * (um programa, sem argumentos no nome) ou `http` (um endereço). */
+function serverProblems(where, server) {
+  if (!isObject(server)) return [`${where} must be an object`];
+  const found = [];
+  for (const key of Object.keys(server)) if (!SERVER_FIELDS.includes(key)) found.push(`${where}.${key} is not a field of an MCP server`);
+  if (typeof server.name !== "string" || !SERVER_NAME.test(server.name) || server.name === "jayv") found.push(`${where}.name must be letters, digits, - and _ (not jayv)`);
+  const transport = server.transport ?? "stdio";
+  if (transport === "stdio") {
+    if (typeof server.command !== "string" || !server.command.trim() || /\s/.test(server.command)) found.push(`${where}.command must be the program name, without arguments`);
+    if (!Array.isArray(server.args ?? []) || (server.args ?? []).some((arg) => typeof arg !== "string" || arg === "")) found.push(`${where}.args must be a list of arguments`);
+    if (!isObject(server.env ?? {}) || Object.entries(server.env ?? {}).some(([key, value]) => !ENV_KEY.test(key) || typeof value !== "string")) found.push(`${where}.env must map variable names to text`);
+    if ("url" in server || "headers" in server) found.push(`${where}: a stdio server has no url or headers`);
+  } else if (transport === "http") {
+    if (typeof server.url !== "string" || !/^https?:\/\/[^\s/@]+/i.test(server.url)) found.push(`${where}.url must be an http(s) address`);
+    if (!isObject(server.headers ?? {}) || Object.values(server.headers ?? {}).some((value) => typeof value !== "string")) found.push(`${where}.headers must map header names to text`);
+    if ("command" in server || "args" in server || "env" in server) found.push(`${where}: an http server has no command, args or env`);
+  } else found.push(`${where}.transport must be stdio or http`);
+  return found;
+}
+
+/** Uma skill de mod: o nome, quando usá-la (em inglês, para o Jev) e as
+ * instruções (em inglês, para o modelo) — no próprio manifesto ou num `.md` da
+ * pasta do mod (`file`), que o build põe no catálogo. */
+function skillProblems(where, skill, folder) {
+  if (!isObject(skill)) return [`${where} must be an object`];
+  const found = [];
+  for (const key of Object.keys(skill)) if (!SKILL_FIELDS.includes(key)) found.push(`${where}.${key} is not a field of a skill`);
+  if (typeof skill.name !== "string" || !SKILL_NAME.test(skill.name)) found.push(`${where}.name must be letters, digits, - and _, up to 64`);
+  if (!isText(skill.description) || skill.description.length > SKILL_DESCRIPTION_MAX) found.push(`${where}.description must say when to use the skill, up to ${SKILL_DESCRIPTION_MAX} characters (Jev reads that much)`);
+  if (("instructions" in skill) === ("file" in skill)) found.push(`${where} needs either instructions or file`);
+  else if ("file" in skill) {
+    if (typeof skill.file !== "string" || !SKILL_FILE.test(skill.file)) found.push(`${where}.file must be a .md file in the folder of the mod`);
+    else if (folder && !existsSync(join(folder, skill.file))) found.push(`${where}.file: ${skill.file} is not in the folder of the mod`);
+    else if (folder && readFileSync(join(folder, skill.file), "utf8").trim().length > SKILL_INSTRUCTIONS_MAX) found.push(`${where}.file is longer than ${SKILL_INSTRUCTIONS_MAX} characters`);
+  } else if (!isText(skill.instructions) || skill.instructions.length > SKILL_INSTRUCTIONS_MAX) found.push(`${where}.instructions must be the instructions, up to ${SKILL_INSTRUCTIONS_MAX} characters`);
+  const servers = skill.mcpServers ?? [];
+  if (!Array.isArray(servers) || servers.length > MAX_SERVERS) found.push(`${where}.mcpServers must be a list of up to ${MAX_SERVERS} servers`);
+  else {
+    servers.forEach((server, index) => found.push(...serverProblems(`${where}.mcpServers[${index}]`, server)));
+    const names = servers.map((server) => server?.name);
+    if (new Set(names).size !== names.length) found.push(`${where}.mcpServers repeats a server name`);
+  }
+  return found;
+}
+
 /** Uma lista de motores do app de um tipo, sem repetir. */
 function engineListProblems(where, value, engines, kind) {
   if (!Array.isArray(value) || value.length === 0) return [`${where} must be a non-empty list of ${kind} engines`];
@@ -158,6 +223,8 @@ function engineListProblems(where, value, engines, kind) {
  * - `llmEngines` liga motores de integração com LLM do app (engines.json › llm).
  * - `agents`     instala agentes de linha de comando ou de API como agentes de
  *                quem instala (`mod-<id>`, `mod-<id>-2`…).
+ * - `skills`     instala skills que o Jev escolhe pelo pedido; os servidores MCP
+ *                de cada uma só vão ao agente no pedido em que ela vale.
  */
 export const POINTS = {
   llmEngines: {
@@ -184,15 +251,29 @@ export const POINTS = {
     engines: () => [],
     legacy: (_mod, value) => (value.length === 1 ? { kind: "template", template: value[0] } : null),
   },
+  skills: {
+    since: "0.103.0",
+    problems: (where, value, { folder }) => {
+      if (!Array.isArray(value) || value.length === 0 || value.length > MAX_SKILLS) return [`${where} must be a list of 1 to ${MAX_SKILLS} skills`];
+      const found = [];
+      value.forEach((skill, index) => found.push(...skillProblems(`${where}[${index}]`, skill, folder)));
+      const names = value.map((skill) => skill?.name);
+      if (new Set(names).size !== names.length) found.push(`${where} repeats a skill name`);
+      return found;
+    },
+    engines: () => [],
+    // O app antigo não tem skills de mod.
+    legacy: () => null,
+  },
 };
 
 /** A ordem em que os pontos aparecem (e a ordem dos mods no catálogo). */
-const POINT_ORDER = ["llmEngines", "features", "agents"];
+const POINT_ORDER = ["llmEngines", "features", "agents", "skills"];
 
 /** Tudo que está errado num manifesto, sozinho. `folder` é o nome da pasta,
  * que tem de ser o id. As dependências (`requires`) são conferidas com o
  * catálogo inteiro, em `buildCatalog`. */
-export function manifestProblems(manifest, folder, engines) {
+export function manifestProblems(manifest, folder, engines, dir = null) {
   const where = `mods/${folder}/mod.json`;
   if (!isObject(manifest)) return [`${where}: must be a JSON object`];
   const found = [];
@@ -227,7 +308,7 @@ export function manifestProblems(manifest, folder, engines) {
   for (const [key, value] of Object.entries(contributes)) {
     const point = POINTS[key];
     if (!point) { found.push(`${where}: contributes.${key} is not an extension point of the app (${POINT_ORDER.join(", ")})`); continue; }
-    found.push(...point.problems(`${where}: contributes.${key}`, value, { engines, id }));
+    found.push(...point.problems(`${where}: contributes.${key}`, value, { engines, id, folder: dir }));
     if (minApp && compareVersions(minApp, point.since) < 0) found.push(`${where}: contributes.${key} needs minApp ${point.since} or newer`);
   }
   // O mod com o nome de um motor do app é o mod daquele motor: ele o traz.
@@ -239,12 +320,21 @@ export function manifestProblems(manifest, folder, engines) {
 }
 
 /** O manifesto como vai no catálogo genérico: sem o `$schema` e com os campos
- * na ordem de sempre, para o catálogo só mudar quando um mod muda. */
-function entry(manifest) {
+ * na ordem de sempre, para o catálogo só mudar quando um mod muda. As
+ * instruções de uma skill que moram num `.md` entram no catálogo como texto. */
+function entry(manifest, dir = null) {
   const out = {};
   for (const key of FIELDS) if (key !== "$schema" && key in manifest) out[key] = manifest[key];
   const contributes = {};
   for (const key of POINT_ORDER) if (key in manifest.contributes) contributes[key] = manifest.contributes[key];
+  if (contributes.skills) {
+    contributes.skills = contributes.skills.map((skill) => {
+      const instructions = "file" in skill ? readFileSync(join(dir, skill.file), "utf8").trim() : skill.instructions;
+      const shaped = { name: skill.name, description: skill.description, instructions };
+      if (skill.mcpServers?.length) shaped.mcpServers = skill.mcpServers;
+      return shaped;
+    });
+  }
   out.contributes = contributes;
   return out;
 }
@@ -289,6 +379,111 @@ const LEGACY_ORDER = (engines) => {
   };
 };
 
+/** A página de cada mod no site (`mods/<id>/page.json`). Os textos vêm nos
+ * dez idiomas; os prints moram em `mods/<id>/media/<nome>.<idioma>.webp`, com
+ * o inglês obrigatório (o idioma sem print mostra o inglês). O print
+ * `enable` (a aba Mods com o mod) acompanha os passos de habilitar, que o site
+ * escreve igual para todo mod. */
+const PAGE_FIELDS = ["$schema", "about", "requirements", "setup", "use"];
+const STEP_FIELDS = ["text", "image"];
+const ABOUT_MAX = 1200;
+const STEP_MAX = 600;
+const MAX_STEPS = 6;
+const IMAGE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const ENABLE_IMAGE = "enable";
+const MEDIA = /^([a-z0-9]+(?:-[a-z0-9]+)*)\.([A-Za-z-]+)\.webp$/;
+const MEDIA_MAX_BYTES = 600_000;
+
+/** Os prints da pasta do mod: nome → idiomas que ele tem, e os problemas dos
+ * arquivos (nome fora do padrão, idioma que o app não tem, grande demais). */
+function mediaOf(dir, where) {
+  const media = join(dir, "media");
+  const images = new Map();
+  const found = [];
+  if (!existsSync(media)) return { images, problems: found };
+  for (const file of readdirSync(media).sort()) {
+    const match = MEDIA.exec(file);
+    if (!match || !LOCALES.includes(match[2])) { found.push(`${where}/media/${file}: name it <image>.<locale>.webp, with a locale of the app`); continue; }
+    if (statSync(join(media, file)).size > MEDIA_MAX_BYTES) found.push(`${where}/media/${file} is larger than ${MEDIA_MAX_BYTES / 1000} kB`);
+    const list = images.get(match[1]) ?? [];
+    list.push(match[2]);
+    images.set(match[1], list);
+  }
+  return { images, problems: found };
+}
+
+/** O print como vai em `pages.json`: o nome, os idiomas (na ordem do app) e
+ * uma marca do conteúdo, para o cache de quem vê trocar junto com o print. */
+function imageEntry(dir, name, locales) {
+  const ordered = LOCALES.filter((locale) => locales.includes(locale));
+  const hash = createHash("sha256");
+  for (const locale of ordered) hash.update(readFileSync(join(dir, "media", `${name}.${locale}.webp`)));
+  return { name, locales: ordered, v: hash.digest("hex").slice(0, 10) };
+}
+
+/** Tudo que está errado na página de um mod. */
+export function pageProblems(page, folder, images) {
+  const where = `mods/${folder}/page.json`;
+  if (!isObject(page)) return [`${where}: must be a JSON object`];
+  const found = [];
+  for (const key of Object.keys(page)) if (!PAGE_FIELDS.includes(key)) found.push(`${where}: ${key} is not a field of a page`);
+  found.push(...textProblems(where, "about", page.about, ABOUT_MAX));
+  if ("requirements" in page) found.push(...textProblems(where, "requirements", page.requirements, STEP_MAX));
+  const used = new Set();
+  const steps = (field, min) => {
+    const list = page[field] ?? [];
+    if (!Array.isArray(list) || list.length < min || list.length > MAX_STEPS) { found.push(`${where}: ${field} must be a list of ${min} to ${MAX_STEPS} steps`); return; }
+    list.forEach((step, index) => {
+      const at = `${field}[${index}]`;
+      if (!isObject(step)) { found.push(`${where}: ${at} must be an object`); return; }
+      for (const key of Object.keys(step)) if (!STEP_FIELDS.includes(key)) found.push(`${where}: ${at}.${key} is not a field of a step`);
+      found.push(...textProblems(where, `${at}.text`, step.text, STEP_MAX));
+      if ("image" in step) {
+        if (typeof step.image !== "string" || !IMAGE.test(step.image) || step.image === ENABLE_IMAGE) found.push(`${where}: ${at}.image must be the name of a print in media/ (not ${ENABLE_IMAGE})`);
+        else if (!images.get(step.image)?.includes("en")) found.push(`${where}: ${at}.image needs media/${step.image}.en.webp`);
+        else used.add(step.image);
+      }
+    });
+  };
+  steps("setup", 0);
+  steps("use", 1);
+  if (images.has(ENABLE_IMAGE) && !images.get(ENABLE_IMAGE).includes("en")) found.push(`mods/${folder}/media: the ${ENABLE_IMAGE} print needs ${ENABLE_IMAGE}.en.webp`);
+  for (const name of images.keys()) if (name !== ENABLE_IMAGE && !used.has(name)) found.push(`mods/${folder}/media: ${name} is not used by any step of page.json`);
+  return found;
+}
+
+/** As páginas de todos os mods do catálogo, conferidas: todo mod tem a sua. */
+export function buildPages(root, mods) {
+  const found = [];
+  const pages = {};
+  for (const mod of mods) {
+    const dir = join(root, "mods", mod.id);
+    const where = `mods/${mod.id}`;
+    const file = join(dir, "page.json");
+    if (!existsSync(file)) { found.push(`${where}: missing page.json (every mod has a page on the site)`); continue; }
+    let page;
+    try {
+      page = JSON.parse(readFileSync(file, "utf8"));
+    } catch (error) {
+      found.push(`${where}/page.json: invalid JSON (${error.message})`);
+      continue;
+    }
+    const { images, problems: media } = mediaOf(dir, where);
+    const problems = [...media, ...pageProblems(page, mod.id, images)];
+    if (problems.length) { found.push(...problems); continue; }
+    const step = (item) => (item.image ? { text: item.text, image: imageEntry(dir, item.image, images.get(item.image)) } : { text: item.text });
+    pages[mod.id] = {
+      version: mod.version,
+      about: page.about,
+      ...(page.requirements ? { requirements: page.requirements } : {}),
+      enable: images.has(ENABLE_IMAGE) ? imageEntry(dir, ENABLE_IMAGE, images.get(ENABLE_IMAGE)) : null,
+      setup: (page.setup ?? []).map(step),
+      use: page.use.map(step),
+    };
+  }
+  return { pages: found.length ? null : { schema: PAGES_SCHEMA, pages }, problems: found };
+}
+
 /** Os motores do app, conferidos. */
 export function readEngines(root) {
   const engines = JSON.parse(readFileSync(join(root, "engines.json"), "utf8"));
@@ -328,7 +523,7 @@ function requiresProblems(mods) {
 /** Lê e confere todos os mods. Devolve os dois catálogos e o que está errado. */
 export function buildCatalog(root) {
   const { engines, problems } = readEngines(root);
-  if (problems.length) return { catalog: null, legacy: null, problems };
+  if (problems.length) return { catalog: null, legacy: null, pages: null, problems };
   const found = [];
   const folders = readdirSync(join(root, "mods"), { withFileTypes: true }).filter((item) => item.isDirectory()).map((item) => item.name).sort();
   const mods = [];
@@ -342,9 +537,10 @@ export function buildCatalog(root) {
       found.push(`mods/${folder}/mod.json: invalid JSON (${error.message})`);
       continue;
     }
-    const problems = manifestProblems(manifest, folder, engines);
+    const dir = join(root, "mods", folder);
+    const problems = manifestProblems(manifest, folder, engines, dir);
     if (problems.length) found.push(...problems);
-    else mods.push(entry(manifest));
+    else mods.push(entry(manifest, dir));
   }
   found.push(...requiresProblems(mods));
   // Dois mods não podem virar o mesmo agente no app.
@@ -355,6 +551,14 @@ export function buildCatalog(root) {
       if (agents.has(agent)) found.push(`mods/${mod.id}/mod.json: agent ${agent} is also an agent of mods/${agents.get(agent)}`);
       else agents.set(agent, mod.id);
     });
+  }
+  // Duas skills com o mesmo nome: o app fica com a do primeiro mod instalado.
+  const skills = new Map();
+  for (const mod of mods) {
+    for (const skill of mod.contributes.skills ?? []) {
+      if (skills.has(skill.name)) found.push(`mods/${mod.id}/mod.json: skill ${skill.name} is also a skill of mods/${skills.get(skill.name)}`);
+      else skills.set(skill.name, mod.id);
+    }
   }
   const legacy = mods.map(legacyEntry).filter((mod) => mod !== null);
   // Todo motor tem quem o traga, a não ser que a retirada seja de propósito —
@@ -372,16 +576,18 @@ export function buildCatalog(root) {
       else if (!legacy.some((mod) => mod.kind === kind && mod.id === id)) found.push(`engine ${id} has no mod the old format can say (a mod named ${id} that brings only it): the app 0.94 would turn it off`);
     }
   }
-  if (found.length) return { catalog: null, legacy: null, problems: found };
+  const { pages, problems: pageProblemsFound } = buildPages(root, mods);
+  found.push(...pageProblemsFound);
+  if (found.length) return { catalog: null, legacy: null, pages: null, problems: found };
   mods.sort(ORDER(engines));
   legacy.sort(LEGACY_ORDER(engines));
-  return { catalog: { schema: SCHEMA, mods }, legacy: { schema: LEGACY_SCHEMA, mods: legacy }, problems: [] };
+  return { catalog: { schema: SCHEMA, mods }, legacy: { schema: LEGACY_SCHEMA, mods: legacy }, pages, problems: [] };
 }
 
 export const serialize = (catalog) => `${JSON.stringify(catalog, null, 2)}\n`;
 
 /** Os arquivos que o build grava, com o conteúdo de cada um. */
-export const outputs = ({ catalog, legacy }) => [["catalog.v2.json", serialize(catalog)], ["catalog.json", serialize(legacy)]];
+export const outputs = ({ catalog, legacy, pages }) => [["catalog.v2.json", serialize(catalog)], ["catalog.json", serialize(legacy)], ["pages.json", serialize(pages)]];
 
 function main() {
   const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -398,7 +604,7 @@ function main() {
   const files = outputs(built);
   if (command === "build") {
     for (const [name, text] of files) writeFileSync(join(root, name), text);
-    console.log(`catalog.v2.json: ${built.catalog.mods.length} mods; catalog.json: ${built.legacy.mods.length} mods`);
+    console.log(`catalog.v2.json: ${built.catalog.mods.length} mods; catalog.json: ${built.legacy.mods.length} mods; pages.json: ${Object.keys(built.pages.pages).length} pages`);
     return;
   }
   let stale = false;
@@ -411,7 +617,7 @@ function main() {
     }
   }
   if (stale) process.exit(1);
-  console.log(`catalog.v2.json: ok, ${built.catalog.mods.length} mods; catalog.json: ok, ${built.legacy.mods.length} mods`);
+  console.log(`catalog.v2.json: ok, ${built.catalog.mods.length} mods; catalog.json: ok, ${built.legacy.mods.length} mods; pages.json: ok, ${Object.keys(built.pages.pages).length} pages`);
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) main();

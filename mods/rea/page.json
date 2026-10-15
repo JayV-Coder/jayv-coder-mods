@@ -1,0 +1,75 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "REA (Reverse Engineer Anything, MIT license) lets the agent inspect software without its source code — native executables and libraries, JavaScript and Electron apps and .asar files, .NET, Android packages, websites and running processes — and answer with evidence. Jev reads each request and hands it to REA only when it asks how a program works inside; only then does the agent receive the tools of REA.",
+    "pt-BR": "O REA (Reverse Engineer Anything, licença MIT) deixa o agente examinar software sem o código-fonte — executáveis e bibliotecas nativas, apps JavaScript e Electron e arquivos .asar, .NET, pacotes Android, sites e processos rodando — e responder com evidências. O Jev lê cada pedido e só o passa ao REA quando ele pergunta como um programa funciona por dentro; só então o agente recebe as ferramentas do REA.",
+    "es": "REA (Reverse Engineer Anything, licencia MIT) permite al agente examinar software sin su código fuente — ejecutables y bibliotecas nativas, apps JavaScript y Electron y archivos .asar, .NET, paquetes Android, sitios web y procesos en ejecución — y responder con evidencias. Jev lee cada solicitud y solo la pasa a REA cuando pregunta cómo funciona un programa por dentro; solo entonces el agente recibe las herramientas de REA.",
+    "zh-CN": "REA（Reverse Engineer Anything，MIT 许可）让代理在没有源代码的情况下检查软件——原生可执行文件和库、JavaScript 和 Electron 应用及 .asar 文件、.NET、Android 安装包、网站以及正在运行的进程——并附上证据作答。Jev 会阅读每个请求，只有当请求问的是某个程序内部如何运作时才交给 REA；只有这时代理才会获得 REA 的工具。",
+    "hi": "REA (Reverse Engineer Anything, MIT लाइसेंस) एजेंट को सोर्स कोड के बिना सॉफ़्टवेयर जाँचने देता है — नेटिव प्रोग्राम और लाइब्रेरी, JavaScript और Electron ऐप और .asar फ़ाइलें, .NET, Android पैकेज, वेबसाइटें और चल रहे प्रोसेस — और सबूतों के साथ जवाब देने देता है। Jev हर अनुरोध पढ़ता है और उसे REA को सिर्फ़ तब देता है जब वह पूछता है कि कोई प्रोग्राम अंदर से कैसे काम करता है; सिर्फ़ तभी एजेंट को REA के टूल मिलते हैं।",
+    "ar": "يتيح REA ‏(Reverse Engineer Anything، برخصة MIT) للوكيل فحص البرامج دون شيفرتها المصدرية — الملفات التنفيذية والمكتبات الأصلية، وتطبيقات JavaScript وElectron وملفات ‎.asar، و‎.NET، وحزم Android، والمواقع، والعمليات الجارية — والإجابة بالأدلة. يقرأ Jev كل طلب ولا يسلّمه إلى REA إلا إذا سأل كيف يعمل برنامجٌ من الداخل؛ وعندها فقط يحصل الوكيل على أدوات REA.",
+    "fr": "REA (Reverse Engineer Anything, licence MIT) permet à l’agent d’examiner un logiciel sans son code source — exécutables et bibliothèques natifs, apps JavaScript et Electron et fichiers .asar, .NET, paquets Android, sites web et processus en cours — et de répondre avec des preuves. Jev lit chaque demande et ne la confie à REA que lorsqu’elle porte sur le fonctionnement interne d’un programme ; c’est seulement alors que l’agent reçoit les outils de REA.",
+    "ru": "REA (Reverse Engineer Anything, лицензия MIT) позволяет агенту исследовать программы без исходного кода — нативные исполняемые файлы и библиотеки, приложения на JavaScript и Electron и файлы .asar, .NET, пакеты Android, сайты и запущенные процессы — и отвечать с доказательствами. Jev читает каждый запрос и передаёт его REA, только когда в нём спрашивают, как программа устроена внутри; только тогда агент получает инструменты REA.",
+    "ja": "REA（Reverse Engineer Anything、MIT ライセンス）を使うと、エージェントはソースコードのないソフトウェア（ネイティブの実行ファイルやライブラリ、JavaScript や Electron のアプリと .asar ファイル、.NET、Android パッケージ、Web サイト、実行中のプロセス）を調べ、根拠を示して答えられます。Jev は依頼を一つずつ読み、プログラムの内部の動きを尋ねるものだけを REA に任せます。そのときだけ、エージェントは REA のツールを受け取ります。",
+    "de": "REA (Reverse Engineer Anything, MIT-Lizenz) lässt den Agenten Software ohne Quellcode untersuchen – native Programme und Bibliotheken, JavaScript- und Electron-Apps und .asar-Dateien, .NET, Android-Pakete, Websites und laufende Prozesse – und mit Belegen antworten. Jev liest jede Anfrage und übergibt sie nur dann an REA, wenn sie fragt, wie ein Programm intern funktioniert; erst dann erhält der Agent die Werkzeuge von REA."
+  },
+  "requirements": {
+    "en": "Node.js 22.19 or newer on this computer. Decompiling native code also needs Hopper or Ghidra; without them, REA still identifies the program, reads its strings, symbols and resources, and analyzes JavaScript, .NET and Android packages.",
+    "pt-BR": "Node.js 22.19 ou mais novo neste computador. Descompilar código nativo também pede o Hopper ou o Ghidra; sem eles, o REA ainda identifica o programa, lê as strings, os símbolos e os recursos dele, e analisa pacotes JavaScript, .NET e Android.",
+    "es": "Node.js 22.19 o más reciente en este equipo. Descompilar código nativo también requiere Hopper o Ghidra; sin ellos, REA igualmente identifica el programa, lee sus cadenas, símbolos y recursos, y analiza paquetes JavaScript, .NET y Android.",
+    "zh-CN": "这台电脑上安装 Node.js 22.19 或更高版本。反编译原生代码还需要 Hopper 或 Ghidra；没有它们，REA 仍能识别程序、读取其字符串、符号和资源，并分析 JavaScript、.NET 和 Android 软件包。",
+    "hi": "इस कंप्यूटर पर Node.js 22.19 या नया। नेटिव कोड डीकंपाइल करने के लिए Hopper या Ghidra भी चाहिए; उनके बिना भी REA प्रोग्राम पहचानता है, उसकी स्ट्रिंग, सिंबल और रिसोर्स पढ़ता है, और JavaScript, .NET और Android पैकेज का विश्लेषण करता है।",
+    "ar": "Node.js 22.19 أو أحدث على هذا الجهاز. ويحتاج تفكيك الكود الأصلي أيضًا إلى Hopper أو Ghidra؛ ومن دونهما يظل REA يتعرّف على البرنامج، ويقرأ سلاسله ورموزه وموارده، ويحلل حزم JavaScript و‎.NET وAndroid.",
+    "fr": "Node.js 22.19 ou plus récent sur cet ordinateur. Décompiler du code natif demande aussi Hopper ou Ghidra ; sans eux, REA identifie quand même le programme, lit ses chaînes, ses symboles et ses ressources, et analyse les paquets JavaScript, .NET et Android.",
+    "ru": "Node.js 22.19 или новее на этом компьютере. Для декомпиляции нативного кода нужен ещё Hopper или Ghidra; без них REA всё равно определяет программу, читает её строки, символы и ресурсы и анализирует пакеты JavaScript, .NET и Android.",
+    "ja": "このコンピューターに Node.js 22.19 以降。ネイティブコードの逆コンパイルには Hopper か Ghidra も必要です。それらがなくても、REA はプログラムを特定し、文字列・シンボル・リソースを読み、JavaScript、.NET、Android のパッケージを解析できます。",
+    "de": "Node.js 22.19 oder neuer auf diesem Computer. Zum Dekompilieren von nativem Code braucht es außerdem Hopper oder Ghidra; ohne sie erkennt REA das Programm trotzdem, liest seine Strings, Symbole und Ressourcen und analysiert JavaScript-, .NET- und Android-Pakete."
+  },
+  "setup": [
+    {
+      "text": {
+        "en": "Turn on Approve MCP servers in the tab of each agent that should use REA (Settings › Claude Code, for example) and click Save settings. The first use downloads REA with npx.",
+        "pt-BR": "Ligue Aprovar servidores MCP na aba de cada agente que deve usar o REA (Configuração › Claude Code, por exemplo) e clique em Salvar configuração. No primeiro uso, o REA é baixado com o npx.",
+        "es": "Activa Aprobar servidores MCP en la pestaña de cada agente que deba usar REA (Configuración › Claude Code, por ejemplo) y haz clic en Guardar configuración. En el primer uso, REA se descarga con npx.",
+        "zh-CN": "在每个需要使用 REA 的代理标签页中（例如“设置 › Claude Code”）开启“批准 MCP 服务器”，然后点击“保存设置”。首次使用时会通过 npx 下载 REA。",
+        "hi": "जिस भी एजेंट को REA इस्तेमाल करना है, उसके टैब में (जैसे सेटिंग्स › Claude Code) MCP सर्वर स्वीकृत करें चालू करें और सेटिंग्स सहेजें पर क्लिक करें। पहली बार इस्तेमाल पर REA npx से डाउनलोड होता है।",
+        "ar": "فعّل «الموافقة على خوادم MCP» في تبويب كل وكيل ينبغي أن يستخدم REA (الإعدادات › Claude Code مثلًا) وانقر «حفظ الإعدادات». عند أول استخدام، يُنزَّل REA عبر npx.",
+        "fr": "Activez Approuver les serveurs MCP dans l’onglet de chaque agent qui doit utiliser REA (Configuration › Claude Code, par exemple) et cliquez sur Enregistrer la configuration. À la première utilisation, REA est téléchargé avec npx.",
+        "ru": "Включите «Одобрять серверы MCP» на вкладке каждого агента, который должен пользоваться REA (например, Настройки › Claude Code), и нажмите «Сохранить настройки». При первом использовании REA скачивается через npx.",
+        "ja": "REA を使わせたい各エージェントのタブ（たとえば設定 › Claude Code）で「MCP サーバーを承認」をオンにし、「設定を保存」をクリックします。初回の利用時に REA は npx でダウンロードされます。",
+        "de": "Schalten Sie im Tab jedes Agenten, der REA nutzen soll (zum Beispiel Einstellungen › Claude Code), MCP-Server freigeben ein und klicken Sie auf Einstellungen speichern. Beim ersten Einsatz wird REA mit npx heruntergeladen."
+      },
+      "image": "settings"
+    }
+  ],
+  "use": [
+    {
+      "text": {
+        "en": "Ask about a program in a chat and give its path, for example: How does the CSV export of /Applications/Ledger.app work? When Jev picks the reverse-engineering skill, the Progress panel shows the Skill step and the agent uses the tools of REA.",
+        "pt-BR": "Pergunte sobre um programa num chat e diga onde ele está, por exemplo: Como funciona a exportação para CSV de /Applications/Ledger.app? Quando o Jev escolhe a skill reverse-engineering, o painel Andamento mostra o passo Skill e o agente usa as ferramentas do REA.",
+        "es": "Pregunta por un programa en un chat e indica su ruta, por ejemplo: ¿Cómo funciona la exportación a CSV de /Applications/Ledger.app? Cuando Jev elige la skill reverse-engineering, el panel Progreso muestra el paso Skill y el agente usa las herramientas de REA.",
+        "zh-CN": "在对话中询问某个程序并给出它的路径，例如：/Applications/Ledger.app 的 CSV 导出是怎么实现的？当 Jev 选择技能 reverse-engineering 时，进度面板会显示“技能”步骤，代理会使用 REA 的工具。",
+        "hi": "चैट में किसी प्रोग्राम के बारे में पूछें और उसका पाथ बताएँ, जैसे: /Applications/Ledger.app का CSV एक्सपोर्ट कैसे काम करता है? जब Jev स्किल reverse-engineering चुनता है, तो प्रगति पैनल स्किल चरण दिखाता है और एजेंट REA के टूल इस्तेमाल करता है।",
+        "ar": "اسأل عن برنامج في محادثة واذكر مساره، مثلًا: كيف يعمل التصدير إلى CSV في ‎/Applications/Ledger.app؟ عندما يختار Jev المهارة reverse-engineering، تعرض لوحة التقدّم خطوة «المهارة» ويستخدم الوكيل أدوات REA.",
+        "fr": "Posez une question sur un programme dans un chat en donnant son chemin, par exemple : Comment fonctionne l’export CSV de /Applications/Ledger.app ? Quand Jev choisit la skill reverse-engineering, le panneau Progression affiche l’étape Skill et l’agent utilise les outils de REA.",
+        "ru": "Спросите в чате о программе и укажите её путь, например: Как работает экспорт в CSV у /Applications/Ledger.app? Когда Jev выбирает скилл reverse-engineering, панель «Ход работы» показывает шаг «Скилл», и агент пользуется инструментами REA.",
+        "ja": "チャットでプログラムについて、その場所を添えて質問してください。例: /Applications/Ledger.app の CSV エクスポートはどう動いていますか？ Jev がスキル reverse-engineering を選ぶと、進行状況パネルに「スキル」のステップが表示され、エージェントは REA のツールを使います。",
+        "de": "Fragen Sie in einem Chat nach einem Programm und nennen Sie seinen Pfad, zum Beispiel: Wie funktioniert der CSV-Export von /Applications/Ledger.app? Wenn Jev den Skill reverse-engineering wählt, zeigt das Fortschritt-Panel den Skill-Schritt, und der Agent nutzt die Werkzeuge von REA."
+      },
+      "image": "chat"
+    },
+    {
+      "text": {
+        "en": "The answer lists each finding with its evidence (function, address, string) and what is still unknown. To build the same in your project, ask for it in the same chat.",
+        "pt-BR": "A resposta lista cada descoberta com a evidência dela (função, endereço, string) e o que ainda não se sabe. Para construir o mesmo no seu projeto, peça no mesmo chat.",
+        "es": "La respuesta lista cada hallazgo con su evidencia (función, dirección, cadena) y lo que aún no se sabe. Para construir lo mismo en tu proyecto, pídelo en el mismo chat.",
+        "zh-CN": "回答会列出每项发现及其证据（函数、地址、字符串），以及仍未查明的内容。想在你的项目里做同样的东西，就在同一个对话中提出。",
+        "hi": "उत्तर हर खोज को उसके सबूत (फ़ंक्शन, पता, स्ट्रिंग) के साथ और जो अभी तक पता नहीं है, उसकी सूची देता है। अपने प्रोजेक्ट में यही बनाने के लिए उसी चैट में कहें।",
+        "ar": "تسرد الإجابة كل اكتشاف مع دليله (دالة، عنوان، سلسلة) وما لا يزال مجهولًا. ولبناء الشيء نفسه في مشروعك، اطلب ذلك في المحادثة نفسها.",
+        "fr": "La réponse liste chaque constat avec sa preuve (fonction, adresse, chaîne) et ce qui reste inconnu. Pour construire la même chose dans votre projet, demandez-le dans le même chat.",
+        "ru": "В ответе каждая находка указана с доказательством (функция, адрес, строка), а также то, что пока неизвестно. Чтобы сделать то же самое в вашем проекте, попросите об этом в том же чате.",
+        "ja": "回答には、各発見とその根拠（関数、アドレス、文字列）、そしてまだわからないことが並びます。同じものをプロジェクトに作りたいときは、同じチャットで頼んでください。",
+        "de": "Die Antwort listet jeden Befund mit seinem Beleg (Funktion, Adresse, String) und was noch unbekannt ist. Um dasselbe in Ihrem Projekt zu bauen, fragen Sie im selben Chat danach."
+      }
+    }
+  ]
+}

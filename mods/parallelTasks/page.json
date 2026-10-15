@@ -1,0 +1,47 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "A large build request in a git project is split into up to four parts that touch separate files, each done at the same time by a different agent in its own copy of the project.",
+    "pt-BR": "Um pedido grande do modo desenvolvimento num projeto git é dividido em até quatro partes que mexem em arquivos separados, cada uma feita ao mesmo tempo por um agente diferente, na sua própria cópia do projeto.",
+    "es": "Una solicitud grande del modo de desarrollo en un proyecto git se divide en hasta cuatro partes que tocan archivos distintos, cada una hecha a la vez por un agente diferente en su propia copia del proyecto.",
+    "zh-CN": "git 项目中开发模式下的大请求会被拆成最多四个互不重叠文件的部分，每个部分由不同的代理在各自的项目副本中同时完成。",
+    "hi": "किसी git प्रोजेक्ट में डेवलपमेंट मोड का बड़ा अनुरोध चार तक हिस्सों में बँट जाता है जो अलग-अलग फ़ाइलें छूते हैं, और हर हिस्सा एक साथ अलग एजेंट प्रोजेक्ट की अपनी प्रति में करता है।",
+    "ar": "يُقسَّم الطلب الكبير في وضع التطوير داخل مشروع git إلى أربعة أجزاء كحد أقصى تمس ملفات منفصلة، وينجز كل جزءٍ في الوقت نفسه وكيلٌ مختلف في نسخته الخاصة من المشروع.",
+    "fr": "Une grosse demande en mode développement dans un projet git est découpée en quatre parties au plus, qui touchent des fichiers distincts, chacune réalisée en même temps par un agent différent dans sa propre copie du projet.",
+    "ru": "Большой запрос в режиме разработки в git-проекте делится на части (до четырёх), которые затрагивают разные файлы; каждую одновременно выполняет свой агент в собственной копии проекта.",
+    "ja": "git プロジェクトでの開発モードの大きな依頼を、別々のファイルに触れる最大 4 つの部分に分け、それぞれを別のエージェントが自分用のプロジェクトのコピーで同時にこなします。",
+    "de": "Eine große Anfrage im Entwicklungsmodus in einem Git-Projekt wird in bis zu vier Teile mit getrennten Dateien aufgeteilt, die gleichzeitig von verschiedenen Agenten in je einer eigenen Kopie des Projekts erledigt werden."
+  },
+  "use": [
+    {
+      "text": {
+        "en": "Turn on Split big requests between agents in Settings › Jev › Routing.",
+        "pt-BR": "Ligue Dividir pedidos grandes entre agentes em Configuração › Jev › Roteamento.",
+        "es": "Activa Dividir solicitudes grandes entre agentes en Configuración › Jev › Enrutamiento.",
+        "zh-CN": "在“设置 › Jev › 路由”中开启“把大请求拆分给多个代理”。",
+        "hi": "सेटिंग्स › Jev › रूटिंग में बड़े अनुरोध एजेंटों में बाँटें चालू करें।",
+        "ar": "فعّل «تقسيم الطلبات الكبيرة بين الوكلاء» في الإعدادات › Jev › التوجيه.",
+        "fr": "Activez Répartir les grosses demandes entre agents dans Configuration › Jev › Routage.",
+        "ru": "Включите «Делить большие запросы между агентами» в Настройки › Jev › Маршрутизация.",
+        "ja": "設定 › Jev › ルーティングで「大きな依頼をエージェントで分担」をオンにします。",
+        "de": "Schalten Sie Große Anfragen auf Agenten verteilen unter Einstellungen › Jev › Routing ein."
+      },
+      "image": "settings"
+    },
+    {
+      "text": {
+        "en": "The Progress panel lists the parts and the agent of each one; the changes come back to your folder as each part finishes.",
+        "pt-BR": "O painel Andamento lista as partes e o agente de cada uma; as mudanças voltam para a sua pasta conforme cada parte termina.",
+        "es": "El panel Progreso lista las partes y el agente de cada una; los cambios vuelven a tu carpeta a medida que termina cada parte.",
+        "zh-CN": "进度面板会列出各个部分及其代理；每完成一部分，改动就会回到你的文件夹。",
+        "hi": "प्रगति पैनल हिस्सों और हर हिस्से के एजेंट की सूची दिखाता है; हर हिस्सा पूरा होते ही बदलाव आपके फ़ोल्डर में लौट आते हैं।",
+        "ar": "تسرد لوحة التقدّم الأجزاء ووكيل كل جزء؛ وتعود التغييرات إلى مجلدك مع انتهاء كل جزء.",
+        "fr": "Le panneau Progression liste les parties et l’agent de chacune ; les changements reviennent dans votre dossier à mesure que chaque partie se termine.",
+        "ru": "Панель «Ход работы» показывает части и агента каждой; изменения возвращаются в вашу папку по мере готовности частей.",
+        "ja": "進行状況パネルに各部分とその担当エージェントが表示され、部分が終わるたびに変更があなたのフォルダーに戻ります。",
+        "de": "Das Fortschritt-Panel listet die Teile und den Agenten jedes Teils; die Änderungen kommen in Ihren Ordner zurück, sobald ein Teil fertig ist."
+      },
+      "image": "chat"
+    }
+  ]
+}

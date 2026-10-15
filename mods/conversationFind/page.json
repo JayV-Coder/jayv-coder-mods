@@ -1,0 +1,32 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "Searches the words of the open conversation, highlights every match and jumps to the next and the previous one. Case and accents don't matter.",
+    "pt-BR": "Busca as palavras da conversa aberta, destaca cada ocorrência e pula para a próxima e para a anterior. Maiúsculas e acentos não importam.",
+    "es": "Busca las palabras de la conversación abierta, resalta cada coincidencia y salta a la siguiente y a la anterior. Las mayúsculas y los acentos no importan.",
+    "zh-CN": "搜索当前对话中的文字，高亮每一处匹配，并跳到下一处或上一处。不区分大小写和重音符号。",
+    "hi": "खुली बातचीत के शब्द खोजता है, हर मिलान हाइलाइट करता है और अगले व पिछले पर जाता है। बड़े-छोटे अक्षर और मात्राएँ मायने नहीं रखतीं।",
+    "ar": "تبحث عن الكلمات في المحادثة المفتوحة، وتُبرز كل تطابق وتنتقل إلى التالي والسابق. لا يهم حجم الأحرف ولا علامات التشكيل.",
+    "fr": "Cherche les mots de la conversation ouverte, met en évidence chaque occurrence et saute à la suivante et à la précédente. Les majuscules et les accents n’ont pas d’importance.",
+    "ru": "Ищет слова в открытом разговоре, подсвечивает каждое совпадение и переходит к следующему и предыдущему. Регистр и диакритика не важны.",
+    "ja": "開いている会話の語句を検索し、一致箇所をすべて強調表示して、次と前の一致へ移動します。大文字・小文字やアクセントは区別しません。",
+    "de": "Durchsucht die Wörter des offenen Gesprächs, hebt jeden Treffer hervor und springt zum nächsten und vorherigen. Groß- und Kleinschreibung sowie Akzente spielen keine Rolle."
+  },
+  "use": [
+    {
+      "text": {
+        "en": "Press Ctrl+F (⌘F on Mac) in a chat and type. Enter and Shift+Enter, or the arrows, move between the matches; Esc closes.",
+        "pt-BR": "Aperte Ctrl+F (⌘F no Mac) num chat e digite. Enter e Shift+Enter, ou as setas, andam entre as ocorrências; Esc fecha.",
+        "es": "Pulsa Ctrl+F (⌘F en Mac) en un chat y escribe. Enter y Shift+Enter, o las flechas, se mueven entre las coincidencias; Esc cierra.",
+        "zh-CN": "在对话中按 Ctrl+F（Mac 上为 ⌘F）并输入。按 Enter 和 Shift+Enter，或使用箭头，在匹配之间移动；按 Esc 关闭。",
+        "hi": "किसी चैट में Ctrl+F (Mac पर ⌘F) दबाएँ और लिखें। Enter और Shift+Enter, या तीर, मिलानों के बीच चलते हैं; Esc बंद करता है।",
+        "ar": "اضغط Ctrl+F ‏(⌘F على Mac) في محادثة واكتب. ينتقل Enter وShift+Enter، أو الأسهم، بين التطابقات؛ وEsc يغلق.",
+        "fr": "Appuyez sur Ctrl+F (⌘F sur Mac) dans un chat et tapez. Entrée et Maj+Entrée, ou les flèches, passent d’une occurrence à l’autre ; Échap ferme.",
+        "ru": "Нажмите Ctrl+F (⌘F на Mac) в чате и введите текст. Enter и Shift+Enter или стрелки переходят между совпадениями; Esc закрывает.",
+        "ja": "チャットで Ctrl+F（Mac では ⌘F）を押して入力します。Enter と Shift+Enter、または矢印で一致箇所を移動し、Esc で閉じます。",
+        "de": "Drücken Sie Strg+F (⌘F auf dem Mac) in einem Chat und tippen Sie. Enter und Umschalt+Enter oder die Pfeile springen zwischen den Treffern; Esc schließt."
+      },
+      "image": "chat"
+    }
+  ]
+}

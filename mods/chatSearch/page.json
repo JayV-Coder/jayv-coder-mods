@@ -1,0 +1,32 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "Searches the words of every conversation of a project and shows the matching passage highlighted. The index lives on your computer, and the search never goes to the network.",
+    "pt-BR": "Busca as palavras de todas as conversas de um projeto e mostra o trecho encontrado em destaque. O índice fica no seu computador, e a busca nunca vai para a rede.",
+    "es": "Busca las palabras de todas las conversaciones de un proyecto y muestra el fragmento encontrado resaltado. El índice vive en tu equipo, y la búsqueda nunca sale a la red.",
+    "zh-CN": "搜索一个项目中所有对话的文字，并高亮显示匹配的片段。索引保存在你的电脑上，搜索从不经过网络。",
+    "hi": "किसी प्रोजेक्ट की सभी बातचीत में शब्द खोजता है और मिला हुआ हिस्सा हाइलाइट करके दिखाता है। इंडेक्स आपके कंप्यूटर पर रहता है, और खोज कभी नेटवर्क पर नहीं जाती।",
+    "ar": "تبحث عن الكلمات في كل محادثات المشروع وتُبرز المقطع المطابق. يبقى الفهرس على جهازك، ولا يمر البحث عبر الشبكة أبدًا.",
+    "fr": "Cherche les mots de toutes les conversations d’un projet et met en évidence le passage trouvé. L’index reste sur votre ordinateur, et la recherche ne passe jamais par le réseau.",
+    "ru": "Ищет слова во всех разговорах проекта и подсвечивает найденный фрагмент. Индекс хранится на вашем компьютере, и поиск никогда не уходит в сеть.",
+    "ja": "プロジェクトのすべての会話から語句を検索し、一致した箇所を強調表示します。インデックスはあなたのコンピューターにあり、検索がネットワークに出ることはありません。",
+    "de": "Durchsucht die Wörter aller Gespräche eines Projekts und hebt die gefundene Stelle hervor. Der Index liegt auf Ihrem Computer, und die Suche geht nie ins Netz."
+  },
+  "use": [
+    {
+      "text": {
+        "en": "On the Chats screen of a project, type in the search field and click a result to open that chat.",
+        "pt-BR": "Na tela Chats de um projeto, digite no campo de busca e clique num resultado para abrir aquele chat.",
+        "es": "En la pantalla Chats de un proyecto, escribe en el campo de búsqueda y haz clic en un resultado para abrir ese chat.",
+        "zh-CN": "在项目的“对话”页面中，在搜索框里输入，点击结果即可打开那个对话。",
+        "hi": "किसी प्रोजेक्ट की चैट स्क्रीन पर खोज फ़ील्ड में लिखें और उस चैट को खोलने के लिए किसी नतीजे पर क्लिक करें।",
+        "ar": "في شاشة المحادثات لمشروع، اكتب في حقل البحث وانقر نتيجة لفتح تلك المحادثة.",
+        "fr": "Sur l’écran Chats d’un projet, tapez dans le champ de recherche et cliquez sur un résultat pour ouvrir ce chat.",
+        "ru": "На экране «Чаты» проекта введите текст в поле поиска и нажмите на результат, чтобы открыть этот чат.",
+        "ja": "プロジェクトのチャット画面で検索欄に入力し、結果をクリックするとそのチャットが開きます。",
+        "de": "Tippen Sie auf dem Chats-Bildschirm eines Projekts in das Suchfeld und klicken Sie auf ein Ergebnis, um diesen Chat zu öffnen."
+      },
+      "image": "search"
+    }
+  ]
+}

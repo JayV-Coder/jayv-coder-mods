@@ -1,0 +1,75 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "GitHub Copilot CLI is GitHub's agent for the terminal. With this mod, Jev can send requests to it: Copilot works on the project with the models of your Copilot plan and can use GitHub's own tools.",
+    "pt-BR": "O GitHub Copilot CLI é o agente do GitHub para o terminal. Com este mod, o Jev pode mandar pedidos para ele: o Copilot trabalha no projeto com os modelos do seu plano do Copilot e pode usar as ferramentas do próprio GitHub.",
+    "es": "GitHub Copilot CLI es el agente de GitHub para la terminal. Con este mod, Jev puede enviarle solicitudes: Copilot trabaja en el proyecto con los modelos de tu plan de Copilot y puede usar las herramientas del propio GitHub.",
+    "zh-CN": "GitHub Copilot CLI 是 GitHub 面向终端的代理。有了这个模组，Jev 可以把请求发给它：Copilot 使用你的 Copilot 套餐中的模型处理项目，还能使用 GitHub 自己的工具。",
+    "hi": "GitHub Copilot CLI टर्मिनल के लिए GitHub का एजेंट है। इस मॉड से Jev उसे अनुरोध भेज सकता है: Copilot आपके Copilot प्लान के मॉडल से प्रोजेक्ट पर काम करता है और GitHub के अपने टूल इस्तेमाल कर सकता है।",
+    "ar": "GitHub Copilot CLI هو وكيل GitHub للطرفية. بهذه الإضافة يستطيع Jev إرسال الطلبات إليه: يعمل Copilot على المشروع بنماذج خطة Copilot الخاصة بك، ويمكنه استخدام أدوات GitHub نفسها.",
+    "fr": "GitHub Copilot CLI est l’agent de GitHub pour le terminal. Avec ce mod, Jev peut lui envoyer des demandes : Copilot travaille sur le projet avec les modèles de votre forfait Copilot et peut utiliser les outils de GitHub.",
+    "ru": "GitHub Copilot CLI — агент GitHub для терминала. С этим модом Jev может отправлять ему запросы: Copilot работает над проектом с моделями вашего тарифа Copilot и может пользоваться инструментами самого GitHub.",
+    "ja": "GitHub Copilot CLI は GitHub のターミナル用エージェントです。この Mod があると、Jev は依頼を Copilot に送れます。Copilot はあなたの Copilot プランのモデルでプロジェクトに取り組み、GitHub 自身のツールも使えます。",
+    "de": "GitHub Copilot CLI ist der Agent von GitHub für das Terminal. Mit diesem Mod kann Jev Anfragen an ihn schicken: Copilot arbeitet mit den Modellen Ihres Copilot-Tarifs am Projekt und kann die Werkzeuge von GitHub nutzen."
+  },
+  "requirements": {
+    "en": "The GitHub Copilot CLI installed and signed in with a GitHub account that has a Copilot plan.",
+    "pt-BR": "O GitHub Copilot CLI instalado e logado com uma conta do GitHub que tenha um plano do Copilot.",
+    "es": "GitHub Copilot CLI instalado y con la sesión iniciada en una cuenta de GitHub que tenga un plan de Copilot.",
+    "zh-CN": "已安装 GitHub Copilot CLI，并已用拥有 Copilot 套餐的 GitHub 账号登录。",
+    "hi": "GitHub Copilot CLI इंस्टॉल हो और ऐसे GitHub खाते से लॉग इन हो जिसमें Copilot प्लान हो।",
+    "ar": "أن تكون GitHub Copilot CLI مثبّتة ومسجّلة الدخول بحساب GitHub لديه خطة Copilot.",
+    "fr": "GitHub Copilot CLI installé et connecté avec un compte GitHub qui a un forfait Copilot.",
+    "ru": "GitHub Copilot CLI, установленный и с входом в учётную запись GitHub, у которой есть тариф Copilot.",
+    "ja": "GitHub Copilot CLI がインストールされ、Copilot プランのある GitHub アカウントでサインインしていること。",
+    "de": "Die GitHub Copilot CLI installiert und mit einem GitHub-Konto angemeldet, das einen Copilot-Tarif hat."
+  },
+  "setup": [
+    {
+      "text": {
+        "en": "Install the GitHub Copilot CLI and sign in once by running copilot in a terminal.",
+        "pt-BR": "Instale o GitHub Copilot CLI e faça login uma vez rodando copilot num terminal.",
+        "es": "Instala GitHub Copilot CLI e inicia sesión una vez ejecutando copilot en una terminal.",
+        "zh-CN": "安装 GitHub Copilot CLI，并在终端中运行 copilot 登录一次。",
+        "hi": "GitHub Copilot CLI इंस्टॉल करें और टर्मिनल में copilot चलाकर एक बार लॉग इन करें।",
+        "ar": "ثبّت GitHub Copilot CLI وسجّل الدخول مرة واحدة بتشغيل copilot في الطرفية.",
+        "fr": "Installez GitHub Copilot CLI et connectez-vous une fois en lançant copilot dans un terminal.",
+        "ru": "Установите GitHub Copilot CLI и один раз войдите, выполнив copilot в терминале.",
+        "ja": "GitHub Copilot CLI をインストールし、ターミナルで copilot を実行して一度サインインします。",
+        "de": "Installieren Sie die GitHub Copilot CLI und melden Sie sich einmal an, indem Sie copilot in einem Terminal ausführen."
+      }
+    },
+    {
+      "text": {
+        "en": "In Settings › GitHub Copilot, check the program, turn on the models Jev may use and choose what the agent may touch: read only, edits or everything.",
+        "pt-BR": "Em Configuração › GitHub Copilot, confira o programa, ligue os modelos que o Jev pode usar e escolha o que o agente pode mexer: só ler, editar ou tudo.",
+        "es": "En Configuración › GitHub Copilot, comprueba el programa, activa los modelos que Jev puede usar y elige lo que el agente puede tocar: solo leer, editar o todo.",
+        "zh-CN": "在“设置 › GitHub Copilot”中确认程序，开启 Jev 可以使用的模型，并选择代理可以动的范围：只读、编辑或全部。",
+        "hi": "सेटिंग्स › GitHub Copilot में प्रोग्राम जाँचें, वे मॉडल चालू करें जिन्हें Jev इस्तेमाल कर सकता है और चुनें कि एजेंट क्या छू सकता है: सिर्फ़ पढ़ना, बदलाव या सब कुछ।",
+        "ar": "في الإعدادات › GitHub Copilot، تحقق من البرنامج، وفعّل النماذج التي يُسمح لـ Jev باستخدامها، واختر ما يُسمح للوكيل بلمسه: القراءة فقط أو التعديلات أو كل شيء.",
+        "fr": "Dans Configuration › GitHub Copilot, vérifiez le programme, activez les modèles que Jev peut utiliser et choisissez ce que l’agent peut toucher : lecture seule, modifications ou tout.",
+        "ru": "В Настройки › GitHub Copilot проверьте программу, включите модели, которые может использовать Jev, и выберите, что агенту можно трогать: только чтение, правки или всё.",
+        "ja": "設定 › GitHub Copilot でプログラムを確認し、Jev が使ってよいモデルをオンにして、エージェントに許す範囲（読み取りのみ、編集、すべて）を選びます。",
+        "de": "Prüfen Sie unter Einstellungen › GitHub Copilot das Programm, schalten Sie die Modelle ein, die Jev nutzen darf, und wählen Sie, was der Agent anfassen darf: nur lesen, bearbeiten oder alles."
+      },
+      "image": "settings"
+    }
+  ],
+  "use": [
+    {
+      "text": {
+        "en": "Write the request in a chat. The Progress panel shows when Jev picks Copilot, and the premium requests it spends appear in Statistics.",
+        "pt-BR": "Escreva o pedido num chat. O painel Andamento mostra quando o Jev escolhe o Copilot, e as solicitações premium que ele gasta aparecem nas Estatísticas.",
+        "es": "Escribe la solicitud en un chat. El panel Progreso muestra cuándo Jev elige Copilot, y las solicitudes premium que gasta aparecen en Estadísticas.",
+        "zh-CN": "在对话中写下请求。进度面板会显示 Jev 何时选择 Copilot，它消耗的高级请求会出现在统计中。",
+        "hi": "चैट में अनुरोध लिखें। प्रगति पैनल दिखाता है कि Jev ने कब Copilot चुना, और उसके ख़र्च किए प्रीमियम अनुरोध आँकड़े में दिखते हैं।",
+        "ar": "اكتب الطلب في محادثة. تعرض لوحة التقدّم متى يختار Jev ‏Copilot، وتظهر الطلبات المميزة التي يستهلكها في الإحصاءات.",
+        "fr": "Écrivez la demande dans un chat. Le panneau Progression montre quand Jev choisit Copilot, et les requêtes premium qu’il consomme apparaissent dans Statistiques.",
+        "ru": "Напишите запрос в чате. Панель «Ход работы» показывает, когда Jev выбирает Copilot, а потраченные им премиум-запросы видны в разделе «Статистика».",
+        "ja": "チャットで依頼を書いてください。Jev が Copilot を選ぶと進行状況パネルに表示され、消費したプレミアムリクエストは統計に表示されます。",
+        "de": "Schreiben Sie die Anfrage in einen Chat. Das Fortschritt-Panel zeigt, wann Jev Copilot wählt, und die Premium-Anfragen, die er verbraucht, erscheinen unter Statistiken."
+      },
+      "image": "chat"
+    }
+  ]
+}

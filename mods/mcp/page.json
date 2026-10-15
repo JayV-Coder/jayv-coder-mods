@@ -1,0 +1,47 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "Gives every agent extra tools through MCP servers. JayV hands the servers to each agent on every request, in the way that agent understands, and calls the tools itself for the API models.",
+    "pt-BR": "Dá ferramentas extras a todos os agentes por meio de servidores MCP. O JayV entrega os servidores a cada agente em todo pedido, do jeito que aquele agente entende, e chama as ferramentas ele mesmo para os modelos de API.",
+    "es": "Da herramientas extra a todos los agentes mediante servidores MCP. JayV entrega los servidores a cada agente en cada solicitud, de la forma que ese agente entiende, y llama él mismo a las herramientas por los modelos de API.",
+    "zh-CN": "通过 MCP 服务器为所有代理提供额外工具。JayV 在每个请求中以各代理能理解的方式把服务器交给它们，并替 API 模型自己调用这些工具。",
+    "hi": "MCP सर्वरों के ज़रिए सभी एजेंटों को अतिरिक्त टूल देता है। JayV हर अनुरोध में हर एजेंट को सर्वर उसी तरह सौंपता है जैसे वह एजेंट समझता है, और API मॉडल के लिए टूल ख़ुद बुलाता है।",
+    "ar": "تمنح كل الوكلاء أدوات إضافية عبر خوادم MCP. يسلّم JayV الخوادم إلى كل وكيل في كل طلب بالطريقة التي يفهمها ذلك الوكيل، ويستدعي الأدوات بنفسه لنماذج الواجهة البرمجية.",
+    "fr": "Donne des outils supplémentaires à tous les agents grâce aux serveurs MCP. JayV remet les serveurs à chaque agent à chaque demande, de la façon que cet agent comprend, et appelle lui-même les outils pour les modèles d’API.",
+    "ru": "Даёт всем агентам дополнительные инструменты через серверы MCP. JayV передаёт серверы каждому агенту в каждом запросе так, как этот агент понимает, а для моделей API вызывает инструменты сам.",
+    "ja": "MCP サーバーを通じて、すべてのエージェントに追加のツールを与えます。JayV は依頼のたびに、各エージェントが理解できる形でサーバーを渡し、API モデルの代わりには自分でツールを呼び出します。",
+    "de": "Gibt allen Agenten zusätzliche Werkzeuge über MCP-Server. JayV übergibt die Server bei jeder Anfrage an jeden Agenten so, wie dieser sie versteht, und ruft die Werkzeuge für die API-Modelle selbst auf."
+  },
+  "use": [
+    {
+      "text": {
+        "en": "Open Settings › MCP and add a server with the form, or paste a configuration (mcpServers JSON, a claude mcp add line or an npx command). In a chat, /mcp followed by a description drafts one for you.",
+        "pt-BR": "Abra Configuração › MCP e adicione um servidor pelo formulário, ou cole uma configuração (o JSON mcpServers, uma linha claude mcp add ou um comando npx). Num chat, /mcp seguido de uma descrição monta um rascunho para você.",
+        "es": "Abre Configuración › MCP y añade un servidor con el formulario, o pega una configuración (el JSON mcpServers, una línea claude mcp add o un comando npx). En un chat, /mcp seguido de una descripción prepara un borrador por ti.",
+        "zh-CN": "打开“设置 › MCP”，用表单添加服务器，或粘贴一段配置（mcpServers JSON、一行 claude mcp add 或一条 npx 命令）。在对话中输入 /mcp 加上描述，会替你生成草稿。",
+        "hi": "सेटिंग्स › MCP खोलें और फ़ॉर्म से सर्वर जोड़ें, या कोई कॉन्फ़िगरेशन चिपकाएँ (mcpServers JSON, claude mcp add की लाइन या npx कमांड)। चैट में /mcp के बाद विवरण लिखने पर आपके लिए ड्राफ़्ट बनता है।",
+        "ar": "افتح الإعدادات › MCP وأضف خادمًا عبر النموذج، أو الصق إعدادًا (JSON ‏mcpServers أو سطر claude mcp add أو أمر npx). وفي المحادثة، يُعِدّ لك /mcp متبوعًا بوصف مسودةً.",
+        "fr": "Ouvrez Configuration › MCP et ajoutez un serveur avec le formulaire, ou collez une configuration (le JSON mcpServers, une ligne claude mcp add ou une commande npx). Dans un chat, /mcp suivi d’une description prépare un brouillon pour vous.",
+        "ru": "Откройте Настройки › MCP и добавьте сервер через форму или вставьте конфигурацию (JSON mcpServers, строку claude mcp add или команду npx). В чате /mcp с описанием подготовит черновик за вас.",
+        "ja": "設定 › MCP を開き、フォームでサーバーを追加するか、設定（mcpServers の JSON、claude mcp add の行、npx コマンド）を貼り付けます。チャットで /mcp に続けて説明を書くと、下書きを作ってくれます。",
+        "de": "Öffnen Sie Einstellungen › MCP und fügen Sie einen Server über das Formular hinzu, oder fügen Sie eine Konfiguration ein (mcpServers-JSON, eine claude-mcp-add-Zeile oder einen npx-Befehl). In einem Chat erstellt /mcp mit einer Beschreibung einen Entwurf für Sie."
+      },
+      "image": "settings"
+    },
+    {
+      "text": {
+        "en": "In the tab of each agent that should use the servers, turn on Approve MCP servers. The changes take effect when you click Save settings.",
+        "pt-BR": "Na aba de cada agente que deve usar os servidores, ligue Aprovar servidores MCP. As mudanças valem quando você clica em Salvar configuração.",
+        "es": "En la pestaña de cada agente que deba usar los servidores, activa Aprobar servidores MCP. Los cambios valen al hacer clic en Guardar configuración.",
+        "zh-CN": "在每个需要使用这些服务器的代理标签页中开启“批准 MCP 服务器”。点击“保存设置”后更改生效。",
+        "hi": "जिन एजेंटों को सर्वर इस्तेमाल करने हैं, उनके टैब में MCP सर्वर स्वीकृत करें चालू करें। बदलाव सेटिंग्स सहेजें पर क्लिक करने पर लागू होते हैं।",
+        "ar": "في تبويب كل وكيل ينبغي أن يستخدم الخوادم، فعّل «الموافقة على خوادم MCP». تسري التغييرات عند النقر على «حفظ الإعدادات».",
+        "fr": "Dans l’onglet de chaque agent qui doit utiliser les serveurs, activez Approuver les serveurs MCP. Les changements prennent effet quand vous cliquez sur Enregistrer la configuration.",
+        "ru": "На вкладке каждого агента, который должен пользоваться серверами, включите «Одобрять серверы MCP». Изменения вступают в силу после нажатия «Сохранить настройки».",
+        "ja": "サーバーを使うべき各エージェントのタブで「MCP サーバーを承認」をオンにします。変更は「設定を保存」をクリックしたときに反映されます。",
+        "de": "Schalten Sie im Tab jedes Agenten, der die Server nutzen soll, MCP-Server freigeben ein. Die Änderungen gelten, wenn Sie auf Einstellungen speichern klicken."
+      },
+      "image": "agent"
+    }
+  ]
+}

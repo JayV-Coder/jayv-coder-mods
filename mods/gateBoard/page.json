@@ -1,0 +1,46 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "One page with everything the gatehouse of Jev did in the project: the requests it let through, asked about or blocked, and what it held at the exit.",
+    "pt-BR": "Uma página com tudo o que a portaria do Jev fez no projeto: os pedidos que ela deixou passar, sobre os quais perguntou ou que barrou, e o que segurou na saída.",
+    "es": "Una página con todo lo que hizo la portería de Jev en el proyecto: las solicitudes que dejó pasar, sobre las que preguntó o que bloqueó, y lo que retuvo a la salida.",
+    "zh-CN": "一个页面汇总 Jev 的门岗在项目中做过的一切：放行、追问或拦截的请求，以及在出口处扣下的内容。",
+    "hi": "एक पेज जिसमें वह सब है जो Jev के गेट ने प्रोजेक्ट में किया: कौन-से अनुरोध उसने जाने दिए, किन पर सवाल पूछा या किन्हें रोका, और निकास पर क्या रोका।",
+    "ar": "صفحة واحدة بكل ما فعلته بوابة Jev في المشروع: الطلبات التي سمحت بمرورها أو سألت عنها أو حظرتها، وما احتجزته عند الخروج.",
+    "fr": "Une page avec tout ce que la loge de Jev a fait dans le projet : les demandes qu’elle a laissées passer, sur lesquelles elle a posé une question ou qu’elle a bloquées, et ce qu’elle a retenu à la sortie.",
+    "ru": "Одна страница со всем, что проходная Jev сделала в проекте: какие запросы она пропустила, по каким задала вопрос или которые заблокировала, и что задержала на выходе.",
+    "ja": "プロジェクトで Jev のゲートが行ったことをすべて 1 ページにまとめます。通した依頼、質問した依頼、ブロックした依頼、そして出口で止めたものです。",
+    "de": "Eine Seite mit allem, was die Pforte von Jev im Projekt getan hat: die Anfragen, die sie durchgelassen, nachgefragt oder blockiert hat, und was sie am Ausgang zurückgehalten hat."
+  },
+  "use": [
+    {
+      "text": {
+        "en": "Open Gatehouse in the side menu of a project, click the count in the status bar or press Ctrl+G (⌘G on Mac).",
+        "pt-BR": "Abra Portaria no menu lateral de um projeto, clique na contagem da barra de status ou aperte Ctrl+G (⌘G no Mac).",
+        "es": "Abre Portería en el menú lateral de un proyecto, haz clic en el recuento de la barra de estado o pulsa Ctrl+G (⌘G en Mac).",
+        "zh-CN": "在项目的侧边菜单中打开“门岗”，点击状态栏中的计数，或按 Ctrl+G（Mac 上为 ⌘G）。",
+        "hi": "किसी प्रोजेक्ट के साइड मेनू में गेट खोलें, स्टेटस बार की गिनती पर क्लिक करें या Ctrl+G (Mac पर ⌘G) दबाएँ।",
+        "ar": "افتح البوابة من القائمة الجانبية للمشروع، أو انقر العدد في شريط الحالة، أو اضغط Ctrl+G ‏(⌘G على Mac).",
+        "fr": "Ouvrez Loge dans le menu latéral d’un projet, cliquez sur le compteur de la barre d’état ou appuyez sur Ctrl+G (⌘G sur Mac).",
+        "ru": "Откройте «Проходная» в боковом меню проекта, нажмите на счётчик в строке состояния или нажмите Ctrl+G (⌘G на Mac).",
+        "ja": "プロジェクトのサイドメニューでゲートを開くか、ステータスバーの件数をクリックするか、Ctrl+G（Mac では ⌘G）を押します。",
+        "de": "Öffnen Sie Pforte im Seitenmenü eines Projekts, klicken Sie auf die Zahl in der Statusleiste oder drücken Sie Strg+G (⌘G auf dem Mac)."
+      },
+      "image": "gate"
+    },
+    {
+      "text": {
+        "en": "The answers you give to the gatehouse become project notes, so it does not ask the same thing again.",
+        "pt-BR": "As respostas que você dá à portaria viram notas do projeto, para ela não perguntar a mesma coisa de novo.",
+        "es": "Las respuestas que das a la portería se convierten en notas del proyecto, para que no vuelva a preguntar lo mismo.",
+        "zh-CN": "你对门岗的回答会变成项目笔记，这样它就不会再问同样的问题。",
+        "hi": "गेट को दिए आपके जवाब प्रोजेक्ट नोट्स बन जाते हैं, ताकि वह वही बात दोबारा न पूछे।",
+        "ar": "تتحول إجاباتك للبوابة إلى ملاحظات للمشروع، كي لا تسأل الشيء نفسه مرة أخرى.",
+        "fr": "Les réponses que vous donnez à la loge deviennent des notes du projet, pour qu’elle ne repose pas la même question.",
+        "ru": "Ваши ответы проходной становятся заметками проекта, чтобы она не спрашивала одно и то же снова.",
+        "ja": "ゲートへのあなたの回答はプロジェクトノートになるので、同じことを二度聞かれません。",
+        "de": "Ihre Antworten an die Pforte werden zu Projektnotizen, damit sie nicht noch einmal dasselbe fragt."
+      }
+    }
+  ]
+}

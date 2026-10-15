@@ -1,0 +1,47 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "Installs skills — folders with a SKILL.md — and lets Jev choose, for each request, the one the agent should follow. Jev reads the request and the name and description of each skill, and picks at most one.",
+    "pt-BR": "Instala skills — pastas com um SKILL.md — e deixa o Jev escolher, para cada pedido, aquela que o agente deve seguir. O Jev lê o pedido e o nome e a descrição de cada skill, e escolhe no máximo uma.",
+    "es": "Instala skills — carpetas con un SKILL.md — y deja que Jev elija, para cada solicitud, la que el agente debe seguir. Jev lee la solicitud y el nombre y la descripción de cada skill, y elige como mucho una.",
+    "zh-CN": "安装技能——包含 SKILL.md 的文件夹——并让 Jev 为每个请求选择代理应遵循的那个。Jev 会阅读请求以及每个技能的名称和描述，最多选择一个。",
+    "hi": "स्किल — SKILL.md वाले फ़ोल्डर — इंस्टॉल करता है और Jev को हर अनुरोध के लिए वह स्किल चुनने देता है जिसका एजेंट को पालन करना चाहिए। Jev अनुरोध और हर स्किल का नाम और विवरण पढ़ता है, और ज़्यादा से ज़्यादा एक चुनता है।",
+    "ar": "تثبّت المهارات — مجلدات تحتوي على SKILL.md — وتترك لـ Jev أن يختار لكل طلب المهارة التي ينبغي أن يتبعها الوكيل. يقرأ Jev الطلب واسم كل مهارة ووصفها، ويختار واحدة على الأكثر.",
+    "fr": "Installe des skills — des dossiers avec un SKILL.md — et laisse Jev choisir, pour chaque demande, celle que l’agent doit suivre. Jev lit la demande ainsi que le nom et la description de chaque skill, et en choisit une au plus.",
+    "ru": "Устанавливает скиллы — папки с файлом SKILL.md — и позволяет Jev для каждого запроса выбрать тот, которому должен следовать агент. Jev читает запрос, название и описание каждого скилла и выбирает не больше одного.",
+    "ja": "スキル（SKILL.md を含むフォルダー）をインストールし、依頼ごとにエージェントが従うべきスキルを Jev に選ばせます。Jev は依頼と各スキルの名前・説明を読み、多くても 1 つを選びます。",
+    "de": "Installiert Skills – Ordner mit einer SKILL.md – und lässt Jev für jede Anfrage den Skill wählen, dem der Agent folgen soll. Jev liest die Anfrage sowie Name und Beschreibung jedes Skills und wählt höchstens einen."
+  },
+  "use": [
+    {
+      "text": {
+        "en": "Open Settings › Skills and click Install from folder, or paste the text of a SKILL.md. Turn a skill off to take it out of the choice.",
+        "pt-BR": "Abra Configuração › Skills e clique em Instalar de uma pasta, ou cole o texto de um SKILL.md. Desligue uma skill para tirá-la da escolha.",
+        "es": "Abre Configuración › Skills y haz clic en Instalar desde una carpeta, o pega el texto de un SKILL.md. Desactiva una skill para sacarla de la elección.",
+        "zh-CN": "打开“设置 › 技能”，点击“从文件夹安装”，或粘贴一份 SKILL.md 的文本。关闭某个技能即可将它移出选择范围。",
+        "hi": "सेटिंग्स › स्किल खोलें और फ़ोल्डर से इंस्टॉल करें पर क्लिक करें, या SKILL.md का पाठ चिपकाएँ। किसी स्किल को चुनाव से हटाने के लिए उसे बंद करें।",
+        "ar": "افتح الإعدادات › المهارات وانقر «التثبيت من مجلد»، أو الصق نص ملف SKILL.md. أوقف مهارة لإخراجها من الاختيار.",
+        "fr": "Ouvrez Configuration › Skills et cliquez sur Installer depuis un dossier, ou collez le texte d’un SKILL.md. Désactivez une skill pour l’écarter du choix.",
+        "ru": "Откройте Настройки › Скиллы и нажмите «Установить из папки» или вставьте текст SKILL.md. Отключите скилл, чтобы убрать его из выбора.",
+        "ja": "設定 › スキルを開き、「フォルダからインストール」をクリックするか、SKILL.md のテキストを貼り付けます。スキルをオフにすると選択対象から外れます。",
+        "de": "Öffnen Sie Einstellungen › Skills und klicken Sie auf Aus Ordner installieren, oder fügen Sie den Text einer SKILL.md ein. Schalten Sie einen Skill aus, um ihn aus der Auswahl zu nehmen."
+      },
+      "image": "settings"
+    },
+    {
+      "text": {
+        "en": "When a skill fits the request, the Progress panel shows the Skill step and the agent follows its instructions.",
+        "pt-BR": "Quando uma skill combina com o pedido, o painel Andamento mostra o passo Skill e o agente segue as instruções dela.",
+        "es": "Cuando una skill encaja con la solicitud, el panel Progreso muestra el paso Skill y el agente sigue sus instrucciones.",
+        "zh-CN": "当某个技能与请求相符时，进度面板会显示“技能”步骤，代理会按照它的说明操作。",
+        "hi": "जब कोई स्किल अनुरोध से मेल खाती है, तो प्रगति पैनल स्किल चरण दिखाता है और एजेंट उसके निर्देशों का पालन करता है।",
+        "ar": "عندما تناسب مهارةٌ الطلب، تعرض لوحة التقدّم خطوة «المهارة» ويتبع الوكيل تعليماتها.",
+        "fr": "Quand une skill correspond à la demande, le panneau Progression affiche l’étape Skill et l’agent suit ses instructions.",
+        "ru": "Когда скилл подходит к запросу, панель «Ход работы» показывает шаг «Скилл», и агент следует его инструкциям.",
+        "ja": "スキルが依頼に合うと、進行状況パネルに「スキル」のステップが表示され、エージェントはその指示に従います。",
+        "de": "Passt ein Skill zur Anfrage, zeigt das Fortschritt-Panel den Skill-Schritt, und der Agent folgt seinen Anweisungen."
+      },
+      "image": "chat"
+    }
+  ]
+}

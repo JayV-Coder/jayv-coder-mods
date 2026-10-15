@@ -1,4 +1,4 @@
-# Confere os manifestos e o catalog.json em todo PR e em todo push no main.
+# Confere os manifestos, os catálogos e as páginas em todo PR e em todo push no main.
 # A função `mods` do Supabase entrega o catalog.json do main ao app e ao site:
 # um catálogo quebrado no main chegaria a todo mundo, então ele só entra
 # conferido e em dia com os manifestos.
@@ -23,5 +23,5 @@ jobs:
           node-version: 22
       - name: Testes do validador
         run: node --test scripts/catalog.test.mjs
-      - name: Manifestos e catalog.json
+      - name: Manifestos, catálogos e páginas
         run: node scripts/catalog.mjs check

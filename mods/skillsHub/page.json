@@ -1,0 +1,32 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "Searches the skills.sh directory from inside JayV and installs a skill with one click: in the app, or on the site for a whole organization.",
+    "pt-BR": "Busca no diretório skills.sh de dentro do JayV e instala uma skill com um clique: no app, ou no site para uma organização inteira.",
+    "es": "Busca en el directorio skills.sh desde dentro de JayV e instala una skill con un clic: en la app, o en el sitio para toda una organización.",
+    "zh-CN": "在 JayV 内搜索 skills.sh 目录，一键安装技能：可以在应用中安装，也可以在网站上为整个组织安装。",
+    "hi": "JayV के अंदर से skills.sh डायरेक्टरी में खोजता है और एक क्लिक में स्किल इंस्टॉल करता है: ऐप में, या साइट पर पूरे संगठन के लिए।",
+    "ar": "تبحث في دليل skills.sh من داخل JayV وتثبّت مهارة بنقرة واحدة: في التطبيق، أو على الموقع لمنظمة كاملة.",
+    "fr": "Cherche dans l’annuaire skills.sh depuis JayV et installe une skill en un clic : dans l’app, ou sur le site pour toute une organisation.",
+    "ru": "Ищет в каталоге skills.sh прямо из JayV и устанавливает скилл одним нажатием: в приложении или на сайте для всей организации.",
+    "ja": "JayV の中から skills.sh のディレクトリを検索し、ワンクリックでスキルをインストールします。アプリで、またはサイトで組織全体に対して行えます。",
+    "de": "Durchsucht das Verzeichnis skills.sh direkt in JayV und installiert einen Skill mit einem Klick: in der App oder auf der Website für eine ganze Organisation."
+  },
+  "use": [
+    {
+      "text": {
+        "en": "In Settings › Skills, type what you need in the skills.sh search, press Search and click Install on a result. Read its instructions first; it is installed when you click Save settings.",
+        "pt-BR": "Em Configuração › Skills, digite o que você precisa na busca do skills.sh, aperte Buscar e clique em Instalar num resultado. Leia as instruções antes; ela é instalada quando você clica em Salvar configuração.",
+        "es": "En Configuración › Skills, escribe lo que necesitas en la búsqueda de skills.sh, pulsa Buscar y haz clic en Instalar en un resultado. Lee antes sus instrucciones; se instala al hacer clic en Guardar configuración.",
+        "zh-CN": "在“设置 › 技能”的 skills.sh 搜索中输入你需要的内容，按“搜索”，然后在结果上点击“安装”。请先阅读它的说明；点击“保存设置”后才会安装。",
+        "hi": "सेटिंग्स › स्किल में skills.sh खोज में अपनी ज़रूरत लिखें, खोजें दबाएँ और किसी नतीजे पर इंस्टॉल करें पर क्लिक करें। पहले उसके निर्देश पढ़ें; सेटिंग्स सहेजें पर क्लिक करने पर वह इंस्टॉल होती है।",
+        "ar": "في الإعدادات › المهارات، اكتب ما تحتاج إليه في بحث skills.sh، واضغط «بحث» ثم انقر «تثبيت» على نتيجة. اقرأ تعليماتها أولًا؛ وتُثبَّت عند النقر على «حفظ الإعدادات».",
+        "fr": "Dans Configuration › Skills, tapez ce dont vous avez besoin dans la recherche skills.sh, appuyez sur Rechercher et cliquez sur Installer sur un résultat. Lisez d’abord ses instructions ; elle s’installe quand vous cliquez sur Enregistrer la configuration.",
+        "ru": "В Настройки › Скиллы введите, что вам нужно, в поиск skills.sh, нажмите «Найти» и затем «Установить» у результата. Сначала прочитайте его инструкции; установка происходит после нажатия «Сохранить настройки».",
+        "ja": "設定 › スキルの skills.sh 検索に必要なものを入力し、「検索」を押して、結果の「インストール」をクリックします。先に指示を読んでください。「設定を保存」をクリックするとインストールされます。",
+        "de": "Tippen Sie unter Einstellungen › Skills in die skills.sh-Suche, was Sie brauchen, drücken Sie Suchen und klicken Sie bei einem Ergebnis auf Installieren. Lesen Sie vorher die Anweisungen; installiert wird beim Klick auf Einstellungen speichern."
+      },
+      "image": "settings"
+    }
+  ]
+}

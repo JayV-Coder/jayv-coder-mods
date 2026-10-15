@@ -1,0 +1,75 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "Codex is OpenAI's coding agent for the terminal. With this mod, Jev can hand requests to it: Codex edits the project inside its own sandbox and runs commands, while JayV keeps the gatehouse, the context and the usage records the same for every agent.",
+    "pt-BR": "O Codex é o agente de programação da OpenAI para o terminal. Com este mod, o Jev pode passar pedidos para ele: o Codex edita o projeto dentro do próprio sandbox e roda comandos, enquanto o JayV mantém a portaria, o contexto e o registro de uso iguais para todos os agentes.",
+    "es": "Codex es el agente de programación de OpenAI para la terminal. Con este mod, Jev puede pasarle solicitudes: Codex edita el proyecto dentro de su propio sandbox y ejecuta comandos, mientras JayV mantiene la portería, el contexto y el registro de uso iguales para todos los agentes.",
+    "zh-CN": "Codex 是 OpenAI 面向终端的编程代理。有了这个模组，Jev 可以把请求交给它：Codex 在自己的沙箱中编辑项目并运行命令，而 JayV 让门岗、上下文和用量记录对所有代理保持一致。",
+    "hi": "Codex टर्मिनल के लिए OpenAI का कोडिंग एजेंट है। इस मॉड से Jev अनुरोध उसे सौंप सकता है: Codex अपने सैंडबॉक्स में प्रोजेक्ट बदलता है और कमांड चलाता है, जबकि JayV गेट, संदर्भ और उपयोग का रिकॉर्ड सभी एजेंटों के लिए एक जैसा रखता है।",
+    "ar": "Codex هو وكيل البرمجة من OpenAI للطرفية. بهذه الإضافة يستطيع Jev تسليم الطلبات إليه: يعدّل Codex المشروع داخل بيئته المعزولة ويشغّل الأوامر، بينما يُبقي JayV البوابة والسياق وسجل الاستهلاك واحدة لكل الوكلاء.",
+    "fr": "Codex est l’agent de programmation d’OpenAI pour le terminal. Avec ce mod, Jev peut lui confier des demandes : Codex modifie le projet dans son propre sandbox et lance des commandes, pendant que JayV garde la loge, le contexte et le suivi de consommation identiques pour tous les agents.",
+    "ru": "Codex — агент OpenAI для программирования в терминале. С этим модом Jev может передавать ему запросы: Codex правит проект в собственной песочнице и выполняет команды, а JayV держит проходную, контекст и учёт расхода одинаковыми для всех агентов.",
+    "ja": "Codex は OpenAI のターミナル用コーディングエージェントです。この Mod があると、Jev は依頼を Codex に任せられます。Codex は自分のサンドボックス内でプロジェクトを編集してコマンドを実行し、ゲート、コンテキスト、使用量の記録は JayV がすべてのエージェントで共通に保ちます。",
+    "de": "Codex ist der Coding-Agent von OpenAI für das Terminal. Mit diesem Mod kann Jev Anfragen an ihn übergeben: Codex bearbeitet das Projekt in seiner eigenen Sandbox und führt Befehle aus, während JayV Pforte, Kontext und Verbrauchsprotokoll für alle Agenten gleich hält."
+  },
+  "requirements": {
+    "en": "The Codex CLI installed on this computer and signed in with your ChatGPT account or an OpenAI API key.",
+    "pt-BR": "O Codex CLI instalado neste computador e logado com a sua conta do ChatGPT ou com uma chave de API da OpenAI.",
+    "es": "Codex CLI instalado en este equipo y con la sesión iniciada con tu cuenta de ChatGPT o una clave de API de OpenAI.",
+    "zh-CN": "这台电脑上已安装 Codex CLI，并已用你的 ChatGPT 账号或 OpenAI API 密钥登录。",
+    "hi": "इस कंप्यूटर पर Codex CLI इंस्टॉल हो और आपके ChatGPT खाते या OpenAI API कुंजी से लॉग इन हो।",
+    "ar": "أن تكون Codex CLI مثبّتة على هذا الجهاز ومسجّلة الدخول بحسابك في ChatGPT أو بمفتاح API من OpenAI.",
+    "fr": "Codex CLI installé sur cet ordinateur et connecté avec votre compte ChatGPT ou une clé d’API OpenAI.",
+    "ru": "Codex CLI, установленный на этом компьютере, с входом через учётную запись ChatGPT или ключ API OpenAI.",
+    "ja": "このコンピューターに Codex CLI がインストールされ、ChatGPT アカウントまたは OpenAI の API キーでサインインしていること。",
+    "de": "Die Codex CLI auf diesem Computer installiert und mit Ihrem ChatGPT-Konto oder einem OpenAI-API-Schlüssel angemeldet."
+  },
+  "setup": [
+    {
+      "text": {
+        "en": "Install the Codex CLI and run codex login once in a terminal.",
+        "pt-BR": "Instale o Codex CLI e rode codex login uma vez num terminal.",
+        "es": "Instala Codex CLI y ejecuta codex login una vez en una terminal.",
+        "zh-CN": "安装 Codex CLI，并在终端中运行一次 codex login。",
+        "hi": "Codex CLI इंस्टॉल करें और टर्मिनल में एक बार codex login चलाएँ।",
+        "ar": "ثبّت Codex CLI وشغّل codex login مرة واحدة في الطرفية.",
+        "fr": "Installez Codex CLI et lancez codex login une fois dans un terminal.",
+        "ru": "Установите Codex CLI и один раз выполните codex login в терминале.",
+        "ja": "Codex CLI をインストールし、ターミナルで codex login を一度実行します。",
+        "de": "Installieren Sie die Codex CLI und führen Sie einmal codex login in einem Terminal aus."
+      }
+    },
+    {
+      "text": {
+        "en": "In Settings › Codex, check the program, turn on the models Jev may use and choose the sandbox and the reasoning effort.",
+        "pt-BR": "Em Configuração › Codex, confira o programa, ligue os modelos que o Jev pode usar e escolha o sandbox e o esforço de raciocínio.",
+        "es": "En Configuración › Codex, comprueba el programa, activa los modelos que Jev puede usar y elige el sandbox y el esfuerzo de razonamiento.",
+        "zh-CN": "在“设置 › Codex”中确认程序，开启 Jev 可以使用的模型，并选择沙箱和推理强度。",
+        "hi": "सेटिंग्स › Codex में प्रोग्राम जाँचें, वे मॉडल चालू करें जिन्हें Jev इस्तेमाल कर सकता है और सैंडबॉक्स व तर्क का प्रयास चुनें।",
+        "ar": "في الإعدادات › Codex، تحقق من البرنامج، وفعّل النماذج التي يُسمح لـ Jev باستخدامها، واختر البيئة المعزولة وجهد الاستدلال.",
+        "fr": "Dans Configuration › Codex, vérifiez le programme, activez les modèles que Jev peut utiliser et choisissez le sandbox et l’effort de raisonnement.",
+        "ru": "В Настройки › Codex проверьте программу, включите модели, которые может использовать Jev, и выберите песочницу и усилие рассуждения.",
+        "ja": "設定 › Codex でプログラムを確認し、Jev が使ってよいモデルをオンにして、サンドボックスと推論の強さを選びます。",
+        "de": "Prüfen Sie unter Einstellungen › Codex das Programm, schalten Sie die Modelle ein, die Jev nutzen darf, und wählen Sie Sandbox und Denkaufwand."
+      },
+      "image": "settings"
+    }
+  ],
+  "use": [
+    {
+      "text": {
+        "en": "Send your request in a chat. When Jev routes it to Codex, the Progress panel shows the route and each step of the agent.",
+        "pt-BR": "Mande o seu pedido num chat. Quando o Jev o encaminha ao Codex, o painel Andamento mostra a rota e cada passo do agente.",
+        "es": "Envía tu solicitud en un chat. Cuando Jev la envía a Codex, el panel Progreso muestra la ruta y cada paso del agente.",
+        "zh-CN": "在对话中发送你的请求。当 Jev 把它交给 Codex 时，进度面板会显示路由和代理的每一步。",
+        "hi": "चैट में अपना अनुरोध भेजें। जब Jev उसे Codex को भेजता है, तो प्रगति पैनल रूट और एजेंट का हर चरण दिखाता है।",
+        "ar": "أرسل طلبك في محادثة. عندما يوجّهه Jev إلى Codex، تعرض لوحة التقدّم المسار وكل خطوة من خطوات الوكيل.",
+        "fr": "Envoyez votre demande dans un chat. Quand Jev la confie à Codex, le panneau Progression montre la route et chaque étape de l’agent.",
+        "ru": "Отправьте запрос в чате. Когда Jev направляет его в Codex, панель «Ход работы» показывает маршрут и каждый шаг агента.",
+        "ja": "チャットで依頼を送ってください。Jev が Codex に回すと、進行状況パネルにルートとエージェントの各ステップが表示されます。",
+        "de": "Senden Sie Ihre Anfrage in einem Chat. Wenn Jev sie an Codex leitet, zeigt das Fortschritt-Panel die Route und jeden Schritt des Agenten."
+      },
+      "image": "chat"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/JayV-Coder/jayv-coder-mods/schema/page.schema.json",
+  "title": "JayV mod page",
+  "description": "The page of a mod on the JayV site (mods/<id>/page.json): what it does, what it needs, the steps beyond turning it on, and how to use it, in the ten languages of the app. A step may show a print from mods/<id>/media/<image>.<locale>.webp (the English one is required). The steps to turn a mod on are the same for every mod and the site writes them, with the print media/enable.<locale>.webp when there is one. scripts/catalog.mjs is the authority: this schema only helps editors.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "about",
+    "use"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "about": {
+      "$ref": "#/$defs/texts",
+      "description": "What the mod does, in one to three sentences (up to 1200 characters)."
+    },
+    "requirements": {
+      "$ref": "#/$defs/texts",
+      "description": "What must be there before (a program, an account, a key), up to 600 characters."
+    },
+    "setup": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "$ref": "#/$defs/step"
+      },
+      "description": "What else the mod needs after it is turned on."
+    },
+    "use": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 6,
+      "items": {
+        "$ref": "#/$defs/step"
+      },
+      "description": "How to use it."
+    }
+  },
+  "$defs": {
+    "texts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "en",
+        "pt-BR",
+        "es",
+        "zh-CN",
+        "hi",
+        "ar",
+        "fr",
+        "ru",
+        "ja",
+        "de"
+      ],
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pt-BR": {
+          "type": "string",
+          "minLength": 1
+        },
+        "es": {
+          "type": "string",
+          "minLength": 1
+        },
+        "zh-CN": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hi": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ar": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fr": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ru": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ja": {
+          "type": "string",
+          "minLength": 1
+        },
+        "de": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "text"
+      ],
+      "properties": {
+        "text": {
+          "$ref": "#/$defs/texts"
+        },
+        "image": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "not": {
+            "const": "enable"
+          },
+          "description": "The name of a print in media/ (without the language and .webp)."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "OpenRouter offers one API for models from many providers. With this mod, Jev can send requests to them: they answer as text, without editing the project, and JayV itself calls the MCP tools for these models.",
+    "pt-BR": "O OpenRouter oferece uma API só para modelos de muitos provedores. Com este mod, o Jev pode mandar pedidos para eles: eles respondem em texto, sem editar o projeto, e o próprio JayV chama as ferramentas MCP para esses modelos.",
+    "es": "OpenRouter ofrece una sola API para modelos de muchos proveedores. Con este mod, Jev puede enviarles solicitudes: responden con texto, sin editar el proyecto, y el propio JayV llama a las herramientas MCP por estos modelos.",
+    "zh-CN": "OpenRouter 用一个 API 提供来自众多提供商的模型。有了这个模组，Jev 可以把请求发给这些模型：它们以文本作答，不编辑项目，并由 JayV 自己替这些模型调用 MCP 工具。",
+    "hi": "OpenRouter कई प्रदाताओं के मॉडल के लिए एक ही API देता है। इस मॉड से Jev उन्हें अनुरोध भेज सकता है: वे प्रोजेक्ट बदले बिना पाठ में जवाब देते हैं, और इन मॉडल के लिए MCP टूल JayV ख़ुद बुलाता है।",
+    "ar": "يوفّر OpenRouter واجهة برمجية واحدة لنماذج من مزوّدين كثيرين. بهذه الإضافة يستطيع Jev إرسال الطلبات إليها: تجيب نصًا دون تعديل المشروع، ويستدعي JayV بنفسه أدوات MCP لهذه النماذج.",
+    "fr": "OpenRouter propose une seule API pour des modèles de nombreux fournisseurs. Avec ce mod, Jev peut leur envoyer des demandes : ils répondent en texte, sans modifier le projet, et JayV appelle lui-même les outils MCP pour ces modèles.",
+    "ru": "OpenRouter даёт единый API к моделям многих поставщиков. С этим модом Jev может отправлять им запросы: они отвечают текстом, не правя проект, а инструменты MCP для этих моделей вызывает сам JayV.",
+    "ja": "OpenRouter は、多くのプロバイダーのモデルを 1 つの API で提供します。この Mod があると、Jev はそれらのモデルに依頼を送れます。モデルはプロジェクトを編集せずテキストで答え、これらのモデルの MCP ツールは JayV 自身が呼び出します。",
+    "de": "OpenRouter bietet eine einzige API für Modelle vieler Anbieter. Mit diesem Mod kann Jev Anfragen an sie schicken: Sie antworten als Text, ohne das Projekt zu bearbeiten, und JayV ruft die MCP-Werkzeuge für diese Modelle selbst auf."
+  },
+  "requirements": {
+    "en": "An OpenRouter account and an API key.",
+    "pt-BR": "Uma conta no OpenRouter e uma chave de API.",
+    "es": "Una cuenta de OpenRouter y una clave de API.",
+    "zh-CN": "一个 OpenRouter 账号和一个 API 密钥。",
+    "hi": "एक OpenRouter खाता और एक API कुंजी।",
+    "ar": "حساب في OpenRouter ومفتاح API.",
+    "fr": "Un compte OpenRouter et une clé d’API.",
+    "ru": "Учётная запись OpenRouter и ключ API.",
+    "ja": "OpenRouter のアカウントと API キー。",
+    "de": "Ein OpenRouter-Konto und ein API-Schlüssel."
+  },
+  "setup": [
+    {
+      "text": {
+        "en": "In Settings › OpenRouter, paste your API key (it stays on this computer) and check the connection: JayV loads the list of models. Then turn on the models Jev may use.",
+        "pt-BR": "Em Configuração › OpenRouter, cole a sua chave de API (ela fica neste computador) e confira a conexão: o JayV carrega a lista de modelos. Depois ligue os modelos que o Jev pode usar.",
+        "es": "En Configuración › OpenRouter, pega tu clave de API (se queda en este equipo) y comprueba la conexión: JayV carga la lista de modelos. Después activa los modelos que Jev puede usar.",
+        "zh-CN": "在“设置 › OpenRouter”中粘贴你的 API 密钥（它保存在这台电脑上）并检查连接：JayV 会加载模型列表。然后开启 Jev 可以使用的模型。",
+        "hi": "सेटिंग्स › OpenRouter में अपनी API कुंजी चिपकाएँ (यह इसी कंप्यूटर पर रहती है) और कनेक्शन जाँचें: JayV मॉडल की सूची लोड करता है। फिर वे मॉडल चालू करें जिन्हें Jev इस्तेमाल कर सकता है।",
+        "ar": "في الإعدادات › OpenRouter، الصق مفتاح API (يبقى على هذا الجهاز) وافحص الاتصال: يحمّل JayV قائمة النماذج. ثم فعّل النماذج التي يُسمح لـ Jev باستخدامها.",
+        "fr": "Dans Configuration › OpenRouter, collez votre clé d’API (elle reste sur cet ordinateur) et vérifiez la connexion : JayV charge la liste des modèles. Activez ensuite les modèles que Jev peut utiliser.",
+        "ru": "В Настройки › OpenRouter вставьте ключ API (он остаётся на этом компьютере) и проверьте подключение: JayV загрузит список моделей. Затем включите модели, которые может использовать Jev.",
+        "ja": "設定 › OpenRouter で API キーを貼り付け（キーはこのコンピューターに保存されます）、接続を確認すると、JayV がモデル一覧を読み込みます。その後、Jev が使ってよいモデルをオンにします。",
+        "de": "Fügen Sie unter Einstellungen › OpenRouter Ihren API-Schlüssel ein (er bleibt auf diesem Computer) und prüfen Sie die Verbindung: JayV lädt die Modellliste. Schalten Sie dann die Modelle ein, die Jev nutzen darf."
+      },
+      "image": "settings"
+    }
+  ],
+  "use": [
+    {
+      "text": {
+        "en": "Ask in a chat for an analysis, a review or an explanation. When Jev picks an OpenRouter model, the answer says which one.",
+        "pt-BR": "Peça num chat uma análise, uma revisão ou uma explicação. Quando o Jev escolhe um modelo do OpenRouter, a resposta diz qual.",
+        "es": "Pide en un chat un análisis, una revisión o una explicación. Cuando Jev elige un modelo de OpenRouter, la respuesta dice cuál.",
+        "zh-CN": "在对话中请求分析、审查或解释。当 Jev 选择 OpenRouter 的模型时，回答会注明是哪一个。",
+        "hi": "चैट में विश्लेषण, समीक्षा या व्याख्या माँगें। जब Jev कोई OpenRouter मॉडल चुनता है, तो उत्तर बताता है कि कौन-सा।",
+        "ar": "اطلب في محادثة تحليلًا أو مراجعة أو شرحًا. عندما يختار Jev نموذجًا من OpenRouter، تذكر الإجابة أيّه.",
+        "fr": "Demandez dans un chat une analyse, une relecture ou une explication. Quand Jev choisit un modèle OpenRouter, la réponse indique lequel.",
+        "ru": "Попросите в чате анализ, ревью или объяснение. Когда Jev выбирает модель OpenRouter, в ответе указано, какую.",
+        "ja": "チャットで分析、レビュー、説明を頼んでください。Jev が OpenRouter のモデルを選ぶと、回答にどのモデルかが示されます。",
+        "de": "Bitten Sie in einem Chat um eine Analyse, eine Prüfung oder eine Erklärung. Wenn Jev ein OpenRouter-Modell wählt, nennt die Antwort es."
+      },
+      "image": "chat"
+    }
+  ]
+}
