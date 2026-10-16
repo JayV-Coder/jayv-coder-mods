@@ -9,6 +9,7 @@
   "required": true,
   "author": "JayV",
   "docs": "stats",
+  "icon": "icon.svg",
   "title": {
     "en": "Statistics",
     "pt-BR": "Estatísticas",

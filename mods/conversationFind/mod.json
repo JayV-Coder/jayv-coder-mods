@@ -9,6 +9,7 @@
   "required": true,
   "author": "JayV",
   "docs": "conversationFind",
+  "icon": "icon.svg",
   "title": {
     "en": "Find in conversation",
     "pt-BR": "Busca na conversa",

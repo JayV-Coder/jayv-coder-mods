@@ -5,12 +5,13 @@ import { mkdirSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { agentIdOf, buildCatalog, legacyEntry, LOCALES, manifestProblems, outputs, pageProblems, POINTS } from "./catalog.mjs";
+import { agentIdOf, buildCatalog, cleanIcon, iconProblems, legacyEntry, LOCALES, manifestProblems, outputs, pageProblems, POINTS } from "./catalog.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const engines = { llm: ["claude"], feature: ["stats", "mcp"], withdrawn: [] };
 const texts = (text) => Object.fromEntries(LOCALES.map((locale) => [locale, text]));
-const base = (id, contributes, patch = {}) => ({ id, version: "1.0.0", category: "project", plan: null, minApp: "0.94.0", title: texts(id), summary: texts(`${id}.`), contributes, ...patch });
+const base = (id, contributes, patch = {}) => ({ id, version: "1.0.0", category: "project", plan: null, minApp: "0.94.0", icon: "icon.svg", title: texts(id), summary: texts(`${id}.`), contributes, ...patch });
+const ICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M2 2h20v20H2z"/></svg>';
 const stats = (patch = {}) => base("stats", { features: ["stats"] }, { plan: "stats", preinstalled: true, ...patch });
 const api = { kind: "api", protocol: "openai", baseUrl: "http://localhost:8080/v1", keyRequired: false, models: [] };
 const localAi = (patch = {}) => base("local-ai", { agents: [api] }, { category: "agents", plan: "customMods", ...patch });
@@ -26,6 +27,7 @@ function folder(mods, withEngines = engines, { pages = {}, files = {} } = {}) {
   for (const mod of mods) {
     mkdirSync(join(dir, "mods", mod.id), { recursive: true });
     writeFileSync(join(dir, "mods", mod.id, "mod.json"), JSON.stringify(mod));
+    writeFileSync(join(dir, "mods", mod.id, "icon.svg"), ICON);
     if (pages[mod.id] !== null) writeFileSync(join(dir, "mods", mod.id, "page.json"), JSON.stringify(pages[mod.id] ?? page()));
   }
   for (const [path, content] of Object.entries(files)) {
@@ -45,11 +47,14 @@ test("the published catalogs are valid and up to date", () => {
   assert.equal(built.legacy.schema, 1);
 });
 
-/** Os mods de hoje se instalam sozinhos, no login de quem os vê. Os recursos
- * do app são essenciais; os motores de LLM e os agentes, não (regra do dono). */
-test("the mods of today are preinstalled, the features required, and readable by the old app", () => {
+/** No login, só os essenciais (os recursos do app) e Claude Code, Codex e
+ * Ollama se instalam sozinhos; o resto espera quem quiser instalar (regra do
+ * dono). */
+test("only the essentials and Claude Code, Codex and Ollama come installed; the features are required and readable by the old app", () => {
   const { catalog, legacy } = buildCatalog(root);
-  assert.ok(catalog.mods.every((mod) => mod.preinstalled === true));
+  const preinstalled = catalog.mods.filter((mod) => mod.preinstalled === true && !mod.required).map((mod) => mod.id).sort();
+  assert.deepEqual(preinstalled, ["claude", "codex", "ollama"]);
+  assert.ok(catalog.mods.filter((mod) => mod.required).every((mod) => mod.preinstalled === true), "o essencial também é de fábrica");
   const required = catalog.mods.filter((mod) => mod.required === true).map((mod) => mod.id).sort();
   const features = catalog.mods.filter((mod) => "features" in mod.contributes).map((mod) => mod.id).sort();
   assert.deepEqual(required, features, "todo recurso é essencial");
@@ -226,4 +231,25 @@ test("pages.json lists the prints of each page with their locales and a mark of 
   assert.equal(pages.pages.claude.enable, null, "sem print, sem imagem");
   const bad = buildCatalog(folder(essentials(), engines, { files: { "mods/stats/media/enable.xx.webp": "e", "mods/stats/media/Shot.en.png": "p" } }));
   assert.ok(bad.problems.some((problem) => problem.includes("enable.xx.webp")) && bad.problems.some((problem) => problem.includes("Shot.en.png")));
+});
+
+test("every mod has an icon, and an icon is only a drawing", () => {
+  const { catalog } = buildCatalog(root);
+  assert.ok(catalog.mods.every((mod) => typeof mod.icon === "string" && mod.icon.startsWith("<svg") && mod.icon.endsWith("</svg>")), "o catálogo leva o desenho, não o nome do arquivo");
+  assert.ok(catalog.mods.every((mod) => iconProblems(mod.id, mod.icon).length === 0));
+  const { icon, ...without } = stats();
+  assert.ok(manifestProblems(without, "stats", engines).some((problem) => problem.includes("icon must be an .svg file")));
+  assert.ok(manifestProblems(stats({ icon: "icon.png" }), "stats", engines).some((problem) => problem.includes("icon must be an .svg file")));
+  const bad = (svg) => iconProblems("x.svg", svg);
+  assert.deepEqual(bad(ICON), []);
+  assert.ok(bad('<svg xmlns="http://www.w3.org/2000/svg"><path d="M0 0"/></svg>').some((problem) => problem.includes("viewBox")));
+  assert.ok(bad('<svg viewBox="0 0 1 1"><script>alert(1)</script></svg>').some((problem) => problem.includes("<script>")));
+  assert.ok(bad('<svg viewBox="0 0 1 1" onload="alert(1)"><path d="M0 0"/></svg>').some((problem) => problem.includes("event")));
+  assert.ok(bad('<svg viewBox="0 0 1 1"><image href="https://example.com/a.png"/></svg>').some((problem) => problem.includes("href")));
+  assert.ok(bad('<svg viewBox="0 0 1 1"><path fill="url(https://example.com/x)" d="M0 0"/></svg>').some((problem) => problem.includes("url()")));
+  assert.ok(bad('<svg viewBox="0 0 1 1"><foreignObject/></svg>').some((problem) => problem.includes("<foreignObject>")));
+  assert.deepEqual(bad('<svg viewBox="0 0 1 1"><image href="data:image/png;base64,iVBORw0KGgo="/><path fill="url(#g)" d="M0 0"/></svg>'), []);
+  assert.equal(cleanIcon('<!-- license -->\n<svg\n  class="lucide"\n  width="24"\n  viewBox="0 0 24 24"\n>\n  <path d="M1 1" />\n</svg>\n'), '<svg viewBox="0 0 24 24"><path d="M1 1"/></svg>');
+  const dir = folder([stats()], engines, { files: { "mods/stats/icon.svg": '<svg viewBox="0 0 1 1"><script/></svg>' } });
+  assert.ok(buildCatalog(dir).problems.some((problem) => problem.includes("mods/stats/icon.svg")));
 });

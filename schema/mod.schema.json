@@ -5,7 +5,7 @@
   "description": "One mod of JayV: what it is and what it adds to each extension point of the app (contributes). scripts/catalog.mjs is the authority: this schema only helps editors.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "version", "category", "plan", "minApp", "title", "summary", "contributes"],
+  "required": ["id", "version", "category", "plan", "minApp", "icon", "title", "summary", "contributes"],
   "properties": {
     "$schema": { "type": "string" },
     "id": { "type": "string", "pattern": "^[a-z][A-Za-z0-9-]{1,39}$", "description": "The folder name. A mod with agents uses lowercase letters, digits and - (up to 28)." },
@@ -13,12 +13,13 @@
     "category": { "enum": ["start", "chat", "agents", "gate", "privacy", "project", "team", "account", "app"] },
     "plan": { "type": ["string", "null"], "pattern": "^[a-z][A-Za-z]{1,39}$", "description": "The plan feature the mod needs, or null." },
     "minApp": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$", "description": "The oldest app that runs the mod; at least the version of every extension point it uses." },
-    "preinstalled": { "type": "boolean", "description": "Installed, and on, when the person signs in; if they uninstall it, it does not come back." },
+    "preinstalled": { "type": "boolean", "description": "Installed, and on, when the person signs in; if they uninstall it, it does not come back. Only the essential mods and Claude Code, Codex and Ollama are." },
     "required": { "type": "boolean", "description": "Essential: JayV needs it. Always installed and on; nobody turns it off or uninstalls it. Implies preinstalled." },
     "requires": { "type": "array", "maxItems": 16, "uniqueItems": true, "items": { "type": "string", "pattern": "^[a-z][A-Za-z0-9-]{1,39}$" }, "description": "Other mods this one needs installed and on." },
     "author": { "type": "string", "minLength": 1, "maxLength": 60 },
     "docs": { "type": "string", "pattern": "^[A-Za-z][A-Za-z0-9]{0,63}$" },
     "homepage": { "type": "string", "pattern": "^https://" },
+    "icon": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}\\.svg$", "description": "The icon of the mod: an SVG file in its folder (only the drawing: no script, style or outside address). The build puts its text in the catalog." },
     "title": { "$ref": "#/$defs/texts" },
     "summary": { "$ref": "#/$defs/texts" },
     "contributes": {

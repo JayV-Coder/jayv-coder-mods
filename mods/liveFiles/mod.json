@@ -9,6 +9,7 @@
   "required": true,
   "author": "JayV",
   "docs": "liveFiles",
+  "icon": "icon.svg",
   "title": {
     "en": "Live files",
     "pt-BR": "Arquivos ao vivo",

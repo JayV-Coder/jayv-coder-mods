@@ -9,6 +9,7 @@
   "required": true,
   "author": "JayV",
   "docs": "symbolIndex",
+  "icon": "icon.svg",
   "title": {
     "en": "Symbol index for Claude",
     "pt-BR": "Índice de símbolos para o Claude",

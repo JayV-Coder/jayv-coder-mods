@@ -9,6 +9,7 @@
   "author": "JayV",
   "docs": "llmMods",
   "homepage": "https://ollama.com",
+  "icon": "icon.svg",
   "title": {
     "en": "Ollama",
     "pt-BR": "Ollama",

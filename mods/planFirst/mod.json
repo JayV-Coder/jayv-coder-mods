@@ -9,6 +9,7 @@
   "required": true,
   "author": "JayV",
   "docs": "planFirst",
+  "icon": "icon.svg",
   "title": {
     "en": "Plan before building",
     "pt-BR": "Planejar antes de construir",

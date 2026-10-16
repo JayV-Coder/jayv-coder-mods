@@ -9,6 +9,7 @@
   "required": true,
   "author": "JayV",
   "docs": "gateBoard",
+  "icon": "icon.svg",
   "title": {
     "en": "Gatehouse board",
     "pt-BR": "Painel da portaria",

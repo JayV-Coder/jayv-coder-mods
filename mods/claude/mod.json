@@ -9,6 +9,7 @@
   "author": "JayV",
   "docs": "agents",
   "homepage": "https://docs.anthropic.com/en/docs/claude-code",
+  "icon": "icon.svg",
   "title": {
     "en": "Claude Code",
     "pt-BR": "Claude Code",

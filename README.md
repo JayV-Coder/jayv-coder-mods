@@ -57,6 +57,7 @@ stay in their account; they are not part of this repository.
   "preinstalled": false,
   "requires": ["mcp"],
   "author": "Someone",
+  "icon": "icon.svg",
   "title": { "en": "Local pack", "pt-BR": "Pacote local", "...": "..." },
   "summary": { "en": "A local model and the features it needs.", "...": "..." },
   "contributes": {
@@ -79,7 +80,13 @@ stay in their account; they are not part of this repository.
   Implies `preinstalled`. The app's features are required; the LLM engines
   and the agents are not.
 - `preinstalled`: installed, and on, when the person signs in. If they
-  uninstall it, it does not come back.
+  uninstall it, it does not come back. Only the essential mods and Claude
+  Code, Codex and Ollama are; the others wait for whoever wants them.
+- `icon`: an `.svg` file in the mod's folder, required. Only the drawing (no
+  script, style, event or outside address; an embedded image only as a
+  `data:` PNG, JPEG or WebP), up to 16 kB, with a `viewBox`. A one-color icon
+  uses `currentColor` and follows the text color and the theme; a colored one
+  keeps its colors. The build puts the drawing in the catalog.
 - `requires`: mods this one needs installed and on; installing it brings them.
 - A command-line agent uses `"kind": "cli"` with `command`, `args` (where
   `{model}` becomes the model Jev picked and `{prompt}`, alone in an argument,
