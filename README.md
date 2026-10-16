@@ -80,8 +80,8 @@ stay in their account; they are not part of this repository.
   Implies `preinstalled`. The app's features are required; the LLM engines
   and the agents are not.
 - `preinstalled`: installed, and on, when the person signs in. If they
-  uninstall it, it does not come back. Only the essential mods and Claude
-  Code, Codex and Ollama are; the others wait for whoever wants them.
+  uninstall it, it does not come back. Only the essential mods are; the LLM
+  engines, the agents and the skills wait for whoever wants them.
 - `icon`: an `.svg` file in the mod's folder, required. Only the drawing (no
   script, style, event or outside address; an embedded image only as a
   `data:` PNG, JPEG or WebP), up to 16 kB, with a `viewBox`. A one-color icon

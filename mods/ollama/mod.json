@@ -5,7 +5,7 @@
   "category": "agents",
   "plan": "customMods",
   "minApp": "0.94.0",
-  "preinstalled": true,
+  "preinstalled": false,
   "author": "JayV",
   "docs": "llmMods",
   "homepage": "https://ollama.com",

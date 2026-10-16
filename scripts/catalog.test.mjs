@@ -47,13 +47,12 @@ test("the published catalogs are valid and up to date", () => {
   assert.equal(built.legacy.schema, 1);
 });
 
-/** No login, só os essenciais (os recursos do app) e Claude Code, Codex e
- * Ollama se instalam sozinhos; o resto espera quem quiser instalar (regra do
- * dono). */
-test("only the essentials and Claude Code, Codex and Ollama come installed; the features are required and readable by the old app", () => {
+/** No login, só os essenciais (os recursos do app) se instalam sozinhos;
+ * motores, agentes e skills esperam quem quiser instalar (regra do dono). */
+test("only the essentials come installed; the features are required and readable by the old app", () => {
   const { catalog, legacy } = buildCatalog(root);
   const preinstalled = catalog.mods.filter((mod) => mod.preinstalled === true && !mod.required).map((mod) => mod.id).sort();
-  assert.deepEqual(preinstalled, ["claude", "codex", "ollama"]);
+  assert.deepEqual(preinstalled, [], "nada além dos essenciais se instala sozinho");
   assert.ok(catalog.mods.filter((mod) => mod.required).every((mod) => mod.preinstalled === true), "o essencial também é de fábrica");
   const required = catalog.mods.filter((mod) => mod.required === true).map((mod) => mod.id).sort();
   const features = catalog.mods.filter((mod) => "features" in mod.contributes).map((mod) => mod.id).sort();
