@@ -1,0 +1,51 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "deepseek",
+  "version": "1.0.0",
+  "category": "agents",
+  "plan": "customMods",
+  "minApp": "0.94.0",
+  "preinstalled": false,
+  "author": "JayV",
+  "docs": "llmMods",
+  "homepage": "https://platform.deepseek.com",
+  "icon": "icon.svg",
+  "title": {
+    "en": "DeepSeek",
+    "pt-BR": "DeepSeek",
+    "es": "DeepSeek",
+    "zh-CN": "DeepSeek",
+    "hi": "DeepSeek",
+    "ar": "DeepSeek",
+    "fr": "DeepSeek",
+    "ru": "DeepSeek",
+    "ja": "DeepSeek",
+    "de": "DeepSeek"
+  },
+  "summary": {
+    "en": "DeepSeek models through the DeepSeek API. They answer with text and never edit the project.",
+    "pt-BR": "Os modelos da DeepSeek pela API da DeepSeek. Respondem por texto e nunca editam o projeto.",
+    "es": "Los modelos de DeepSeek mediante la API de DeepSeek. Responden con texto y nunca editan el proyecto.",
+    "zh-CN": "通过 DeepSeek API 使用 DeepSeek 模型。它们以文本作答，从不编辑项目。",
+    "hi": "DeepSeek API के ज़रिए DeepSeek के मॉडल। ये टेक्स्ट में जवाब देते हैं और प्रोजेक्ट कभी नहीं बदलते।",
+    "ar": "نماذج DeepSeek عبر واجهة DeepSeek API. تجيب بالنص ولا تعدّل المشروع أبدًا.",
+    "fr": "Les modèles DeepSeek via l’API DeepSeek. Ils répondent par du texte et ne modifient jamais le projet.",
+    "ru": "Модели DeepSeek через API DeepSeek. Отвечают текстом и никогда не изменяют проект.",
+    "ja": "DeepSeek API 経由で DeepSeek のモデルを使います。テキストで回答し、プロジェクトは編集しません。",
+    "de": "Die Modelle von DeepSeek über die DeepSeek-API. Sie antworten mit Text und bearbeiten das Projekt nie."
+  },
+  "contributes": {
+    "agents": [
+      {
+        "kind": "api",
+        "protocol": "openai",
+        "baseUrl": "https://api.deepseek.com",
+        "keyRequired": true,
+        "models": [
+          "deepseek-v4-pro",
+          "deepseek-flash"
+        ]
+      }
+    ]
+  }
+}

@@ -36,7 +36,7 @@
         "fr": "Installez Kilo Code CLI et configurez-y un fournisseur de modèles.",
         "ru": "Установите Kilo Code CLI и настройте в нём поставщика моделей.",
         "ja": "Kilo Code CLI をインストールし、モデルプロバイダーを設定します。",
-        "de": "Installieren Sie die Kilo Code CLI und richten Sie darin einen Modellanbieter ein."
+        "de": "Installiere die Kilo Code CLI und richte darin einen Modellanbieter ein."
       }
     },
     {
@@ -50,7 +50,7 @@
         "fr": "Dans Configuration › Kilo Code, vérifiez le programme et activez les modèles que Jev peut utiliser.",
         "ru": "В Настройки › Kilo Code проверьте программу и включите модели, которые может использовать Jev.",
         "ja": "設定 › Kilo Code でプログラムを確認し、Jev が使ってよいモデルをオンにします。",
-        "de": "Prüfen Sie unter Einstellungen › Kilo Code das Programm und schalten Sie die Modelle ein, die Jev nutzen darf."
+        "de": "Prüfe unter Einstellungen › Kilo Code das Programm und schalte die Modelle ein, die Jev nutzen darf."
       },
       "image": "settings"
     }
@@ -67,7 +67,7 @@
         "fr": "Écrivez la demande dans un chat. Le panneau Progression montre quand Jev choisit Kilo Code.",
         "ru": "Напишите запрос в чате. Панель «Ход работы» показывает, когда Jev выбирает Kilo Code.",
         "ja": "チャットで依頼を書いてください。Jev が Kilo Code を選ぶと、進行状況パネルに表示されます。",
-        "de": "Schreiben Sie die Anfrage in einen Chat. Das Fortschritt-Panel zeigt, wann Jev Kilo Code wählt."
+        "de": "Schreib die Anfrage in einen Chat. Das Fortschritt-Panel zeigt, wann Jev Kilo Code wählt."
       },
       "image": "chat"
     }

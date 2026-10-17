@@ -1,0 +1,75 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "Gemini CLI is Google's coding agent for the terminal. With this mod, Jev can send requests to it: the app talks to it through the Agent Client Protocol (ACP), picks the Gemini model, gives it your MCP servers and answers each permission it asks for.",
+    "pt-BR": "O Gemini CLI é o agente de programação do Google para o terminal. Com este mod, o Jev pode mandar pedidos para ele: o app conversa com ele pelo Agent Client Protocol (ACP), escolhe o modelo Gemini, entrega os seus servidores MCP e responde a cada permissão que ele pede.",
+    "es": "Gemini CLI es el agente de programación de Google para la terminal. Con este mod, Jev puede enviarle solicitudes: la app habla con él mediante el Agent Client Protocol (ACP), elige el modelo Gemini, le da tus servidores MCP y responde a cada permiso que pide.",
+    "zh-CN": "Gemini CLI 是 Google 的终端编程代理。有了这个模组，Jev 可以把请求发给它：应用通过 Agent Client Protocol（ACP）与它通信，选择 Gemini 模型，向它提供你的 MCP 服务器，并回应它请求的每一项权限。",
+    "hi": "Gemini CLI टर्मिनल के लिए Google का कोडिंग एजेंट है। इस मॉड से Jev उसे अनुरोध भेज सकता है: ऐप Agent Client Protocol (ACP) के ज़रिए उससे बात करता है, Gemini मॉडल चुनता है, उसे आपके MCP सर्वर देता है और उसकी माँगी हर अनुमति का जवाब देता है।",
+    "ar": "Gemini CLI وكيل البرمجة من Google للطرفية. بهذه الإضافة يستطيع Jev إرسال الطلبات إليه: يتواصل التطبيق معه عبر Agent Client Protocol (ACP)، ويختار نموذج Gemini، ويمنحه خوادم MCP لديك، ويردّ على كل إذن يطلبه.",
+    "fr": "Gemini CLI est l’agent de programmation de Google pour le terminal. Avec ce mod, Jev peut lui envoyer des demandes : l’app lui parle via l’Agent Client Protocol (ACP), choisit le modèle Gemini, lui donne vos serveurs MCP et répond à chaque autorisation qu’il demande.",
+    "ru": "Gemini CLI — агент для программирования в терминале от Google. С этим модом Jev может отправлять ему запросы: приложение общается с ним по Agent Client Protocol (ACP), выбирает модель Gemini, передаёт ему ваши серверы MCP и отвечает на каждый его запрос разрешения.",
+    "ja": "Gemini CLI は Google のターミナル用コーディングエージェントです。この Mod があると、Jev は Gemini CLI に依頼を送れます。アプリは Agent Client Protocol（ACP）で通信し、Gemini モデルを選び、MCP サーバーを渡し、求められた許可に一つずつ応答します。",
+    "de": "Gemini CLI ist der Coding-Agent von Google für das Terminal. Mit diesem Mod kann Jev Anfragen an ihn schicken: Die App spricht über das Agent Client Protocol (ACP) mit ihm, wählt das Gemini-Modell, gibt ihm deine MCP-Server und beantwortet jede Berechtigung, die er anfragt."
+  },
+  "requirements": {
+    "en": "Gemini CLI installed on this computer and signed in with a Gemini API key, Vertex AI or a Gemini Code Assist Standard or Enterprise account.",
+    "pt-BR": "O Gemini CLI instalado neste computador e com acesso por chave da API do Gemini, Vertex AI ou uma conta Gemini Code Assist Standard ou Enterprise.",
+    "es": "Gemini CLI instalado en este equipo y con acceso mediante una clave de API de Gemini, Vertex AI o una cuenta de Gemini Code Assist Standard o Enterprise.",
+    "zh-CN": "这台电脑上已安装 Gemini CLI，并已通过 Gemini API 密钥、Vertex AI 或 Gemini Code Assist Standard / Enterprise 账号登录。",
+    "hi": "इस कंप्यूटर पर Gemini CLI इंस्टॉल हो, और Gemini API कुंजी, Vertex AI या Gemini Code Assist Standard या Enterprise खाते से साइन इन हो।",
+    "ar": "أن يكون Gemini CLI مثبّتًا على هذا الجهاز ومسجَّل الدخول بمفتاح Gemini API أو Vertex AI أو حساب Gemini Code Assist Standard أو Enterprise.",
+    "fr": "Gemini CLI installé sur cet ordinateur et connecté avec une clé d’API Gemini, Vertex AI ou un compte Gemini Code Assist Standard ou Enterprise.",
+    "ru": "Gemini CLI, установленный на этом компьютере, со входом по API-ключу Gemini, через Vertex AI или с учётной записью Gemini Code Assist Standard или Enterprise.",
+    "ja": "このコンピューターに Gemini CLI がインストールされ、Gemini API キー、Vertex AI、または Gemini Code Assist Standard / Enterprise のアカウントでサインインしていること。",
+    "de": "Gemini CLI auf diesem Computer installiert und angemeldet mit einem Gemini-API-Schlüssel, Vertex AI oder einem Konto für Gemini Code Assist Standard oder Enterprise."
+  },
+  "setup": [
+    {
+      "text": {
+        "en": "Install Gemini CLI (npm install -g @google/gemini-cli) and run gemini once to sign in.",
+        "pt-BR": "Instale o Gemini CLI (npm install -g @google/gemini-cli) e rode gemini uma vez para entrar.",
+        "es": "Instala Gemini CLI (npm install -g @google/gemini-cli) y ejecuta gemini una vez para iniciar sesión.",
+        "zh-CN": "安装 Gemini CLI（npm install -g @google/gemini-cli），然后运行一次 gemini 进行登录。",
+        "hi": "Gemini CLI इंस्टॉल करें (npm install -g @google/gemini-cli) और साइन इन करने के लिए एक बार gemini चलाएँ।",
+        "ar": "ثبّت Gemini CLI (npm install -g @google/gemini-cli) وشغّل gemini مرة واحدة لتسجيل الدخول.",
+        "fr": "Installez Gemini CLI (npm install -g @google/gemini-cli) et lancez gemini une fois pour vous connecter.",
+        "ru": "Установите Gemini CLI (npm install -g @google/gemini-cli) и один раз запустите gemini, чтобы войти.",
+        "ja": "Gemini CLI をインストールし（npm install -g @google/gemini-cli）、一度 gemini を実行してサインインします。",
+        "de": "Installiere Gemini CLI (npm install -g @google/gemini-cli) und starte gemini einmal, um dich anzumelden."
+      }
+    },
+    {
+      "text": {
+        "en": "In Settings › Google Gemini, click Load from the agent and turn on the models Jev may use.",
+        "pt-BR": "Em Configuração › Google Gemini, clique em Carregar do agente e ligue os modelos que o Jev pode usar.",
+        "es": "En Configuración › Google Gemini, haz clic en Cargar desde el agente y activa los modelos que Jev puede usar.",
+        "zh-CN": "在“设置 › Google Gemini”中点击“从代理加载”，并开启 Jev 可以使用的模型。",
+        "hi": "सेटिंग्स › Google Gemini में एजेंट से लोड करें पर क्लिक करें और वे मॉडल चालू करें जिन्हें Jev इस्तेमाल कर सकता है।",
+        "ar": "في الإعدادات › Google Gemini، انقر التحميل من الوكيل وفعّل النماذج التي يُسمح لـ Jev باستخدامها.",
+        "fr": "Dans Configuration › Google Gemini, cliquez sur Charger depuis l’agent et activez les modèles que Jev peut utiliser.",
+        "ru": "В Настройки › Google Gemini нажмите «Загрузить из агента» и включите модели, которые может использовать Jev.",
+        "ja": "設定 › Google Gemini で「エージェントから読み込む」をクリックし、Jev が使ってよいモデルをオンにします。",
+        "de": "Klicke unter Einstellungen › Google Gemini auf Vom Agenten laden und schalte die Modelle ein, die Jev nutzen darf."
+      },
+      "image": "settings"
+    }
+  ],
+  "use": [
+    {
+      "text": {
+        "en": "Write the request in a chat. In Planning mode, Gemini CLI enters its read-only mode.",
+        "pt-BR": "Escreva o pedido num chat. No modo Planejamento, o Gemini CLI entra no modo só leitura dele.",
+        "es": "Escribe la solicitud en un chat. En el modo Planificación, Gemini CLI entra en su modo de solo lectura.",
+        "zh-CN": "在对话中写下请求。在规划模式下，Gemini CLI 会进入它的只读模式。",
+        "hi": "चैट में अनुरोध लिखें। योजना मोड में Gemini CLI अपने सिर्फ़-पढ़ने वाले मोड में चला जाता है।",
+        "ar": "اكتب الطلب في محادثة. في وضع التخطيط، يدخل Gemini CLI وضع القراءة فقط الخاص به.",
+        "fr": "Écrivez la demande dans un chat. En mode Planification, Gemini CLI passe dans son mode lecture seule.",
+        "ru": "Напишите запрос в чате. В режиме «Планирование» Gemini CLI переходит в свой режим только для чтения.",
+        "ja": "チャットで依頼を書いてください。計画モードでは、Gemini CLI は読み取り専用モードに入ります。",
+        "de": "Schreib die Anfrage in einen Chat. Im Modus Planung wechselt Gemini CLI in seinen Nur-Lesen-Modus."
+      },
+      "image": "chat"
+    }
+  ]
+}

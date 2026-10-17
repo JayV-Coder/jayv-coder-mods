@@ -10,7 +10,7 @@
     "fr": "LM Studio fait tourner des modèles ouverts sur votre propre ordinateur avec une app de bureau. Ce mod ajoute un agent LM Studio qui parle à son serveur local : sans clé, et les demandes restent sur la machine.",
     "ru": "LM Studio запускает открытые модели на вашем компьютере через настольное приложение. Этот мод добавляет агента LM Studio, который общается с его локальным сервером: без ключа, и запросы остаются на компьютере.",
     "ja": "LM Studio は、デスクトップアプリでオープンなモデルをあなたのコンピューター上で動かします。この Mod は、そのローカルサーバーと話す LM Studio エージェントを追加します。キーは不要で、依頼はマシンの中にとどまります。",
-    "de": "LM Studio führt offene Modelle mit einer Desktop-App auf Ihrem eigenen Computer aus. Dieser Mod fügt einen LM-Studio-Agenten hinzu, der mit dessen lokalem Server spricht: ohne Schlüssel, und die Anfragen bleiben auf dem Rechner."
+    "de": "LM Studio führt offene Modelle mit einer Desktop-App auf deinem eigenen Computer aus. Dieser Mod fügt einen LM-Studio-Agenten hinzu, der mit dessen lokalem Server spricht: ohne Schlüssel, und die Anfragen bleiben auf dem Rechner."
   },
   "requirements": {
     "en": "LM Studio installed, with a model loaded and the local server started (port 1234).",
@@ -36,7 +36,7 @@
         "fr": "Dans LM Studio, chargez un modèle et démarrez le serveur local.",
         "ru": "В LM Studio загрузите модель и запустите локальный сервер.",
         "ja": "LM Studio でモデルを読み込み、ローカルサーバーを起動します。",
-        "de": "Laden Sie in LM Studio ein Modell und starten Sie den lokalen Server."
+        "de": "Lade in LM Studio ein Modell und starte den lokalen Server."
       }
     },
     {
@@ -50,7 +50,7 @@
         "fr": "Dans Configuration › LM Studio, chargez les modèles et activez ceux que Jev peut utiliser.",
         "ru": "В Настройки › LM Studio загрузите модели и включите те, которые может использовать Jev.",
         "ja": "設定 › LM Studio でモデルを読み込み、Jev が使ってよいものをオンにします。",
-        "de": "Laden Sie unter Einstellungen › LM Studio die Modelle und schalten Sie die ein, die Jev nutzen darf."
+        "de": "Lade unter Einstellungen › LM Studio die Modelle und schalte die ein, die Jev nutzen darf."
       },
       "image": "settings"
     }
@@ -67,7 +67,7 @@
         "fr": "Posez votre question dans un chat. Quand Jev choisit le modèle de LM Studio, la réponse indique lequel.",
         "ru": "Спросите в чате. Когда Jev выбирает модель LM Studio, в ответе указано, какую.",
         "ja": "チャットで質問してください。Jev が LM Studio のモデルを選ぶと、回答にどのモデルかが示されます。",
-        "de": "Fragen Sie in einem Chat. Wenn Jev das Modell von LM Studio wählt, nennt die Antwort es."
+        "de": "Frag in einem Chat. Wenn Jev das Modell von LM Studio wählt, nennt die Antwort es."
       },
       "image": "chat"
     }

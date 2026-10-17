@@ -1,0 +1,75 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "Muse Code is Meta's coding agent for the terminal, built on the Muse Spark and Muse Wonder models. With this mod, Jev can send requests to it like to any other agent: it edits the project in Development mode, and in Planning mode it runs without writing files or running commands.",
+    "pt-BR": "O Muse Code é o agente de programação da Meta para o terminal, feito sobre os modelos Muse Spark e Muse Wonder. Com este mod, o Jev pode mandar pedidos para ele como para qualquer outro agente: no modo Desenvolvimento ele edita o projeto, e no modo Planejamento roda sem escrever arquivos nem rodar comandos.",
+    "es": "Muse Code es el agente de programación de Meta para la terminal, basado en los modelos Muse Spark y Muse Wonder. Con este mod, Jev puede enviarle solicitudes como a cualquier otro agente: en el modo Desarrollo edita el proyecto, y en el modo Planificación funciona sin escribir archivos ni ejecutar comandos.",
+    "zh-CN": "Muse Code 是 Meta 的终端编程代理，基于 Muse Spark 和 Muse Wonder 模型。有了这个模组，Jev 可以像对待其他代理一样把请求发给它：在开发模式下它会编辑项目，在规划模式下它运行时不写文件也不执行命令。",
+    "hi": "Muse Code टर्मिनल के लिए Meta का कोडिंग एजेंट है, जो Muse Spark और Muse Wonder मॉडलों पर बना है। इस मॉड से Jev उसे किसी भी दूसरे एजेंट की तरह अनुरोध भेज सकता है: डेवलपमेंट मोड में यह प्रोजेक्ट बदलता है, और योजना मोड में फ़ाइलें लिखे या कमांड चलाए बिना चलता है।",
+    "ar": "Muse Code وكيل البرمجة من Meta للطرفية، مبني على نموذجي Muse Spark وMuse Wonder. بهذه الإضافة يستطيع Jev إرسال الطلبات إليه كأي وكيل آخر: يعدّل المشروع في وضع التطوير، ويعمل في وضع التخطيط دون كتابة ملفات أو تشغيل أوامر.",
+    "fr": "Muse Code est l’agent de programmation de Meta pour le terminal, basé sur les modèles Muse Spark et Muse Wonder. Avec ce mod, Jev peut lui envoyer des demandes comme à n’importe quel autre agent : en mode Développement il modifie le projet, et en mode Planification il travaille sans écrire de fichiers ni lancer de commandes.",
+    "ru": "Muse Code — агент для программирования в терминале от Meta на моделях Muse Spark и Muse Wonder. С этим модом Jev может отправлять ему запросы, как любому другому агенту: в режиме «Разработка» он изменяет проект, а в режиме «Планирование» работает, не записывая файлы и не запуская команды.",
+    "ja": "Muse Code は、Muse Spark と Muse Wonder モデルを使う Meta のターミナル用コーディングエージェントです。この Mod があると、Jev はほかのエージェントと同じように依頼を送れます。開発モードではプロジェクトを編集し、計画モードではファイルを書かずコマンドも実行しません。",
+    "de": "Muse Code ist der Coding-Agent von Meta für das Terminal, gebaut auf den Modellen Muse Spark und Muse Wonder. Mit diesem Mod kann Jev Anfragen an ihn schicken wie an jeden anderen Agenten: Im Modus Entwicklung bearbeitet er das Projekt, im Modus Planung arbeitet er, ohne Dateien zu schreiben oder Befehle auszuführen."
+  },
+  "requirements": {
+    "en": "Muse Code installed on this computer and signed in with a Meta account (muse login) or a Meta Model API key.",
+    "pt-BR": "O Muse Code instalado neste computador e com acesso por uma conta Meta (muse login) ou uma chave da Meta Model API.",
+    "es": "Muse Code instalado en este equipo y con acceso mediante una cuenta de Meta (muse login) o una clave de Meta Model API.",
+    "zh-CN": "这台电脑上已安装 Muse Code，并已用 Meta 账号（muse login）或 Meta Model API 密钥登录。",
+    "hi": "इस कंप्यूटर पर Muse Code इंस्टॉल हो, और Meta खाते (muse login) या Meta Model API कुंजी से साइन इन हो।",
+    "ar": "أن يكون Muse Code مثبّتًا على هذا الجهاز ومسجَّل الدخول بحساب Meta (muse login) أو بمفتاح Meta Model API.",
+    "fr": "Muse Code installé sur cet ordinateur et connecté avec un compte Meta (muse login) ou une clé de Meta Model API.",
+    "ru": "Muse Code, установленный на этом компьютере, со входом через учётную запись Meta (muse login) или по ключу Meta Model API.",
+    "ja": "このコンピューターに Muse Code がインストールされ、Meta アカウント（muse login）または Meta Model API キーでサインインしていること。",
+    "de": "Muse Code auf diesem Computer installiert und angemeldet mit einem Meta-Konto (muse login) oder einem Schlüssel für die Meta Model API."
+  },
+  "setup": [
+    {
+      "text": {
+        "en": "Install Muse Code (curl -fsSL https://dev.meta.ai/install.sh | sh; on Windows, irm https://dev.meta.ai/install.ps1 | iex) and sign in with muse login.",
+        "pt-BR": "Instale o Muse Code (curl -fsSL https://dev.meta.ai/install.sh | sh; no Windows, irm https://dev.meta.ai/install.ps1 | iex) e entre com muse login.",
+        "es": "Instala Muse Code (curl -fsSL https://dev.meta.ai/install.sh | sh; en Windows, irm https://dev.meta.ai/install.ps1 | iex) e inicia sesión con muse login.",
+        "zh-CN": "安装 Muse Code（curl -fsSL https://dev.meta.ai/install.sh | sh；Windows 上用 irm https://dev.meta.ai/install.ps1 | iex），然后用 muse login 登录。",
+        "hi": "Muse Code इंस्टॉल करें (curl -fsSL https://dev.meta.ai/install.sh | sh; Windows पर irm https://dev.meta.ai/install.ps1 | iex) और muse login से साइन इन करें।",
+        "ar": "ثبّت Muse Code (curl -fsSL https://dev.meta.ai/install.sh | sh؛ وفي Windows: irm https://dev.meta.ai/install.ps1 | iex) وسجّل الدخول بـ muse login.",
+        "fr": "Installez Muse Code (curl -fsSL https://dev.meta.ai/install.sh | sh ; sous Windows, irm https://dev.meta.ai/install.ps1 | iex) et connectez-vous avec muse login.",
+        "ru": "Установите Muse Code (curl -fsSL https://dev.meta.ai/install.sh | sh; в Windows — irm https://dev.meta.ai/install.ps1 | iex) и войдите командой muse login.",
+        "ja": "Muse Code をインストールし（curl -fsSL https://dev.meta.ai/install.sh | sh、Windows では irm https://dev.meta.ai/install.ps1 | iex）、muse login でサインインします。",
+        "de": "Installiere Muse Code (curl -fsSL https://dev.meta.ai/install.sh | sh; unter Windows irm https://dev.meta.ai/install.ps1 | iex) und melde dich mit muse login an."
+      }
+    },
+    {
+      "text": {
+        "en": "In Settings › Meta AI, check the program and turn on the models Jev may use.",
+        "pt-BR": "Em Configuração › Meta AI, confira o programa e ligue os modelos que o Jev pode usar.",
+        "es": "En Configuración › Meta AI, comprueba el programa y activa los modelos que Jev puede usar.",
+        "zh-CN": "在“设置 › Meta AI”中确认程序，并开启 Jev 可以使用的模型。",
+        "hi": "सेटिंग्स › Meta AI में प्रोग्राम जाँचें और वे मॉडल चालू करें जिन्हें Jev इस्तेमाल कर सकता है।",
+        "ar": "في الإعدادات › Meta AI، تحقق من البرنامج وفعّل النماذج التي يُسمح لـ Jev باستخدامها.",
+        "fr": "Dans Configuration › Meta AI, vérifiez le programme et activez les modèles que Jev peut utiliser.",
+        "ru": "В Настройки › Meta AI проверьте программу и включите модели, которые может использовать Jev.",
+        "ja": "設定 › Meta AI でプログラムを確認し、Jev が使ってよいモデルをオンにします。",
+        "de": "Prüfe unter Einstellungen › Meta AI das Programm und schalte die Modelle ein, die Jev nutzen darf."
+      },
+      "image": "settings"
+    }
+  ],
+  "use": [
+    {
+      "text": {
+        "en": "Write the request in a chat. The Progress panel shows when Jev picks Muse Code.",
+        "pt-BR": "Escreva o pedido num chat. O painel Andamento mostra quando o Jev escolhe o Muse Code.",
+        "es": "Escribe la solicitud en un chat. El panel Progreso muestra cuándo Jev elige Muse Code.",
+        "zh-CN": "在对话中写下请求。进度面板会显示 Jev 何时选择 Muse Code。",
+        "hi": "चैट में अनुरोध लिखें। प्रगति पैनल दिखाता है कि Jev ने कब Muse Code चुना।",
+        "ar": "اكتب الطلب في محادثة. تعرض لوحة التقدّم متى يختار Jev ‏Muse Code.",
+        "fr": "Écrivez la demande dans un chat. Le panneau Progression montre quand Jev choisit Muse Code.",
+        "ru": "Напишите запрос в чате. Панель «Ход работы» показывает, когда Jev выбирает Muse Code.",
+        "ja": "チャットで依頼を書いてください。Jev が Muse Code を選ぶと、進行状況パネルに表示されます。",
+        "de": "Schreib die Anfrage in einen Chat. Das Fortschritt-Panel zeigt, wann Jev Muse Code wählt."
+      },
+      "image": "chat"
+    }
+  ]
+}

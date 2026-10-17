@@ -10,7 +10,7 @@
     "fr": "Dans une demande complexe en mode développement, votre modèle de raisonnement le plus fort écrit d’abord un plan, et l’agent choisi pour construire le reçoit avec la demande.",
     "ru": "В сложном запросе в режиме разработки ваша самая сильная модель рассуждения сначала пишет план, и агент, выбранный для сборки, получает его вместе с запросом.",
     "ja": "開発モードの複雑な依頼では、いちばん強い推論モデルがまず計画を書き、構築に選ばれたエージェントが依頼と一緒にそれを受け取ります。",
-    "de": "Bei einer komplexen Anfrage im Entwicklungsmodus schreibt Ihr stärkstes Denkmodell zuerst einen Plan, und der Agent, der baut, erhält ihn zusammen mit der Anfrage."
+    "de": "Bei einer komplexen Anfrage im Entwicklungsmodus schreibt dein stärkstes Denkmodell zuerst einen Plan, und der Agent, der baut, erhält ihn zusammen mit der Anfrage."
   },
   "use": [
     {
@@ -24,7 +24,7 @@
         "fr": "Activez Planifier avec un modèle, construire avec un autre dans Configuration › Jev › Routage.",
         "ru": "Включите «Планировать одной моделью, строить другой» в Настройки › Jev › Маршрутизация.",
         "ja": "設定 › Jev › ルーティングで「あるモデルで計画し、別のモデルで構築」をオンにします。",
-        "de": "Schalten Sie Mit einem Modell planen, mit einem anderen bauen unter Einstellungen › Jev › Routing ein."
+        "de": "Schalte Mit einem Modell planen, mit einem anderen bauen unter Einstellungen › Jev › Routing ein."
       },
       "image": "settings"
     },

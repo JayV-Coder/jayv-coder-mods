@@ -1,0 +1,75 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "OpenHands is an open-source agent that writes code, runs commands and browses the web. With this mod, Jev can send requests to it through the Agent Client Protocol (ACP): OpenHands asks before each action, and the app answers. In Development mode it approves, except the commands your organization blocks; in Planning mode it refuses anything that changes the project.",
+    "pt-BR": "O OpenHands é um agente de código aberto que escreve código, roda comandos e navega na web. Com este mod, o Jev pode mandar pedidos para ele pelo Agent Client Protocol (ACP): o OpenHands pergunta antes de cada ação, e o app responde. No modo Desenvolvimento, aprova, menos os comandos que a sua organização bloqueia; no modo Planejamento, recusa tudo o que muda o projeto.",
+    "es": "OpenHands es un agente de código abierto que escribe código, ejecuta comandos y navega por la web. Con este mod, Jev puede enviarle solicitudes mediante el Agent Client Protocol (ACP): OpenHands pregunta antes de cada acción, y la app responde. En el modo Desarrollo aprueba, salvo los comandos que tu organización bloquea; en el modo Planificación rechaza todo lo que cambia el proyecto.",
+    "zh-CN": "OpenHands 是一个开源代理，会编写代码、执行命令并浏览网页。有了这个模组，Jev 可以通过 Agent Client Protocol（ACP）把请求发给它：OpenHands 在每个操作前都会询问，由应用来回应。在开发模式下应用会批准，你的组织禁止的命令除外；在规划模式下会拒绝一切修改项目的操作。",
+    "hi": "OpenHands एक ओपन-सोर्स एजेंट है जो कोड लिखता है, कमांड चलाता है और वेब देखता है। इस मॉड से Jev उसे Agent Client Protocol (ACP) के ज़रिए अनुरोध भेज सकता है: OpenHands हर कार्रवाई से पहले पूछता है, और ऐप जवाब देता है। डेवलपमेंट मोड में यह स्वीकृति देता है, सिवाय उन कमांड के जिन्हें आपका संगठन रोकता है; योजना मोड में प्रोजेक्ट बदलने वाली हर चीज़ मना करता है।",
+    "ar": "OpenHands وكيل مفتوح المصدر يكتب الكود ويشغّل الأوامر ويتصفح الويب. بهذه الإضافة يستطيع Jev إرسال الطلبات إليه عبر Agent Client Protocol (ACP): يسأل OpenHands قبل كل إجراء، ويردّ التطبيق. في وضع التطوير يوافق، عدا الأوامر التي تحظرها مؤسستك؛ وفي وضع التخطيط يرفض كل ما يغيّر المشروع.",
+    "fr": "OpenHands est un agent open source qui écrit du code, lance des commandes et navigue sur le web. Avec ce mod, Jev peut lui envoyer des demandes via l’Agent Client Protocol (ACP) : OpenHands demande avant chaque action, et l’app répond. En mode Développement, elle approuve, sauf les commandes que votre organisation bloque ; en mode Planification, elle refuse tout ce qui modifie le projet.",
+    "ru": "OpenHands — агент с открытым исходным кодом, который пишет код, запускает команды и работает с веб-страницами. С этим модом Jev может отправлять ему запросы по Agent Client Protocol (ACP): OpenHands спрашивает перед каждым действием, а приложение отвечает. В режиме «Разработка» оно одобряет, кроме команд, которые блокирует ваша организация; в режиме «Планирование» отклоняет всё, что меняет проект.",
+    "ja": "OpenHands は、コードを書き、コマンドを実行し、ウェブを閲覧するオープンソースのエージェントです。この Mod があると、Jev は Agent Client Protocol（ACP）で依頼を送れます。OpenHands はアクションごとに確認し、アプリが応答します。開発モードでは、組織がブロックしているコマンドを除いて承認し、計画モードではプロジェクトを変えるものをすべて拒否します。",
+    "de": "OpenHands ist ein quelloffener Agent, der Code schreibt, Befehle ausführt und im Web surft. Mit diesem Mod kann Jev Anfragen über das Agent Client Protocol (ACP) an ihn schicken: OpenHands fragt vor jeder Aktion, und die App antwortet. Im Modus Entwicklung gibt sie frei, außer den Befehlen, die deine Organisation sperrt; im Modus Planung lehnt sie alles ab, was das Projekt ändert."
+  },
+  "requirements": {
+    "en": "The OpenHands CLI installed on this computer, with a model set up in it (run openhands once and choose the provider and the key).",
+    "pt-BR": "O OpenHands CLI instalado neste computador, com um modelo configurado nele (rode openhands uma vez e escolha o provedor e a chave).",
+    "es": "OpenHands CLI instalado en este equipo, con un modelo configurado en él (ejecuta openhands una vez y elige el proveedor y la clave).",
+    "zh-CN": "这台电脑上已安装 OpenHands CLI，并在其中配置好模型（运行一次 openhands，选择提供商和密钥）。",
+    "hi": "इस कंप्यूटर पर OpenHands CLI इंस्टॉल हो, और उसमें कोई मॉडल सेट हो (एक बार openhands चलाएँ और प्रदाता व कुंजी चुनें)।",
+    "ar": "أن يكون OpenHands CLI مثبّتًا على هذا الجهاز، مع نموذج مُعدّ فيه (شغّل openhands مرة واحدة واختر المزوّد والمفتاح).",
+    "fr": "OpenHands CLI installé sur cet ordinateur, avec un modèle configuré (lancez openhands une fois et choisissez le fournisseur et la clé).",
+    "ru": "OpenHands CLI, установленный на этом компьютере, с настроенной в нём моделью (один раз запустите openhands и выберите поставщика и ключ).",
+    "ja": "このコンピューターに OpenHands CLI がインストールされ、モデルが設定されていること（一度 openhands を実行し、プロバイダーとキーを選びます）。",
+    "de": "Die OpenHands CLI auf diesem Computer installiert, mit einem darin eingerichteten Modell (starte openhands einmal und wähle Anbieter und Schlüssel)."
+  },
+  "setup": [
+    {
+      "text": {
+        "en": "Install the OpenHands CLI (uv tool install openhands --python 3.12) and run openhands once to set up the model.",
+        "pt-BR": "Instale o OpenHands CLI (uv tool install openhands --python 3.12) e rode openhands uma vez para configurar o modelo.",
+        "es": "Instala OpenHands CLI (uv tool install openhands --python 3.12) y ejecuta openhands una vez para configurar el modelo.",
+        "zh-CN": "安装 OpenHands CLI（uv tool install openhands --python 3.12），然后运行一次 openhands 配置模型。",
+        "hi": "OpenHands CLI इंस्टॉल करें (uv tool install openhands --python 3.12) और मॉडल सेट करने के लिए एक बार openhands चलाएँ।",
+        "ar": "ثبّت OpenHands CLI (uv tool install openhands --python 3.12) وشغّل openhands مرة واحدة لإعداد النموذج.",
+        "fr": "Installez OpenHands CLI (uv tool install openhands --python 3.12) et lancez openhands une fois pour configurer le modèle.",
+        "ru": "Установите OpenHands CLI (uv tool install openhands --python 3.12) и один раз запустите openhands, чтобы настроить модель.",
+        "ja": "OpenHands CLI をインストールし（uv tool install openhands --python 3.12）、一度 openhands を実行してモデルを設定します。",
+        "de": "Installiere die OpenHands CLI (uv tool install openhands --python 3.12) und starte openhands einmal, um das Modell einzurichten."
+      }
+    },
+    {
+      "text": {
+        "en": "In Settings › OpenHands, check the program and turn the agent on. OpenHands uses the model you set up in it.",
+        "pt-BR": "Em Configuração › OpenHands, confira o programa e ligue o agente. O OpenHands usa o modelo que você configurou nele.",
+        "es": "En Configuración › OpenHands, comprueba el programa y activa el agente. OpenHands usa el modelo que configuraste en él.",
+        "zh-CN": "在“设置 › OpenHands”中确认程序并启用代理。OpenHands 使用你在其中配置的模型。",
+        "hi": "सेटिंग्स › OpenHands में प्रोग्राम जाँचें और एजेंट चालू करें। OpenHands वही मॉडल इस्तेमाल करता है जो आपने उसमें सेट किया है।",
+        "ar": "في الإعدادات › OpenHands، تحقق من البرنامج وشغّل الوكيل. يستخدم OpenHands النموذج الذي أعددته فيه.",
+        "fr": "Dans Configuration › OpenHands, vérifiez le programme et activez l’agent. OpenHands utilise le modèle que vous y avez configuré.",
+        "ru": "В Настройки › OpenHands проверьте программу и включите агента. OpenHands использует модель, которую вы в нём настроили.",
+        "ja": "設定 › OpenHands でプログラムを確認し、エージェントをオンにします。OpenHands は設定したモデルを使います。",
+        "de": "Prüfe unter Einstellungen › OpenHands das Programm und schalte den Agenten ein. OpenHands nutzt das Modell, das du darin eingerichtet hast."
+      },
+      "image": "settings"
+    }
+  ],
+  "use": [
+    {
+      "text": {
+        "en": "Write the request in a chat. The Progress panel shows each action and the ones the app refused.",
+        "pt-BR": "Escreva o pedido num chat. O painel Andamento mostra cada ação e as que o app recusou.",
+        "es": "Escribe la solicitud en un chat. El panel Progreso muestra cada acción y las que la app rechazó.",
+        "zh-CN": "在对话中写下请求。进度面板会显示每个操作，以及被应用拒绝的操作。",
+        "hi": "चैट में अनुरोध लिखें। प्रगति पैनल हर कार्रवाई दिखाता है, और वे भी जिन्हें ऐप ने मना किया।",
+        "ar": "اكتب الطلب في محادثة. تعرض لوحة التقدّم كل إجراء والإجراءات التي رفضها التطبيق.",
+        "fr": "Écrivez la demande dans un chat. Le panneau Progression montre chaque action et celles que l’app a refusées.",
+        "ru": "Напишите запрос в чате. Панель «Ход работы» показывает каждое действие и те, что приложение отклонило.",
+        "ja": "チャットで依頼を書いてください。進行状況パネルに各アクションと、アプリが拒否したアクションが表示されます。",
+        "de": "Schreib die Anfrage in einen Chat. Das Fortschritt-Panel zeigt jede Aktion und die, die die App abgelehnt hat."
+      },
+      "image": "chat"
+    }
+  ]
+}

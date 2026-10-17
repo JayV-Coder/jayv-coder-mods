@@ -1,0 +1,75 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "Aider is an open-source agent that edits the code in your git repository with the model you choose. With this mod, Jev can send requests to it: in Development mode it applies the changes without committing, so you review them, and in Planning mode it only answers (its ask mode).",
+    "pt-BR": "O Aider é um agente de código aberto que edita o código do seu repositório git com o modelo que você escolher. Com este mod, o Jev pode mandar pedidos para ele: no modo Desenvolvimento ele aplica as mudanças sem fazer commit, para você revisar, e no modo Planejamento só responde (o modo ask dele).",
+    "es": "Aider es un agente de código abierto que edita el código de tu repositorio git con el modelo que elijas. Con este mod, Jev puede enviarle solicitudes: en el modo Desarrollo aplica los cambios sin hacer commit, para que los revises, y en el modo Planificación solo responde (su modo ask).",
+    "zh-CN": "Aider 是一个开源代理，用你选择的模型编辑 git 仓库中的代码。有了这个模组，Jev 可以把请求发给它：在开发模式下它会应用修改但不提交，留给你审查；在规划模式下它只作答（它的 ask 模式）。",
+    "hi": "Aider एक ओपन-सोर्स एजेंट है जो आपके चुने मॉडल से आपकी git रिपॉज़िटरी का कोड बदलता है। इस मॉड से Jev उसे अनुरोध भेज सकता है: डेवलपमेंट मोड में यह बदलाव commit किए बिना लागू करता है, ताकि आप उनकी समीक्षा करें, और योजना मोड में सिर्फ़ जवाब देता है (इसका ask मोड)।",
+    "ar": "Aider وكيل مفتوح المصدر يعدّل الكود في مستودع git لديك بالنموذج الذي تختاره. بهذه الإضافة يستطيع Jev إرسال الطلبات إليه: في وضع التطوير يطبّق التغييرات دون commit لكي تراجعها، وفي وضع التخطيط يجيب فقط (وضع ask الخاص به).",
+    "fr": "Aider est un agent open source qui modifie le code de votre dépôt git avec le modèle de votre choix. Avec ce mod, Jev peut lui envoyer des demandes : en mode Développement il applique les changements sans commit, pour que vous les relisiez, et en mode Planification il ne fait que répondre (son mode ask).",
+    "ru": "Aider — агент с открытым исходным кодом, который изменяет код в вашем git-репозитории с выбранной вами моделью. С этим модом Jev может отправлять ему запросы: в режиме «Разработка» он применяет изменения без коммита, чтобы вы их проверили, а в режиме «Планирование» только отвечает (его режим ask).",
+    "ja": "Aider は、選んだモデルで git リポジトリのコードを編集するオープンソースのエージェントです。この Mod があると、Jev は依頼を送れます。開発モードでは変更をコミットせずに適用し、確認できるようにします。計画モードでは回答だけを行います（ask モード）。",
+    "de": "Aider ist ein quelloffener Agent, der den Code in deinem git-Repository mit dem Modell deiner Wahl bearbeitet. Mit diesem Mod kann Jev Anfragen an ihn schicken: Im Modus Entwicklung übernimmt er die Änderungen ohne Commit, damit du sie prüfst, und im Modus Planung antwortet er nur (sein Ask-Modus)."
+  },
+  "requirements": {
+    "en": "Aider installed on this computer and the API key of a model provider in your environment, such as ANTHROPIC_API_KEY, GEMINI_API_KEY or DEEPSEEK_API_KEY.",
+    "pt-BR": "O Aider instalado neste computador e a chave de API de um provedor de modelos no seu ambiente, como ANTHROPIC_API_KEY, GEMINI_API_KEY ou DEEPSEEK_API_KEY.",
+    "es": "Aider instalado en este equipo y la clave de API de un proveedor de modelos en tu entorno, como ANTHROPIC_API_KEY, GEMINI_API_KEY o DEEPSEEK_API_KEY.",
+    "zh-CN": "这台电脑上已安装 Aider，并在环境变量中设置了模型提供商的 API 密钥，例如 ANTHROPIC_API_KEY、GEMINI_API_KEY 或 DEEPSEEK_API_KEY。",
+    "hi": "इस कंप्यूटर पर Aider इंस्टॉल हो और आपके एनवायरनमेंट में किसी मॉडल प्रदाता की API कुंजी हो, जैसे ANTHROPIC_API_KEY, GEMINI_API_KEY या DEEPSEEK_API_KEY।",
+    "ar": "أن يكون Aider مثبّتًا على هذا الجهاز ومفتاح API لمزوّد نماذج في بيئتك، مثل ANTHROPIC_API_KEY أو GEMINI_API_KEY أو DEEPSEEK_API_KEY.",
+    "fr": "Aider installé sur cet ordinateur et la clé d’API d’un fournisseur de modèles dans votre environnement, comme ANTHROPIC_API_KEY, GEMINI_API_KEY ou DEEPSEEK_API_KEY.",
+    "ru": "Aider, установленный на этом компьютере, и API-ключ поставщика моделей в вашем окружении, например ANTHROPIC_API_KEY, GEMINI_API_KEY или DEEPSEEK_API_KEY.",
+    "ja": "このコンピューターに Aider がインストールされ、ANTHROPIC_API_KEY、GEMINI_API_KEY、DEEPSEEK_API_KEY などモデルプロバイダーの API キーが環境変数にあること。",
+    "de": "Aider auf diesem Computer installiert und der API-Schlüssel eines Modellanbieters in deiner Umgebung, etwa ANTHROPIC_API_KEY, GEMINI_API_KEY oder DEEPSEEK_API_KEY."
+  },
+  "setup": [
+    {
+      "text": {
+        "en": "Install Aider (python -m pip install aider-install, then aider-install) and set the API key of your provider as an environment variable.",
+        "pt-BR": "Instale o Aider (python -m pip install aider-install e depois aider-install) e ponha a chave de API do seu provedor numa variável de ambiente.",
+        "es": "Instala Aider (python -m pip install aider-install y después aider-install) y pon la clave de API de tu proveedor en una variable de entorno.",
+        "zh-CN": "安装 Aider（python -m pip install aider-install，然后运行 aider-install），并把提供商的 API 密钥设为环境变量。",
+        "hi": "Aider इंस्टॉल करें (python -m pip install aider-install, फिर aider-install) और अपने प्रदाता की API कुंजी एनवायरनमेंट वेरिएबल में रखें।",
+        "ar": "ثبّت Aider (python -m pip install aider-install ثم aider-install) وضع مفتاح API الخاص بمزوّدك في متغير بيئة.",
+        "fr": "Installez Aider (python -m pip install aider-install, puis aider-install) et mettez la clé d’API de votre fournisseur dans une variable d’environnement.",
+        "ru": "Установите Aider (python -m pip install aider-install, затем aider-install) и задайте API-ключ вашего поставщика в переменной окружения.",
+        "ja": "Aider をインストールし（python -m pip install aider-install の後に aider-install）、プロバイダーの API キーを環境変数に設定します。",
+        "de": "Installiere Aider (python -m pip install aider-install, dann aider-install) und lege den API-Schlüssel deines Anbieters als Umgebungsvariable an."
+      }
+    },
+    {
+      "text": {
+        "en": "In Settings › Aider, check the program and turn on the models Jev may use: sonnet, opus, gemini and deepseek come ready, and you can add others by name.",
+        "pt-BR": "Em Configuração › Aider, confira o programa e ligue os modelos que o Jev pode usar: sonnet, opus, gemini e deepseek já vêm prontos, e você pode somar outros pelo nome.",
+        "es": "En Configuración › Aider, comprueba el programa y activa los modelos que Jev puede usar: sonnet, opus, gemini y deepseek ya vienen listos, y puedes añadir otros por su nombre.",
+        "zh-CN": "在“设置 › Aider”中确认程序，并开启 Jev 可以使用的模型：sonnet、opus、gemini 和 deepseek 已就绪，你也可以按名称添加其他模型。",
+        "hi": "सेटिंग्स › Aider में प्रोग्राम जाँचें और वे मॉडल चालू करें जिन्हें Jev इस्तेमाल कर सकता है: sonnet, opus, gemini और deepseek पहले से तैयार हैं, और आप नाम से दूसरे मॉडल जोड़ सकते हैं।",
+        "ar": "في الإعدادات › Aider، تحقق من البرنامج وفعّل النماذج التي يُسمح لـ Jev باستخدامها: تأتي sonnet وopus وgemini وdeepseek جاهزة، ويمكنك إضافة غيرها بالاسم.",
+        "fr": "Dans Configuration › Aider, vérifiez le programme et activez les modèles que Jev peut utiliser : sonnet, opus, gemini et deepseek sont déjà prêts, et vous pouvez en ajouter d’autres par leur nom.",
+        "ru": "В Настройки › Aider проверьте программу и включите модели, которые может использовать Jev: sonnet, opus, gemini и deepseek уже готовы, а другие можно добавить по имени.",
+        "ja": "設定 › Aider でプログラムを確認し、Jev が使ってよいモデルをオンにします。sonnet、opus、gemini、deepseek は最初から用意されており、ほかのモデルも名前で追加できます。",
+        "de": "Prüfe unter Einstellungen › Aider das Programm und schalte die Modelle ein, die Jev nutzen darf: sonnet, opus, gemini und deepseek sind schon da, weitere kannst du über ihren Namen hinzufügen."
+      },
+      "image": "settings"
+    }
+  ],
+  "use": [
+    {
+      "text": {
+        "en": "Write the request in a chat. Aider doesn't commit: the changes stay in the project for you to review.",
+        "pt-BR": "Escreva o pedido num chat. O Aider não faz commit: as mudanças ficam no projeto para você revisar.",
+        "es": "Escribe la solicitud en un chat. Aider no hace commit: los cambios quedan en el proyecto para que los revises.",
+        "zh-CN": "在对话中写下请求。Aider 不会提交：修改留在项目中供你审查。",
+        "hi": "चैट में अनुरोध लिखें। Aider commit नहीं करता: बदलाव प्रोजेक्ट में रहते हैं ताकि आप उनकी समीक्षा करें।",
+        "ar": "اكتب الطلب في محادثة. لا ينفّذ Aider أي commit: تبقى التغييرات في المشروع لكي تراجعها.",
+        "fr": "Écrivez la demande dans un chat. Aider ne fait pas de commit : les changements restent dans le projet pour que vous les relisiez.",
+        "ru": "Напишите запрос в чате. Aider не делает коммиты: изменения остаются в проекте, чтобы вы их проверили.",
+        "ja": "チャットで依頼を書いてください。Aider はコミットしないので、変更はプロジェクトに残り、確認できます。",
+        "de": "Schreib die Anfrage in einen Chat. Aider macht keinen Commit: Die Änderungen bleiben im Projekt, damit du sie prüfst."
+      },
+      "image": "chat"
+    }
+  ]
+}

@@ -22,7 +22,7 @@
     "fr": "Cursor Agent CLI (cursor-agent) installé et connecté à votre compte Cursor.",
     "ru": "Cursor Agent CLI (cursor-agent), установленный и с входом в вашу учётную запись Cursor.",
     "ja": "Cursor Agent CLI（cursor-agent）がインストールされ、Cursor アカウントでサインインしていること。",
-    "de": "Die Cursor Agent CLI (cursor-agent) installiert und bei Ihrem Cursor-Konto angemeldet."
+    "de": "Die Cursor Agent CLI (cursor-agent) installiert und bei deinem Cursor-Konto angemeldet."
   },
   "setup": [
     {
@@ -36,7 +36,7 @@
         "fr": "Installez Cursor Agent CLI et connectez-vous une fois avec cursor-agent login.",
         "ru": "Установите Cursor Agent CLI и один раз войдите командой cursor-agent login.",
         "ja": "Cursor Agent CLI をインストールし、cursor-agent login で一度サインインします。",
-        "de": "Installieren Sie die Cursor Agent CLI und melden Sie sich einmal mit cursor-agent login an."
+        "de": "Installiere die Cursor Agent CLI und melde dich einmal mit cursor-agent login an."
       }
     },
     {
@@ -50,7 +50,7 @@
         "fr": "Dans Configuration › Cursor, vérifiez le programme, activez les modèles que Jev peut utiliser et choisissez le sandbox.",
         "ru": "В Настройки › Cursor проверьте программу, включите модели, которые может использовать Jev, и выберите песочницу.",
         "ja": "設定 › Cursor でプログラムを確認し、Jev が使ってよいモデルをオンにして、サンドボックスを選びます。",
-        "de": "Prüfen Sie unter Einstellungen › Cursor das Programm, schalten Sie die Modelle ein, die Jev nutzen darf, und wählen Sie die Sandbox."
+        "de": "Prüfe unter Einstellungen › Cursor das Programm, schalte die Modelle ein, die Jev nutzen darf, und wähle die Sandbox."
       },
       "image": "settings"
     }
@@ -67,7 +67,7 @@
         "fr": "Envoyez votre demande dans un chat. Quand Jev la confie à Cursor, le panneau Progression montre la route et la réponse indique le modèle.",
         "ru": "Отправьте запрос в чате. Когда Jev направляет его в Cursor, панель «Ход работы» показывает маршрут, а в ответе указана модель.",
         "ja": "チャットで依頼を送ってください。Jev が Cursor に回すと、進行状況パネルにルートが表示され、回答にモデル名が示されます。",
-        "de": "Senden Sie Ihre Anfrage in einem Chat. Wenn Jev sie an Cursor leitet, zeigt das Fortschritt-Panel die Route und die Antwort nennt das Modell."
+        "de": "Sende deine Anfrage in einem Chat. Wenn Jev sie an Cursor leitet, zeigt das Fortschritt-Panel die Route und die Antwort nennt das Modell."
       },
       "image": "chat"
     }

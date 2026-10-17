@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "kimi-code",
+  "version": "1.0.0",
+  "category": "agents",
+  "plan": "customMods",
+  "minApp": "0.108.0",
+  "preinstalled": false,
+  "author": "JayV",
+  "docs": "acpAgents",
+  "homepage": "https://www.kimi.com/code",
+  "icon": "icon.svg",
+  "title": {
+    "en": "Kimi Code",
+    "pt-BR": "Kimi Code",
+    "es": "Kimi Code",
+    "zh-CN": "Kimi Code",
+    "hi": "Kimi Code",
+    "ar": "Kimi Code",
+    "fr": "Kimi Code",
+    "ru": "Kimi Code",
+    "ja": "Kimi Code",
+    "de": "Kimi Code"
+  },
+  "summary": {
+    "en": "Moonshot AI's coding agent, with the Kimi models. It edits the project and only reads in Planning mode.",
+    "pt-BR": "O agente de programação da Moonshot AI, com os modelos Kimi. Edita o projeto e só lê no modo Planejamento.",
+    "es": "El agente de programación de Moonshot AI, con los modelos Kimi. Edita el proyecto y solo lee en el modo Planificación.",
+    "zh-CN": "月之暗面（Moonshot AI）的编程代理，使用 Kimi 模型。它会编辑项目，在规划模式下只读取。",
+    "hi": "Moonshot AI का कोडिंग एजेंट, Kimi मॉडलों के साथ। यह प्रोजेक्ट बदलता है और योजना मोड में सिर्फ़ पढ़ता है।",
+    "ar": "وكيل البرمجة من Moonshot AI، مع نماذج Kimi. يعدّل المشروع ولا يقرأ إلا في وضع التخطيط.",
+    "fr": "L’agent de programmation de Moonshot AI, avec les modèles Kimi. Il modifie le projet et ne fait que lire en mode Planification.",
+    "ru": "Агент для программирования от Moonshot AI с моделями Kimi. Изменяет проект, а в режиме «Планирование» только читает.",
+    "ja": "Moonshot AI のコーディングエージェントを Kimi モデルで使います。プロジェクトを編集し、計画モードでは読み取りだけを行います。",
+    "de": "Der Coding-Agent von Moonshot AI, mit den Kimi-Modellen. Er bearbeitet das Projekt und liest im Modus Planung nur."
+  },
+  "contributes": {
+    "agents": [
+      {
+        "kind": "acp",
+        "command": "kimi",
+        "args": [
+          "acp"
+        ],
+        "buildMode": "default",
+        "planMode": "plan",
+        "models": [
+          "default"
+        ]
+      }
+    ]
+  }
+}

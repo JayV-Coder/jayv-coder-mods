@@ -1,0 +1,75 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "Kimi Code is Moonshot AI's coding agent for the terminal. With this mod, Jev can send requests to it: the app talks to it through the Agent Client Protocol (ACP), picks the model, gives it your MCP servers and answers each permission it asks for.",
+    "pt-BR": "O Kimi Code é o agente de programação da Moonshot AI para o terminal. Com este mod, o Jev pode mandar pedidos para ele: o app conversa com ele pelo Agent Client Protocol (ACP), escolhe o modelo, entrega os seus servidores MCP e responde a cada permissão que ele pede.",
+    "es": "Kimi Code es el agente de programación de Moonshot AI para la terminal. Con este mod, Jev puede enviarle solicitudes: la app habla con él mediante el Agent Client Protocol (ACP), elige el modelo, le da tus servidores MCP y responde a cada permiso que pide.",
+    "zh-CN": "Kimi Code 是月之暗面（Moonshot AI）的终端编程代理。有了这个模组，Jev 可以把请求发给它：应用通过 Agent Client Protocol（ACP）与它通信，选择模型，向它提供你的 MCP 服务器，并回应它请求的每一项权限。",
+    "hi": "Kimi Code टर्मिनल के लिए Moonshot AI का कोडिंग एजेंट है। इस मॉड से Jev उसे अनुरोध भेज सकता है: ऐप Agent Client Protocol (ACP) के ज़रिए उससे बात करता है, मॉडल चुनता है, उसे आपके MCP सर्वर देता है और उसकी माँगी हर अनुमति का जवाब देता है।",
+    "ar": "Kimi Code وكيل البرمجة من Moonshot AI للطرفية. بهذه الإضافة يستطيع Jev إرسال الطلبات إليه: يتواصل التطبيق معه عبر Agent Client Protocol (ACP)، ويختار النموذج، ويمنحه خوادم MCP لديك، ويردّ على كل إذن يطلبه.",
+    "fr": "Kimi Code est l’agent de programmation de Moonshot AI pour le terminal. Avec ce mod, Jev peut lui envoyer des demandes : l’app lui parle via l’Agent Client Protocol (ACP), choisit le modèle, lui donne vos serveurs MCP et répond à chaque autorisation qu’il demande.",
+    "ru": "Kimi Code — агент для программирования в терминале от Moonshot AI. С этим модом Jev может отправлять ему запросы: приложение общается с ним по Agent Client Protocol (ACP), выбирает модель, передаёт ему ваши серверы MCP и отвечает на каждый его запрос разрешения.",
+    "ja": "Kimi Code は Moonshot AI のターミナル用コーディングエージェントです。この Mod があると、Jev は依頼を送れます。アプリは Agent Client Protocol（ACP）で通信し、モデルを選び、MCP サーバーを渡し、求められた許可に一つずつ応答します。",
+    "de": "Kimi Code ist der Coding-Agent von Moonshot AI für das Terminal. Mit diesem Mod kann Jev Anfragen an ihn schicken: Die App spricht über das Agent Client Protocol (ACP) mit ihm, wählt das Modell, gibt ihm deine MCP-Server und beantwortet jede Berechtigung, die er anfragt."
+  },
+  "requirements": {
+    "en": "Kimi Code CLI installed on this computer and signed in with a Kimi Code membership or a Kimi platform API key.",
+    "pt-BR": "O Kimi Code CLI instalado neste computador e com acesso por uma assinatura do Kimi Code ou uma chave de API da plataforma Kimi.",
+    "es": "Kimi Code CLI instalado en este equipo y con acceso mediante una membresía de Kimi Code o una clave de API de la plataforma Kimi.",
+    "zh-CN": "这台电脑上已安装 Kimi Code CLI，并已通过 Kimi Code 会员或 Kimi 开放平台 API 密钥登录。",
+    "hi": "इस कंप्यूटर पर Kimi Code CLI इंस्टॉल हो, और Kimi Code सदस्यता या Kimi प्लेटफ़ॉर्म की API कुंजी से साइन इन हो।",
+    "ar": "أن يكون Kimi Code CLI مثبّتًا على هذا الجهاز ومسجَّل الدخول باشتراك Kimi Code أو بمفتاح API من منصة Kimi.",
+    "fr": "Kimi Code CLI installé sur cet ordinateur et connecté avec un abonnement Kimi Code ou une clé d’API de la plateforme Kimi.",
+    "ru": "Kimi Code CLI, установленный на этом компьютере, со входом по подписке Kimi Code или по API-ключу платформы Kimi.",
+    "ja": "このコンピューターに Kimi Code CLI がインストールされ、Kimi Code のメンバーシップまたは Kimi プラットフォームの API キーでサインインしていること。",
+    "de": "Kimi Code CLI auf diesem Computer installiert und angemeldet mit einer Kimi-Code-Mitgliedschaft oder einem API-Schlüssel der Kimi-Plattform."
+  },
+  "setup": [
+    {
+      "text": {
+        "en": "Install Kimi Code CLI (npm install -g @moonshot-ai/kimi-code) and sign in with kimi login.",
+        "pt-BR": "Instale o Kimi Code CLI (npm install -g @moonshot-ai/kimi-code) e entre com kimi login.",
+        "es": "Instala Kimi Code CLI (npm install -g @moonshot-ai/kimi-code) e inicia sesión con kimi login.",
+        "zh-CN": "安装 Kimi Code CLI（npm install -g @moonshot-ai/kimi-code），然后用 kimi login 登录。",
+        "hi": "Kimi Code CLI इंस्टॉल करें (npm install -g @moonshot-ai/kimi-code) और kimi login से साइन इन करें।",
+        "ar": "ثبّت Kimi Code CLI (npm install -g @moonshot-ai/kimi-code) وسجّل الدخول بـ kimi login.",
+        "fr": "Installez Kimi Code CLI (npm install -g @moonshot-ai/kimi-code) et connectez-vous avec kimi login.",
+        "ru": "Установите Kimi Code CLI (npm install -g @moonshot-ai/kimi-code) и войдите командой kimi login.",
+        "ja": "Kimi Code CLI をインストールし（npm install -g @moonshot-ai/kimi-code）、kimi login でサインインします。",
+        "de": "Installiere Kimi Code CLI (npm install -g @moonshot-ai/kimi-code) und melde dich mit kimi login an."
+      }
+    },
+    {
+      "text": {
+        "en": "In Settings › Kimi Code, click Load from the agent and turn on the models Jev may use. The default model keeps the agent's own choice.",
+        "pt-BR": "Em Configuração › Kimi Code, clique em Carregar do agente e ligue os modelos que o Jev pode usar. O modelo default mantém a escolha do próprio agente.",
+        "es": "En Configuración › Kimi Code, haz clic en Cargar desde el agente y activa los modelos que Jev puede usar. El modelo default mantiene la elección del propio agente.",
+        "zh-CN": "在“设置 › Kimi Code”中点击“从代理加载”，并开启 Jev 可以使用的模型。default 模型沿用代理自己的选择。",
+        "hi": "सेटिंग्स › Kimi Code में एजेंट से लोड करें पर क्लिक करें और वे मॉडल चालू करें जिन्हें Jev इस्तेमाल कर सकता है। default मॉडल एजेंट की अपनी पसंद रखता है।",
+        "ar": "في الإعدادات › Kimi Code، انقر التحميل من الوكيل وفعّل النماذج التي يُسمح لـ Jev باستخدامها. النموذج default يُبقي اختيار الوكيل نفسه.",
+        "fr": "Dans Configuration › Kimi Code, cliquez sur Charger depuis l’agent et activez les modèles que Jev peut utiliser. Le modèle default garde le choix de l’agent.",
+        "ru": "В Настройки › Kimi Code нажмите «Загрузить из агента» и включите модели, которые может использовать Jev. Модель default оставляет выбор самого агента.",
+        "ja": "設定 › Kimi Code で「エージェントから読み込む」をクリックし、Jev が使ってよいモデルをオンにします。default モデルはエージェント自身の選択を使います。",
+        "de": "Klicke unter Einstellungen › Kimi Code auf Vom Agenten laden und schalte die Modelle ein, die Jev nutzen darf. Das Modell default behält die Wahl des Agenten."
+      },
+      "image": "settings"
+    }
+  ],
+  "use": [
+    {
+      "text": {
+        "en": "Write the request in a chat. In Planning mode, Kimi Code enters its plan mode and doesn't change files.",
+        "pt-BR": "Escreva o pedido num chat. No modo Planejamento, o Kimi Code entra no modo de plano dele e não muda arquivos.",
+        "es": "Escribe la solicitud en un chat. En el modo Planificación, Kimi Code entra en su modo de plan y no cambia archivos.",
+        "zh-CN": "在对话中写下请求。在规划模式下，Kimi Code 会进入它的计划模式，不修改文件。",
+        "hi": "चैट में अनुरोध लिखें। योजना मोड में Kimi Code अपने प्लान मोड में चला जाता है और फ़ाइलें नहीं बदलता।",
+        "ar": "اكتب الطلب في محادثة. في وضع التخطيط، يدخل Kimi Code وضع الخطة الخاص به ولا يغيّر الملفات.",
+        "fr": "Écrivez la demande dans un chat. En mode Planification, Kimi Code passe dans son mode plan et ne modifie aucun fichier.",
+        "ru": "Напишите запрос в чате. В режиме «Планирование» Kimi Code переходит в свой режим плана и не меняет файлы.",
+        "ja": "チャットで依頼を書いてください。計画モードでは、Kimi Code はプランモードに入り、ファイルを変更しません。",
+        "de": "Schreib die Anfrage in einen Chat. Im Modus Planung wechselt Kimi Code in seinen Planmodus und ändert keine Dateien."
+      },
+      "image": "chat"
+    }
+  ]
+}

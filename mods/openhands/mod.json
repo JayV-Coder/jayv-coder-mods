@@ -1,0 +1,52 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "openhands",
+  "version": "1.0.0",
+  "category": "agents",
+  "plan": "customMods",
+  "minApp": "0.108.0",
+  "preinstalled": false,
+  "author": "JayV",
+  "docs": "acpAgents",
+  "homepage": "https://docs.openhands.dev",
+  "icon": "icon.svg",
+  "title": {
+    "en": "OpenHands",
+    "pt-BR": "OpenHands",
+    "es": "OpenHands",
+    "zh-CN": "OpenHands",
+    "hi": "OpenHands",
+    "ar": "OpenHands",
+    "fr": "OpenHands",
+    "ru": "OpenHands",
+    "ja": "OpenHands",
+    "de": "OpenHands"
+  },
+  "summary": {
+    "en": "The open-source software agent. The app approves each action in Development mode and refuses changes in Planning mode.",
+    "pt-BR": "O agente de software de código aberto. O app aprova cada ação no modo Desenvolvimento e recusa mudanças no modo Planejamento.",
+    "es": "El agente de software de código abierto. La app aprueba cada acción en el modo Desarrollo y rechaza los cambios en el modo Planificación.",
+    "zh-CN": "开源软件代理。在开发模式下应用会批准每个操作，在规划模式下会拒绝修改。",
+    "hi": "ओपन-सोर्स सॉफ़्टवेयर एजेंट। ऐप डेवलपमेंट मोड में हर कार्रवाई स्वीकृत करता है और योजना मोड में बदलाव मना करता है।",
+    "ar": "وكيل البرمجيات مفتوح المصدر. يوافق التطبيق على كل إجراء في وضع التطوير ويرفض التغييرات في وضع التخطيط.",
+    "fr": "L’agent logiciel open source. L’app approuve chaque action en mode Développement et refuse les changements en mode Planification.",
+    "ru": "Программный агент с открытым исходным кодом. Приложение одобряет каждое действие в режиме «Разработка» и отклоняет изменения в режиме «Планирование».",
+    "ja": "オープンソースのソフトウェアエージェントです。開発モードではアプリが各アクションを承認し、計画モードでは変更を拒否します。",
+    "de": "Der quelloffene Software-Agent. Die App gibt im Modus Entwicklung jede Aktion frei und lehnt im Modus Planung Änderungen ab."
+  },
+  "contributes": {
+    "agents": [
+      {
+        "kind": "acp",
+        "command": "openhands",
+        "args": [
+          "acp"
+        ],
+        "buildMode": "always-ask",
+        "models": [
+          "default"
+        ]
+      }
+    ]
+  }
+}

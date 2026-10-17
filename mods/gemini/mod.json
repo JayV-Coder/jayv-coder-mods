@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "gemini",
+  "version": "1.0.0",
+  "category": "agents",
+  "plan": "customMods",
+  "minApp": "0.108.0",
+  "preinstalled": false,
+  "author": "JayV",
+  "docs": "acpAgents",
+  "homepage": "https://github.com/google-gemini/gemini-cli",
+  "icon": "icon.svg",
+  "title": {
+    "en": "Google Gemini",
+    "pt-BR": "Google Gemini",
+    "es": "Google Gemini",
+    "zh-CN": "Google Gemini",
+    "hi": "Google Gemini",
+    "ar": "Google Gemini",
+    "fr": "Google Gemini",
+    "ru": "Google Gemini",
+    "ja": "Google Gemini",
+    "de": "Google Gemini"
+  },
+  "summary": {
+    "en": "Gemini CLI, Google's coding agent, with the Gemini models. It edits the project and only reads in Planning mode.",
+    "pt-BR": "O Gemini CLI, agente de programação do Google, com os modelos Gemini. Edita o projeto e só lê no modo Planejamento.",
+    "es": "Gemini CLI, el agente de programación de Google, con los modelos Gemini. Edita el proyecto y solo lee en el modo Planificación.",
+    "zh-CN": "Gemini CLI 是 Google 的编程代理，使用 Gemini 模型。它会编辑项目，在规划模式下只读取。",
+    "hi": "Gemini CLI, Google का कोडिंग एजेंट, Gemini मॉडलों के साथ। यह प्रोजेक्ट बदलता है और योजना मोड में सिर्फ़ पढ़ता है।",
+    "ar": "Gemini CLI، وكيل البرمجة من Google، مع نماذج Gemini. يعدّل المشروع ولا يقرأ إلا في وضع التخطيط.",
+    "fr": "Gemini CLI, l’agent de programmation de Google, avec les modèles Gemini. Il modifie le projet et ne fait que lire en mode Planification.",
+    "ru": "Gemini CLI — агент для программирования от Google с моделями Gemini. Изменяет проект, а в режиме «Планирование» только читает.",
+    "ja": "Google のコーディングエージェント Gemini CLI を Gemini モデルで使います。プロジェクトを編集し、計画モードでは読み取りだけを行います。",
+    "de": "Gemini CLI, der Coding-Agent von Google, mit den Gemini-Modellen. Er bearbeitet das Projekt und liest im Modus Planung nur."
+  },
+  "contributes": {
+    "agents": [
+      {
+        "kind": "acp",
+        "command": "gemini",
+        "args": [
+          "--acp"
+        ],
+        "buildMode": "default",
+        "planMode": "plan",
+        "models": [
+          "default"
+        ]
+      }
+    ]
+  }
+}
