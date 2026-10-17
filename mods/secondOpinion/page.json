@@ -24,7 +24,7 @@
         "fr": "Activez Deuxième avis d’un autre agent dans Configuration › Jev › Routage. Il faut au moins deux agents.",
         "ru": "Включите «Второе мнение другого агента» в Настройки › Jev › Маршрутизация. Нужны хотя бы два агента.",
         "ja": "設定 › Jev › ルーティングで「別のエージェントによるセカンドオピニオン」をオンにします。エージェントが 2 つ以上必要です。",
-        "de": "Schalten Sie Zweite Meinung von einem anderen Agenten unter Einstellungen › Jev › Routing ein. Dafür braucht es mindestens zwei Agenten."
+        "de": "Schalte Zweite Meinung von einem anderen Agenten unter Einstellungen › Jev › Routing ein. Dafür braucht es mindestens zwei Agenten."
       },
       "image": "settings"
     },

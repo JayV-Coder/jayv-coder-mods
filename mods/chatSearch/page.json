@@ -10,7 +10,7 @@
     "fr": "Cherche les mots de toutes les conversations d’un projet et met en évidence le passage trouvé. L’index reste sur votre ordinateur, et la recherche ne passe jamais par le réseau.",
     "ru": "Ищет слова во всех разговорах проекта и подсвечивает найденный фрагмент. Индекс хранится на вашем компьютере, и поиск никогда не уходит в сеть.",
     "ja": "プロジェクトのすべての会話から語句を検索し、一致した箇所を強調表示します。インデックスはあなたのコンピューターにあり、検索がネットワークに出ることはありません。",
-    "de": "Durchsucht die Wörter aller Gespräche eines Projekts und hebt die gefundene Stelle hervor. Der Index liegt auf Ihrem Computer, und die Suche geht nie ins Netz."
+    "de": "Durchsucht die Wörter aller Gespräche eines Projekts und hebt die gefundene Stelle hervor. Der Index liegt auf deinem Computer, und die Suche geht nie ins Netz."
   },
   "use": [
     {
@@ -24,7 +24,7 @@
         "fr": "Sur l’écran Chats d’un projet, tapez dans le champ de recherche et cliquez sur un résultat pour ouvrir ce chat.",
         "ru": "На экране «Чаты» проекта введите текст в поле поиска и нажмите на результат, чтобы открыть этот чат.",
         "ja": "プロジェクトのチャット画面で検索欄に入力し、結果をクリックするとそのチャットが開きます。",
-        "de": "Tippen Sie auf dem Chats-Bildschirm eines Projekts in das Suchfeld und klicken Sie auf ein Ergebnis, um diesen Chat zu öffnen."
+        "de": "Tippe auf dem Chats-Bildschirm eines Projekts in das Suchfeld und klicke auf ein Ergebnis, um diesen Chat zu öffnen."
       },
       "image": "search"
     }

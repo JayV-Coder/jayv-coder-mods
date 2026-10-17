@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "devin",
+  "version": "1.0.0",
+  "category": "agents",
+  "plan": "customMods",
+  "minApp": "0.107.0",
+  "preinstalled": false,
+  "author": "JayV",
+  "docs": "acpAgents",
+  "homepage": "https://docs.devin.ai",
+  "icon": "icon.svg",
+  "title": {
+    "en": "Devin",
+    "pt-BR": "Devin",
+    "es": "Devin",
+    "zh-CN": "Devin",
+    "hi": "Devin",
+    "ar": "Devin",
+    "fr": "Devin",
+    "ru": "Devin",
+    "ja": "Devin",
+    "de": "Devin"
+  },
+  "summary": {
+    "en": "Devin CLI, Cognition's coding agent, in your terminal. It edits the project and only reads in Planning mode.",
+    "pt-BR": "O Devin CLI, agente de programação da Cognition, no seu terminal. Edita o projeto e só lê no modo Planejamento.",
+    "es": "Devin CLI, el agente de programación de Cognition, en tu terminal. Edita el proyecto y solo lee en el modo Planificación.",
+    "zh-CN": "Devin CLI 是 Cognition 的编程代理，在你的终端中运行。它会编辑项目，在规划模式下只读取。",
+    "hi": "Devin CLI, Cognition का कोडिंग एजेंट, आपके टर्मिनल में। यह प्रोजेक्ट बदलता है और योजना मोड में सिर्फ़ पढ़ता है।",
+    "ar": "Devin CLI، وكيل البرمجة من Cognition، في طرفيتك. يعدّل المشروع ولا يقرأ إلا في وضع التخطيط.",
+    "fr": "Devin CLI, l’agent de programmation de Cognition, dans votre terminal. Il modifie le projet et ne fait que lire en mode Planification.",
+    "ru": "Devin CLI — агент для программирования от Cognition в вашем терминале. Изменяет проект, а в режиме «Планирование» только читает.",
+    "ja": "Cognition のコーディングエージェント Devin CLI をターミナルで使います。プロジェクトを編集し、計画モードでは読み取りだけを行います。",
+    "de": "Devin CLI, der Coding-Agent von Cognition, in deinem Terminal. Er bearbeitet das Projekt und liest im Modus Planung nur."
+  },
+  "contributes": {
+    "agents": [
+      {
+        "kind": "acp",
+        "command": "devin",
+        "args": [
+          "acp"
+        ],
+        "buildMode": "accept-edits",
+        "planMode": "plan",
+        "models": [
+          "default"
+        ]
+      }
+    ]
+  }
+}

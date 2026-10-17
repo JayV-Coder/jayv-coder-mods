@@ -36,7 +36,7 @@
         "fr": "Installez GitHub Copilot CLI et connectez-vous une fois en lançant copilot dans un terminal.",
         "ru": "Установите GitHub Copilot CLI и один раз войдите, выполнив copilot в терминале.",
         "ja": "GitHub Copilot CLI をインストールし、ターミナルで copilot を実行して一度サインインします。",
-        "de": "Installieren Sie die GitHub Copilot CLI und melden Sie sich einmal an, indem Sie copilot in einem Terminal ausführen."
+        "de": "Installiere die GitHub Copilot CLI und melde dich einmal an, indem du copilot in einem Terminal ausführst."
       }
     },
     {
@@ -50,7 +50,7 @@
         "fr": "Dans Configuration › GitHub Copilot, vérifiez le programme, activez les modèles que Jev peut utiliser et choisissez ce que l’agent peut toucher : lecture seule, modifications ou tout.",
         "ru": "В Настройки › GitHub Copilot проверьте программу, включите модели, которые может использовать Jev, и выберите, что агенту можно трогать: только чтение, правки или всё.",
         "ja": "設定 › GitHub Copilot でプログラムを確認し、Jev が使ってよいモデルをオンにして、エージェントに許す範囲（読み取りのみ、編集、すべて）を選びます。",
-        "de": "Prüfen Sie unter Einstellungen › GitHub Copilot das Programm, schalten Sie die Modelle ein, die Jev nutzen darf, und wählen Sie, was der Agent anfassen darf: nur lesen, bearbeiten oder alles."
+        "de": "Prüfe unter Einstellungen › GitHub Copilot das Programm, schalte die Modelle ein, die Jev nutzen darf, und wähle, was der Agent anfassen darf: nur lesen, bearbeiten oder alles."
       },
       "image": "settings"
     }
@@ -67,7 +67,7 @@
         "fr": "Écrivez la demande dans un chat. Le panneau Progression montre quand Jev choisit Copilot, et les requêtes premium qu’il consomme apparaissent dans Statistiques.",
         "ru": "Напишите запрос в чате. Панель «Ход работы» показывает, когда Jev выбирает Copilot, а потраченные им премиум-запросы видны в разделе «Статистика».",
         "ja": "チャットで依頼を書いてください。Jev が Copilot を選ぶと進行状況パネルに表示され、消費したプレミアムリクエストは統計に表示されます。",
-        "de": "Schreiben Sie die Anfrage in einen Chat. Das Fortschritt-Panel zeigt, wann Jev Copilot wählt, und die Premium-Anfragen, die er verbraucht, erscheinen unter Statistiken."
+        "de": "Schreib die Anfrage in einen Chat. Das Fortschritt-Panel zeigt, wann Jev Copilot wählt, und die Premium-Anfragen, die er verbraucht, erscheinen unter Statistiken."
       },
       "image": "chat"
     }

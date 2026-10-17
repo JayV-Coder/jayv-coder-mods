@@ -22,7 +22,7 @@ um mod pode trazer vários pontos de uma vez.
 | --- | --- |
 | `llmEngines` | motores de integração com LLM do app (`claude`, `codex`, …) |
 | `features` | recursos opcionais do app (`stats`, `mcp`, …); o plano continua mandando |
-| `agents` | agentes de linha de comando ou de API, instalados como agentes de quem instala (`mod-<id>`, `mod-<id>-2`…) |
+| `agents` | agentes de linha de comando, ACP ou de API, instalados como agentes de quem instala (`mod-<id>`, `mod-<id>-2`…) |
 | `skills` | skills que o Jev escolhe pelo pedido (como as que a pessoa instala), com os servidores MCP de cada uma; os servidores só vão ao agente no pedido em que a skill vale (app 0.103+) |
 
 O núcleo do app é Rust compilado no instalador e não executa nada baixado: um
@@ -114,6 +114,14 @@ quando precisa de um print além do `enable`.
 
 - O id é o nome da pasta. Mod com o nome de um motor traz aquele motor; mod com
   `agents` usa letras minúsculas, dígitos e `-` (até 28).
+- Agente de `agents`: `cli` (programa com `args`/`planArgs`), `acp` (o app
+  conversa pelo Agent Client Protocol; `args` só aceita `{model}`, e `env`,
+  `buildMode`, `planMode` dizem como ele abre) ou `api` (`openai`,
+  `anthropic`, `responses` com `modelField`, `manus`). ACP, `responses`,
+  `manus`, `modelField` e `{prompt_file}` só o app 0.107 lê
+  (`AGENTS_V2_SINCE`): o `catalog.mjs` pede `minApp` dessa versão e deixa o
+  mod fora do `catalog.json`. Agente ACP vem com o modelo `default` (o que o
+  agente escolher); quem usa carrega os outros do próprio agente.
 - Título e resumo vêm nos dez idiomas do app (`en`, `pt-BR`, `es`, `zh-CN`,
   `hi`, `ar`, `fr`, `ru`, `ja`, `de`), sem espaço nas pontas. Nada de texto
   de um projeto específico: os exemplos usam nomes genéricos.

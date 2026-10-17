@@ -10,7 +10,7 @@
     "fr": "Ollama fait tourner des modèles ouverts sur votre propre ordinateur. Ce mod ajoute un agent Ollama qui lui parle par son adresse compatible OpenAI : sans clé, et les demandes ne quittent jamais la machine.",
     "ru": "Ollama запускает открытые модели на вашем компьютере. Этот мод добавляет агента Ollama, который общается с ним по адресу, совместимому с OpenAI: без ключа, и запросы никогда не покидают компьютер.",
     "ja": "Ollama はオープンなモデルをあなたのコンピューター上で動かします。この Mod は、OpenAI 互換のアドレスで Ollama と話す Ollama エージェントを追加します。キーは不要で、依頼がマシンの外に出ることはありません。",
-    "de": "Ollama führt offene Modelle auf Ihrem eigenen Computer aus. Dieser Mod fügt einen Ollama-Agenten hinzu, der über dessen OpenAI-kompatible Adresse mit ihm spricht: ohne Schlüssel, und die Anfragen verlassen den Rechner nie."
+    "de": "Ollama führt offene Modelle auf deinem eigenen Computer aus. Dieser Mod fügt einen Ollama-Agenten hinzu, der über dessen OpenAI-kompatible Adresse mit ihm spricht: ohne Schlüssel, und die Anfragen verlassen den Rechner nie."
   },
   "requirements": {
     "en": "Ollama installed and running on this computer, with at least one model downloaded (for example, ollama pull llama3.2).",
@@ -36,7 +36,7 @@
         "fr": "Installez Ollama et téléchargez un modèle avec ollama pull.",
         "ru": "Установите Ollama и скачайте модель командой ollama pull.",
         "ja": "Ollama をインストールし、ollama pull でモデルをダウンロードします。",
-        "de": "Installieren Sie Ollama und laden Sie mit ollama pull ein Modell herunter."
+        "de": "Installiere Ollama und lade mit ollama pull ein Modell herunter."
       }
     },
     {
@@ -50,7 +50,7 @@
         "fr": "Dans Configuration › Ollama, chargez les modèles du serveur local et activez ceux que Jev peut utiliser.",
         "ru": "В Настройки › Ollama загрузите модели локального сервера и включите те, которые может использовать Jev.",
         "ja": "設定 › Ollama でローカルサーバーのモデルを読み込み、Jev が使ってよいものをオンにします。",
-        "de": "Laden Sie unter Einstellungen › Ollama die Modelle des lokalen Servers und schalten Sie die ein, die Jev nutzen darf."
+        "de": "Lade unter Einstellungen › Ollama die Modelle des lokalen Servers und schalte die ein, die Jev nutzen darf."
       },
       "image": "settings"
     }
@@ -67,7 +67,7 @@
         "fr": "Posez votre question dans un chat. Quand Jev choisit un modèle local, la réponse indique lequel, et rien ne part sur internet.",
         "ru": "Спросите в чате. Когда Jev выбирает локальную модель, в ответе указано, какую, и ничего не уходит в интернет.",
         "ja": "チャットで質問してください。Jev がローカルモデルを選ぶと回答にどのモデルかが示され、インターネットには何も送られません。",
-        "de": "Fragen Sie in einem Chat. Wenn Jev ein lokales Modell wählt, nennt die Antwort es, und nichts geht ins Internet."
+        "de": "Frag in einem Chat. Wenn Jev ein lokales Modell wählt, nennt die Antwort es, und nichts geht ins Internet."
       },
       "image": "chat"
     }

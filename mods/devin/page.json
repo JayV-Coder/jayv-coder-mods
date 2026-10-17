@@ -1,0 +1,75 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "Devin CLI is Cognition's coding agent for the terminal. With this mod, Jev can send requests to it: the app talks to it through the Agent Client Protocol (ACP), picks the model, gives it your MCP servers and answers each permission it asks for.",
+    "pt-BR": "O Devin CLI é o agente de programação da Cognition para o terminal. Com este mod, o Jev pode mandar pedidos para ele: o app conversa com ele pelo Agent Client Protocol (ACP), escolhe o modelo, entrega os seus servidores MCP e responde a cada permissão que ele pede.",
+    "es": "Devin CLI es el agente de programación de Cognition para la terminal. Con este mod, Jev puede enviarle solicitudes: la app habla con él mediante el Agent Client Protocol (ACP), elige el modelo, le da tus servidores MCP y responde a cada permiso que pide.",
+    "zh-CN": "Devin CLI 是 Cognition 的终端编程代理。有了这个模组，Jev 可以把请求发给它：应用通过 Agent Client Protocol（ACP）与它通信，选择模型，向它提供你的 MCP 服务器，并回应它请求的每一项权限。",
+    "hi": "Devin CLI टर्मिनल के लिए Cognition का कोडिंग एजेंट है। इस मॉड से Jev उसे अनुरोध भेज सकता है: ऐप Agent Client Protocol (ACP) के ज़रिए उससे बात करता है, मॉडल चुनता है, उसे आपके MCP सर्वर देता है और उसकी माँगी हर अनुमति का जवाब देता है।",
+    "ar": "Devin CLI وكيل البرمجة من Cognition للطرفية. بهذه الإضافة يستطيع Jev إرسال الطلبات إليه: يتواصل التطبيق معه عبر Agent Client Protocol (ACP)، ويختار النموذج، ويمنحه خوادم MCP لديك، ويردّ على كل إذن يطلبه.",
+    "fr": "Devin CLI est l’agent de programmation de Cognition pour le terminal. Avec ce mod, Jev peut lui envoyer des demandes : l’app lui parle via l’Agent Client Protocol (ACP), choisit le modèle, lui donne vos serveurs MCP et répond à chaque autorisation qu’il demande.",
+    "ru": "Devin CLI — агент для программирования в терминале от Cognition. С этим модом Jev может отправлять ему запросы: приложение общается с ним по Agent Client Protocol (ACP), выбирает модель, передаёт ему ваши серверы MCP и отвечает на каждый его запрос разрешения.",
+    "ja": "Devin CLI は Cognition のターミナル用コーディングエージェントです。この Mod があると、Jev は依頼を送れます。アプリは Agent Client Protocol（ACP）で通信し、モデルを選び、MCP サーバーを渡し、求められた許可に一つずつ応答します。",
+    "de": "Devin CLI ist der Coding-Agent von Cognition für das Terminal. Mit diesem Mod kann Jev Anfragen an ihn schicken: Die App spricht über das Agent Client Protocol (ACP) mit ihm, wählt das Modell, gibt ihm deine MCP-Server und beantwortet jede Berechtigung, die er anfragt."
+  },
+  "requirements": {
+    "en": "Devin CLI installed on this computer and signed in to a Devin account (devin auth login).",
+    "pt-BR": "O Devin CLI instalado neste computador e com acesso a uma conta do Devin (devin auth login).",
+    "es": "Devin CLI instalado en este equipo y con acceso a una cuenta de Devin (devin auth login).",
+    "zh-CN": "这台电脑上已安装 Devin CLI，并已登录 Devin 账号（devin auth login）。",
+    "hi": "इस कंप्यूटर पर Devin CLI इंस्टॉल हो और Devin खाते में साइन इन हो (devin auth login)।",
+    "ar": "أن يكون Devin CLI مثبّتًا على هذا الجهاز ومسجَّل الدخول إلى حساب Devin (devin auth login).",
+    "fr": "Devin CLI installé sur cet ordinateur et connecté à un compte Devin (devin auth login).",
+    "ru": "Devin CLI, установленный на этом компьютере, со входом в учётную запись Devin (devin auth login).",
+    "ja": "このコンピューターに Devin CLI がインストールされ、Devin アカウントにサインインしていること（devin auth login）。",
+    "de": "Devin CLI auf diesem Computer installiert und bei einem Devin-Konto angemeldet (devin auth login)."
+  },
+  "setup": [
+    {
+      "text": {
+        "en": "Install Devin CLI (curl -fsSL https://cli.devin.ai/install.sh | bash; on macOS, brew install --cask devin-cli; on Windows, irm https://static.devin.ai/cli/setup.ps1 | iex) and sign in with devin auth login.",
+        "pt-BR": "Instale o Devin CLI (curl -fsSL https://cli.devin.ai/install.sh | bash; no macOS, brew install --cask devin-cli; no Windows, irm https://static.devin.ai/cli/setup.ps1 | iex) e entre com devin auth login.",
+        "es": "Instala Devin CLI (curl -fsSL https://cli.devin.ai/install.sh | bash; en macOS, brew install --cask devin-cli; en Windows, irm https://static.devin.ai/cli/setup.ps1 | iex) e inicia sesión con devin auth login.",
+        "zh-CN": "安装 Devin CLI（curl -fsSL https://cli.devin.ai/install.sh | bash；macOS 上可用 brew install --cask devin-cli；Windows 上用 irm https://static.devin.ai/cli/setup.ps1 | iex），然后用 devin auth login 登录。",
+        "hi": "Devin CLI इंस्टॉल करें (curl -fsSL https://cli.devin.ai/install.sh | bash; macOS पर brew install --cask devin-cli; Windows पर irm https://static.devin.ai/cli/setup.ps1 | iex) और devin auth login से साइन इन करें।",
+        "ar": "ثبّت Devin CLI (curl -fsSL https://cli.devin.ai/install.sh | bash؛ وفي macOS: brew install --cask devin-cli؛ وفي Windows: irm https://static.devin.ai/cli/setup.ps1 | iex) وسجّل الدخول بـ devin auth login.",
+        "fr": "Installez Devin CLI (curl -fsSL https://cli.devin.ai/install.sh | bash ; sous macOS, brew install --cask devin-cli ; sous Windows, irm https://static.devin.ai/cli/setup.ps1 | iex) et connectez-vous avec devin auth login.",
+        "ru": "Установите Devin CLI (curl -fsSL https://cli.devin.ai/install.sh | bash; в macOS — brew install --cask devin-cli; в Windows — irm https://static.devin.ai/cli/setup.ps1 | iex) и войдите командой devin auth login.",
+        "ja": "Devin CLI をインストールし（curl -fsSL https://cli.devin.ai/install.sh | bash、macOS では brew install --cask devin-cli、Windows では irm https://static.devin.ai/cli/setup.ps1 | iex）、devin auth login でサインインします。",
+        "de": "Installiere Devin CLI (curl -fsSL https://cli.devin.ai/install.sh | bash; unter macOS brew install --cask devin-cli; unter Windows irm https://static.devin.ai/cli/setup.ps1 | iex) und melde dich mit devin auth login an."
+      }
+    },
+    {
+      "text": {
+        "en": "In Settings › Devin, click Load from the agent and turn on the models Jev may use. The default model keeps the agent's own choice.",
+        "pt-BR": "Em Configuração › Devin, clique em Carregar do agente e ligue os modelos que o Jev pode usar. O modelo default mantém a escolha do próprio agente.",
+        "es": "En Configuración › Devin, haz clic en Cargar desde el agente y activa los modelos que Jev puede usar. El modelo default mantiene la elección del propio agente.",
+        "zh-CN": "在“设置 › Devin”中点击“从代理加载”，并开启 Jev 可以使用的模型。default 模型沿用代理自己的选择。",
+        "hi": "सेटिंग्स › Devin में एजेंट से लोड करें पर क्लिक करें और वे मॉडल चालू करें जिन्हें Jev इस्तेमाल कर सकता है। default मॉडल एजेंट की अपनी पसंद रखता है।",
+        "ar": "في الإعدادات › Devin، انقر التحميل من الوكيل وفعّل النماذج التي يُسمح لـ Jev باستخدامها. النموذج default يُبقي اختيار الوكيل نفسه.",
+        "fr": "Dans Configuration › Devin, cliquez sur Charger depuis l’agent et activez les modèles que Jev peut utiliser. Le modèle default garde le choix de l’agent.",
+        "ru": "В Настройки › Devin нажмите «Загрузить из агента» и включите модели, которые может использовать Jev. Модель default оставляет выбор самого агента.",
+        "ja": "設定 › Devin で「エージェントから読み込む」をクリックし、Jev が使ってよいモデルをオンにします。default モデルはエージェント自身の選択を使います。",
+        "de": "Klicke unter Einstellungen › Devin auf Vom Agenten laden und schalte die Modelle ein, die Jev nutzen darf. Das Modell default behält die Wahl des Agenten."
+      },
+      "image": "settings"
+    }
+  ],
+  "use": [
+    {
+      "text": {
+        "en": "Write the request in a chat. In Planning mode, Devin enters its plan mode and doesn't change files.",
+        "pt-BR": "Escreva o pedido num chat. No modo Planejamento, o Devin entra no modo de plano dele e não muda arquivos.",
+        "es": "Escribe la solicitud en un chat. En el modo Planificación, Devin entra en su modo de plan y no cambia archivos.",
+        "zh-CN": "在对话中写下请求。在规划模式下，Devin 会进入它的计划模式，不修改文件。",
+        "hi": "चैट में अनुरोध लिखें। योजना मोड में Devin अपने प्लान मोड में चला जाता है और फ़ाइलें नहीं बदलता।",
+        "ar": "اكتب الطلب في محادثة. في وضع التخطيط، يدخل Devin وضع الخطة الخاص به ولا يغيّر الملفات.",
+        "fr": "Écrivez la demande dans un chat. En mode Planification, Devin passe dans son mode plan et ne modifie aucun fichier.",
+        "ru": "Напишите запрос в чате. В режиме «Планирование» Devin переходит в свой режим плана и не меняет файлы.",
+        "ja": "チャットで依頼を書いてください。計画モードでは、Devin はプランモードに入り、ファイルを変更しません。",
+        "de": "Schreib die Anfrage in einen Chat. Im Modus Planung wechselt Devin in seinen Planmodus und ändert keine Dateien."
+      },
+      "image": "chat"
+    }
+  ]
+}

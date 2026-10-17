@@ -24,7 +24,7 @@
         "fr": "Ouvrez Configuration › Skills et cliquez sur Installer depuis un dossier, ou collez le texte d’un SKILL.md. Désactivez une skill pour l’écarter du choix.",
         "ru": "Откройте Настройки › Скиллы и нажмите «Установить из папки» или вставьте текст SKILL.md. Отключите скилл, чтобы убрать его из выбора.",
         "ja": "設定 › スキルを開き、「フォルダからインストール」をクリックするか、SKILL.md のテキストを貼り付けます。スキルをオフにすると選択対象から外れます。",
-        "de": "Öffnen Sie Einstellungen › Skills und klicken Sie auf Aus Ordner installieren, oder fügen Sie den Text einer SKILL.md ein. Schalten Sie einen Skill aus, um ihn aus der Auswahl zu nehmen."
+        "de": "Öffne Einstellungen › Skills und klicke auf Aus Ordner installieren, oder füge den Text einer SKILL.md ein. Schalte einen Skill aus, um ihn aus der Auswahl zu nehmen."
       },
       "image": "settings"
     },

@@ -1,6 +1,127 @@
 {
   "schema": 1,
   "pages": {
+    "aider": {
+      "version": "1.0.0",
+      "about": {
+        "en": "Aider is an open-source agent that edits the code in your git repository with the model you choose. With this mod, Jev can send requests to it: in Development mode it applies the changes without committing, so you review them, and in Planning mode it only answers (its ask mode).",
+        "pt-BR": "O Aider é um agente de código aberto que edita o código do seu repositório git com o modelo que você escolher. Com este mod, o Jev pode mandar pedidos para ele: no modo Desenvolvimento ele aplica as mudanças sem fazer commit, para você revisar, e no modo Planejamento só responde (o modo ask dele).",
+        "es": "Aider es un agente de código abierto que edita el código de tu repositorio git con el modelo que elijas. Con este mod, Jev puede enviarle solicitudes: en el modo Desarrollo aplica los cambios sin hacer commit, para que los revises, y en el modo Planificación solo responde (su modo ask).",
+        "zh-CN": "Aider 是一个开源代理，用你选择的模型编辑 git 仓库中的代码。有了这个模组，Jev 可以把请求发给它：在开发模式下它会应用修改但不提交，留给你审查；在规划模式下它只作答（它的 ask 模式）。",
+        "hi": "Aider एक ओपन-सोर्स एजेंट है जो आपके चुने मॉडल से आपकी git रिपॉज़िटरी का कोड बदलता है। इस मॉड से Jev उसे अनुरोध भेज सकता है: डेवलपमेंट मोड में यह बदलाव commit किए बिना लागू करता है, ताकि आप उनकी समीक्षा करें, और योजना मोड में सिर्फ़ जवाब देता है (इसका ask मोड)।",
+        "ar": "Aider وكيل مفتوح المصدر يعدّل الكود في مستودع git لديك بالنموذج الذي تختاره. بهذه الإضافة يستطيع Jev إرسال الطلبات إليه: في وضع التطوير يطبّق التغييرات دون commit لكي تراجعها، وفي وضع التخطيط يجيب فقط (وضع ask الخاص به).",
+        "fr": "Aider est un agent open source qui modifie le code de votre dépôt git avec le modèle de votre choix. Avec ce mod, Jev peut lui envoyer des demandes : en mode Développement il applique les changements sans commit, pour que vous les relisiez, et en mode Planification il ne fait que répondre (son mode ask).",
+        "ru": "Aider — агент с открытым исходным кодом, который изменяет код в вашем git-репозитории с выбранной вами моделью. С этим модом Jev может отправлять ему запросы: в режиме «Разработка» он применяет изменения без коммита, чтобы вы их проверили, а в режиме «Планирование» только отвечает (его режим ask).",
+        "ja": "Aider は、選んだモデルで git リポジトリのコードを編集するオープンソースのエージェントです。この Mod があると、Jev は依頼を送れます。開発モードでは変更をコミットせずに適用し、確認できるようにします。計画モードでは回答だけを行います（ask モード）。",
+        "de": "Aider ist ein quelloffener Agent, der den Code in deinem git-Repository mit dem Modell deiner Wahl bearbeitet. Mit diesem Mod kann Jev Anfragen an ihn schicken: Im Modus Entwicklung übernimmt er die Änderungen ohne Commit, damit du sie prüfst, und im Modus Planung antwortet er nur (sein Ask-Modus)."
+      },
+      "requirements": {
+        "en": "Aider installed on this computer and the API key of a model provider in your environment, such as ANTHROPIC_API_KEY, GEMINI_API_KEY or DEEPSEEK_API_KEY.",
+        "pt-BR": "O Aider instalado neste computador e a chave de API de um provedor de modelos no seu ambiente, como ANTHROPIC_API_KEY, GEMINI_API_KEY ou DEEPSEEK_API_KEY.",
+        "es": "Aider instalado en este equipo y la clave de API de un proveedor de modelos en tu entorno, como ANTHROPIC_API_KEY, GEMINI_API_KEY o DEEPSEEK_API_KEY.",
+        "zh-CN": "这台电脑上已安装 Aider，并在环境变量中设置了模型提供商的 API 密钥，例如 ANTHROPIC_API_KEY、GEMINI_API_KEY 或 DEEPSEEK_API_KEY。",
+        "hi": "इस कंप्यूटर पर Aider इंस्टॉल हो और आपके एनवायरनमेंट में किसी मॉडल प्रदाता की API कुंजी हो, जैसे ANTHROPIC_API_KEY, GEMINI_API_KEY या DEEPSEEK_API_KEY।",
+        "ar": "أن يكون Aider مثبّتًا على هذا الجهاز ومفتاح API لمزوّد نماذج في بيئتك، مثل ANTHROPIC_API_KEY أو GEMINI_API_KEY أو DEEPSEEK_API_KEY.",
+        "fr": "Aider installé sur cet ordinateur et la clé d’API d’un fournisseur de modèles dans votre environnement, comme ANTHROPIC_API_KEY, GEMINI_API_KEY ou DEEPSEEK_API_KEY.",
+        "ru": "Aider, установленный на этом компьютере, и API-ключ поставщика моделей в вашем окружении, например ANTHROPIC_API_KEY, GEMINI_API_KEY или DEEPSEEK_API_KEY.",
+        "ja": "このコンピューターに Aider がインストールされ、ANTHROPIC_API_KEY、GEMINI_API_KEY、DEEPSEEK_API_KEY などモデルプロバイダーの API キーが環境変数にあること。",
+        "de": "Aider auf diesem Computer installiert und der API-Schlüssel eines Modellanbieters in deiner Umgebung, etwa ANTHROPIC_API_KEY, GEMINI_API_KEY oder DEEPSEEK_API_KEY."
+      },
+      "enable": {
+        "name": "enable",
+        "locales": [
+          "en",
+          "pt-BR",
+          "es",
+          "zh-CN",
+          "hi",
+          "ar",
+          "fr",
+          "ru",
+          "ja",
+          "de"
+        ],
+        "v": "5f4cb4a9e8"
+      },
+      "setup": [
+        {
+          "text": {
+            "en": "Install Aider (python -m pip install aider-install, then aider-install) and set the API key of your provider as an environment variable.",
+            "pt-BR": "Instale o Aider (python -m pip install aider-install e depois aider-install) e ponha a chave de API do seu provedor numa variável de ambiente.",
+            "es": "Instala Aider (python -m pip install aider-install y después aider-install) y pon la clave de API de tu proveedor en una variable de entorno.",
+            "zh-CN": "安装 Aider（python -m pip install aider-install，然后运行 aider-install），并把提供商的 API 密钥设为环境变量。",
+            "hi": "Aider इंस्टॉल करें (python -m pip install aider-install, फिर aider-install) और अपने प्रदाता की API कुंजी एनवायरनमेंट वेरिएबल में रखें।",
+            "ar": "ثبّت Aider (python -m pip install aider-install ثم aider-install) وضع مفتاح API الخاص بمزوّدك في متغير بيئة.",
+            "fr": "Installez Aider (python -m pip install aider-install, puis aider-install) et mettez la clé d’API de votre fournisseur dans une variable d’environnement.",
+            "ru": "Установите Aider (python -m pip install aider-install, затем aider-install) и задайте API-ключ вашего поставщика в переменной окружения.",
+            "ja": "Aider をインストールし（python -m pip install aider-install の後に aider-install）、プロバイダーの API キーを環境変数に設定します。",
+            "de": "Installiere Aider (python -m pip install aider-install, dann aider-install) und lege den API-Schlüssel deines Anbieters als Umgebungsvariable an."
+          }
+        },
+        {
+          "text": {
+            "en": "In Settings › Aider, check the program and turn on the models Jev may use: sonnet, opus, gemini and deepseek come ready, and you can add others by name.",
+            "pt-BR": "Em Configuração › Aider, confira o programa e ligue os modelos que o Jev pode usar: sonnet, opus, gemini e deepseek já vêm prontos, e você pode somar outros pelo nome.",
+            "es": "En Configuración › Aider, comprueba el programa y activa los modelos que Jev puede usar: sonnet, opus, gemini y deepseek ya vienen listos, y puedes añadir otros por su nombre.",
+            "zh-CN": "在“设置 › Aider”中确认程序，并开启 Jev 可以使用的模型：sonnet、opus、gemini 和 deepseek 已就绪，你也可以按名称添加其他模型。",
+            "hi": "सेटिंग्स › Aider में प्रोग्राम जाँचें और वे मॉडल चालू करें जिन्हें Jev इस्तेमाल कर सकता है: sonnet, opus, gemini और deepseek पहले से तैयार हैं, और आप नाम से दूसरे मॉडल जोड़ सकते हैं।",
+            "ar": "في الإعدادات › Aider، تحقق من البرنامج وفعّل النماذج التي يُسمح لـ Jev باستخدامها: تأتي sonnet وopus وgemini وdeepseek جاهزة، ويمكنك إضافة غيرها بالاسم.",
+            "fr": "Dans Configuration › Aider, vérifiez le programme et activez les modèles que Jev peut utiliser : sonnet, opus, gemini et deepseek sont déjà prêts, et vous pouvez en ajouter d’autres par leur nom.",
+            "ru": "В Настройки › Aider проверьте программу и включите модели, которые может использовать Jev: sonnet, opus, gemini и deepseek уже готовы, а другие можно добавить по имени.",
+            "ja": "設定 › Aider でプログラムを確認し、Jev が使ってよいモデルをオンにします。sonnet、opus、gemini、deepseek は最初から用意されており、ほかのモデルも名前で追加できます。",
+            "de": "Prüfe unter Einstellungen › Aider das Programm und schalte die Modelle ein, die Jev nutzen darf: sonnet, opus, gemini und deepseek sind schon da, weitere kannst du über ihren Namen hinzufügen."
+          },
+          "image": {
+            "name": "settings",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "5c4891de03"
+          }
+        }
+      ],
+      "use": [
+        {
+          "text": {
+            "en": "Write the request in a chat. Aider doesn't commit: the changes stay in the project for you to review.",
+            "pt-BR": "Escreva o pedido num chat. O Aider não faz commit: as mudanças ficam no projeto para você revisar.",
+            "es": "Escribe la solicitud en un chat. Aider no hace commit: los cambios quedan en el proyecto para que los revises.",
+            "zh-CN": "在对话中写下请求。Aider 不会提交：修改留在项目中供你审查。",
+            "hi": "चैट में अनुरोध लिखें। Aider commit नहीं करता: बदलाव प्रोजेक्ट में रहते हैं ताकि आप उनकी समीक्षा करें।",
+            "ar": "اكتب الطلب في محادثة. لا ينفّذ Aider أي commit: تبقى التغييرات في المشروع لكي تراجعها.",
+            "fr": "Écrivez la demande dans un chat. Aider ne fait pas de commit : les changements restent dans le projet pour que vous les relisiez.",
+            "ru": "Напишите запрос в чате. Aider не делает коммиты: изменения остаются в проекте, чтобы вы их проверили.",
+            "ja": "チャットで依頼を書いてください。Aider はコミットしないので、変更はプロジェクトに残り、確認できます。",
+            "de": "Schreib die Anfrage in einen Chat. Aider macht keinen Commit: Die Änderungen bleiben im Projekt, damit du sie prüfst."
+          },
+          "image": {
+            "name": "chat",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "a75761bf21"
+          }
+        }
+      ]
+    },
     "answerRecall": {
       "version": "1.1.0",
       "about": {
@@ -44,7 +165,7 @@
             "fr": "Il n’y a rien à configurer : ça fonctionne dès que votre forfait l’inclut. Chaque réponse précédente réutilisée est comptée dans le panneau de Jev, dans Statistiques.",
             "ru": "Настраивать ничего не нужно: работает, если ваш тариф это включает. Каждый повторно использованный ответ учитывается на панели Jev в разделе «Статистика».",
             "ja": "設定は不要です。プランに含まれていれば自動で動きます。再利用された過去の回答は、統計の Jev パネルで数えられます。",
-            "de": "Es gibt nichts einzurichten: Es funktioniert, sobald Ihr Tarif es enthält. Jede wiederverwendete frühere Antwort wird im Jev-Panel unter Statistiken gezählt."
+            "de": "Es gibt nichts einzurichten: Es funktioniert, sobald dein Tarif es enthält. Jede wiederverwendete frühere Antwort wird im Jev-Panel unter Statistiken gezählt."
           },
           "image": {
             "name": "stats",
@@ -77,7 +198,7 @@
         "fr": "Cherche les mots de toutes les conversations d’un projet et met en évidence le passage trouvé. L’index reste sur votre ordinateur, et la recherche ne passe jamais par le réseau.",
         "ru": "Ищет слова во всех разговорах проекта и подсвечивает найденный фрагмент. Индекс хранится на вашем компьютере, и поиск никогда не уходит в сеть.",
         "ja": "プロジェクトのすべての会話から語句を検索し、一致した箇所を強調表示します。インデックスはあなたのコンピューターにあり、検索がネットワークに出ることはありません。",
-        "de": "Durchsucht die Wörter aller Gespräche eines Projekts und hebt die gefundene Stelle hervor. Der Index liegt auf Ihrem Computer, und die Suche geht nie ins Netz."
+        "de": "Durchsucht die Wörter aller Gespräche eines Projekts und hebt die gefundene Stelle hervor. Der Index liegt auf deinem Computer, und die Suche geht nie ins Netz."
       },
       "enable": {
         "name": "enable",
@@ -108,7 +229,7 @@
             "fr": "Sur l’écran Chats d’un projet, tapez dans le champ de recherche et cliquez sur un résultat pour ouvrir ce chat.",
             "ru": "На экране «Чаты» проекта введите текст в поле поиска и нажмите на результат, чтобы открыть этот чат.",
             "ja": "プロジェクトのチャット画面で検索欄に入力し、結果をクリックするとそのチャットが開きます。",
-            "de": "Tippen Sie auf dem Chats-Bildschirm eines Projekts in das Suchfeld und klicken Sie auf ein Ergebnis, um diesen Chat zu öffnen."
+            "de": "Tippe auf dem Chats-Bildschirm eines Projekts in das Suchfeld und klicke auf ein Ergebnis, um diesen Chat zu öffnen."
           },
           "image": {
             "name": "search",
@@ -141,7 +262,7 @@
         "fr": "Claude Code est l’agent de programmation d’Anthropic pour le terminal. Avec ce mod, Jev peut lui envoyer des demandes : Claude Code modifie le projet, lance les commandes que vous autorisez et garde sa session dans chaque chat, pendant que JayV s’occupe de la loge, du contexte, du routage et du suivi de consommation.",
         "ru": "Claude Code — агент Anthropic для программирования в терминале. С этим модом Jev может отправлять ему запросы: Claude Code правит проект, выполняет разрешённые вами команды и сохраняет сессию в каждом чате, а JayV берёт на себя проходную, контекст, маршрутизацию и учёт расхода.",
         "ja": "Claude Code は Anthropic のターミナル用コーディングエージェントです。この Mod があると、Jev は依頼を Claude Code に送れます。Claude Code はプロジェクトを編集し、許可したコマンドを実行し、チャットごとにセッションを保ちます。ゲート、コンテキスト、ルーティング、使用量の記録は JayV が担います。",
-        "de": "Claude Code ist der Coding-Agent von Anthropic für das Terminal. Mit diesem Mod kann Jev Anfragen an ihn schicken: Claude Code bearbeitet das Projekt, führt die Befehle aus, die Sie erlauben, und behält seine Sitzung in jedem Chat, während JayV Pforte, Kontext, Routing und Verbrauchsprotokoll übernimmt."
+        "de": "Claude Code ist der Coding-Agent von Anthropic für das Terminal. Mit diesem Mod kann Jev Anfragen an ihn schicken: Claude Code bearbeitet das Projekt, führt die Befehle aus, die du erlaubst, und behält seine Sitzung in jedem Chat, während JayV Pforte, Kontext, Routing und Verbrauchsprotokoll übernimmt."
       },
       "requirements": {
         "en": "Claude Code installed on this computer and signed in to your Anthropic account (a Claude plan or an API key).",
@@ -153,7 +274,7 @@
         "fr": "Claude Code installé sur cet ordinateur et connecté à votre compte Anthropic (un forfait Claude ou une clé d’API).",
         "ru": "Claude Code, установленный на этом компьютере, с входом в вашу учётную запись Anthropic (тариф Claude или ключ API).",
         "ja": "このコンピューターに Claude Code がインストールされ、Anthropic のアカウント（Claude のプランまたは API キー）でサインインしていること。",
-        "de": "Claude Code auf diesem Computer installiert und bei Ihrem Anthropic-Konto angemeldet (ein Claude-Tarif oder ein API-Schlüssel)."
+        "de": "Claude Code auf diesem Computer installiert und bei deinem Anthropic-Konto angemeldet (ein Claude-Tarif oder ein API-Schlüssel)."
       },
       "enable": {
         "name": "enable",
@@ -183,7 +304,7 @@
             "fr": "Installez Claude Code et connectez-vous une fois en lançant claude dans un terminal. JayV trouve le programme tout seul.",
             "ru": "Установите Claude Code и один раз войдите, выполнив claude в терминале. JayV найдёт программу сам.",
             "ja": "Claude Code をインストールし、ターミナルで claude を実行して一度サインインします。JayV はプログラムを自動で見つけます。",
-            "de": "Installieren Sie Claude Code und melden Sie sich einmal an, indem Sie claude in einem Terminal ausführen. JayV findet das Programm von selbst."
+            "de": "Installiere Claude Code und melde dich einmal an, indem du claude in einem Terminal ausführst. JayV findet das Programm von selbst."
           }
         },
         {
@@ -197,7 +318,7 @@
             "fr": "Dans Configuration › Claude Code, vérifiez que le programme a été trouvé, activez les modèles que Jev peut utiliser et réglez les options : permissions, effort et serveurs MCP.",
             "ru": "В Настройки › Claude Code проверьте, что программа найдена, включите модели, которые может использовать Jev, и настройте параметры: разрешения, усилие и серверы MCP.",
             "ja": "設定 › Claude Code で、プログラムが見つかったことを確認し、Jev が使ってよいモデルをオンにして、権限、思考量、MCP サーバーなどのオプションを調整します。",
-            "de": "Prüfen Sie unter Einstellungen › Claude Code, ob das Programm gefunden wurde, schalten Sie die Modelle ein, die Jev nutzen darf, und passen Sie die Optionen an: Berechtigungen, Aufwand und MCP-Server."
+            "de": "Prüfe unter Einstellungen › Claude Code, ob das Programm gefunden wurde, schalte die Modelle ein, die Jev nutzen darf, und passe die Optionen an: Berechtigungen, Aufwand und MCP-Server."
           },
           "image": {
             "name": "settings",
@@ -229,7 +350,7 @@
             "fr": "Écrivez votre demande dans n’importe quel chat. Quand Claude Code est le plus adapté, le panneau Progression montre la route vers lui, et la réponse indique quel modèle l’a écrite.",
             "ru": "Напишите запрос в любом чате. Когда лучше всего подходит Claude Code, панель «Ход работы» показывает маршрут к нему, а в ответе видно, какая модель его написала.",
             "ja": "どのチャットでも依頼を書いてください。Claude Code が最適なとき、進行状況パネルにそこへのルートが表示され、回答にはどのモデルが書いたかが示されます。",
-            "de": "Schreiben Sie Ihre Anfrage in einen beliebigen Chat. Wenn Claude Code am besten passt, zeigt das Fortschritt-Panel die Route zu ihm, und die Antwort nennt das Modell, das sie geschrieben hat."
+            "de": "Schreib deine Anfrage in einen beliebigen Chat. Wenn Claude Code am besten passt, zeigt das Fortschritt-Panel die Route zu ihm, und die Antwort nennt das Modell, das sie geschrieben hat."
           },
           "image": {
             "name": "chat",
@@ -274,7 +395,7 @@
         "fr": "Codex CLI installé sur cet ordinateur et connecté avec votre compte ChatGPT ou une clé d’API OpenAI.",
         "ru": "Codex CLI, установленный на этом компьютере, с входом через учётную запись ChatGPT или ключ API OpenAI.",
         "ja": "このコンピューターに Codex CLI がインストールされ、ChatGPT アカウントまたは OpenAI の API キーでサインインしていること。",
-        "de": "Die Codex CLI auf diesem Computer installiert und mit Ihrem ChatGPT-Konto oder einem OpenAI-API-Schlüssel angemeldet."
+        "de": "Die Codex CLI auf diesem Computer installiert und mit deinem ChatGPT-Konto oder einem OpenAI-API-Schlüssel angemeldet."
       },
       "enable": {
         "name": "enable",
@@ -304,7 +425,7 @@
             "fr": "Installez Codex CLI et lancez codex login une fois dans un terminal.",
             "ru": "Установите Codex CLI и один раз выполните codex login в терминале.",
             "ja": "Codex CLI をインストールし、ターミナルで codex login を一度実行します。",
-            "de": "Installieren Sie die Codex CLI und führen Sie einmal codex login in einem Terminal aus."
+            "de": "Installiere die Codex CLI und führe einmal codex login in einem Terminal aus."
           }
         },
         {
@@ -318,7 +439,7 @@
             "fr": "Dans Configuration › Codex, vérifiez le programme, activez les modèles que Jev peut utiliser et choisissez le sandbox et l’effort de raisonnement.",
             "ru": "В Настройки › Codex проверьте программу, включите модели, которые может использовать Jev, и выберите песочницу и усилие рассуждения.",
             "ja": "設定 › Codex でプログラムを確認し、Jev が使ってよいモデルをオンにして、サンドボックスと推論の強さを選びます。",
-            "de": "Prüfen Sie unter Einstellungen › Codex das Programm, schalten Sie die Modelle ein, die Jev nutzen darf, und wählen Sie Sandbox und Denkaufwand."
+            "de": "Prüfe unter Einstellungen › Codex das Programm, schalte die Modelle ein, die Jev nutzen darf, und wähle Sandbox und Denkaufwand."
           },
           "image": {
             "name": "settings",
@@ -350,7 +471,7 @@
             "fr": "Envoyez votre demande dans un chat. Quand Jev la confie à Codex, le panneau Progression montre la route et chaque étape de l’agent.",
             "ru": "Отправьте запрос в чате. Когда Jev направляет его в Codex, панель «Ход работы» показывает маршрут и каждый шаг агента.",
             "ja": "チャットで依頼を送ってください。Jev が Codex に回すと、進行状況パネルにルートとエージェントの各ステップが表示されます。",
-            "de": "Senden Sie Ihre Anfrage in einem Chat. Wenn Jev sie an Codex leitet, zeigt das Fortschritt-Panel die Route und jeden Schritt des Agenten."
+            "de": "Sende deine Anfrage in einem Chat. Wenn Jev sie an Codex leitet, zeigt das Fortschritt-Panel die Route und jeden Schritt des Agenten."
           },
           "image": {
             "name": "chat",
@@ -414,7 +535,7 @@
             "fr": "Appuyez sur Ctrl+F (⌘F sur Mac) dans un chat et tapez. Entrée et Maj+Entrée, ou les flèches, passent d’une occurrence à l’autre ; Échap ferme.",
             "ru": "Нажмите Ctrl+F (⌘F на Mac) в чате и введите текст. Enter и Shift+Enter или стрелки переходят между совпадениями; Esc закрывает.",
             "ja": "チャットで Ctrl+F（Mac では ⌘F）を押して入力します。Enter と Shift+Enter、または矢印で一致箇所を移動し、Esc で閉じます。",
-            "de": "Drücken Sie Strg+F (⌘F auf dem Mac) in einem Chat und tippen Sie. Enter und Umschalt+Enter oder die Pfeile springen zwischen den Treffern; Esc schließt."
+            "de": "Drück Strg+F (⌘F auf dem Mac) in einem Chat und tippe. Enter und Umschalt+Enter oder die Pfeile springen zwischen den Treffern; Esc schließt."
           },
           "image": {
             "name": "chat",
@@ -489,7 +610,7 @@
             "fr": "Installez GitHub Copilot CLI et connectez-vous une fois en lançant copilot dans un terminal.",
             "ru": "Установите GitHub Copilot CLI и один раз войдите, выполнив copilot в терминале.",
             "ja": "GitHub Copilot CLI をインストールし、ターミナルで copilot を実行して一度サインインします。",
-            "de": "Installieren Sie die GitHub Copilot CLI und melden Sie sich einmal an, indem Sie copilot in einem Terminal ausführen."
+            "de": "Installiere die GitHub Copilot CLI und melde dich einmal an, indem du copilot in einem Terminal ausführst."
           }
         },
         {
@@ -503,7 +624,7 @@
             "fr": "Dans Configuration › GitHub Copilot, vérifiez le programme, activez les modèles que Jev peut utiliser et choisissez ce que l’agent peut toucher : lecture seule, modifications ou tout.",
             "ru": "В Настройки › GitHub Copilot проверьте программу, включите модели, которые может использовать Jev, и выберите, что агенту можно трогать: только чтение, правки или всё.",
             "ja": "設定 › GitHub Copilot でプログラムを確認し、Jev が使ってよいモデルをオンにして、エージェントに許す範囲（読み取りのみ、編集、すべて）を選びます。",
-            "de": "Prüfen Sie unter Einstellungen › GitHub Copilot das Programm, schalten Sie die Modelle ein, die Jev nutzen darf, und wählen Sie, was der Agent anfassen darf: nur lesen, bearbeiten oder alles."
+            "de": "Prüfe unter Einstellungen › GitHub Copilot das Programm, schalte die Modelle ein, die Jev nutzen darf, und wähle, was der Agent anfassen darf: nur lesen, bearbeiten oder alles."
           },
           "image": {
             "name": "settings",
@@ -535,7 +656,7 @@
             "fr": "Écrivez la demande dans un chat. Le panneau Progression montre quand Jev choisit Copilot, et les requêtes premium qu’il consomme apparaissent dans Statistiques.",
             "ru": "Напишите запрос в чате. Панель «Ход работы» показывает, когда Jev выбирает Copilot, а потраченные им премиум-запросы видны в разделе «Статистика».",
             "ja": "チャットで依頼を書いてください。Jev が Copilot を選ぶと進行状況パネルに表示され、消費したプレミアムリクエストは統計に表示されます。",
-            "de": "Schreiben Sie die Anfrage in einen Chat. Das Fortschritt-Panel zeigt, wann Jev Copilot wählt, und die Premium-Anfragen, die er verbraucht, erscheinen unter Statistiken."
+            "de": "Schreib die Anfrage in einen Chat. Das Fortschritt-Panel zeigt, wann Jev Copilot wählt, und die Premium-Anfragen, die er verbraucht, erscheinen unter Statistiken."
           },
           "image": {
             "name": "chat",
@@ -580,7 +701,7 @@
         "fr": "Cursor Agent CLI (cursor-agent) installé et connecté à votre compte Cursor.",
         "ru": "Cursor Agent CLI (cursor-agent), установленный и с входом в вашу учётную запись Cursor.",
         "ja": "Cursor Agent CLI（cursor-agent）がインストールされ、Cursor アカウントでサインインしていること。",
-        "de": "Die Cursor Agent CLI (cursor-agent) installiert und bei Ihrem Cursor-Konto angemeldet."
+        "de": "Die Cursor Agent CLI (cursor-agent) installiert und bei deinem Cursor-Konto angemeldet."
       },
       "enable": {
         "name": "enable",
@@ -610,7 +731,7 @@
             "fr": "Installez Cursor Agent CLI et connectez-vous une fois avec cursor-agent login.",
             "ru": "Установите Cursor Agent CLI и один раз войдите командой cursor-agent login.",
             "ja": "Cursor Agent CLI をインストールし、cursor-agent login で一度サインインします。",
-            "de": "Installieren Sie die Cursor Agent CLI und melden Sie sich einmal mit cursor-agent login an."
+            "de": "Installiere die Cursor Agent CLI und melde dich einmal mit cursor-agent login an."
           }
         },
         {
@@ -624,7 +745,7 @@
             "fr": "Dans Configuration › Cursor, vérifiez le programme, activez les modèles que Jev peut utiliser et choisissez le sandbox.",
             "ru": "В Настройки › Cursor проверьте программу, включите модели, которые может использовать Jev, и выберите песочницу.",
             "ja": "設定 › Cursor でプログラムを確認し、Jev が使ってよいモデルをオンにして、サンドボックスを選びます。",
-            "de": "Prüfen Sie unter Einstellungen › Cursor das Programm, schalten Sie die Modelle ein, die Jev nutzen darf, und wählen Sie die Sandbox."
+            "de": "Prüfe unter Einstellungen › Cursor das Programm, schalte die Modelle ein, die Jev nutzen darf, und wähle die Sandbox."
           },
           "image": {
             "name": "settings",
@@ -656,7 +777,7 @@
             "fr": "Envoyez votre demande dans un chat. Quand Jev la confie à Cursor, le panneau Progression montre la route et la réponse indique le modèle.",
             "ru": "Отправьте запрос в чате. Когда Jev направляет его в Cursor, панель «Ход работы» показывает маршрут, а в ответе указана модель.",
             "ja": "チャットで依頼を送ってください。Jev が Cursor に回すと、進行状況パネルにルートが表示され、回答にモデル名が示されます。",
-            "de": "Senden Sie Ihre Anfrage in einem Chat. Wenn Jev sie an Cursor leitet, zeigt das Fortschritt-Panel die Route und die Antwort nennt das Modell."
+            "de": "Sende deine Anfrage in einem Chat. Wenn Jev sie an Cursor leitet, zeigt das Fortschritt-Panel die Route und die Antwort nennt das Modell."
           },
           "image": {
             "name": "chat",
@@ -673,6 +794,234 @@
               "de"
             ],
             "v": "6392be01f1"
+          }
+        }
+      ]
+    },
+    "deepseek": {
+      "version": "1.0.0",
+      "about": {
+        "en": "DeepSeek offers its V4 models through an OpenAI-compatible API. With this mod, Jev can send them questions, analysis and reviews: they answer with text and never edit the project. With Approve MCP servers on, the app also offers them the tools of your MCP servers.",
+        "pt-BR": "A DeepSeek oferece os modelos V4 por uma API compatível com a da OpenAI. Com este mod, o Jev pode mandar a eles perguntas, análises e revisões: respondem por texto e nunca editam o projeto. Com Aprovar servidores MCP ligado, o app também oferece a eles as ferramentas dos seus servidores MCP.",
+        "es": "DeepSeek ofrece sus modelos V4 mediante una API compatible con la de OpenAI. Con este mod, Jev puede enviarles preguntas, análisis y revisiones: responden con texto y nunca editan el proyecto. Con Aprobar servidores MCP activado, la app también les ofrece las herramientas de tus servidores MCP.",
+        "zh-CN": "DeepSeek 通过兼容 OpenAI 的 API 提供 V4 模型。有了这个模组，Jev 可以把提问、分析和审查发给它们：它们以文本作答，从不编辑项目。开启“批准 MCP 服务器”后，应用还会向它们提供你的 MCP 服务器的工具。",
+        "hi": "DeepSeek अपने V4 मॉडल OpenAI के साथ संगत API से देता है। इस मॉड से Jev उन्हें सवाल, विश्लेषण और समीक्षा भेज सकता है: वे टेक्स्ट में जवाब देते हैं और प्रोजेक्ट कभी नहीं बदलते। MCP सर्वर स्वीकृत करें चालू होने पर ऐप उन्हें आपके MCP सर्वरों के टूल भी देता है।",
+        "ar": "تقدّم DeepSeek نماذج V4 عبر واجهة API متوافقة مع OpenAI. بهذه الإضافة يستطيع Jev إرسال الأسئلة والتحليلات والمراجعات إليها: تجيب بالنص ولا تعدّل المشروع أبدًا. وعند تفعيل الموافقة على خوادم MCP، يعرض التطبيق عليها أيضًا أدوات خوادم MCP لديك.",
+        "fr": "DeepSeek propose ses modèles V4 via une API compatible avec celle d’OpenAI. Avec ce mod, Jev peut leur envoyer des questions, des analyses et des revues : ils répondent par du texte et ne modifient jamais le projet. Avec Approuver les serveurs MCP activé, l’app leur propose aussi les outils de vos serveurs MCP.",
+        "ru": "DeepSeek предоставляет модели V4 через API, совместимый с OpenAI. С этим модом Jev может отправлять им вопросы, анализ и ревью: они отвечают текстом и никогда не изменяют проект. Если включено «Одобрять серверы MCP», приложение также предлагает им инструменты ваших серверов MCP.",
+        "ja": "DeepSeek は OpenAI 互換の API で V4 モデルを提供しています。この Mod があると、Jev は質問、分析、レビューをこれらのモデルに送れます。回答はテキストで、プロジェクトは編集しません。「MCP サーバーを承認」をオンにすると、アプリは MCP サーバーのツールも提供します。",
+        "de": "DeepSeek bietet seine V4-Modelle über eine OpenAI-kompatible API an. Mit diesem Mod kann Jev ihnen Fragen, Analysen und Reviews schicken: Sie antworten mit Text und bearbeiten das Projekt nie. Ist MCP-Server freigeben eingeschaltet, bietet die App ihnen auch die Werkzeuge deiner MCP-Server an."
+      },
+      "requirements": {
+        "en": "A DeepSeek platform account and an API key.",
+        "pt-BR": "Uma conta na plataforma da DeepSeek e uma chave de API.",
+        "es": "Una cuenta en la plataforma de DeepSeek y una clave de API.",
+        "zh-CN": "一个 DeepSeek 开放平台账号和一个 API 密钥。",
+        "hi": "DeepSeek प्लेटफ़ॉर्म पर खाता और एक API कुंजी।",
+        "ar": "حساب على منصة DeepSeek ومفتاح API.",
+        "fr": "Un compte sur la plateforme DeepSeek et une clé d’API.",
+        "ru": "Учётная запись на платформе DeepSeek и API-ключ.",
+        "ja": "DeepSeek プラットフォームのアカウントと API キー。",
+        "de": "Ein Konto auf der DeepSeek-Plattform und ein API-Schlüssel."
+      },
+      "enable": {
+        "name": "enable",
+        "locales": [
+          "en",
+          "pt-BR",
+          "es",
+          "zh-CN",
+          "hi",
+          "ar",
+          "fr",
+          "ru",
+          "ja",
+          "de"
+        ],
+        "v": "f6935ae5e1"
+      },
+      "setup": [
+        {
+          "text": {
+            "en": "In Settings › DeepSeek, paste the API key (it stays on this computer), turn the agent on and check the connection. Then turn on the models Jev may use.",
+            "pt-BR": "Em Configuração › DeepSeek, cole a chave de API (ela fica neste computador), ligue o agente e confira a conexão. Depois ligue os modelos que o Jev pode usar.",
+            "es": "En Configuración › DeepSeek, pega la clave de API (se queda en este equipo), activa el agente y comprueba la conexión. Después activa los modelos que Jev puede usar.",
+            "zh-CN": "在“设置 › DeepSeek”中粘贴 API 密钥（它保存在这台电脑上），启用代理并检查连接。然后开启 Jev 可以使用的模型。",
+            "hi": "सेटिंग्स › DeepSeek में API कुंजी चिपकाएँ (यह इसी कंप्यूटर पर रहती है), एजेंट चालू करें और कनेक्शन जाँचें। फिर वे मॉडल चालू करें जिन्हें Jev इस्तेमाल कर सकता है।",
+            "ar": "في الإعدادات › DeepSeek، الصق مفتاح API (يبقى على هذا الجهاز)، وشغّل الوكيل، وافحص الاتصال. ثم فعّل النماذج التي يُسمح لـ Jev باستخدامها.",
+            "fr": "Dans Configuration › DeepSeek, collez la clé d’API (elle reste sur cet ordinateur), activez l’agent et vérifiez la connexion. Activez ensuite les modèles que Jev peut utiliser.",
+            "ru": "В Настройки › DeepSeek вставьте API-ключ (он остаётся на этом компьютере), включите агента и проверьте подключение. Затем включите модели, которые может использовать Jev.",
+            "ja": "設定 › DeepSeek で API キーを貼り付け（キーはこのコンピューターに保存されます）、エージェントをオンにして接続を確認します。その後、Jev が使ってよいモデルをオンにします。",
+            "de": "Füge unter Einstellungen › DeepSeek den API-Schlüssel ein (er bleibt auf diesem Computer), schalte den Agenten ein und prüfe die Verbindung. Schalte dann die Modelle ein, die Jev nutzen darf."
+          },
+          "image": {
+            "name": "settings",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "3704a6e4af"
+          }
+        }
+      ],
+      "use": [
+        {
+          "text": {
+            "en": "Ask in a chat for an analysis, a review or an explanation. When Jev picks a DeepSeek model, the answer says which one.",
+            "pt-BR": "Peça num chat uma análise, uma revisão ou uma explicação. Quando o Jev escolhe um modelo da DeepSeek, a resposta diz qual.",
+            "es": "Pide en un chat un análisis, una revisión o una explicación. Cuando Jev elige un modelo de DeepSeek, la respuesta dice cuál.",
+            "zh-CN": "在对话中请求分析、审查或解释。当 Jev 选择 DeepSeek 的模型时，回答会注明是哪一个。",
+            "hi": "चैट में विश्लेषण, समीक्षा या व्याख्या माँगें। जब Jev कोई DeepSeek मॉडल चुनता है, तो जवाब बताता है कि कौन-सा।",
+            "ar": "اطلب في محادثة تحليلًا أو مراجعة أو شرحًا. عندما يختار Jev نموذجًا من DeepSeek، يذكر الرد أيّها.",
+            "fr": "Demandez dans un chat une analyse, une revue ou une explication. Quand Jev choisit un modèle DeepSeek, la réponse indique lequel.",
+            "ru": "Попросите в чате анализ, ревью или объяснение. Когда Jev выбирает модель DeepSeek, в ответе указано, какую.",
+            "ja": "チャットで分析、レビュー、説明を依頼してください。Jev が DeepSeek のモデルを選ぶと、回答にどのモデルかが表示されます。",
+            "de": "Bitte in einem Chat um eine Analyse, ein Review oder eine Erklärung. Wenn Jev ein DeepSeek-Modell wählt, steht in der Antwort, welches."
+          },
+          "image": {
+            "name": "chat",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "10e1a2e9ba"
+          }
+        }
+      ]
+    },
+    "devin": {
+      "version": "1.0.0",
+      "about": {
+        "en": "Devin CLI is Cognition's coding agent for the terminal. With this mod, Jev can send requests to it: the app talks to it through the Agent Client Protocol (ACP), picks the model, gives it your MCP servers and answers each permission it asks for.",
+        "pt-BR": "O Devin CLI é o agente de programação da Cognition para o terminal. Com este mod, o Jev pode mandar pedidos para ele: o app conversa com ele pelo Agent Client Protocol (ACP), escolhe o modelo, entrega os seus servidores MCP e responde a cada permissão que ele pede.",
+        "es": "Devin CLI es el agente de programación de Cognition para la terminal. Con este mod, Jev puede enviarle solicitudes: la app habla con él mediante el Agent Client Protocol (ACP), elige el modelo, le da tus servidores MCP y responde a cada permiso que pide.",
+        "zh-CN": "Devin CLI 是 Cognition 的终端编程代理。有了这个模组，Jev 可以把请求发给它：应用通过 Agent Client Protocol（ACP）与它通信，选择模型，向它提供你的 MCP 服务器，并回应它请求的每一项权限。",
+        "hi": "Devin CLI टर्मिनल के लिए Cognition का कोडिंग एजेंट है। इस मॉड से Jev उसे अनुरोध भेज सकता है: ऐप Agent Client Protocol (ACP) के ज़रिए उससे बात करता है, मॉडल चुनता है, उसे आपके MCP सर्वर देता है और उसकी माँगी हर अनुमति का जवाब देता है।",
+        "ar": "Devin CLI وكيل البرمجة من Cognition للطرفية. بهذه الإضافة يستطيع Jev إرسال الطلبات إليه: يتواصل التطبيق معه عبر Agent Client Protocol (ACP)، ويختار النموذج، ويمنحه خوادم MCP لديك، ويردّ على كل إذن يطلبه.",
+        "fr": "Devin CLI est l’agent de programmation de Cognition pour le terminal. Avec ce mod, Jev peut lui envoyer des demandes : l’app lui parle via l’Agent Client Protocol (ACP), choisit le modèle, lui donne vos serveurs MCP et répond à chaque autorisation qu’il demande.",
+        "ru": "Devin CLI — агент для программирования в терминале от Cognition. С этим модом Jev может отправлять ему запросы: приложение общается с ним по Agent Client Protocol (ACP), выбирает модель, передаёт ему ваши серверы MCP и отвечает на каждый его запрос разрешения.",
+        "ja": "Devin CLI は Cognition のターミナル用コーディングエージェントです。この Mod があると、Jev は依頼を送れます。アプリは Agent Client Protocol（ACP）で通信し、モデルを選び、MCP サーバーを渡し、求められた許可に一つずつ応答します。",
+        "de": "Devin CLI ist der Coding-Agent von Cognition für das Terminal. Mit diesem Mod kann Jev Anfragen an ihn schicken: Die App spricht über das Agent Client Protocol (ACP) mit ihm, wählt das Modell, gibt ihm deine MCP-Server und beantwortet jede Berechtigung, die er anfragt."
+      },
+      "requirements": {
+        "en": "Devin CLI installed on this computer and signed in to a Devin account (devin auth login).",
+        "pt-BR": "O Devin CLI instalado neste computador e com acesso a uma conta do Devin (devin auth login).",
+        "es": "Devin CLI instalado en este equipo y con acceso a una cuenta de Devin (devin auth login).",
+        "zh-CN": "这台电脑上已安装 Devin CLI，并已登录 Devin 账号（devin auth login）。",
+        "hi": "इस कंप्यूटर पर Devin CLI इंस्टॉल हो और Devin खाते में साइन इन हो (devin auth login)।",
+        "ar": "أن يكون Devin CLI مثبّتًا على هذا الجهاز ومسجَّل الدخول إلى حساب Devin (devin auth login).",
+        "fr": "Devin CLI installé sur cet ordinateur et connecté à un compte Devin (devin auth login).",
+        "ru": "Devin CLI, установленный на этом компьютере, со входом в учётную запись Devin (devin auth login).",
+        "ja": "このコンピューターに Devin CLI がインストールされ、Devin アカウントにサインインしていること（devin auth login）。",
+        "de": "Devin CLI auf diesem Computer installiert und bei einem Devin-Konto angemeldet (devin auth login)."
+      },
+      "enable": {
+        "name": "enable",
+        "locales": [
+          "en",
+          "pt-BR",
+          "es",
+          "zh-CN",
+          "hi",
+          "ar",
+          "fr",
+          "ru",
+          "ja",
+          "de"
+        ],
+        "v": "81ebde95a9"
+      },
+      "setup": [
+        {
+          "text": {
+            "en": "Install Devin CLI (curl -fsSL https://cli.devin.ai/install.sh | bash; on macOS, brew install --cask devin-cli; on Windows, irm https://static.devin.ai/cli/setup.ps1 | iex) and sign in with devin auth login.",
+            "pt-BR": "Instale o Devin CLI (curl -fsSL https://cli.devin.ai/install.sh | bash; no macOS, brew install --cask devin-cli; no Windows, irm https://static.devin.ai/cli/setup.ps1 | iex) e entre com devin auth login.",
+            "es": "Instala Devin CLI (curl -fsSL https://cli.devin.ai/install.sh | bash; en macOS, brew install --cask devin-cli; en Windows, irm https://static.devin.ai/cli/setup.ps1 | iex) e inicia sesión con devin auth login.",
+            "zh-CN": "安装 Devin CLI（curl -fsSL https://cli.devin.ai/install.sh | bash；macOS 上可用 brew install --cask devin-cli；Windows 上用 irm https://static.devin.ai/cli/setup.ps1 | iex），然后用 devin auth login 登录。",
+            "hi": "Devin CLI इंस्टॉल करें (curl -fsSL https://cli.devin.ai/install.sh | bash; macOS पर brew install --cask devin-cli; Windows पर irm https://static.devin.ai/cli/setup.ps1 | iex) और devin auth login से साइन इन करें।",
+            "ar": "ثبّت Devin CLI (curl -fsSL https://cli.devin.ai/install.sh | bash؛ وفي macOS: brew install --cask devin-cli؛ وفي Windows: irm https://static.devin.ai/cli/setup.ps1 | iex) وسجّل الدخول بـ devin auth login.",
+            "fr": "Installez Devin CLI (curl -fsSL https://cli.devin.ai/install.sh | bash ; sous macOS, brew install --cask devin-cli ; sous Windows, irm https://static.devin.ai/cli/setup.ps1 | iex) et connectez-vous avec devin auth login.",
+            "ru": "Установите Devin CLI (curl -fsSL https://cli.devin.ai/install.sh | bash; в macOS — brew install --cask devin-cli; в Windows — irm https://static.devin.ai/cli/setup.ps1 | iex) и войдите командой devin auth login.",
+            "ja": "Devin CLI をインストールし（curl -fsSL https://cli.devin.ai/install.sh | bash、macOS では brew install --cask devin-cli、Windows では irm https://static.devin.ai/cli/setup.ps1 | iex）、devin auth login でサインインします。",
+            "de": "Installiere Devin CLI (curl -fsSL https://cli.devin.ai/install.sh | bash; unter macOS brew install --cask devin-cli; unter Windows irm https://static.devin.ai/cli/setup.ps1 | iex) und melde dich mit devin auth login an."
+          }
+        },
+        {
+          "text": {
+            "en": "In Settings › Devin, click Load from the agent and turn on the models Jev may use. The default model keeps the agent's own choice.",
+            "pt-BR": "Em Configuração › Devin, clique em Carregar do agente e ligue os modelos que o Jev pode usar. O modelo default mantém a escolha do próprio agente.",
+            "es": "En Configuración › Devin, haz clic en Cargar desde el agente y activa los modelos que Jev puede usar. El modelo default mantiene la elección del propio agente.",
+            "zh-CN": "在“设置 › Devin”中点击“从代理加载”，并开启 Jev 可以使用的模型。default 模型沿用代理自己的选择。",
+            "hi": "सेटिंग्स › Devin में एजेंट से लोड करें पर क्लिक करें और वे मॉडल चालू करें जिन्हें Jev इस्तेमाल कर सकता है। default मॉडल एजेंट की अपनी पसंद रखता है।",
+            "ar": "في الإعدادات › Devin، انقر التحميل من الوكيل وفعّل النماذج التي يُسمح لـ Jev باستخدامها. النموذج default يُبقي اختيار الوكيل نفسه.",
+            "fr": "Dans Configuration › Devin, cliquez sur Charger depuis l’agent et activez les modèles que Jev peut utiliser. Le modèle default garde le choix de l’agent.",
+            "ru": "В Настройки › Devin нажмите «Загрузить из агента» и включите модели, которые может использовать Jev. Модель default оставляет выбор самого агента.",
+            "ja": "設定 › Devin で「エージェントから読み込む」をクリックし、Jev が使ってよいモデルをオンにします。default モデルはエージェント自身の選択を使います。",
+            "de": "Klicke unter Einstellungen › Devin auf Vom Agenten laden und schalte die Modelle ein, die Jev nutzen darf. Das Modell default behält die Wahl des Agenten."
+          },
+          "image": {
+            "name": "settings",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "3682d04589"
+          }
+        }
+      ],
+      "use": [
+        {
+          "text": {
+            "en": "Write the request in a chat. In Planning mode, Devin enters its plan mode and doesn't change files.",
+            "pt-BR": "Escreva o pedido num chat. No modo Planejamento, o Devin entra no modo de plano dele e não muda arquivos.",
+            "es": "Escribe la solicitud en un chat. En el modo Planificación, Devin entra en su modo de plan y no cambia archivos.",
+            "zh-CN": "在对话中写下请求。在规划模式下，Devin 会进入它的计划模式，不修改文件。",
+            "hi": "चैट में अनुरोध लिखें। योजना मोड में Devin अपने प्लान मोड में चला जाता है और फ़ाइलें नहीं बदलता।",
+            "ar": "اكتب الطلب في محادثة. في وضع التخطيط، يدخل Devin وضع الخطة الخاص به ولا يغيّر الملفات.",
+            "fr": "Écrivez la demande dans un chat. En mode Planification, Devin passe dans son mode plan et ne modifie aucun fichier.",
+            "ru": "Напишите запрос в чате. В режиме «Планирование» Devin переходит в свой режим плана и не меняет файлы.",
+            "ja": "チャットで依頼を書いてください。計画モードでは、Devin はプランモードに入り、ファイルを変更しません。",
+            "de": "Schreib die Anfrage in einen Chat. Im Modus Planung wechselt Devin in seinen Planmodus und ändert keine Dateien."
+          },
+          "image": {
+            "name": "chat",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "84ef058c40"
           }
         }
       ]
@@ -720,7 +1069,7 @@
             "fr": "Ouvrez Loge dans le menu latéral d’un projet, cliquez sur le compteur de la barre d’état ou appuyez sur Ctrl+G (⌘G sur Mac).",
             "ru": "Откройте «Проходная» в боковом меню проекта, нажмите на счётчик в строке состояния или нажмите Ctrl+G (⌘G на Mac).",
             "ja": "プロジェクトのサイドメニューでゲートを開くか、ステータスバーの件数をクリックするか、Ctrl+G（Mac では ⌘G）を押します。",
-            "de": "Öffnen Sie Pforte im Seitenmenü eines Projekts, klicken Sie auf die Zahl in der Statusleiste oder drücken Sie Strg+G (⌘G auf dem Mac)."
+            "de": "Öffne Pforte im Seitenmenü eines Projekts, klicke auf die Zahl in der Statusleiste oder drück Strg+G (⌘G auf dem Mac)."
           },
           "image": {
             "name": "gate",
@@ -750,7 +1099,128 @@
             "fr": "Les réponses que vous donnez à la loge deviennent des notes du projet, pour qu’elle ne repose pas la même question.",
             "ru": "Ваши ответы проходной становятся заметками проекта, чтобы она не спрашивала одно и то же снова.",
             "ja": "ゲートへのあなたの回答はプロジェクトノートになるので、同じことを二度聞かれません。",
-            "de": "Ihre Antworten an die Pforte werden zu Projektnotizen, damit sie nicht noch einmal dasselbe fragt."
+            "de": "Deine Antworten an die Pforte werden zu Projektnotizen, damit sie nicht noch einmal dasselbe fragt."
+          }
+        }
+      ]
+    },
+    "gemini": {
+      "version": "1.0.0",
+      "about": {
+        "en": "Gemini CLI is Google's coding agent for the terminal. With this mod, Jev can send requests to it: the app talks to it through the Agent Client Protocol (ACP), picks the Gemini model, gives it your MCP servers and answers each permission it asks for.",
+        "pt-BR": "O Gemini CLI é o agente de programação do Google para o terminal. Com este mod, o Jev pode mandar pedidos para ele: o app conversa com ele pelo Agent Client Protocol (ACP), escolhe o modelo Gemini, entrega os seus servidores MCP e responde a cada permissão que ele pede.",
+        "es": "Gemini CLI es el agente de programación de Google para la terminal. Con este mod, Jev puede enviarle solicitudes: la app habla con él mediante el Agent Client Protocol (ACP), elige el modelo Gemini, le da tus servidores MCP y responde a cada permiso que pide.",
+        "zh-CN": "Gemini CLI 是 Google 的终端编程代理。有了这个模组，Jev 可以把请求发给它：应用通过 Agent Client Protocol（ACP）与它通信，选择 Gemini 模型，向它提供你的 MCP 服务器，并回应它请求的每一项权限。",
+        "hi": "Gemini CLI टर्मिनल के लिए Google का कोडिंग एजेंट है। इस मॉड से Jev उसे अनुरोध भेज सकता है: ऐप Agent Client Protocol (ACP) के ज़रिए उससे बात करता है, Gemini मॉडल चुनता है, उसे आपके MCP सर्वर देता है और उसकी माँगी हर अनुमति का जवाब देता है।",
+        "ar": "Gemini CLI وكيل البرمجة من Google للطرفية. بهذه الإضافة يستطيع Jev إرسال الطلبات إليه: يتواصل التطبيق معه عبر Agent Client Protocol (ACP)، ويختار نموذج Gemini، ويمنحه خوادم MCP لديك، ويردّ على كل إذن يطلبه.",
+        "fr": "Gemini CLI est l’agent de programmation de Google pour le terminal. Avec ce mod, Jev peut lui envoyer des demandes : l’app lui parle via l’Agent Client Protocol (ACP), choisit le modèle Gemini, lui donne vos serveurs MCP et répond à chaque autorisation qu’il demande.",
+        "ru": "Gemini CLI — агент для программирования в терминале от Google. С этим модом Jev может отправлять ему запросы: приложение общается с ним по Agent Client Protocol (ACP), выбирает модель Gemini, передаёт ему ваши серверы MCP и отвечает на каждый его запрос разрешения.",
+        "ja": "Gemini CLI は Google のターミナル用コーディングエージェントです。この Mod があると、Jev は Gemini CLI に依頼を送れます。アプリは Agent Client Protocol（ACP）で通信し、Gemini モデルを選び、MCP サーバーを渡し、求められた許可に一つずつ応答します。",
+        "de": "Gemini CLI ist der Coding-Agent von Google für das Terminal. Mit diesem Mod kann Jev Anfragen an ihn schicken: Die App spricht über das Agent Client Protocol (ACP) mit ihm, wählt das Gemini-Modell, gibt ihm deine MCP-Server und beantwortet jede Berechtigung, die er anfragt."
+      },
+      "requirements": {
+        "en": "Gemini CLI installed on this computer and signed in with a Gemini API key, Vertex AI or a Gemini Code Assist Standard or Enterprise account.",
+        "pt-BR": "O Gemini CLI instalado neste computador e com acesso por chave da API do Gemini, Vertex AI ou uma conta Gemini Code Assist Standard ou Enterprise.",
+        "es": "Gemini CLI instalado en este equipo y con acceso mediante una clave de API de Gemini, Vertex AI o una cuenta de Gemini Code Assist Standard o Enterprise.",
+        "zh-CN": "这台电脑上已安装 Gemini CLI，并已通过 Gemini API 密钥、Vertex AI 或 Gemini Code Assist Standard / Enterprise 账号登录。",
+        "hi": "इस कंप्यूटर पर Gemini CLI इंस्टॉल हो, और Gemini API कुंजी, Vertex AI या Gemini Code Assist Standard या Enterprise खाते से साइन इन हो।",
+        "ar": "أن يكون Gemini CLI مثبّتًا على هذا الجهاز ومسجَّل الدخول بمفتاح Gemini API أو Vertex AI أو حساب Gemini Code Assist Standard أو Enterprise.",
+        "fr": "Gemini CLI installé sur cet ordinateur et connecté avec une clé d’API Gemini, Vertex AI ou un compte Gemini Code Assist Standard ou Enterprise.",
+        "ru": "Gemini CLI, установленный на этом компьютере, со входом по API-ключу Gemini, через Vertex AI или с учётной записью Gemini Code Assist Standard или Enterprise.",
+        "ja": "このコンピューターに Gemini CLI がインストールされ、Gemini API キー、Vertex AI、または Gemini Code Assist Standard / Enterprise のアカウントでサインインしていること。",
+        "de": "Gemini CLI auf diesem Computer installiert und angemeldet mit einem Gemini-API-Schlüssel, Vertex AI oder einem Konto für Gemini Code Assist Standard oder Enterprise."
+      },
+      "enable": {
+        "name": "enable",
+        "locales": [
+          "en",
+          "pt-BR",
+          "es",
+          "zh-CN",
+          "hi",
+          "ar",
+          "fr",
+          "ru",
+          "ja",
+          "de"
+        ],
+        "v": "55a8e36aa9"
+      },
+      "setup": [
+        {
+          "text": {
+            "en": "Install Gemini CLI (npm install -g @google/gemini-cli) and run gemini once to sign in.",
+            "pt-BR": "Instale o Gemini CLI (npm install -g @google/gemini-cli) e rode gemini uma vez para entrar.",
+            "es": "Instala Gemini CLI (npm install -g @google/gemini-cli) y ejecuta gemini una vez para iniciar sesión.",
+            "zh-CN": "安装 Gemini CLI（npm install -g @google/gemini-cli），然后运行一次 gemini 进行登录。",
+            "hi": "Gemini CLI इंस्टॉल करें (npm install -g @google/gemini-cli) और साइन इन करने के लिए एक बार gemini चलाएँ।",
+            "ar": "ثبّت Gemini CLI (npm install -g @google/gemini-cli) وشغّل gemini مرة واحدة لتسجيل الدخول.",
+            "fr": "Installez Gemini CLI (npm install -g @google/gemini-cli) et lancez gemini une fois pour vous connecter.",
+            "ru": "Установите Gemini CLI (npm install -g @google/gemini-cli) и один раз запустите gemini, чтобы войти.",
+            "ja": "Gemini CLI をインストールし（npm install -g @google/gemini-cli）、一度 gemini を実行してサインインします。",
+            "de": "Installiere Gemini CLI (npm install -g @google/gemini-cli) und starte gemini einmal, um dich anzumelden."
+          }
+        },
+        {
+          "text": {
+            "en": "In Settings › Google Gemini, click Load from the agent and turn on the models Jev may use.",
+            "pt-BR": "Em Configuração › Google Gemini, clique em Carregar do agente e ligue os modelos que o Jev pode usar.",
+            "es": "En Configuración › Google Gemini, haz clic en Cargar desde el agente y activa los modelos que Jev puede usar.",
+            "zh-CN": "在“设置 › Google Gemini”中点击“从代理加载”，并开启 Jev 可以使用的模型。",
+            "hi": "सेटिंग्स › Google Gemini में एजेंट से लोड करें पर क्लिक करें और वे मॉडल चालू करें जिन्हें Jev इस्तेमाल कर सकता है।",
+            "ar": "في الإعدادات › Google Gemini، انقر التحميل من الوكيل وفعّل النماذج التي يُسمح لـ Jev باستخدامها.",
+            "fr": "Dans Configuration › Google Gemini, cliquez sur Charger depuis l’agent et activez les modèles que Jev peut utiliser.",
+            "ru": "В Настройки › Google Gemini нажмите «Загрузить из агента» и включите модели, которые может использовать Jev.",
+            "ja": "設定 › Google Gemini で「エージェントから読み込む」をクリックし、Jev が使ってよいモデルをオンにします。",
+            "de": "Klicke unter Einstellungen › Google Gemini auf Vom Agenten laden und schalte die Modelle ein, die Jev nutzen darf."
+          },
+          "image": {
+            "name": "settings",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "51eed758bb"
+          }
+        }
+      ],
+      "use": [
+        {
+          "text": {
+            "en": "Write the request in a chat. In Planning mode, Gemini CLI enters its read-only mode.",
+            "pt-BR": "Escreva o pedido num chat. No modo Planejamento, o Gemini CLI entra no modo só leitura dele.",
+            "es": "Escribe la solicitud en un chat. En el modo Planificación, Gemini CLI entra en su modo de solo lectura.",
+            "zh-CN": "在对话中写下请求。在规划模式下，Gemini CLI 会进入它的只读模式。",
+            "hi": "चैट में अनुरोध लिखें। योजना मोड में Gemini CLI अपने सिर्फ़-पढ़ने वाले मोड में चला जाता है।",
+            "ar": "اكتب الطلب في محادثة. في وضع التخطيط، يدخل Gemini CLI وضع القراءة فقط الخاص به.",
+            "fr": "Écrivez la demande dans un chat. En mode Planification, Gemini CLI passe dans son mode lecture seule.",
+            "ru": "Напишите запрос в чате. В режиме «Планирование» Gemini CLI переходит в свой режим только для чтения.",
+            "ja": "チャットで依頼を書いてください。計画モードでは、Gemini CLI は読み取り専用モードに入ります。",
+            "de": "Schreib die Anfrage in einen Chat. Im Modus Planung wechselt Gemini CLI in seinen Nur-Lesen-Modus."
+          },
+          "image": {
+            "name": "chat",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "3ced510c0c"
           }
         }
       ]
@@ -809,7 +1279,7 @@
             "fr": "Installez Kilo Code CLI et configurez-y un fournisseur de modèles.",
             "ru": "Установите Kilo Code CLI и настройте в нём поставщика моделей.",
             "ja": "Kilo Code CLI をインストールし、モデルプロバイダーを設定します。",
-            "de": "Installieren Sie die Kilo Code CLI und richten Sie darin einen Modellanbieter ein."
+            "de": "Installiere die Kilo Code CLI und richte darin einen Modellanbieter ein."
           }
         },
         {
@@ -823,7 +1293,7 @@
             "fr": "Dans Configuration › Kilo Code, vérifiez le programme et activez les modèles que Jev peut utiliser.",
             "ru": "В Настройки › Kilo Code проверьте программу и включите модели, которые может использовать Jev.",
             "ja": "設定 › Kilo Code でプログラムを確認し、Jev が使ってよいモデルをオンにします。",
-            "de": "Prüfen Sie unter Einstellungen › Kilo Code das Programm und schalten Sie die Modelle ein, die Jev nutzen darf."
+            "de": "Prüfe unter Einstellungen › Kilo Code das Programm und schalte die Modelle ein, die Jev nutzen darf."
           },
           "image": {
             "name": "settings",
@@ -855,7 +1325,7 @@
             "fr": "Écrivez la demande dans un chat. Le panneau Progression montre quand Jev choisit Kilo Code.",
             "ru": "Напишите запрос в чате. Панель «Ход работы» показывает, когда Jev выбирает Kilo Code.",
             "ja": "チャットで依頼を書いてください。Jev が Kilo Code を選ぶと、進行状況パネルに表示されます。",
-            "de": "Schreiben Sie die Anfrage in einen Chat. Das Fortschritt-Panel zeigt, wann Jev Kilo Code wählt."
+            "de": "Schreib die Anfrage in einen Chat. Das Fortschritt-Panel zeigt, wann Jev Kilo Code wählt."
           },
           "image": {
             "name": "chat",
@@ -872,6 +1342,127 @@
               "de"
             ],
             "v": "46645bfd9b"
+          }
+        }
+      ]
+    },
+    "kimi-code": {
+      "version": "1.0.0",
+      "about": {
+        "en": "Kimi Code is Moonshot AI's coding agent for the terminal. With this mod, Jev can send requests to it: the app talks to it through the Agent Client Protocol (ACP), picks the model, gives it your MCP servers and answers each permission it asks for.",
+        "pt-BR": "O Kimi Code é o agente de programação da Moonshot AI para o terminal. Com este mod, o Jev pode mandar pedidos para ele: o app conversa com ele pelo Agent Client Protocol (ACP), escolhe o modelo, entrega os seus servidores MCP e responde a cada permissão que ele pede.",
+        "es": "Kimi Code es el agente de programación de Moonshot AI para la terminal. Con este mod, Jev puede enviarle solicitudes: la app habla con él mediante el Agent Client Protocol (ACP), elige el modelo, le da tus servidores MCP y responde a cada permiso que pide.",
+        "zh-CN": "Kimi Code 是月之暗面（Moonshot AI）的终端编程代理。有了这个模组，Jev 可以把请求发给它：应用通过 Agent Client Protocol（ACP）与它通信，选择模型，向它提供你的 MCP 服务器，并回应它请求的每一项权限。",
+        "hi": "Kimi Code टर्मिनल के लिए Moonshot AI का कोडिंग एजेंट है। इस मॉड से Jev उसे अनुरोध भेज सकता है: ऐप Agent Client Protocol (ACP) के ज़रिए उससे बात करता है, मॉडल चुनता है, उसे आपके MCP सर्वर देता है और उसकी माँगी हर अनुमति का जवाब देता है।",
+        "ar": "Kimi Code وكيل البرمجة من Moonshot AI للطرفية. بهذه الإضافة يستطيع Jev إرسال الطلبات إليه: يتواصل التطبيق معه عبر Agent Client Protocol (ACP)، ويختار النموذج، ويمنحه خوادم MCP لديك، ويردّ على كل إذن يطلبه.",
+        "fr": "Kimi Code est l’agent de programmation de Moonshot AI pour le terminal. Avec ce mod, Jev peut lui envoyer des demandes : l’app lui parle via l’Agent Client Protocol (ACP), choisit le modèle, lui donne vos serveurs MCP et répond à chaque autorisation qu’il demande.",
+        "ru": "Kimi Code — агент для программирования в терминале от Moonshot AI. С этим модом Jev может отправлять ему запросы: приложение общается с ним по Agent Client Protocol (ACP), выбирает модель, передаёт ему ваши серверы MCP и отвечает на каждый его запрос разрешения.",
+        "ja": "Kimi Code は Moonshot AI のターミナル用コーディングエージェントです。この Mod があると、Jev は依頼を送れます。アプリは Agent Client Protocol（ACP）で通信し、モデルを選び、MCP サーバーを渡し、求められた許可に一つずつ応答します。",
+        "de": "Kimi Code ist der Coding-Agent von Moonshot AI für das Terminal. Mit diesem Mod kann Jev Anfragen an ihn schicken: Die App spricht über das Agent Client Protocol (ACP) mit ihm, wählt das Modell, gibt ihm deine MCP-Server und beantwortet jede Berechtigung, die er anfragt."
+      },
+      "requirements": {
+        "en": "Kimi Code CLI installed on this computer and signed in with a Kimi Code membership or a Kimi platform API key.",
+        "pt-BR": "O Kimi Code CLI instalado neste computador e com acesso por uma assinatura do Kimi Code ou uma chave de API da plataforma Kimi.",
+        "es": "Kimi Code CLI instalado en este equipo y con acceso mediante una membresía de Kimi Code o una clave de API de la plataforma Kimi.",
+        "zh-CN": "这台电脑上已安装 Kimi Code CLI，并已通过 Kimi Code 会员或 Kimi 开放平台 API 密钥登录。",
+        "hi": "इस कंप्यूटर पर Kimi Code CLI इंस्टॉल हो, और Kimi Code सदस्यता या Kimi प्लेटफ़ॉर्म की API कुंजी से साइन इन हो।",
+        "ar": "أن يكون Kimi Code CLI مثبّتًا على هذا الجهاز ومسجَّل الدخول باشتراك Kimi Code أو بمفتاح API من منصة Kimi.",
+        "fr": "Kimi Code CLI installé sur cet ordinateur et connecté avec un abonnement Kimi Code ou une clé d’API de la plateforme Kimi.",
+        "ru": "Kimi Code CLI, установленный на этом компьютере, со входом по подписке Kimi Code или по API-ключу платформы Kimi.",
+        "ja": "このコンピューターに Kimi Code CLI がインストールされ、Kimi Code のメンバーシップまたは Kimi プラットフォームの API キーでサインインしていること。",
+        "de": "Kimi Code CLI auf diesem Computer installiert und angemeldet mit einer Kimi-Code-Mitgliedschaft oder einem API-Schlüssel der Kimi-Plattform."
+      },
+      "enable": {
+        "name": "enable",
+        "locales": [
+          "en",
+          "pt-BR",
+          "es",
+          "zh-CN",
+          "hi",
+          "ar",
+          "fr",
+          "ru",
+          "ja",
+          "de"
+        ],
+        "v": "47abfec284"
+      },
+      "setup": [
+        {
+          "text": {
+            "en": "Install Kimi Code CLI (npm install -g @moonshot-ai/kimi-code) and sign in with kimi login.",
+            "pt-BR": "Instale o Kimi Code CLI (npm install -g @moonshot-ai/kimi-code) e entre com kimi login.",
+            "es": "Instala Kimi Code CLI (npm install -g @moonshot-ai/kimi-code) e inicia sesión con kimi login.",
+            "zh-CN": "安装 Kimi Code CLI（npm install -g @moonshot-ai/kimi-code），然后用 kimi login 登录。",
+            "hi": "Kimi Code CLI इंस्टॉल करें (npm install -g @moonshot-ai/kimi-code) और kimi login से साइन इन करें।",
+            "ar": "ثبّت Kimi Code CLI (npm install -g @moonshot-ai/kimi-code) وسجّل الدخول بـ kimi login.",
+            "fr": "Installez Kimi Code CLI (npm install -g @moonshot-ai/kimi-code) et connectez-vous avec kimi login.",
+            "ru": "Установите Kimi Code CLI (npm install -g @moonshot-ai/kimi-code) и войдите командой kimi login.",
+            "ja": "Kimi Code CLI をインストールし（npm install -g @moonshot-ai/kimi-code）、kimi login でサインインします。",
+            "de": "Installiere Kimi Code CLI (npm install -g @moonshot-ai/kimi-code) und melde dich mit kimi login an."
+          }
+        },
+        {
+          "text": {
+            "en": "In Settings › Kimi Code, click Load from the agent and turn on the models Jev may use. The default model keeps the agent's own choice.",
+            "pt-BR": "Em Configuração › Kimi Code, clique em Carregar do agente e ligue os modelos que o Jev pode usar. O modelo default mantém a escolha do próprio agente.",
+            "es": "En Configuración › Kimi Code, haz clic en Cargar desde el agente y activa los modelos que Jev puede usar. El modelo default mantiene la elección del propio agente.",
+            "zh-CN": "在“设置 › Kimi Code”中点击“从代理加载”，并开启 Jev 可以使用的模型。default 模型沿用代理自己的选择。",
+            "hi": "सेटिंग्स › Kimi Code में एजेंट से लोड करें पर क्लिक करें और वे मॉडल चालू करें जिन्हें Jev इस्तेमाल कर सकता है। default मॉडल एजेंट की अपनी पसंद रखता है।",
+            "ar": "في الإعدادات › Kimi Code، انقر التحميل من الوكيل وفعّل النماذج التي يُسمح لـ Jev باستخدامها. النموذج default يُبقي اختيار الوكيل نفسه.",
+            "fr": "Dans Configuration › Kimi Code, cliquez sur Charger depuis l’agent et activez les modèles que Jev peut utiliser. Le modèle default garde le choix de l’agent.",
+            "ru": "В Настройки › Kimi Code нажмите «Загрузить из агента» и включите модели, которые может использовать Jev. Модель default оставляет выбор самого агента.",
+            "ja": "設定 › Kimi Code で「エージェントから読み込む」をクリックし、Jev が使ってよいモデルをオンにします。default モデルはエージェント自身の選択を使います。",
+            "de": "Klicke unter Einstellungen › Kimi Code auf Vom Agenten laden und schalte die Modelle ein, die Jev nutzen darf. Das Modell default behält die Wahl des Agenten."
+          },
+          "image": {
+            "name": "settings",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "e9c6d6f0b9"
+          }
+        }
+      ],
+      "use": [
+        {
+          "text": {
+            "en": "Write the request in a chat. In Planning mode, Kimi Code enters its plan mode and doesn't change files.",
+            "pt-BR": "Escreva o pedido num chat. No modo Planejamento, o Kimi Code entra no modo de plano dele e não muda arquivos.",
+            "es": "Escribe la solicitud en un chat. En el modo Planificación, Kimi Code entra en su modo de plan y no cambia archivos.",
+            "zh-CN": "在对话中写下请求。在规划模式下，Kimi Code 会进入它的计划模式，不修改文件。",
+            "hi": "चैट में अनुरोध लिखें। योजना मोड में Kimi Code अपने प्लान मोड में चला जाता है और फ़ाइलें नहीं बदलता।",
+            "ar": "اكتب الطلب في محادثة. في وضع التخطيط، يدخل Kimi Code وضع الخطة الخاص به ولا يغيّر الملفات.",
+            "fr": "Écrivez la demande dans un chat. En mode Planification, Kimi Code passe dans son mode plan et ne modifie aucun fichier.",
+            "ru": "Напишите запрос в чате. В режиме «Планирование» Kimi Code переходит в свой режим плана и не меняет файлы.",
+            "ja": "チャットで依頼を書いてください。計画モードでは、Kimi Code はプランモードに入り、ファイルを変更しません。",
+            "de": "Schreib die Anfrage in einen Chat. Im Modus Planung wechselt Kimi Code in seinen Planmodus und ändert keine Dateien."
+          },
+          "image": {
+            "name": "chat",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "0a1ef2e478"
           }
         }
       ]
@@ -919,7 +1510,7 @@
             "fr": "Activé par défaut. Pour le désactiver, ouvrez votre page Profil et changez-le sous Votre niveau.",
             "ru": "Включено по умолчанию. Чтобы выключить, откройте страницу «Профиль» и измените это в разделе «Ваш уровень».",
             "ja": "最初からオンです。オフにするには、プロフィールページを開き、「あなたのレベル」で変更します。",
-            "de": "Standardmäßig eingeschaltet. Zum Ausschalten öffnen Sie Ihre Profilseite und ändern es unter Ihr Level."
+            "de": "Standardmäßig eingeschaltet. Zum Ausschalten öffne deine Profilseite und ändere es unter Dein Level."
           },
           "image": {
             "name": "profile",
@@ -994,7 +1585,7 @@
             "fr": "Dans Configuration › LiteLLM, saisissez l’adresse du proxy et la clé, s’il en faut une, puis vérifiez la connexion. Activez ensuite les modèles que Jev peut utiliser.",
             "ru": "В Настройки › LiteLLM укажите адрес прокси и ключ, если он нужен, и проверьте подключение. Затем включите модели, которые может использовать Jev.",
             "ja": "設定 › LiteLLM でプロキシのアドレスと、必要ならキーを入力し、接続を確認します。その後、Jev が使ってよいモデルをオンにします。",
-            "de": "Geben Sie unter Einstellungen › LiteLLM die Adresse des Proxys und, falls nötig, den Schlüssel ein und prüfen Sie die Verbindung. Schalten Sie dann die Modelle ein, die Jev nutzen darf."
+            "de": "Gib unter Einstellungen › LiteLLM die Adresse des Proxys und, falls nötig, den Schlüssel ein und prüfe die Verbindung. Schalte dann die Modelle ein, die Jev nutzen darf."
           },
           "image": {
             "name": "settings",
@@ -1026,7 +1617,7 @@
             "fr": "Posez votre question dans un chat. Quand Jev choisit un modèle du proxy, le panneau Progression montre la route et la réponse indique le modèle.",
             "ru": "Спросите в чате. Когда Jev выбирает модель прокси, панель «Ход работы» показывает маршрут, а в ответе указана модель.",
             "ja": "チャットで質問してください。Jev がプロキシのモデルを選ぶと、進行状況パネルにルートが表示され、回答にモデル名が示されます。",
-            "de": "Fragen Sie in einem Chat. Wenn Jev ein Modell des Proxys wählt, zeigt das Fortschritt-Panel die Route und die Antwort nennt das Modell."
+            "de": "Frag in einem Chat. Wenn Jev ein Modell des Proxys wählt, zeigt das Fortschritt-Panel die Route und die Antwort nennt das Modell."
           },
           "image": {
             "name": "chat",
@@ -1090,7 +1681,7 @@
             "fr": "Cliquez sur Code dans l’en-tête du chat ; il s’ouvre aussi tout seul, sur Fichiers, au premier changement. Choisissez un fichier pour voir ce qui a changé, ou suivez l’agent de fichier en fichier.",
             "ru": "Нажмите «Код» в заголовке чата; при первом изменении панель открывается и сама, на вкладке «Файлы». Выберите файл, чтобы увидеть изменения, или следите за агентом от файла к файлу.",
             "ja": "チャットのヘッダーで「コード」をクリックします。最初の変更で「ファイル」が自動的に開くこともあります。ファイルを選ぶと変更内容がわかり、エージェントを追ってファイルからファイルへ移ることもできます。",
-            "de": "Klicken Sie im Chat-Kopf auf Code; das Panel öffnet sich bei der ersten Änderung auch von selbst, im Tab Dateien. Wählen Sie eine Datei, um zu sehen, was sich geändert hat, oder folgen Sie dem Agenten von Datei zu Datei."
+            "de": "Klicke im Chat-Kopf auf Code; das Panel öffnet sich bei der ersten Änderung auch von selbst, im Tab Dateien. Wähle eine Datei, um zu sehen, was sich geändert hat, oder folge dem Agenten von Datei zu Datei."
           },
           "image": {
             "name": "live",
@@ -1153,7 +1744,7 @@
         "fr": "LM Studio fait tourner des modèles ouverts sur votre propre ordinateur avec une app de bureau. Ce mod ajoute un agent LM Studio qui parle à son serveur local : sans clé, et les demandes restent sur la machine.",
         "ru": "LM Studio запускает открытые модели на вашем компьютере через настольное приложение. Этот мод добавляет агента LM Studio, который общается с его локальным сервером: без ключа, и запросы остаются на компьютере.",
         "ja": "LM Studio は、デスクトップアプリでオープンなモデルをあなたのコンピューター上で動かします。この Mod は、そのローカルサーバーと話す LM Studio エージェントを追加します。キーは不要で、依頼はマシンの中にとどまります。",
-        "de": "LM Studio führt offene Modelle mit einer Desktop-App auf Ihrem eigenen Computer aus. Dieser Mod fügt einen LM-Studio-Agenten hinzu, der mit dessen lokalem Server spricht: ohne Schlüssel, und die Anfragen bleiben auf dem Rechner."
+        "de": "LM Studio führt offene Modelle mit einer Desktop-App auf deinem eigenen Computer aus. Dieser Mod fügt einen LM-Studio-Agenten hinzu, der mit dessen lokalem Server spricht: ohne Schlüssel, und die Anfragen bleiben auf dem Rechner."
       },
       "requirements": {
         "en": "LM Studio installed, with a model loaded and the local server started (port 1234).",
@@ -1195,7 +1786,7 @@
             "fr": "Dans LM Studio, chargez un modèle et démarrez le serveur local.",
             "ru": "В LM Studio загрузите модель и запустите локальный сервер.",
             "ja": "LM Studio でモデルを読み込み、ローカルサーバーを起動します。",
-            "de": "Laden Sie in LM Studio ein Modell und starten Sie den lokalen Server."
+            "de": "Lade in LM Studio ein Modell und starte den lokalen Server."
           }
         },
         {
@@ -1209,7 +1800,7 @@
             "fr": "Dans Configuration › LM Studio, chargez les modèles et activez ceux que Jev peut utiliser.",
             "ru": "В Настройки › LM Studio загрузите модели и включите те, которые может использовать Jev.",
             "ja": "設定 › LM Studio でモデルを読み込み、Jev が使ってよいものをオンにします。",
-            "de": "Laden Sie unter Einstellungen › LM Studio die Modelle und schalten Sie die ein, die Jev nutzen darf."
+            "de": "Lade unter Einstellungen › LM Studio die Modelle und schalte die ein, die Jev nutzen darf."
           },
           "image": {
             "name": "settings",
@@ -1241,7 +1832,7 @@
             "fr": "Posez votre question dans un chat. Quand Jev choisit le modèle de LM Studio, la réponse indique lequel.",
             "ru": "Спросите в чате. Когда Jev выбирает модель LM Studio, в ответе указано, какую.",
             "ja": "チャットで質問してください。Jev が LM Studio のモデルを選ぶと、回答にどのモデルかが示されます。",
-            "de": "Fragen Sie in einem Chat. Wenn Jev das Modell von LM Studio wählt, nennt die Antwort es."
+            "de": "Frag in einem Chat. Wenn Jev das Modell von LM Studio wählt, nennt die Antwort es."
           },
           "image": {
             "name": "chat",
@@ -1258,6 +1849,113 @@
               "de"
             ],
             "v": "46ad472251"
+          }
+        }
+      ]
+    },
+    "manus": {
+      "version": "1.0.0",
+      "about": {
+        "en": "Manus is a general AI agent that works on its own computer in the cloud: it browses, researches and produces documents. With this mod, Jev can hand it a task: the app follows the task until Manus answers, and the next message in the chat continues the same task. Manus doesn't edit the project on your computer.",
+        "pt-BR": "A Manus é um agente de IA de uso geral que trabalha num computador próprio na nuvem: navega, pesquisa e produz documentos. Com este mod, o Jev pode passar uma tarefa a ela: o app acompanha a tarefa até a Manus responder, e a mensagem seguinte do chat continua a mesma tarefa. A Manus não edita o projeto no seu computador.",
+        "es": "Manus es un agente de IA de uso general que trabaja en su propio equipo en la nube: navega, investiga y produce documentos. Con este mod, Jev puede pasarle una tarea: la app sigue la tarea hasta que Manus responde, y el siguiente mensaje del chat continúa la misma tarea. Manus no edita el proyecto en tu equipo.",
+        "zh-CN": "Manus 是一个通用 AI 代理，在云端自己的电脑上工作：浏览网页、做调研并生成文档。有了这个模组，Jev 可以把任务交给它：应用会跟进任务直到 Manus 作答，对话中的下一条消息会继续同一个任务。Manus 不会编辑你电脑上的项目。",
+        "hi": "Manus एक सामान्य उपयोग का AI एजेंट है जो क्लाउड में अपने कंप्यूटर पर काम करता है: वेब देखता है, शोध करता है और दस्तावेज़ बनाता है। इस मॉड से Jev उसे कोई काम सौंप सकता है: ऐप उस काम पर तब तक नज़र रखता है जब तक Manus जवाब न दे, और चैट का अगला संदेश उसी काम को आगे बढ़ाता है। Manus आपके कंप्यूटर का प्रोजेक्ट नहीं बदलता।",
+        "ar": "Manus وكيل ذكاء اصطناعي عام يعمل على جهازه الخاص في السحابة: يتصفح ويبحث وينتج المستندات. بهذه الإضافة يستطيع Jev تسليمه مهمة: يتابع التطبيق المهمة حتى يجيب Manus، والرسالة التالية في المحادثة تواصل المهمة نفسها. لا يعدّل Manus المشروع على جهازك.",
+        "fr": "Manus est un agent d’IA généraliste qui travaille sur son propre ordinateur dans le cloud : il navigue, fait des recherches et produit des documents. Avec ce mod, Jev peut lui confier une tâche : l’app suit la tâche jusqu’à la réponse de Manus, et le message suivant du chat poursuit la même tâche. Manus ne modifie pas le projet sur votre ordinateur.",
+        "ru": "Manus — универсальный ИИ-агент, который работает на собственном компьютере в облаке: просматривает сайты, исследует и создаёт документы. С этим модом Jev может передать ему задачу: приложение следит за задачей, пока Manus не ответит, а следующее сообщение в чате продолжает ту же задачу. Manus не изменяет проект на вашем компьютере.",
+        "ja": "Manus は、クラウド上の自分のコンピューターで作業する汎用 AI エージェントです。ウェブを閲覧し、調査し、ドキュメントを作ります。この Mod があると、Jev はタスクを Manus に任せられます。アプリは Manus が回答するまでタスクを追い、チャットの次のメッセージは同じタスクの続きになります。Manus はあなたのコンピューター上のプロジェクトを編集しません。",
+        "de": "Manus ist ein KI-Agent für alles, der auf seinem eigenen Computer in der Cloud arbeitet: Er surft, recherchiert und erstellt Dokumente. Mit diesem Mod kann Jev ihm eine Aufgabe geben: Die App verfolgt die Aufgabe, bis Manus antwortet, und die nächste Nachricht im Chat setzt dieselbe Aufgabe fort. Manus bearbeitet das Projekt auf deinem Computer nicht."
+      },
+      "requirements": {
+        "en": "A Manus account with credits and an API key.",
+        "pt-BR": "Uma conta da Manus com créditos e uma chave de API.",
+        "es": "Una cuenta de Manus con créditos y una clave de API.",
+        "zh-CN": "一个有额度的 Manus 账号和一个 API 密钥。",
+        "hi": "क्रेडिट वाला Manus खाता और एक API कुंजी।",
+        "ar": "حساب Manus فيه رصيد ومفتاح API.",
+        "fr": "Un compte Manus avec des crédits et une clé d’API.",
+        "ru": "Учётная запись Manus с кредитами и API-ключ.",
+        "ja": "クレジットのある Manus アカウントと API キー。",
+        "de": "Ein Manus-Konto mit Guthaben und ein API-Schlüssel."
+      },
+      "enable": {
+        "name": "enable",
+        "locales": [
+          "en",
+          "pt-BR",
+          "es",
+          "zh-CN",
+          "hi",
+          "ar",
+          "fr",
+          "ru",
+          "ja",
+          "de"
+        ],
+        "v": "b4241c617a"
+      },
+      "setup": [
+        {
+          "text": {
+            "en": "In Settings › Manus, paste the API key (it stays on this computer) and turn the agent on. The models are Manus's agent profiles: standard, lite and max.",
+            "pt-BR": "Em Configuração › Manus, cole a chave de API (ela fica neste computador) e ligue o agente. Os modelos são os perfis de agente da Manus: standard, lite e max.",
+            "es": "En Configuración › Manus, pega la clave de API (se queda en este equipo) y activa el agente. Los modelos son los perfiles de agente de Manus: standard, lite y max.",
+            "zh-CN": "在“设置 › Manus”中粘贴 API 密钥（它保存在这台电脑上）并启用代理。模型是 Manus 的代理档位：standard、lite 和 max。",
+            "hi": "सेटिंग्स › Manus में API कुंजी चिपकाएँ (यह इसी कंप्यूटर पर रहती है) और एजेंट चालू करें। मॉडल Manus के एजेंट प्रोफ़ाइल हैं: standard, lite और max।",
+            "ar": "في الإعدادات › Manus، الصق مفتاح API (يبقى على هذا الجهاز) وشغّل الوكيل. النماذج هي ملفات الوكيل لدى Manus: standard وlite وmax.",
+            "fr": "Dans Configuration › Manus, collez la clé d’API (elle reste sur cet ordinateur) et activez l’agent. Les modèles sont les profils d’agent de Manus : standard, lite et max.",
+            "ru": "В Настройки › Manus вставьте API-ключ (он остаётся на этом компьютере) и включите агента. Модели — это профили агента Manus: standard, lite и max.",
+            "ja": "設定 › Manus で API キーを貼り付け（キーはこのコンピューターに保存されます）、エージェントをオンにします。モデルは Manus のエージェントプロファイル（standard、lite、max）です。",
+            "de": "Füge unter Einstellungen › Manus den API-Schlüssel ein (er bleibt auf diesem Computer) und schalte den Agenten ein. Die Modelle sind die Agentenprofile von Manus: standard, lite und max."
+          },
+          "image": {
+            "name": "settings",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "8e85519b60"
+          }
+        }
+      ],
+      "use": [
+        {
+          "text": {
+            "en": "Ask in a chat for research or a document. The Progress panel shows the steps of the task, and the answer brings links to the files Manus made.",
+            "pt-BR": "Peça num chat uma pesquisa ou um documento. O painel Andamento mostra os passos da tarefa, e a resposta traz os links dos arquivos que a Manus fez.",
+            "es": "Pide en un chat una investigación o un documento. El panel Progreso muestra los pasos de la tarea, y la respuesta trae los enlaces de los archivos que hizo Manus.",
+            "zh-CN": "在对话中请求调研或一份文档。进度面板会显示任务的步骤，回答会附上 Manus 生成的文件链接。",
+            "hi": "चैट में कोई शोध या दस्तावेज़ माँगें। प्रगति पैनल काम के चरण दिखाता है, और जवाब में Manus की बनाई फ़ाइलों के लिंक होते हैं।",
+            "ar": "اطلب في محادثة بحثًا أو مستندًا. تعرض لوحة التقدّم خطوات المهمة، ويأتي الرد بروابط الملفات التي أنشأها Manus.",
+            "fr": "Demandez dans un chat une recherche ou un document. Le panneau Progression montre les étapes de la tâche, et la réponse donne les liens des fichiers créés par Manus.",
+            "ru": "Попросите в чате исследование или документ. Панель «Ход работы» показывает шаги задачи, а в ответе будут ссылки на файлы, которые сделал Manus.",
+            "ja": "チャットで調査やドキュメントを依頼してください。進行状況パネルにタスクのステップが表示され、回答には Manus が作ったファイルへのリンクが付きます。",
+            "de": "Bitte in einem Chat um eine Recherche oder ein Dokument. Das Fortschritt-Panel zeigt die Schritte der Aufgabe, und die Antwort bringt Links zu den Dateien, die Manus erstellt hat."
+          },
+          "image": {
+            "name": "chat",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "5b703600f4"
           }
         }
       ]
@@ -1305,7 +2003,7 @@
             "fr": "Ouvrez Configuration › MCP et ajoutez un serveur avec le formulaire, ou collez une configuration (le JSON mcpServers, une ligne claude mcp add ou une commande npx). Dans un chat, /mcp suivi d’une description prépare un brouillon pour vous.",
             "ru": "Откройте Настройки › MCP и добавьте сервер через форму или вставьте конфигурацию (JSON mcpServers, строку claude mcp add или команду npx). В чате /mcp с описанием подготовит черновик за вас.",
             "ja": "設定 › MCP を開き、フォームでサーバーを追加するか、設定（mcpServers の JSON、claude mcp add の行、npx コマンド）を貼り付けます。チャットで /mcp に続けて説明を書くと、下書きを作ってくれます。",
-            "de": "Öffnen Sie Einstellungen › MCP und fügen Sie einen Server über das Formular hinzu, oder fügen Sie eine Konfiguration ein (mcpServers-JSON, eine claude-mcp-add-Zeile oder einen npx-Befehl). In einem Chat erstellt /mcp mit einer Beschreibung einen Entwurf für Sie."
+            "de": "Öffne Einstellungen › MCP und füge einen Server über das Formular hinzu, oder füge eine Konfiguration ein (mcpServers-JSON, eine claude-mcp-add-Zeile oder einen npx-Befehl). In einem Chat erstellt /mcp mit einer Beschreibung einen Entwurf für dich."
           },
           "image": {
             "name": "settings",
@@ -1335,7 +2033,7 @@
             "fr": "Dans l’onglet de chaque agent qui doit utiliser les serveurs, activez Approuver les serveurs MCP. Les changements prennent effet quand vous cliquez sur Enregistrer la configuration.",
             "ru": "На вкладке каждого агента, который должен пользоваться серверами, включите «Одобрять серверы MCP». Изменения вступают в силу после нажатия «Сохранить настройки».",
             "ja": "サーバーを使うべき各エージェントのタブで「MCP サーバーを承認」をオンにします。変更は「設定を保存」をクリックしたときに反映されます。",
-            "de": "Schalten Sie im Tab jedes Agenten, der die Server nutzen soll, MCP-Server freigeben ein. Die Änderungen gelten, wenn Sie auf Einstellungen speichern klicken."
+            "de": "Schalte im Tab jedes Agenten, der die Server nutzen soll, MCP-Server freigeben ein. Die Änderungen gelten, wenn du auf Einstellungen speichern klickst."
           },
           "image": {
             "name": "agent",
@@ -1356,6 +2054,127 @@
         }
       ]
     },
+    "meta-ai": {
+      "version": "1.0.0",
+      "about": {
+        "en": "Muse Code is Meta's coding agent for the terminal, built on the Muse Spark and Muse Wonder models. With this mod, Jev can send requests to it like to any other agent: it edits the project in Development mode, and in Planning mode it runs without writing files or running commands.",
+        "pt-BR": "O Muse Code é o agente de programação da Meta para o terminal, feito sobre os modelos Muse Spark e Muse Wonder. Com este mod, o Jev pode mandar pedidos para ele como para qualquer outro agente: no modo Desenvolvimento ele edita o projeto, e no modo Planejamento roda sem escrever arquivos nem rodar comandos.",
+        "es": "Muse Code es el agente de programación de Meta para la terminal, basado en los modelos Muse Spark y Muse Wonder. Con este mod, Jev puede enviarle solicitudes como a cualquier otro agente: en el modo Desarrollo edita el proyecto, y en el modo Planificación funciona sin escribir archivos ni ejecutar comandos.",
+        "zh-CN": "Muse Code 是 Meta 的终端编程代理，基于 Muse Spark 和 Muse Wonder 模型。有了这个模组，Jev 可以像对待其他代理一样把请求发给它：在开发模式下它会编辑项目，在规划模式下它运行时不写文件也不执行命令。",
+        "hi": "Muse Code टर्मिनल के लिए Meta का कोडिंग एजेंट है, जो Muse Spark और Muse Wonder मॉडलों पर बना है। इस मॉड से Jev उसे किसी भी दूसरे एजेंट की तरह अनुरोध भेज सकता है: डेवलपमेंट मोड में यह प्रोजेक्ट बदलता है, और योजना मोड में फ़ाइलें लिखे या कमांड चलाए बिना चलता है।",
+        "ar": "Muse Code وكيل البرمجة من Meta للطرفية، مبني على نموذجي Muse Spark وMuse Wonder. بهذه الإضافة يستطيع Jev إرسال الطلبات إليه كأي وكيل آخر: يعدّل المشروع في وضع التطوير، ويعمل في وضع التخطيط دون كتابة ملفات أو تشغيل أوامر.",
+        "fr": "Muse Code est l’agent de programmation de Meta pour le terminal, basé sur les modèles Muse Spark et Muse Wonder. Avec ce mod, Jev peut lui envoyer des demandes comme à n’importe quel autre agent : en mode Développement il modifie le projet, et en mode Planification il travaille sans écrire de fichiers ni lancer de commandes.",
+        "ru": "Muse Code — агент для программирования в терминале от Meta на моделях Muse Spark и Muse Wonder. С этим модом Jev может отправлять ему запросы, как любому другому агенту: в режиме «Разработка» он изменяет проект, а в режиме «Планирование» работает, не записывая файлы и не запуская команды.",
+        "ja": "Muse Code は、Muse Spark と Muse Wonder モデルを使う Meta のターミナル用コーディングエージェントです。この Mod があると、Jev はほかのエージェントと同じように依頼を送れます。開発モードではプロジェクトを編集し、計画モードではファイルを書かずコマンドも実行しません。",
+        "de": "Muse Code ist der Coding-Agent von Meta für das Terminal, gebaut auf den Modellen Muse Spark und Muse Wonder. Mit diesem Mod kann Jev Anfragen an ihn schicken wie an jeden anderen Agenten: Im Modus Entwicklung bearbeitet er das Projekt, im Modus Planung arbeitet er, ohne Dateien zu schreiben oder Befehle auszuführen."
+      },
+      "requirements": {
+        "en": "Muse Code installed on this computer and signed in with a Meta account (muse login) or a Meta Model API key.",
+        "pt-BR": "O Muse Code instalado neste computador e com acesso por uma conta Meta (muse login) ou uma chave da Meta Model API.",
+        "es": "Muse Code instalado en este equipo y con acceso mediante una cuenta de Meta (muse login) o una clave de Meta Model API.",
+        "zh-CN": "这台电脑上已安装 Muse Code，并已用 Meta 账号（muse login）或 Meta Model API 密钥登录。",
+        "hi": "इस कंप्यूटर पर Muse Code इंस्टॉल हो, और Meta खाते (muse login) या Meta Model API कुंजी से साइन इन हो।",
+        "ar": "أن يكون Muse Code مثبّتًا على هذا الجهاز ومسجَّل الدخول بحساب Meta (muse login) أو بمفتاح Meta Model API.",
+        "fr": "Muse Code installé sur cet ordinateur et connecté avec un compte Meta (muse login) ou une clé de Meta Model API.",
+        "ru": "Muse Code, установленный на этом компьютере, со входом через учётную запись Meta (muse login) или по ключу Meta Model API.",
+        "ja": "このコンピューターに Muse Code がインストールされ、Meta アカウント（muse login）または Meta Model API キーでサインインしていること。",
+        "de": "Muse Code auf diesem Computer installiert und angemeldet mit einem Meta-Konto (muse login) oder einem Schlüssel für die Meta Model API."
+      },
+      "enable": {
+        "name": "enable",
+        "locales": [
+          "en",
+          "pt-BR",
+          "es",
+          "zh-CN",
+          "hi",
+          "ar",
+          "fr",
+          "ru",
+          "ja",
+          "de"
+        ],
+        "v": "4df6107734"
+      },
+      "setup": [
+        {
+          "text": {
+            "en": "Install Muse Code (curl -fsSL https://dev.meta.ai/install.sh | sh; on Windows, irm https://dev.meta.ai/install.ps1 | iex) and sign in with muse login.",
+            "pt-BR": "Instale o Muse Code (curl -fsSL https://dev.meta.ai/install.sh | sh; no Windows, irm https://dev.meta.ai/install.ps1 | iex) e entre com muse login.",
+            "es": "Instala Muse Code (curl -fsSL https://dev.meta.ai/install.sh | sh; en Windows, irm https://dev.meta.ai/install.ps1 | iex) e inicia sesión con muse login.",
+            "zh-CN": "安装 Muse Code（curl -fsSL https://dev.meta.ai/install.sh | sh；Windows 上用 irm https://dev.meta.ai/install.ps1 | iex），然后用 muse login 登录。",
+            "hi": "Muse Code इंस्टॉल करें (curl -fsSL https://dev.meta.ai/install.sh | sh; Windows पर irm https://dev.meta.ai/install.ps1 | iex) और muse login से साइन इन करें।",
+            "ar": "ثبّت Muse Code (curl -fsSL https://dev.meta.ai/install.sh | sh؛ وفي Windows: irm https://dev.meta.ai/install.ps1 | iex) وسجّل الدخول بـ muse login.",
+            "fr": "Installez Muse Code (curl -fsSL https://dev.meta.ai/install.sh | sh ; sous Windows, irm https://dev.meta.ai/install.ps1 | iex) et connectez-vous avec muse login.",
+            "ru": "Установите Muse Code (curl -fsSL https://dev.meta.ai/install.sh | sh; в Windows — irm https://dev.meta.ai/install.ps1 | iex) и войдите командой muse login.",
+            "ja": "Muse Code をインストールし（curl -fsSL https://dev.meta.ai/install.sh | sh、Windows では irm https://dev.meta.ai/install.ps1 | iex）、muse login でサインインします。",
+            "de": "Installiere Muse Code (curl -fsSL https://dev.meta.ai/install.sh | sh; unter Windows irm https://dev.meta.ai/install.ps1 | iex) und melde dich mit muse login an."
+          }
+        },
+        {
+          "text": {
+            "en": "In Settings › Meta AI, check the program and turn on the models Jev may use.",
+            "pt-BR": "Em Configuração › Meta AI, confira o programa e ligue os modelos que o Jev pode usar.",
+            "es": "En Configuración › Meta AI, comprueba el programa y activa los modelos que Jev puede usar.",
+            "zh-CN": "在“设置 › Meta AI”中确认程序，并开启 Jev 可以使用的模型。",
+            "hi": "सेटिंग्स › Meta AI में प्रोग्राम जाँचें और वे मॉडल चालू करें जिन्हें Jev इस्तेमाल कर सकता है।",
+            "ar": "في الإعدادات › Meta AI، تحقق من البرنامج وفعّل النماذج التي يُسمح لـ Jev باستخدامها.",
+            "fr": "Dans Configuration › Meta AI, vérifiez le programme et activez les modèles que Jev peut utiliser.",
+            "ru": "В Настройки › Meta AI проверьте программу и включите модели, которые может использовать Jev.",
+            "ja": "設定 › Meta AI でプログラムを確認し、Jev が使ってよいモデルをオンにします。",
+            "de": "Prüfe unter Einstellungen › Meta AI das Programm und schalte die Modelle ein, die Jev nutzen darf."
+          },
+          "image": {
+            "name": "settings",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "b3e431a69a"
+          }
+        }
+      ],
+      "use": [
+        {
+          "text": {
+            "en": "Write the request in a chat. The Progress panel shows when Jev picks Muse Code.",
+            "pt-BR": "Escreva o pedido num chat. O painel Andamento mostra quando o Jev escolhe o Muse Code.",
+            "es": "Escribe la solicitud en un chat. El panel Progreso muestra cuándo Jev elige Muse Code.",
+            "zh-CN": "在对话中写下请求。进度面板会显示 Jev 何时选择 Muse Code。",
+            "hi": "चैट में अनुरोध लिखें। प्रगति पैनल दिखाता है कि Jev ने कब Muse Code चुना।",
+            "ar": "اكتب الطلب في محادثة. تعرض لوحة التقدّم متى يختار Jev ‏Muse Code.",
+            "fr": "Écrivez la demande dans un chat. Le panneau Progression montre quand Jev choisit Muse Code.",
+            "ru": "Напишите запрос в чате. Панель «Ход работы» показывает, когда Jev выбирает Muse Code.",
+            "ja": "チャットで依頼を書いてください。Jev が Muse Code を選ぶと、進行状況パネルに表示されます。",
+            "de": "Schreib die Anfrage in einen Chat. Das Fortschritt-Panel zeigt, wann Jev Muse Code wählt."
+          },
+          "image": {
+            "name": "chat",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "d2e849574e"
+          }
+        }
+      ]
+    },
     "ollama": {
       "version": "1.0.0",
       "about": {
@@ -1368,7 +2187,7 @@
         "fr": "Ollama fait tourner des modèles ouverts sur votre propre ordinateur. Ce mod ajoute un agent Ollama qui lui parle par son adresse compatible OpenAI : sans clé, et les demandes ne quittent jamais la machine.",
         "ru": "Ollama запускает открытые модели на вашем компьютере. Этот мод добавляет агента Ollama, который общается с ним по адресу, совместимому с OpenAI: без ключа, и запросы никогда не покидают компьютер.",
         "ja": "Ollama はオープンなモデルをあなたのコンピューター上で動かします。この Mod は、OpenAI 互換のアドレスで Ollama と話す Ollama エージェントを追加します。キーは不要で、依頼がマシンの外に出ることはありません。",
-        "de": "Ollama führt offene Modelle auf Ihrem eigenen Computer aus. Dieser Mod fügt einen Ollama-Agenten hinzu, der über dessen OpenAI-kompatible Adresse mit ihm spricht: ohne Schlüssel, und die Anfragen verlassen den Rechner nie."
+        "de": "Ollama führt offene Modelle auf deinem eigenen Computer aus. Dieser Mod fügt einen Ollama-Agenten hinzu, der über dessen OpenAI-kompatible Adresse mit ihm spricht: ohne Schlüssel, und die Anfragen verlassen den Rechner nie."
       },
       "requirements": {
         "en": "Ollama installed and running on this computer, with at least one model downloaded (for example, ollama pull llama3.2).",
@@ -1410,7 +2229,7 @@
             "fr": "Installez Ollama et téléchargez un modèle avec ollama pull.",
             "ru": "Установите Ollama и скачайте модель командой ollama pull.",
             "ja": "Ollama をインストールし、ollama pull でモデルをダウンロードします。",
-            "de": "Installieren Sie Ollama und laden Sie mit ollama pull ein Modell herunter."
+            "de": "Installiere Ollama und lade mit ollama pull ein Modell herunter."
           }
         },
         {
@@ -1424,7 +2243,7 @@
             "fr": "Dans Configuration › Ollama, chargez les modèles du serveur local et activez ceux que Jev peut utiliser.",
             "ru": "В Настройки › Ollama загрузите модели локального сервера и включите те, которые может использовать Jev.",
             "ja": "設定 › Ollama でローカルサーバーのモデルを読み込み、Jev が使ってよいものをオンにします。",
-            "de": "Laden Sie unter Einstellungen › Ollama die Modelle des lokalen Servers und schalten Sie die ein, die Jev nutzen darf."
+            "de": "Lade unter Einstellungen › Ollama die Modelle des lokalen Servers und schalte die ein, die Jev nutzen darf."
           },
           "image": {
             "name": "settings",
@@ -1456,7 +2275,7 @@
             "fr": "Posez votre question dans un chat. Quand Jev choisit un modèle local, la réponse indique lequel, et rien ne part sur internet.",
             "ru": "Спросите в чате. Когда Jev выбирает локальную модель, в ответе указано, какую, и ничего не уходит в интернет.",
             "ja": "チャットで質問してください。Jev がローカルモデルを選ぶと回答にどのモデルかが示され、インターネットには何も送られません。",
-            "de": "Fragen Sie in einem Chat. Wenn Jev ein lokales Modell wählt, nennt die Antwort es, und nichts geht ins Internet."
+            "de": "Frag in einem Chat. Wenn Jev ein lokales Modell wählt, nennt die Antwort es, und nichts geht ins Internet."
           },
           "image": {
             "name": "chat",
@@ -1473,6 +2292,248 @@
               "de"
             ],
             "v": "53a1cbd573"
+          }
+        }
+      ]
+    },
+    "opencode": {
+      "version": "1.0.0",
+      "about": {
+        "en": "OpenCode is an open-source coding agent for the terminal that works with models from many providers. With this mod, Jev can send requests to it: the app talks to it through the Agent Client Protocol (ACP), picks the model, gives it your MCP servers and answers each permission it asks for.",
+        "pt-BR": "O OpenCode é um agente de programação de código aberto para o terminal que funciona com modelos de muitos provedores. Com este mod, o Jev pode mandar pedidos para ele: o app conversa com ele pelo Agent Client Protocol (ACP), escolhe o modelo, entrega os seus servidores MCP e responde a cada permissão que ele pede.",
+        "es": "OpenCode es un agente de programación de código abierto para la terminal que funciona con modelos de muchos proveedores. Con este mod, Jev puede enviarle solicitudes: la app habla con él mediante el Agent Client Protocol (ACP), elige el modelo, le da tus servidores MCP y responde a cada permiso que pide.",
+        "zh-CN": "OpenCode 是一个开源的终端编程代理，可使用多家提供商的模型。有了这个模组，Jev 可以把请求发给它：应用通过 Agent Client Protocol（ACP）与它通信，选择模型，向它提供你的 MCP 服务器，并回应它请求的每一项权限。",
+        "hi": "OpenCode टर्मिनल के लिए एक ओपन-सोर्स कोडिंग एजेंट है जो कई प्रदाताओं के मॉडलों के साथ काम करता है। इस मॉड से Jev उसे अनुरोध भेज सकता है: ऐप Agent Client Protocol (ACP) के ज़रिए उससे बात करता है, मॉडल चुनता है, उसे आपके MCP सर्वर देता है और उसकी माँगी हर अनुमति का जवाब देता है।",
+        "ar": "OpenCode وكيل برمجة مفتوح المصدر للطرفية يعمل مع نماذج من مزوّدين كثيرين. بهذه الإضافة يستطيع Jev إرسال الطلبات إليه: يتواصل التطبيق معه عبر Agent Client Protocol (ACP)، ويختار النموذج، ويمنحه خوادم MCP لديك، ويردّ على كل إذن يطلبه.",
+        "fr": "OpenCode est un agent de programmation open source pour le terminal qui fonctionne avec les modèles de nombreux fournisseurs. Avec ce mod, Jev peut lui envoyer des demandes : l’app lui parle via l’Agent Client Protocol (ACP), choisit le modèle, lui donne vos serveurs MCP et répond à chaque autorisation qu’il demande.",
+        "ru": "OpenCode — агент для программирования в терминале с открытым исходным кодом, который работает с моделями многих поставщиков. С этим модом Jev может отправлять ему запросы: приложение общается с ним по Agent Client Protocol (ACP), выбирает модель, передаёт ему ваши серверы MCP и отвечает на каждый его запрос разрешения.",
+        "ja": "OpenCode は、多くのプロバイダーのモデルで動くオープンソースのターミナル用コーディングエージェントです。この Mod があると、Jev は依頼を送れます。アプリは Agent Client Protocol（ACP）で通信し、モデルを選び、MCP サーバーを渡し、求められた許可に一つずつ応答します。",
+        "de": "OpenCode ist ein quelloffener Coding-Agent für das Terminal, der mit Modellen vieler Anbieter arbeitet. Mit diesem Mod kann Jev Anfragen an ihn schicken: Die App spricht über das Agent Client Protocol (ACP) mit ihm, wählt das Modell, gibt ihm deine MCP-Server und beantwortet jede Berechtigung, die er anfragt."
+      },
+      "requirements": {
+        "en": "OpenCode installed on this computer, with a model provider set up in it (opencode auth login).",
+        "pt-BR": "O OpenCode instalado neste computador, com um provedor de modelos configurado nele (opencode auth login).",
+        "es": "OpenCode instalado en este equipo, con un proveedor de modelos configurado en él (opencode auth login).",
+        "zh-CN": "这台电脑上已安装 OpenCode，并在其中配置好一个模型提供商（opencode auth login）。",
+        "hi": "इस कंप्यूटर पर OpenCode इंस्टॉल हो, और उसमें कोई मॉडल प्रदाता सेट हो (opencode auth login)।",
+        "ar": "أن يكون OpenCode مثبّتًا على هذا الجهاز، مع مزوّد نماذج مُعدّ فيه (opencode auth login).",
+        "fr": "OpenCode installé sur cet ordinateur, avec un fournisseur de modèles configuré (opencode auth login).",
+        "ru": "OpenCode, установленный на этом компьютере, с настроенным в нём поставщиком моделей (opencode auth login).",
+        "ja": "このコンピューターに OpenCode がインストールされ、モデルプロバイダーが設定されていること（opencode auth login）。",
+        "de": "OpenCode auf diesem Computer installiert, mit einem darin eingerichteten Modellanbieter (opencode auth login)."
+      },
+      "enable": {
+        "name": "enable",
+        "locales": [
+          "en",
+          "pt-BR",
+          "es",
+          "zh-CN",
+          "hi",
+          "ar",
+          "fr",
+          "ru",
+          "ja",
+          "de"
+        ],
+        "v": "3e67e9023a"
+      },
+      "setup": [
+        {
+          "text": {
+            "en": "Install OpenCode (npm install -g opencode-ai) and set up a provider with opencode auth login.",
+            "pt-BR": "Instale o OpenCode (npm install -g opencode-ai) e configure um provedor com opencode auth login.",
+            "es": "Instala OpenCode (npm install -g opencode-ai) y configura un proveedor con opencode auth login.",
+            "zh-CN": "安装 OpenCode（npm install -g opencode-ai），然后用 opencode auth login 配置一个提供商。",
+            "hi": "OpenCode इंस्टॉल करें (npm install -g opencode-ai) और opencode auth login से कोई प्रदाता सेट करें।",
+            "ar": "ثبّت OpenCode (npm install -g opencode-ai) وأعِدّ مزوّدًا بـ opencode auth login.",
+            "fr": "Installez OpenCode (npm install -g opencode-ai) et configurez un fournisseur avec opencode auth login.",
+            "ru": "Установите OpenCode (npm install -g opencode-ai) и настройте поставщика командой opencode auth login.",
+            "ja": "OpenCode をインストールし（npm install -g opencode-ai）、opencode auth login でプロバイダーを設定します。",
+            "de": "Installiere OpenCode (npm install -g opencode-ai) und richte mit opencode auth login einen Anbieter ein."
+          }
+        },
+        {
+          "text": {
+            "en": "In Settings › OpenCode, click Load from the agent and turn on the models Jev may use. The default model keeps the agent's own choice.",
+            "pt-BR": "Em Configuração › OpenCode, clique em Carregar do agente e ligue os modelos que o Jev pode usar. O modelo default mantém a escolha do próprio agente.",
+            "es": "En Configuración › OpenCode, haz clic en Cargar desde el agente y activa los modelos que Jev puede usar. El modelo default mantiene la elección del propio agente.",
+            "zh-CN": "在“设置 › OpenCode”中点击“从代理加载”，并开启 Jev 可以使用的模型。default 模型沿用代理自己的选择。",
+            "hi": "सेटिंग्स › OpenCode में एजेंट से लोड करें पर क्लिक करें और वे मॉडल चालू करें जिन्हें Jev इस्तेमाल कर सकता है। default मॉडल एजेंट की अपनी पसंद रखता है।",
+            "ar": "في الإعدادات › OpenCode، انقر التحميل من الوكيل وفعّل النماذج التي يُسمح لـ Jev باستخدامها. النموذج default يُبقي اختيار الوكيل نفسه.",
+            "fr": "Dans Configuration › OpenCode, cliquez sur Charger depuis l’agent et activez les modèles que Jev peut utiliser. Le modèle default garde le choix de l’agent.",
+            "ru": "В Настройки › OpenCode нажмите «Загрузить из агента» и включите модели, которые может использовать Jev. Модель default оставляет выбор самого агента.",
+            "ja": "設定 › OpenCode で「エージェントから読み込む」をクリックし、Jev が使ってよいモデルをオンにします。default モデルはエージェント自身の選択を使います。",
+            "de": "Klicke unter Einstellungen › OpenCode auf Vom Agenten laden und schalte die Modelle ein, die Jev nutzen darf. Das Modell default behält die Wahl des Agenten."
+          },
+          "image": {
+            "name": "settings",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "f908650736"
+          }
+        }
+      ],
+      "use": [
+        {
+          "text": {
+            "en": "Write the request in a chat. OpenCode asks before each command, and the app refuses the ones your organization blocks.",
+            "pt-BR": "Escreva o pedido num chat. O OpenCode pergunta antes de cada comando, e o app recusa os que a sua organização bloqueia.",
+            "es": "Escribe la solicitud en un chat. OpenCode pregunta antes de cada comando, y la app rechaza los que tu organización bloquea.",
+            "zh-CN": "在对话中写下请求。OpenCode 在执行每条命令前都会询问，应用会拒绝你的组织禁止的命令。",
+            "hi": "चैट में अनुरोध लिखें। OpenCode हर कमांड से पहले पूछता है, और ऐप वे कमांड मना कर देता है जिन्हें आपका संगठन रोकता है।",
+            "ar": "اكتب الطلب في محادثة. يسأل OpenCode قبل كل أمر، ويرفض التطبيق الأوامر التي تحظرها مؤسستك.",
+            "fr": "Écrivez la demande dans un chat. OpenCode demande avant chaque commande, et l’app refuse celles que votre organisation bloque.",
+            "ru": "Напишите запрос в чате. OpenCode спрашивает перед каждой командой, а приложение отклоняет те, что блокирует ваша организация.",
+            "ja": "チャットで依頼を書いてください。OpenCode はコマンドごとに確認し、組織がブロックしているコマンドはアプリが拒否します。",
+            "de": "Schreib die Anfrage in einen Chat. OpenCode fragt vor jedem Befehl, und die App lehnt die ab, die deine Organisation sperrt."
+          },
+          "image": {
+            "name": "chat",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "52deb8c743"
+          }
+        }
+      ]
+    },
+    "openhands": {
+      "version": "1.0.0",
+      "about": {
+        "en": "OpenHands is an open-source agent that writes code, runs commands and browses the web. With this mod, Jev can send requests to it through the Agent Client Protocol (ACP): OpenHands asks before each action, and the app answers. In Development mode it approves, except the commands your organization blocks; in Planning mode it refuses anything that changes the project.",
+        "pt-BR": "O OpenHands é um agente de código aberto que escreve código, roda comandos e navega na web. Com este mod, o Jev pode mandar pedidos para ele pelo Agent Client Protocol (ACP): o OpenHands pergunta antes de cada ação, e o app responde. No modo Desenvolvimento, aprova, menos os comandos que a sua organização bloqueia; no modo Planejamento, recusa tudo o que muda o projeto.",
+        "es": "OpenHands es un agente de código abierto que escribe código, ejecuta comandos y navega por la web. Con este mod, Jev puede enviarle solicitudes mediante el Agent Client Protocol (ACP): OpenHands pregunta antes de cada acción, y la app responde. En el modo Desarrollo aprueba, salvo los comandos que tu organización bloquea; en el modo Planificación rechaza todo lo que cambia el proyecto.",
+        "zh-CN": "OpenHands 是一个开源代理，会编写代码、执行命令并浏览网页。有了这个模组，Jev 可以通过 Agent Client Protocol（ACP）把请求发给它：OpenHands 在每个操作前都会询问，由应用来回应。在开发模式下应用会批准，你的组织禁止的命令除外；在规划模式下会拒绝一切修改项目的操作。",
+        "hi": "OpenHands एक ओपन-सोर्स एजेंट है जो कोड लिखता है, कमांड चलाता है और वेब देखता है। इस मॉड से Jev उसे Agent Client Protocol (ACP) के ज़रिए अनुरोध भेज सकता है: OpenHands हर कार्रवाई से पहले पूछता है, और ऐप जवाब देता है। डेवलपमेंट मोड में यह स्वीकृति देता है, सिवाय उन कमांड के जिन्हें आपका संगठन रोकता है; योजना मोड में प्रोजेक्ट बदलने वाली हर चीज़ मना करता है।",
+        "ar": "OpenHands وكيل مفتوح المصدر يكتب الكود ويشغّل الأوامر ويتصفح الويب. بهذه الإضافة يستطيع Jev إرسال الطلبات إليه عبر Agent Client Protocol (ACP): يسأل OpenHands قبل كل إجراء، ويردّ التطبيق. في وضع التطوير يوافق، عدا الأوامر التي تحظرها مؤسستك؛ وفي وضع التخطيط يرفض كل ما يغيّر المشروع.",
+        "fr": "OpenHands est un agent open source qui écrit du code, lance des commandes et navigue sur le web. Avec ce mod, Jev peut lui envoyer des demandes via l’Agent Client Protocol (ACP) : OpenHands demande avant chaque action, et l’app répond. En mode Développement, elle approuve, sauf les commandes que votre organisation bloque ; en mode Planification, elle refuse tout ce qui modifie le projet.",
+        "ru": "OpenHands — агент с открытым исходным кодом, который пишет код, запускает команды и работает с веб-страницами. С этим модом Jev может отправлять ему запросы по Agent Client Protocol (ACP): OpenHands спрашивает перед каждым действием, а приложение отвечает. В режиме «Разработка» оно одобряет, кроме команд, которые блокирует ваша организация; в режиме «Планирование» отклоняет всё, что меняет проект.",
+        "ja": "OpenHands は、コードを書き、コマンドを実行し、ウェブを閲覧するオープンソースのエージェントです。この Mod があると、Jev は Agent Client Protocol（ACP）で依頼を送れます。OpenHands はアクションごとに確認し、アプリが応答します。開発モードでは、組織がブロックしているコマンドを除いて承認し、計画モードではプロジェクトを変えるものをすべて拒否します。",
+        "de": "OpenHands ist ein quelloffener Agent, der Code schreibt, Befehle ausführt und im Web surft. Mit diesem Mod kann Jev Anfragen über das Agent Client Protocol (ACP) an ihn schicken: OpenHands fragt vor jeder Aktion, und die App antwortet. Im Modus Entwicklung gibt sie frei, außer den Befehlen, die deine Organisation sperrt; im Modus Planung lehnt sie alles ab, was das Projekt ändert."
+      },
+      "requirements": {
+        "en": "The OpenHands CLI installed on this computer, with a model set up in it (run openhands once and choose the provider and the key).",
+        "pt-BR": "O OpenHands CLI instalado neste computador, com um modelo configurado nele (rode openhands uma vez e escolha o provedor e a chave).",
+        "es": "OpenHands CLI instalado en este equipo, con un modelo configurado en él (ejecuta openhands una vez y elige el proveedor y la clave).",
+        "zh-CN": "这台电脑上已安装 OpenHands CLI，并在其中配置好模型（运行一次 openhands，选择提供商和密钥）。",
+        "hi": "इस कंप्यूटर पर OpenHands CLI इंस्टॉल हो, और उसमें कोई मॉडल सेट हो (एक बार openhands चलाएँ और प्रदाता व कुंजी चुनें)।",
+        "ar": "أن يكون OpenHands CLI مثبّتًا على هذا الجهاز، مع نموذج مُعدّ فيه (شغّل openhands مرة واحدة واختر المزوّد والمفتاح).",
+        "fr": "OpenHands CLI installé sur cet ordinateur, avec un modèle configuré (lancez openhands une fois et choisissez le fournisseur et la clé).",
+        "ru": "OpenHands CLI, установленный на этом компьютере, с настроенной в нём моделью (один раз запустите openhands и выберите поставщика и ключ).",
+        "ja": "このコンピューターに OpenHands CLI がインストールされ、モデルが設定されていること（一度 openhands を実行し、プロバイダーとキーを選びます）。",
+        "de": "Die OpenHands CLI auf diesem Computer installiert, mit einem darin eingerichteten Modell (starte openhands einmal und wähle Anbieter und Schlüssel)."
+      },
+      "enable": {
+        "name": "enable",
+        "locales": [
+          "en",
+          "pt-BR",
+          "es",
+          "zh-CN",
+          "hi",
+          "ar",
+          "fr",
+          "ru",
+          "ja",
+          "de"
+        ],
+        "v": "577f0b43e5"
+      },
+      "setup": [
+        {
+          "text": {
+            "en": "Install the OpenHands CLI (uv tool install openhands --python 3.12) and run openhands once to set up the model.",
+            "pt-BR": "Instale o OpenHands CLI (uv tool install openhands --python 3.12) e rode openhands uma vez para configurar o modelo.",
+            "es": "Instala OpenHands CLI (uv tool install openhands --python 3.12) y ejecuta openhands una vez para configurar el modelo.",
+            "zh-CN": "安装 OpenHands CLI（uv tool install openhands --python 3.12），然后运行一次 openhands 配置模型。",
+            "hi": "OpenHands CLI इंस्टॉल करें (uv tool install openhands --python 3.12) और मॉडल सेट करने के लिए एक बार openhands चलाएँ।",
+            "ar": "ثبّت OpenHands CLI (uv tool install openhands --python 3.12) وشغّل openhands مرة واحدة لإعداد النموذج.",
+            "fr": "Installez OpenHands CLI (uv tool install openhands --python 3.12) et lancez openhands une fois pour configurer le modèle.",
+            "ru": "Установите OpenHands CLI (uv tool install openhands --python 3.12) и один раз запустите openhands, чтобы настроить модель.",
+            "ja": "OpenHands CLI をインストールし（uv tool install openhands --python 3.12）、一度 openhands を実行してモデルを設定します。",
+            "de": "Installiere die OpenHands CLI (uv tool install openhands --python 3.12) und starte openhands einmal, um das Modell einzurichten."
+          }
+        },
+        {
+          "text": {
+            "en": "In Settings › OpenHands, check the program and turn the agent on. OpenHands uses the model you set up in it.",
+            "pt-BR": "Em Configuração › OpenHands, confira o programa e ligue o agente. O OpenHands usa o modelo que você configurou nele.",
+            "es": "En Configuración › OpenHands, comprueba el programa y activa el agente. OpenHands usa el modelo que configuraste en él.",
+            "zh-CN": "在“设置 › OpenHands”中确认程序并启用代理。OpenHands 使用你在其中配置的模型。",
+            "hi": "सेटिंग्स › OpenHands में प्रोग्राम जाँचें और एजेंट चालू करें। OpenHands वही मॉडल इस्तेमाल करता है जो आपने उसमें सेट किया है।",
+            "ar": "في الإعدادات › OpenHands، تحقق من البرنامج وشغّل الوكيل. يستخدم OpenHands النموذج الذي أعددته فيه.",
+            "fr": "Dans Configuration › OpenHands, vérifiez le programme et activez l’agent. OpenHands utilise le modèle que vous y avez configuré.",
+            "ru": "В Настройки › OpenHands проверьте программу и включите агента. OpenHands использует модель, которую вы в нём настроили.",
+            "ja": "設定 › OpenHands でプログラムを確認し、エージェントをオンにします。OpenHands は設定したモデルを使います。",
+            "de": "Prüfe unter Einstellungen › OpenHands das Programm und schalte den Agenten ein. OpenHands nutzt das Modell, das du darin eingerichtet hast."
+          },
+          "image": {
+            "name": "settings",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "697d2b1e91"
+          }
+        }
+      ],
+      "use": [
+        {
+          "text": {
+            "en": "Write the request in a chat. The Progress panel shows each action and the ones the app refused.",
+            "pt-BR": "Escreva o pedido num chat. O painel Andamento mostra cada ação e as que o app recusou.",
+            "es": "Escribe la solicitud en un chat. El panel Progreso muestra cada acción y las que la app rechazó.",
+            "zh-CN": "在对话中写下请求。进度面板会显示每个操作，以及被应用拒绝的操作。",
+            "hi": "चैट में अनुरोध लिखें। प्रगति पैनल हर कार्रवाई दिखाता है, और वे भी जिन्हें ऐप ने मना किया।",
+            "ar": "اكتب الطلب في محادثة. تعرض لوحة التقدّم كل إجراء والإجراءات التي رفضها التطبيق.",
+            "fr": "Écrivez la demande dans un chat. Le panneau Progression montre chaque action et celles que l’app a refusées.",
+            "ru": "Напишите запрос в чате. Панель «Ход работы» показывает каждое действие и те, что приложение отклонило.",
+            "ja": "チャットで依頼を書いてください。進行状況パネルに各アクションと、アプリが拒否したアクションが表示されます。",
+            "de": "Schreib die Anfrage in einen Chat. Das Fortschritt-Panel zeigt jede Aktion und die, die die App abgelehnt hat."
+          },
+          "image": {
+            "name": "chat",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "bb477802f9"
           }
         }
       ]
@@ -1531,7 +2592,7 @@
             "fr": "Dans Configuration › OpenRouter, collez votre clé d’API (elle reste sur cet ordinateur) et vérifiez la connexion : JayV charge la liste des modèles. Activez ensuite les modèles que Jev peut utiliser.",
             "ru": "В Настройки › OpenRouter вставьте ключ API (он остаётся на этом компьютере) и проверьте подключение: JayV загрузит список моделей. Затем включите модели, которые может использовать Jev.",
             "ja": "設定 › OpenRouter で API キーを貼り付け（キーはこのコンピューターに保存されます）、接続を確認すると、JayV がモデル一覧を読み込みます。その後、Jev が使ってよいモデルをオンにします。",
-            "de": "Fügen Sie unter Einstellungen › OpenRouter Ihren API-Schlüssel ein (er bleibt auf diesem Computer) und prüfen Sie die Verbindung: JayV lädt die Modellliste. Schalten Sie dann die Modelle ein, die Jev nutzen darf."
+            "de": "Füge unter Einstellungen › OpenRouter deinen API-Schlüssel ein (er bleibt auf diesem Computer) und prüfe die Verbindung: JayV lädt die Modellliste. Schalte dann die Modelle ein, die Jev nutzen darf."
           },
           "image": {
             "name": "settings",
@@ -1563,7 +2624,7 @@
             "fr": "Demandez dans un chat une analyse, une relecture ou une explication. Quand Jev choisit un modèle OpenRouter, la réponse indique lequel.",
             "ru": "Попросите в чате анализ, ревью или объяснение. Когда Jev выбирает модель OpenRouter, в ответе указано, какую.",
             "ja": "チャットで分析、レビュー、説明を頼んでください。Jev が OpenRouter のモデルを選ぶと、回答にどのモデルかが示されます。",
-            "de": "Bitten Sie in einem Chat um eine Analyse, eine Prüfung oder eine Erklärung. Wenn Jev ein OpenRouter-Modell wählt, nennt die Antwort es."
+            "de": "Bitte in einem Chat um eine Analyse, eine Prüfung oder eine Erklärung. Wenn Jev ein OpenRouter-Modell wählt, nennt die Antwort es."
           },
           "image": {
             "name": "chat",
@@ -1627,7 +2688,7 @@
             "fr": "Activez Répartir les grosses demandes entre agents dans Configuration › Jev › Routage.",
             "ru": "Включите «Делить большие запросы между агентами» в Настройки › Jev › Маршрутизация.",
             "ja": "設定 › Jev › ルーティングで「大きな依頼をエージェントで分担」をオンにします。",
-            "de": "Schalten Sie Große Anfragen auf Agenten verteilen unter Einstellungen › Jev › Routing ein."
+            "de": "Schalte Große Anfragen auf Agenten verteilen unter Einstellungen › Jev › Routing ein."
           },
           "image": {
             "name": "settings",
@@ -1657,7 +2718,7 @@
             "fr": "Le panneau Progression liste les parties et l’agent de chacune ; les changements reviennent dans votre dossier à mesure que chaque partie se termine.",
             "ru": "Панель «Ход работы» показывает части и агента каждой; изменения возвращаются в вашу папку по мере готовности частей.",
             "ja": "進行状況パネルに各部分とその担当エージェントが表示され、部分が終わるたびに変更があなたのフォルダーに戻ります。",
-            "de": "Das Fortschritt-Panel listet die Teile und den Agenten jedes Teils; die Änderungen kommen in Ihren Ordner zurück, sobald ein Teil fertig ist."
+            "de": "Das Fortschritt-Panel listet die Teile und den Agenten jedes Teils; die Änderungen kommen in deinen Ordner zurück, sobald ein Teil fertig ist."
           },
           "image": {
             "name": "chat",
@@ -1678,6 +2739,113 @@
         }
       ]
     },
+    "perplexity": {
+      "version": "1.0.0",
+      "about": {
+        "en": "Perplexity answers with a web search and cites its sources. With this mod, Jev can send it questions that need current information, such as the latest version of a library. The models are Perplexity's presets, from fast to high: each one chooses the model and how deep the search goes.",
+        "pt-BR": "A Perplexity responde com uma busca na web e cita as fontes. Com este mod, o Jev pode mandar a ela perguntas que pedem informação atual, como a versão mais recente de uma biblioteca. Os modelos são as predefinições da Perplexity, de fast a high: cada uma escolhe o modelo e a profundidade da busca.",
+        "es": "Perplexity responde con una búsqueda web y cita sus fuentes. Con este mod, Jev puede enviarle preguntas que necesitan información actual, como la versión más reciente de una biblioteca. Los modelos son los ajustes predefinidos de Perplexity, de fast a high: cada uno elige el modelo y la profundidad de la búsqueda.",
+        "zh-CN": "Perplexity 会进行网页搜索并注明来源。有了这个模组，Jev 可以把需要最新信息的问题发给它，例如某个库的最新版本。模型是 Perplexity 的预设，从 fast 到 high：每个预设决定所用的模型和搜索深度。",
+        "hi": "Perplexity वेब खोज करके जवाब देता है और स्रोत बताता है। इस मॉड से Jev उसे वे सवाल भेज सकता है जिनके लिए ताज़ा जानकारी चाहिए, जैसे किसी लाइब्रेरी का नया संस्करण। मॉडल Perplexity के प्रीसेट हैं, fast से high तक: हर प्रीसेट मॉडल और खोज की गहराई तय करता है।",
+        "ar": "تجيب Perplexity ببحث في الويب وتذكر مصادرها. بهذه الإضافة يستطيع Jev إرسال الأسئلة التي تحتاج إلى معلومات حديثة إليها، مثل أحدث إصدار من مكتبة. النماذج هي الإعدادات المسبقة من Perplexity، من fast إلى high: يختار كلٌّ منها النموذج وعمق البحث.",
+        "fr": "Perplexity répond avec une recherche web et cite ses sources. Avec ce mod, Jev peut lui envoyer les questions qui demandent une information à jour, comme la dernière version d’une bibliothèque. Les modèles sont les préréglages de Perplexity, de fast à high : chacun choisit le modèle et la profondeur de la recherche.",
+        "ru": "Perplexity отвечает с поиском в интернете и указывает источники. С этим модом Jev может отправлять ей вопросы, которым нужна актуальная информация, например последняя версия библиотеки. Модели — это пресеты Perplexity, от fast до high: каждый выбирает модель и глубину поиска.",
+        "ja": "Perplexity はウェブ検索で回答し、出典を示します。この Mod があると、Jev はライブラリの最新バージョンのような最新情報が必要な質問を Perplexity に送れます。モデルは Perplexity のプリセット（fast から high）で、それぞれがモデルと検索の深さを決めます。",
+        "de": "Perplexity antwortet mit einer Websuche und nennt die Quellen. Mit diesem Mod kann Jev ihr Fragen schicken, die aktuelle Informationen brauchen, etwa die neueste Version einer Bibliothek. Die Modelle sind die Voreinstellungen von Perplexity, von fast bis high: Jede wählt das Modell und wie tief gesucht wird."
+      },
+      "requirements": {
+        "en": "A Perplexity API account and an API key.",
+        "pt-BR": "Uma conta da API da Perplexity e uma chave de API.",
+        "es": "Una cuenta de la API de Perplexity y una clave de API.",
+        "zh-CN": "一个 Perplexity API 账号和一个 API 密钥。",
+        "hi": "Perplexity API खाता और एक API कुंजी।",
+        "ar": "حساب على Perplexity API ومفتاح API.",
+        "fr": "Un compte d’API Perplexity et une clé d’API.",
+        "ru": "Учётная запись Perplexity API и API-ключ.",
+        "ja": "Perplexity API のアカウントと API キー。",
+        "de": "Ein Konto für die Perplexity-API und ein API-Schlüssel."
+      },
+      "enable": {
+        "name": "enable",
+        "locales": [
+          "en",
+          "pt-BR",
+          "es",
+          "zh-CN",
+          "hi",
+          "ar",
+          "fr",
+          "ru",
+          "ja",
+          "de"
+        ],
+        "v": "3dd618a5f7"
+      },
+      "setup": [
+        {
+          "text": {
+            "en": "In Settings › Perplexity, paste the API key (it stays on this computer) and turn the agent on. Then turn on the presets Jev may use.",
+            "pt-BR": "Em Configuração › Perplexity, cole a chave de API (ela fica neste computador) e ligue o agente. Depois ligue as predefinições que o Jev pode usar.",
+            "es": "En Configuración › Perplexity, pega la clave de API (se queda en este equipo) y activa el agente. Después activa los ajustes predefinidos que Jev puede usar.",
+            "zh-CN": "在“设置 › Perplexity”中粘贴 API 密钥（它保存在这台电脑上）并启用代理。然后开启 Jev 可以使用的预设。",
+            "hi": "सेटिंग्स › Perplexity में API कुंजी चिपकाएँ (यह इसी कंप्यूटर पर रहती है) और एजेंट चालू करें। फिर वे प्रीसेट चालू करें जिन्हें Jev इस्तेमाल कर सकता है।",
+            "ar": "في الإعدادات › Perplexity، الصق مفتاح API (يبقى على هذا الجهاز) وشغّل الوكيل. ثم فعّل الإعدادات المسبقة التي يُسمح لـ Jev باستخدامها.",
+            "fr": "Dans Configuration › Perplexity, collez la clé d’API (elle reste sur cet ordinateur) et activez l’agent. Activez ensuite les préréglages que Jev peut utiliser.",
+            "ru": "В Настройки › Perplexity вставьте API-ключ (он остаётся на этом компьютере) и включите агента. Затем включите пресеты, которые может использовать Jev.",
+            "ja": "設定 › Perplexity で API キーを貼り付け（キーはこのコンピューターに保存されます）、エージェントをオンにします。その後、Jev が使ってよいプリセットをオンにします。",
+            "de": "Füge unter Einstellungen › Perplexity den API-Schlüssel ein (er bleibt auf diesem Computer) und schalte den Agenten ein. Schalte dann die Voreinstellungen ein, die Jev nutzen darf."
+          },
+          "image": {
+            "name": "settings",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "534f8ab8e8"
+          }
+        }
+      ],
+      "use": [
+        {
+          "text": {
+            "en": "Ask in a chat about something that needs current information. The answer brings the sources it used.",
+            "pt-BR": "Pergunte num chat algo que pede informação atual. A resposta traz as fontes que usou.",
+            "es": "Pregunta en un chat algo que necesite información actual. La respuesta trae las fuentes que usó.",
+            "zh-CN": "在对话中询问需要最新信息的问题。回答会附上所用的来源。",
+            "hi": "चैट में ऐसा सवाल पूछें जिसके लिए ताज़ा जानकारी चाहिए। जवाब में इस्तेमाल किए गए स्रोत होते हैं।",
+            "ar": "اسأل في محادثة عن أمر يحتاج إلى معلومات حديثة. يأتي الرد مع المصادر التي استخدمها.",
+            "fr": "Posez dans un chat une question qui demande une information à jour. La réponse donne les sources utilisées.",
+            "ru": "Спросите в чате о том, для чего нужна актуальная информация. В ответе будут использованные источники.",
+            "ja": "最新情報が必要なことをチャットで質問してください。回答には使った出典が付きます。",
+            "de": "Frag in einem Chat nach etwas, das aktuelle Informationen braucht. Die Antwort bringt die verwendeten Quellen mit."
+          },
+          "image": {
+            "name": "chat",
+            "locales": [
+              "en",
+              "pt-BR",
+              "es",
+              "zh-CN",
+              "hi",
+              "ar",
+              "fr",
+              "ru",
+              "ja",
+              "de"
+            ],
+            "v": "38969c719b"
+          }
+        }
+      ]
+    },
     "planFirst": {
       "version": "1.1.0",
       "about": {
@@ -1690,7 +2858,7 @@
         "fr": "Dans une demande complexe en mode développement, votre modèle de raisonnement le plus fort écrit d’abord un plan, et l’agent choisi pour construire le reçoit avec la demande.",
         "ru": "В сложном запросе в режиме разработки ваша самая сильная модель рассуждения сначала пишет план, и агент, выбранный для сборки, получает его вместе с запросом.",
         "ja": "開発モードの複雑な依頼では、いちばん強い推論モデルがまず計画を書き、構築に選ばれたエージェントが依頼と一緒にそれを受け取ります。",
-        "de": "Bei einer komplexen Anfrage im Entwicklungsmodus schreibt Ihr stärkstes Denkmodell zuerst einen Plan, und der Agent, der baut, erhält ihn zusammen mit der Anfrage."
+        "de": "Bei einer komplexen Anfrage im Entwicklungsmodus schreibt dein stärkstes Denkmodell zuerst einen Plan, und der Agent, der baut, erhält ihn zusammen mit der Anfrage."
       },
       "enable": {
         "name": "enable",
@@ -1721,7 +2889,7 @@
             "fr": "Activez Planifier avec un modèle, construire avec un autre dans Configuration › Jev › Routage.",
             "ru": "Включите «Планировать одной моделью, строить другой» в Настройки › Jev › Маршрутизация.",
             "ja": "設定 › Jev › ルーティングで「あるモデルで計画し、別のモデルで構築」をオンにします。",
-            "de": "Schalten Sie Mit einem Modell planen, mit einem anderen bauen unter Einstellungen › Jev › Routing ein."
+            "de": "Schalte Mit einem Modell planen, mit einem anderen bauen unter Einstellungen › Jev › Routing ein."
           },
           "image": {
             "name": "settings",
@@ -1784,7 +2952,7 @@
         "fr": "De courtes notes sur le projet — comment tester, où se trouvent les choses, ce qu’il ne faut pas toucher — que l’agent reçoit une fois au début de chaque session, pour que vous n’ayez pas à les répéter.",
         "ru": "Короткие заметки о проекте — как тестировать, где что лежит, чего не трогать, — которые агент получает один раз в начале каждой сессии, чтобы вам не повторять их.",
         "ja": "プロジェクトについての短いメモ（テストの仕方、どこに何があるか、触ってはいけないもの）で、エージェントは各セッションの最初に一度受け取ります。同じことを繰り返し伝える必要がなくなります。",
-        "de": "Kurze Notizen zum Projekt – wie man testet, wo was liegt, was man nicht anfassen soll –, die der Agent einmal zu Beginn jeder Sitzung erhält, damit Sie sie nicht wiederholen müssen."
+        "de": "Kurze Notizen zum Projekt – wie man testet, wo was liegt, was man nicht anfassen soll –, die der Agent einmal zu Beginn jeder Sitzung erhält, damit du sie nicht wiederholen musst."
       },
       "enable": {
         "name": "enable",
@@ -1815,7 +2983,7 @@
             "fr": "Sur l’écran Chats d’un projet, cliquez sur Mémoire du projet et écrivez les notes (jusqu’à 2 200 caractères). Les secrets sont refusés, et les notes se synchronisent avec votre compte.",
             "ru": "На экране «Чаты» проекта нажмите «Память проекта» и напишите заметки (до 2200 символов). Секреты отклоняются, а заметки синхронизируются с вашей учётной записью.",
             "ja": "プロジェクトのチャット画面でプロジェクトメモリーをクリックし、メモを書きます（2,200 文字まで）。秘密情報は受け付けず、メモはあなたのアカウントと同期されます。",
-            "de": "Klicken Sie auf dem Chats-Bildschirm eines Projekts auf Projektgedächtnis und schreiben Sie die Notizen (bis zu 2.200 Zeichen). Geheimnisse werden abgelehnt, und die Notizen synchronisieren sich mit Ihrem Konto."
+            "de": "Klicke auf dem Chats-Bildschirm eines Projekts auf Projektgedächtnis und schreib die Notizen (bis zu 2.200 Zeichen). Geheimnisse werden abgelehnt, und die Notizen synchronisieren sich mit deinem Konto."
           },
           "image": {
             "name": "memory",
@@ -1890,7 +3058,7 @@
             "fr": "Activez Approuver les serveurs MCP dans l’onglet de chaque agent qui doit utiliser REA (Configuration › Claude Code, par exemple) et cliquez sur Enregistrer la configuration. À la première utilisation, REA est téléchargé avec npx.",
             "ru": "Включите «Одобрять серверы MCP» на вкладке каждого агента, который должен пользоваться REA (например, Настройки › Claude Code), и нажмите «Сохранить настройки». При первом использовании REA скачивается через npx.",
             "ja": "REA を使わせたい各エージェントのタブ（たとえば設定 › Claude Code）で「MCP サーバーを承認」をオンにし、「設定を保存」をクリックします。初回の利用時に REA は npx でダウンロードされます。",
-            "de": "Schalten Sie im Tab jedes Agenten, der REA nutzen soll (zum Beispiel Einstellungen › Claude Code), MCP-Server freigeben ein und klicken Sie auf Einstellungen speichern. Beim ersten Einsatz wird REA mit npx heruntergeladen."
+            "de": "Schalte im Tab jedes Agenten, der REA nutzen soll (zum Beispiel Einstellungen › Claude Code), MCP-Server freigeben ein und klicke auf Einstellungen speichern. Beim ersten Einsatz wird REA mit npx heruntergeladen."
           },
           "image": {
             "name": "settings",
@@ -1922,7 +3090,7 @@
             "fr": "Posez une question sur un programme dans un chat en donnant son chemin, par exemple : Comment fonctionne l’export CSV de /Applications/Ledger.app ? Quand Jev choisit la skill reverse-engineering, le panneau Progression affiche l’étape Skill et l’agent utilise les outils de REA.",
             "ru": "Спросите в чате о программе и укажите её путь, например: Как работает экспорт в CSV у /Applications/Ledger.app? Когда Jev выбирает скилл reverse-engineering, панель «Ход работы» показывает шаг «Скилл», и агент пользуется инструментами REA.",
             "ja": "チャットでプログラムについて、その場所を添えて質問してください。例: /Applications/Ledger.app の CSV エクスポートはどう動いていますか？ Jev がスキル reverse-engineering を選ぶと、進行状況パネルに「スキル」のステップが表示され、エージェントは REA のツールを使います。",
-            "de": "Fragen Sie in einem Chat nach einem Programm und nennen Sie seinen Pfad, zum Beispiel: Wie funktioniert der CSV-Export von /Applications/Ledger.app? Wenn Jev den Skill reverse-engineering wählt, zeigt das Fortschritt-Panel den Skill-Schritt, und der Agent nutzt die Werkzeuge von REA."
+            "de": "Frag in einem Chat nach einem Programm und nenne seinen Pfad, zum Beispiel: Wie funktioniert der CSV-Export von /Applications/Ledger.app? Wenn Jev den Skill reverse-engineering wählt, zeigt das Fortschritt-Panel den Skill-Schritt, und der Agent nutzt die Werkzeuge von REA."
           },
           "image": {
             "name": "chat",
@@ -1952,7 +3120,7 @@
             "fr": "La réponse liste chaque constat avec sa preuve (fonction, adresse, chaîne) et ce qui reste inconnu. Pour construire la même chose dans votre projet, demandez-le dans le même chat.",
             "ru": "В ответе каждая находка указана с доказательством (функция, адрес, строка), а также то, что пока неизвестно. Чтобы сделать то же самое в вашем проекте, попросите об этом в том же чате.",
             "ja": "回答には、各発見とその根拠（関数、アドレス、文字列）、そしてまだわからないことが並びます。同じものをプロジェクトに作りたいときは、同じチャットで頼んでください。",
-            "de": "Die Antwort listet jeden Befund mit seinem Beleg (Funktion, Adresse, String) und was noch unbekannt ist. Um dasselbe in Ihrem Projekt zu bauen, fragen Sie im selben Chat danach."
+            "de": "Die Antwort listet jeden Befund mit seinem Beleg (Funktion, Adresse, String) und was noch unbekannt ist. Um dasselbe in deinem Projekt zu bauen, frag im selben Chat danach."
           }
         }
       ]
@@ -2000,7 +3168,7 @@
             "fr": "Activez Deuxième avis d’un autre agent dans Configuration › Jev › Routage. Il faut au moins deux agents.",
             "ru": "Включите «Второе мнение другого агента» в Настройки › Jev › Маршрутизация. Нужны хотя бы два агента.",
             "ja": "設定 › Jev › ルーティングで「別のエージェントによるセカンドオピニオン」をオンにします。エージェントが 2 つ以上必要です。",
-            "de": "Schalten Sie Zweite Meinung von einem anderen Agenten unter Einstellungen › Jev › Routing ein. Dafür braucht es mindestens zwei Agenten."
+            "de": "Schalte Zweite Meinung von einem anderen Agenten unter Einstellungen › Jev › Routing ein. Dafür braucht es mindestens zwei Agenten."
           },
           "image": {
             "name": "settings",
@@ -2094,7 +3262,7 @@
             "fr": "Ouvrez Configuration › Skills et cliquez sur Installer depuis un dossier, ou collez le texte d’un SKILL.md. Désactivez une skill pour l’écarter du choix.",
             "ru": "Откройте Настройки › Скиллы и нажмите «Установить из папки» или вставьте текст SKILL.md. Отключите скилл, чтобы убрать его из выбора.",
             "ja": "設定 › スキルを開き、「フォルダからインストール」をクリックするか、SKILL.md のテキストを貼り付けます。スキルをオフにすると選択対象から外れます。",
-            "de": "Öffnen Sie Einstellungen › Skills und klicken Sie auf Aus Ordner installieren, oder fügen Sie den Text einer SKILL.md ein. Schalten Sie einen Skill aus, um ihn aus der Auswahl zu nehmen."
+            "de": "Öffne Einstellungen › Skills und klicke auf Aus Ordner installieren, oder füge den Text einer SKILL.md ein. Schalte einen Skill aus, um ihn aus der Auswahl zu nehmen."
           },
           "image": {
             "name": "settings",
@@ -2188,7 +3356,7 @@
             "fr": "Dans Configuration › Skills, tapez ce dont vous avez besoin dans la recherche skills.sh, appuyez sur Rechercher et cliquez sur Installer sur un résultat. Lisez d’abord ses instructions ; elle s’installe quand vous cliquez sur Enregistrer la configuration.",
             "ru": "В Настройки › Скиллы введите, что вам нужно, в поиск skills.sh, нажмите «Найти» и затем «Установить» у результата. Сначала прочитайте его инструкции; установка происходит после нажатия «Сохранить настройки».",
             "ja": "設定 › スキルの skills.sh 検索に必要なものを入力し、「検索」を押して、結果の「インストール」をクリックします。先に指示を読んでください。「設定を保存」をクリックするとインストールされます。",
-            "de": "Tippen Sie unter Einstellungen › Skills in die skills.sh-Suche, was Sie brauchen, drücken Sie Suchen und klicken Sie bei einem Ergebnis auf Installieren. Lesen Sie vorher die Anweisungen; installiert wird beim Klick auf Einstellungen speichern."
+            "de": "Tippe unter Einstellungen › Skills in die skills.sh-Suche, was du brauchst, drück Suchen und klicke bei einem Ergebnis auf Installieren. Lies vorher die Anweisungen; installiert wird beim Klick auf Einstellungen speichern."
           },
           "image": {
             "name": "settings",
@@ -2252,7 +3420,7 @@
             "fr": "Ouvrez Statistiques dans le menu latéral ou appuyez sur Ctrl+3 (⌘3 sur Mac). Choisissez la période et la portée ; les graphiques et les tableaux suivent.",
             "ru": "Откройте «Статистика» в боковом меню или нажмите Ctrl+3 (⌘3 на Mac). Выберите период и охват; графики и таблицы обновятся.",
             "ja": "サイドメニューの統計を開くか、Ctrl+3（Mac では ⌘3）を押します。期間と範囲を選ぶと、グラフと表が切り替わります。",
-            "de": "Öffnen Sie Statistiken im Seitenmenü oder drücken Sie Strg+3 (⌘3 auf dem Mac). Wählen Sie Zeitraum und Bereich; Diagramme und Tabellen folgen."
+            "de": "Öffne Statistiken im Seitenmenü oder drück Strg+3 (⌘3 auf dem Mac). Wähle Zeitraum und Bereich; Diagramme und Tabellen folgen."
           },
           "image": {
             "name": "stats",

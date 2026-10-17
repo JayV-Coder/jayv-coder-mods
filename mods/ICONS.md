@@ -7,6 +7,11 @@ their owners and are used only to identify the integration.
   LiteLLM**: the same drawings the JayV app uses for these engines.
 - **Ollama, LM Studio**: [Simple Icons](https://simpleicons.org) 16.35.0
   (CC0 1.0).
+- **Google Gemini, DeepSeek, Perplexity, Manus, Meta AI, Kimi Code, OpenCode,
+  OpenHands, Devin**: [Lobe Icons](https://lobehub.com/icons)
+  (`@lobehub/icons-static-svg` 1.95.1), under the MIT license at the end of
+  this file.
+- **Aider**: Lucide 1.57.0 (`square-terminal`), under the license below.
 - **REA and the app's features** (statistics, gatehouse board, live files,
   chat search, project notes, second opinion, plan before building, parallel
   agents, earlier answers, lean code, symbol index, MCP, skills, skills.sh,
@@ -39,6 +44,32 @@ airplay, alert-circle, alert-octagon, alert-triangle, aperture, arrow-down-circl
 The MIT License (MIT) (for the icons listed above)
 
 Copyright (c) 2013-present Cole Bemis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+Lobe Icons:
+
+```
+MIT License
+
+Copyright (c) 2023 LobeHub
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

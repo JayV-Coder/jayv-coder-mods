@@ -1,0 +1,88 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "aider",
+  "version": "1.0.0",
+  "category": "agents",
+  "plan": "customMods",
+  "minApp": "0.107.0",
+  "preinstalled": false,
+  "author": "JayV",
+  "docs": "llmMods",
+  "homepage": "https://aider.chat",
+  "icon": "icon.svg",
+  "title": {
+    "en": "Aider",
+    "pt-BR": "Aider",
+    "es": "Aider",
+    "zh-CN": "Aider",
+    "hi": "Aider",
+    "ar": "Aider",
+    "fr": "Aider",
+    "ru": "Aider",
+    "ja": "Aider",
+    "de": "Aider"
+  },
+  "summary": {
+    "en": "The open-source pair-programming agent for the terminal. It edits the project without committing and only answers in Planning mode.",
+    "pt-BR": "O agente de programação em dupla, de código aberto, para o terminal. Edita o projeto sem fazer commit e só responde no modo Planejamento.",
+    "es": "El agente de programación en pareja, de código abierto, para la terminal. Edita el proyecto sin hacer commit y solo responde en el modo Planificación.",
+    "zh-CN": "开源的终端结对编程代理。它编辑项目但不提交，在规划模式下只作答。",
+    "hi": "टर्मिनल के लिए ओपन-सोर्स पेयर-प्रोग्रामिंग एजेंट। यह बिना commit किए प्रोजेक्ट बदलता है और योजना मोड में सिर्फ़ जवाब देता है।",
+    "ar": "وكيل البرمجة الثنائية مفتوح المصدر للطرفية. يعدّل المشروع دون commit ولا يجيب إلا في وضع التخطيط.",
+    "fr": "L’agent de programmation en binôme open source pour le terminal. Il modifie le projet sans commit et ne fait que répondre en mode Planification.",
+    "ru": "Агент для парного программирования в терминале с открытым исходным кодом. Изменяет проект без коммитов, а в режиме «Планирование» только отвечает.",
+    "ja": "オープンソースのターミナル用ペアプログラミングエージェントです。コミットせずにプロジェクトを編集し、計画モードでは回答だけを行います。",
+    "de": "Der quelloffene Pair-Programming-Agent für das Terminal. Er bearbeitet das Projekt ohne Commit und antwortet im Modus Planung nur."
+  },
+  "contributes": {
+    "agents": [
+      {
+        "kind": "cli",
+        "command": "aider",
+        "args": [
+          "--model",
+          "{model}",
+          "--yes-always",
+          "--no-auto-commits",
+          "--no-dirty-commits",
+          "--no-gitignore",
+          "--no-check-update",
+          "--no-show-release-notes",
+          "--no-analytics",
+          "--no-pretty",
+          "--no-fancy-input",
+          "--no-suggest-shell-commands",
+          "--no-show-model-warnings",
+          "--message-file",
+          "{prompt_file}"
+        ],
+        "planArgs": [
+          "--model",
+          "{model}",
+          "--yes-always",
+          "--no-auto-commits",
+          "--no-dirty-commits",
+          "--no-gitignore",
+          "--no-check-update",
+          "--no-show-release-notes",
+          "--no-analytics",
+          "--no-pretty",
+          "--no-fancy-input",
+          "--no-suggest-shell-commands",
+          "--no-show-model-warnings",
+          "--chat-mode",
+          "ask",
+          "--message-file",
+          "{prompt_file}"
+        ],
+        "edits": true,
+        "models": [
+          "sonnet",
+          "opus",
+          "gemini",
+          "deepseek"
+        ]
+      }
+    ]
+  }
+}

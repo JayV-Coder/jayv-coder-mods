@@ -1,0 +1,61 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "Perplexity answers with a web search and cites its sources. With this mod, Jev can send it questions that need current information, such as the latest version of a library. The models are Perplexity's presets, from fast to high: each one chooses the model and how deep the search goes.",
+    "pt-BR": "A Perplexity responde com uma busca na web e cita as fontes. Com este mod, o Jev pode mandar a ela perguntas que pedem informação atual, como a versão mais recente de uma biblioteca. Os modelos são as predefinições da Perplexity, de fast a high: cada uma escolhe o modelo e a profundidade da busca.",
+    "es": "Perplexity responde con una búsqueda web y cita sus fuentes. Con este mod, Jev puede enviarle preguntas que necesitan información actual, como la versión más reciente de una biblioteca. Los modelos son los ajustes predefinidos de Perplexity, de fast a high: cada uno elige el modelo y la profundidad de la búsqueda.",
+    "zh-CN": "Perplexity 会进行网页搜索并注明来源。有了这个模组，Jev 可以把需要最新信息的问题发给它，例如某个库的最新版本。模型是 Perplexity 的预设，从 fast 到 high：每个预设决定所用的模型和搜索深度。",
+    "hi": "Perplexity वेब खोज करके जवाब देता है और स्रोत बताता है। इस मॉड से Jev उसे वे सवाल भेज सकता है जिनके लिए ताज़ा जानकारी चाहिए, जैसे किसी लाइब्रेरी का नया संस्करण। मॉडल Perplexity के प्रीसेट हैं, fast से high तक: हर प्रीसेट मॉडल और खोज की गहराई तय करता है।",
+    "ar": "تجيب Perplexity ببحث في الويب وتذكر مصادرها. بهذه الإضافة يستطيع Jev إرسال الأسئلة التي تحتاج إلى معلومات حديثة إليها، مثل أحدث إصدار من مكتبة. النماذج هي الإعدادات المسبقة من Perplexity، من fast إلى high: يختار كلٌّ منها النموذج وعمق البحث.",
+    "fr": "Perplexity répond avec une recherche web et cite ses sources. Avec ce mod, Jev peut lui envoyer les questions qui demandent une information à jour, comme la dernière version d’une bibliothèque. Les modèles sont les préréglages de Perplexity, de fast à high : chacun choisit le modèle et la profondeur de la recherche.",
+    "ru": "Perplexity отвечает с поиском в интернете и указывает источники. С этим модом Jev может отправлять ей вопросы, которым нужна актуальная информация, например последняя версия библиотеки. Модели — это пресеты Perplexity, от fast до high: каждый выбирает модель и глубину поиска.",
+    "ja": "Perplexity はウェブ検索で回答し、出典を示します。この Mod があると、Jev はライブラリの最新バージョンのような最新情報が必要な質問を Perplexity に送れます。モデルは Perplexity のプリセット（fast から high）で、それぞれがモデルと検索の深さを決めます。",
+    "de": "Perplexity antwortet mit einer Websuche und nennt die Quellen. Mit diesem Mod kann Jev ihr Fragen schicken, die aktuelle Informationen brauchen, etwa die neueste Version einer Bibliothek. Die Modelle sind die Voreinstellungen von Perplexity, von fast bis high: Jede wählt das Modell und wie tief gesucht wird."
+  },
+  "requirements": {
+    "en": "A Perplexity API account and an API key.",
+    "pt-BR": "Uma conta da API da Perplexity e uma chave de API.",
+    "es": "Una cuenta de la API de Perplexity y una clave de API.",
+    "zh-CN": "一个 Perplexity API 账号和一个 API 密钥。",
+    "hi": "Perplexity API खाता और एक API कुंजी।",
+    "ar": "حساب على Perplexity API ومفتاح API.",
+    "fr": "Un compte d’API Perplexity et une clé d’API.",
+    "ru": "Учётная запись Perplexity API и API-ключ.",
+    "ja": "Perplexity API のアカウントと API キー。",
+    "de": "Ein Konto für die Perplexity-API und ein API-Schlüssel."
+  },
+  "setup": [
+    {
+      "text": {
+        "en": "In Settings › Perplexity, paste the API key (it stays on this computer) and turn the agent on. Then turn on the presets Jev may use.",
+        "pt-BR": "Em Configuração › Perplexity, cole a chave de API (ela fica neste computador) e ligue o agente. Depois ligue as predefinições que o Jev pode usar.",
+        "es": "En Configuración › Perplexity, pega la clave de API (se queda en este equipo) y activa el agente. Después activa los ajustes predefinidos que Jev puede usar.",
+        "zh-CN": "在“设置 › Perplexity”中粘贴 API 密钥（它保存在这台电脑上）并启用代理。然后开启 Jev 可以使用的预设。",
+        "hi": "सेटिंग्स › Perplexity में API कुंजी चिपकाएँ (यह इसी कंप्यूटर पर रहती है) और एजेंट चालू करें। फिर वे प्रीसेट चालू करें जिन्हें Jev इस्तेमाल कर सकता है।",
+        "ar": "في الإعدادات › Perplexity، الصق مفتاح API (يبقى على هذا الجهاز) وشغّل الوكيل. ثم فعّل الإعدادات المسبقة التي يُسمح لـ Jev باستخدامها.",
+        "fr": "Dans Configuration › Perplexity, collez la clé d’API (elle reste sur cet ordinateur) et activez l’agent. Activez ensuite les préréglages que Jev peut utiliser.",
+        "ru": "В Настройки › Perplexity вставьте API-ключ (он остаётся на этом компьютере) и включите агента. Затем включите пресеты, которые может использовать Jev.",
+        "ja": "設定 › Perplexity で API キーを貼り付け（キーはこのコンピューターに保存されます）、エージェントをオンにします。その後、Jev が使ってよいプリセットをオンにします。",
+        "de": "Füge unter Einstellungen › Perplexity den API-Schlüssel ein (er bleibt auf diesem Computer) und schalte den Agenten ein. Schalte dann die Voreinstellungen ein, die Jev nutzen darf."
+      },
+      "image": "settings"
+    }
+  ],
+  "use": [
+    {
+      "text": {
+        "en": "Ask in a chat about something that needs current information. The answer brings the sources it used.",
+        "pt-BR": "Pergunte num chat algo que pede informação atual. A resposta traz as fontes que usou.",
+        "es": "Pregunta en un chat algo que necesite información actual. La respuesta trae las fuentes que usó.",
+        "zh-CN": "在对话中询问需要最新信息的问题。回答会附上所用的来源。",
+        "hi": "चैट में ऐसा सवाल पूछें जिसके लिए ताज़ा जानकारी चाहिए। जवाब में इस्तेमाल किए गए स्रोत होते हैं।",
+        "ar": "اسأل في محادثة عن أمر يحتاج إلى معلومات حديثة. يأتي الرد مع المصادر التي استخدمها.",
+        "fr": "Posez dans un chat une question qui demande une information à jour. La réponse donne les sources utilisées.",
+        "ru": "Спросите в чате о том, для чего нужна актуальная информация. В ответе будут использованные источники.",
+        "ja": "最新情報が必要なことをチャットで質問してください。回答には使った出典が付きます。",
+        "de": "Frag in einem Chat nach etwas, das aktuelle Informationen braucht. Die Antwort bringt die verwendeten Quellen mit."
+      },
+      "image": "chat"
+    }
+  ]
+}

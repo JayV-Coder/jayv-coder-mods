@@ -229,7 +229,7 @@
         "fr": "Votre proxy LiteLLM : les modèles qu’il sert par une seule adresse. Répond par du texte : questions, analyse, revue et planification.",
         "ru": "Ваш прокси LiteLLM: модели, которые он отдаёт по одному адресу. Отвечает текстом: вопросы, анализ, ревью и планирование.",
         "ja": "あなたの LiteLLM プロキシ。1つのアドレスで提供されるモデルを利用します。テキストで答えます：質問、分析、レビュー、計画。",
-        "de": "Ihr LiteLLM-Proxy: die Modelle, die er über eine Adresse bereitstellt. Antwortet mit Text: Fragen, Analyse, Review und Planung."
+        "de": "Dein LiteLLM-Proxy: die Modelle, die er über eine Adresse bereitstellt. Antwortet mit Text: Fragen, Analyse, Review und Planung."
       }
     },
     {
@@ -725,6 +725,49 @@
         "ru": "Ctrl/Cmd+F ищет текст в открытом чате и подсвечивает каждое совпадение.",
         "ja": "Ctrl/Cmd+Fで開いているチャット内を検索し、一致をハイライト。",
         "de": "Ctrl/Cmd+F durchsucht den offenen Chat und markiert jeden Treffer."
+      }
+    },
+    {
+      "id": "deepseek",
+      "kind": "template",
+      "category": "agents",
+      "plan": "customMods",
+      "minApp": "0.94.0",
+      "docs": "llmMods",
+      "homepage": "https://platform.deepseek.com",
+      "title": {
+        "en": "DeepSeek",
+        "pt-BR": "DeepSeek",
+        "es": "DeepSeek",
+        "zh-CN": "DeepSeek",
+        "hi": "DeepSeek",
+        "ar": "DeepSeek",
+        "fr": "DeepSeek",
+        "ru": "DeepSeek",
+        "ja": "DeepSeek",
+        "de": "DeepSeek"
+      },
+      "summary": {
+        "en": "DeepSeek models through the DeepSeek API. They answer with text and never edit the project.",
+        "pt-BR": "Os modelos da DeepSeek pela API da DeepSeek. Respondem por texto e nunca editam o projeto.",
+        "es": "Los modelos de DeepSeek mediante la API de DeepSeek. Responden con texto y nunca editan el proyecto.",
+        "zh-CN": "通过 DeepSeek API 使用 DeepSeek 模型。它们以文本作答，从不编辑项目。",
+        "hi": "DeepSeek API के ज़रिए DeepSeek के मॉडल। ये टेक्स्ट में जवाब देते हैं और प्रोजेक्ट कभी नहीं बदलते।",
+        "ar": "نماذج DeepSeek عبر واجهة DeepSeek API. تجيب بالنص ولا تعدّل المشروع أبدًا.",
+        "fr": "Les modèles DeepSeek via l’API DeepSeek. Ils répondent par du texte et ne modifient jamais le projet.",
+        "ru": "Модели DeepSeek через API DeepSeek. Отвечают текстом и никогда не изменяют проект.",
+        "ja": "DeepSeek API 経由で DeepSeek のモデルを使います。テキストで回答し、プロジェクトは編集しません。",
+        "de": "Die Modelle von DeepSeek über die DeepSeek-API. Sie antworten mit Text und bearbeiten das Projekt nie."
+      },
+      "template": {
+        "kind": "api",
+        "protocol": "openai",
+        "baseUrl": "https://api.deepseek.com",
+        "keyRequired": true,
+        "models": [
+          "deepseek-v4-pro",
+          "deepseek-flash"
+        ]
       }
     },
     {

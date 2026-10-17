@@ -15,7 +15,7 @@ not tied to any one subject: it says, in `contributes`, what it adds to each
 | --- | --- |
 | `llmEngines` | LLM integration engines of the app (Claude Code, Codex, GitHub Copilot, Cursor, Kilo Code, OpenRouter, LiteLLM) |
 | `features` | Optional features of the app (statistics, gatehouse board, MCP, skills…); the plan still applies |
-| `agents` | Command-line programs or APIs compatible with OpenAI or Anthropic, installed as the person's own agents (Ollama, LM Studio) |
+| `agents` | Command-line programs, ACP agents or APIs (OpenAI, Anthropic, OpenAI Responses, Manus tasks), installed as the person's own agents (Ollama, LM Studio, Gemini CLI, DeepSeek, Aider…) |
 | `skills` | Skills Jev picks by the request, with the MCP servers each one needs; the servers reach the agent only in the request where the skill applies (REA, for reverse engineering) |
 
 A mod is a manifest, not code: the app's core is compiled into the installer
@@ -90,7 +90,21 @@ stay in their account; they are not part of this repository.
 - `requires`: mods this one needs installed and on; installing it brings them.
 - A command-line agent uses `"kind": "cli"` with `command`, `args` (where
   `{model}` becomes the model Jev picked and `{prompt}`, alone in an argument,
-  the request), `planArgs` and `edits`.
+  the request), `planArgs` and `edits`. From app 0.107, `{prompt_file}`, alone
+  in an argument, becomes the path of a file with the request, for programs
+  that read it from a file (`mods/aider`).
+- An ACP agent (`"kind": "acp"`, app 0.107+) is a program the app talks to
+  through the [Agent Client Protocol](https://agentclientprotocol.com) over
+  stdio: `command`, the `args` that start its ACP server, optional `env`, and
+  `buildMode` / `planMode`, the agent's own modes for Development and
+  Planning. The app picks the model, passes the MCP servers and answers each
+  permission the agent asks for by the mode of the request. The model
+  `default` keeps the agent's choice; the person loads the others from the
+  agent (`mods/gemini`, `mods/opencode`).
+- An API agent (`"kind": "api"`) uses `protocol` `openai` or `anthropic`; from
+  app 0.107 also `responses` (OpenAI Responses, with `modelField` when the
+  model goes in another field, as in `mods/perplexity`) and `manus` (the
+  Manus task API).
 - A skill (`"skills"`, app 0.103+) has a `name`, a `description` in English
   that tells Jev when to use it (up to 400 characters), its instructions in
   `instructions` or in a `.md` file of the mod's folder (`file`), and up to
