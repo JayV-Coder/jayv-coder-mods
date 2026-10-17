@@ -29,7 +29,7 @@
           "ja",
           "de"
         ],
-        "v": "c23ab1cf86"
+        "v": "69e21f4ead"
       },
       "setup": [],
       "use": [
@@ -60,7 +60,7 @@
               "ja",
               "de"
             ],
-            "v": "cb915e71b3"
+            "v": "bf18588e71"
           }
         }
       ]
@@ -93,7 +93,7 @@
           "ja",
           "de"
         ],
-        "v": "9513cfb857"
+        "v": "912a055434"
       },
       "setup": [],
       "use": [
@@ -124,7 +124,7 @@
               "ja",
               "de"
             ],
-            "v": "8e6020d4ad"
+            "v": "023b05b854"
           }
         }
       ]
@@ -169,7 +169,7 @@
           "ja",
           "de"
         ],
-        "v": "e2516fbbb8"
+        "v": "b4c724daff"
       },
       "setup": [
         {
@@ -213,7 +213,7 @@
               "ja",
               "de"
             ],
-            "v": "bed97e061d"
+            "v": "521d5421f3"
           }
         }
       ],
@@ -245,7 +245,7 @@
               "ja",
               "de"
             ],
-            "v": "7b3091dfeb"
+            "v": "bc2795221d"
           }
         }
       ]
@@ -290,7 +290,7 @@
           "ja",
           "de"
         ],
-        "v": "50eb883f4f"
+        "v": "7d60e137b6"
       },
       "setup": [
         {
@@ -334,7 +334,7 @@
               "ja",
               "de"
             ],
-            "v": "731ae04b20"
+            "v": "c368e6e789"
           }
         }
       ],
@@ -366,7 +366,7 @@
               "ja",
               "de"
             ],
-            "v": "06d6d43f7a"
+            "v": "1aea8851bd"
           }
         }
       ]
@@ -399,7 +399,7 @@
           "ja",
           "de"
         ],
-        "v": "4bc60842ab"
+        "v": "21785be529"
       },
       "setup": [],
       "use": [
@@ -430,7 +430,7 @@
               "ja",
               "de"
             ],
-            "v": "0db32917a9"
+            "v": "a165953193"
           }
         }
       ]
@@ -475,7 +475,7 @@
           "ja",
           "de"
         ],
-        "v": "ce169ddb14"
+        "v": "cd1b03f183"
       },
       "setup": [
         {
@@ -519,7 +519,7 @@
               "ja",
               "de"
             ],
-            "v": "cba4adfc4d"
+            "v": "fde1ec0d1c"
           }
         }
       ],
@@ -551,7 +551,7 @@
               "ja",
               "de"
             ],
-            "v": "adffaad7b1"
+            "v": "42491164a4"
           }
         }
       ]
@@ -596,7 +596,7 @@
           "ja",
           "de"
         ],
-        "v": "e7a8a189b4"
+        "v": "4a2f955b3e"
       },
       "setup": [
         {
@@ -640,7 +640,7 @@
               "ja",
               "de"
             ],
-            "v": "070b1ca961"
+            "v": "f242a6cc20"
           }
         }
       ],
@@ -672,7 +672,7 @@
               "ja",
               "de"
             ],
-            "v": "c640ca883b"
+            "v": "6392be01f1"
           }
         }
       ]
@@ -705,7 +705,7 @@
           "ja",
           "de"
         ],
-        "v": "0b4a91160b"
+        "v": "c2946a2502"
       },
       "setup": [],
       "use": [
@@ -736,7 +736,7 @@
               "ja",
               "de"
             ],
-            "v": "1ea78f27ad"
+            "v": "c525f8885d"
           }
         },
         {
@@ -795,7 +795,7 @@
           "ja",
           "de"
         ],
-        "v": "15b1949535"
+        "v": "47014b2cc8"
       },
       "setup": [
         {
@@ -839,7 +839,7 @@
               "ja",
               "de"
             ],
-            "v": "a4b8d969dc"
+            "v": "b72a738a2c"
           }
         }
       ],
@@ -871,7 +871,7 @@
               "ja",
               "de"
             ],
-            "v": "320742e6b4"
+            "v": "46645bfd9b"
           }
         }
       ]
@@ -904,7 +904,7 @@
           "ja",
           "de"
         ],
-        "v": "7d603d4199"
+        "v": "602ff58645"
       },
       "setup": [],
       "use": [
@@ -935,7 +935,7 @@
               "ja",
               "de"
             ],
-            "v": "42de9cb5e0"
+            "v": "b5aecd79fe"
           }
         }
       ]
@@ -980,7 +980,7 @@
           "ja",
           "de"
         ],
-        "v": "7c79fb0ba8"
+        "v": "56cd077bcb"
       },
       "setup": [
         {
@@ -1010,7 +1010,7 @@
               "ja",
               "de"
             ],
-            "v": "9e502a5778"
+            "v": "3abb74e5d6"
           }
         }
       ],
@@ -1042,7 +1042,7 @@
               "ja",
               "de"
             ],
-            "v": "7263733023"
+            "v": "b2c732551b"
           }
         }
       ]
@@ -1075,7 +1075,7 @@
           "ja",
           "de"
         ],
-        "v": "a8e3b2ff42"
+        "v": "1bd5e6098b"
       },
       "setup": [],
       "use": [
@@ -1106,7 +1106,7 @@
               "ja",
               "de"
             ],
-            "v": "d394616aa4"
+            "v": "f244c02325"
           }
         },
         {
@@ -1136,7 +1136,7 @@
               "ja",
               "de"
             ],
-            "v": "ea25c230f1"
+            "v": "eee901ed62"
           }
         }
       ]
@@ -1181,7 +1181,7 @@
           "ja",
           "de"
         ],
-        "v": "70769f98ff"
+        "v": "d88d87b5cc"
       },
       "setup": [
         {
@@ -1225,7 +1225,7 @@
               "ja",
               "de"
             ],
-            "v": "e06cb8d30f"
+            "v": "33c9344722"
           }
         }
       ],
@@ -1257,7 +1257,7 @@
               "ja",
               "de"
             ],
-            "v": "73f54286e8"
+            "v": "46ad472251"
           }
         }
       ]
@@ -1290,7 +1290,7 @@
           "ja",
           "de"
         ],
-        "v": "7f057e89db"
+        "v": "f9701a1842"
       },
       "setup": [],
       "use": [
@@ -1321,7 +1321,7 @@
               "ja",
               "de"
             ],
-            "v": "5b9f249dc8"
+            "v": "1b557a5c13"
           }
         },
         {
@@ -1351,7 +1351,7 @@
               "ja",
               "de"
             ],
-            "v": "5bc994ecd1"
+            "v": "178fc231fb"
           }
         }
       ]
@@ -1396,7 +1396,7 @@
           "ja",
           "de"
         ],
-        "v": "5ab194d0a0"
+        "v": "6b7e3aa601"
       },
       "setup": [
         {
@@ -1440,7 +1440,7 @@
               "ja",
               "de"
             ],
-            "v": "1ce7f7d5d2"
+            "v": "fc6dae7571"
           }
         }
       ],
@@ -1472,7 +1472,7 @@
               "ja",
               "de"
             ],
-            "v": "f7f073f740"
+            "v": "53a1cbd573"
           }
         }
       ]
@@ -1517,7 +1517,7 @@
           "ja",
           "de"
         ],
-        "v": "3396f30551"
+        "v": "a38b5096cf"
       },
       "setup": [
         {
@@ -1547,7 +1547,7 @@
               "ja",
               "de"
             ],
-            "v": "caa2836f7d"
+            "v": "01324e2e37"
           }
         }
       ],
@@ -1579,7 +1579,7 @@
               "ja",
               "de"
             ],
-            "v": "724a3e4681"
+            "v": "0e29309721"
           }
         }
       ]
@@ -1612,7 +1612,7 @@
           "ja",
           "de"
         ],
-        "v": "f597260bf1"
+        "v": "22c487c635"
       },
       "setup": [],
       "use": [
@@ -1643,7 +1643,7 @@
               "ja",
               "de"
             ],
-            "v": "c417350234"
+            "v": "2554475d1f"
           }
         },
         {
@@ -1673,7 +1673,7 @@
               "ja",
               "de"
             ],
-            "v": "d03405800f"
+            "v": "73869579cb"
           }
         }
       ]
@@ -1706,7 +1706,7 @@
           "ja",
           "de"
         ],
-        "v": "d3222e8bb6"
+        "v": "e30322746e"
       },
       "setup": [],
       "use": [
@@ -1737,7 +1737,7 @@
               "ja",
               "de"
             ],
-            "v": "1411e0c307"
+            "v": "109a40c105"
           }
         },
         {
@@ -1767,7 +1767,7 @@
               "ja",
               "de"
             ],
-            "v": "d35947db72"
+            "v": "c0523aa9d5"
           }
         }
       ]
@@ -1800,7 +1800,7 @@
           "ja",
           "de"
         ],
-        "v": "b4ad71fb6d"
+        "v": "424a7f3b7e"
       },
       "setup": [],
       "use": [
@@ -1831,7 +1831,7 @@
               "ja",
               "de"
             ],
-            "v": "6e45ab171e"
+            "v": "a224ab5e3a"
           }
         }
       ]
@@ -1876,7 +1876,7 @@
           "ja",
           "de"
         ],
-        "v": "81754bebc9"
+        "v": "786125eaa3"
       },
       "setup": [
         {
@@ -1906,7 +1906,7 @@
               "ja",
               "de"
             ],
-            "v": "5bc994ecd1"
+            "v": "178fc231fb"
           }
         }
       ],
@@ -1938,7 +1938,7 @@
               "ja",
               "de"
             ],
-            "v": "bfe69f8151"
+            "v": "213d47d4de"
           }
         },
         {
@@ -1985,7 +1985,7 @@
           "ja",
           "de"
         ],
-        "v": "b81582383d"
+        "v": "6c6483560d"
       },
       "setup": [],
       "use": [
@@ -2016,7 +2016,7 @@
               "ja",
               "de"
             ],
-            "v": "c76b63cc30"
+            "v": "73522b131d"
           }
         },
         {
@@ -2046,7 +2046,7 @@
               "ja",
               "de"
             ],
-            "v": "8c9dff5fd8"
+            "v": "18a191b747"
           }
         }
       ]
@@ -2079,7 +2079,7 @@
           "ja",
           "de"
         ],
-        "v": "0a4f1ed2b6"
+        "v": "bbcaabd50d"
       },
       "setup": [],
       "use": [
@@ -2110,7 +2110,7 @@
               "ja",
               "de"
             ],
-            "v": "f878bf81c1"
+            "v": "1a3ab873c9"
           }
         },
         {
@@ -2140,7 +2140,7 @@
               "ja",
               "de"
             ],
-            "v": "3116dae683"
+            "v": "46fc2d9c75"
           }
         }
       ]
@@ -2173,7 +2173,7 @@
           "ja",
           "de"
         ],
-        "v": "b1ed320c64"
+        "v": "47b397daac"
       },
       "setup": [],
       "use": [
@@ -2204,7 +2204,7 @@
               "ja",
               "de"
             ],
-            "v": "a6e386a0e7"
+            "v": "cedcfb5b03"
           }
         }
       ]
@@ -2237,7 +2237,7 @@
           "ja",
           "de"
         ],
-        "v": "b3dd7414a0"
+        "v": "f38061ee0b"
       },
       "setup": [],
       "use": [
@@ -2268,24 +2268,24 @@
               "ja",
               "de"
             ],
-            "v": "0c7b6e479b"
+            "v": "f4d7b89a29"
           }
         }
       ]
     },
     "symbolIndex": {
-      "version": "1.1.0",
+      "version": "1.1.1",
       "about": {
-        "en": "JayV maps where each function, type and class of the project is defined, on your computer and without spending tokens, and Claude Code asks that map instead of scanning the folder.",
-        "pt-BR": "O JayV mapeia onde cada função, tipo e classe do projeto é definida, no seu computador e sem gastar tokens, e o Claude Code consulta esse mapa em vez de vasculhar a pasta.",
-        "es": "JayV mapea dónde se define cada función, tipo y clase del proyecto, en tu equipo y sin gastar tokens, y Claude Code consulta ese mapa en lugar de recorrer la carpeta.",
-        "zh-CN": "JayV 在你的电脑上、不花费任何令牌地记录项目中每个函数、类型和类的定义位置，Claude Code 会查询这张图，而不是翻遍整个文件夹。",
-        "hi": "JayV आपके कंप्यूटर पर, बिना टोकन ख़र्च किए, यह नक्शा बनाता है कि प्रोजेक्ट का हर फ़ंक्शन, टाइप और क्लास कहाँ परिभाषित है, और Claude Code फ़ोल्डर खँगालने के बजाय इसी नक्शे से पूछता है।",
-        "ar": "يرسم JayV خريطة لمكان تعريف كل دالة ونوع وصنف في المشروع، على جهازك ودون إنفاق رموز، ويسأل Claude Code هذه الخريطة بدلًا من تفتيش المجلد.",
-        "fr": "JayV repère où chaque fonction, type et classe du projet est défini, sur votre ordinateur et sans dépenser de tokens, et Claude Code interroge cette carte au lieu de parcourir le dossier.",
-        "ru": "JayV составляет карту того, где определены функции, типы и классы проекта, — на вашем компьютере и без расхода токенов, — и Claude Code обращается к этой карте вместо обхода папки.",
-        "ja": "JayV はプロジェクトの各関数、型、クラスが定義されている場所を、あなたのコンピューター上でトークンを使わずに索引化し、Claude Code はフォルダーを探し回る代わりにその索引に問い合わせます。",
-        "de": "JayV erfasst, wo jede Funktion, jeder Typ und jede Klasse des Projekts definiert ist – auf Ihrem Computer und ohne Tokens zu verbrauchen –, und Claude Code fragt diese Karte, statt den Ordner zu durchsuchen."
+        "en": "The app maps where each function, type and class of the project is defined, on your computer and without spending tokens, and Claude Code asks that map instead of scanning the folder.",
+        "pt-BR": "O app mapeia onde cada função, tipo e classe do projeto é definido, no seu computador e sem gastar tokens, e o Claude Code consulta esse mapa em vez de varrer a pasta.",
+        "es": "La app mapea dónde se define cada función, tipo y clase del proyecto, en tu equipo y sin gastar tokens, y Claude Code consulta ese mapa en lugar de recorrer la carpeta.",
+        "zh-CN": "应用会在你的电脑上、不消耗 token 地记录项目中每个函数、类型和类的定义位置，Claude Code 会查询这张图，而不是扫描整个文件夹。",
+        "hi": "ऐप आपके कंप्यूटर पर, बिना टोकन ख़र्च किए, यह नक्शा बनाता है कि प्रोजेक्ट का हर फ़ंक्शन, टाइप और क्लास कहाँ परिभाषित है, और Claude Code फ़ोल्डर खँगालने के बजाय इसी नक्शे से पूछता है।",
+        "ar": "يرسم التطبيق خريطة لمكان تعريف كل دالة ونوع وصنف في المشروع، على جهازك ودون إنفاق رموز، ويسأل Claude Code هذه الخريطة بدل مسح المجلد.",
+        "fr": "L’app repère où chaque fonction, type et classe du projet est défini, sur votre ordinateur et sans dépenser de tokens, et Claude Code interroge cette carte au lieu de parcourir le dossier.",
+        "ru": "Приложение отмечает, где определены функции, типы и классы проекта, — на вашем компьютере и без расхода токенов, — и Claude Code ищет по этой карте, а не просматривает всю папку.",
+        "ja": "アプリはプロジェクトの各関数、型、クラスが定義されている場所を、トークンを使わずにあなたのコンピューター上で記録し、Claude Code はフォルダーを探し回る代わりにそれを参照します。",
+        "de": "Die App erfasst auf deinem Computer und ohne Tokens zu verbrauchen, wo jede Funktion, jeder Typ und jede Klasse des Projekts definiert ist, und Claude Code fragt diese Karte, statt den Ordner zu durchsuchen."
       },
       "enable": {
         "name": "enable",
@@ -2301,22 +2301,22 @@
           "ja",
           "de"
         ],
-        "v": "c093bca422"
+        "v": "8198d8a5f0"
       },
       "setup": [],
       "use": [
         {
           "text": {
-            "en": "Turn on JayV symbol tools in the Claude Code tab of Settings.",
-            "pt-BR": "Ligue Ferramentas de símbolos do JayV na aba Claude Code da Configuração.",
-            "es": "Activa Herramientas de símbolos de JayV en la pestaña Claude Code de la Configuración.",
-            "zh-CN": "在“设置”的 Claude Code 标签页中开启“JayV 符号工具”。",
-            "hi": "सेटिंग्स के Claude Code टैब में JayV सिंबल टूल चालू करें।",
-            "ar": "فعّل «أدوات الرموز في JayV» في تبويب Claude Code في الإعدادات.",
-            "fr": "Activez Outils de symboles de JayV dans l’onglet Claude Code de la Configuration.",
-            "ru": "Включите «Инструменты символов JayV» на вкладке Claude Code в Настройках.",
-            "ja": "設定の Claude Code タブで「JayV シンボルツール」をオンにします。",
-            "de": "Schalten Sie JayV-Symbolwerkzeuge im Tab Claude Code der Einstellungen ein."
+            "en": "In Settings › Claude Code, turn on Symbol tools.",
+            "pt-BR": "Em Configuração › Claude Code, ligue Ferramentas de símbolos.",
+            "es": "En Configuración › Claude Code, activa Herramientas de símbolos.",
+            "zh-CN": "在“设置 › Claude Code”中开启“符号工具”。",
+            "hi": "सेटिंग्स › Claude Code में सिंबल टूल चालू करें।",
+            "ar": "في الإعدادات › Claude Code، فعّل «أدوات الرموز».",
+            "fr": "Dans Configuration › Claude Code, activez Outils de symboles.",
+            "ru": "В Настройки › Claude Code включите «Инструменты символов».",
+            "ja": "設定 › Claude Code で「シンボルツール」をオンにします。",
+            "de": "Schalte unter Einstellungen › Claude Code Symbolwerkzeuge ein."
           },
           "image": {
             "name": "settings",
@@ -2332,7 +2332,7 @@
               "ja",
               "de"
             ],
-            "v": "5f1eac79cb"
+            "v": "7b79376de8"
           }
         },
         {
