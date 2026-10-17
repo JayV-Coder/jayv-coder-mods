@@ -571,28 +571,28 @@
       "minApp": "0.94.0",
       "docs": "symbolIndex",
       "title": {
-        "en": "Symbol index for Claude",
-        "pt-BR": "Índice de símbolos para o Claude",
-        "es": "Índice de símbolos para Claude",
-        "zh-CN": "供 Claude 使用的符号索引",
-        "hi": "Claude के लिए सिंबल इंडेक्स",
-        "ar": "فهرس الرموز لـ Claude",
-        "fr": "Index des symboles pour Claude",
-        "ru": "Индекс символов для Claude",
-        "ja": "Claude 用のシンボルインデックス",
-        "de": "Symbolindex für Claude"
+        "en": "Symbol index",
+        "pt-BR": "Índice de símbolos",
+        "es": "Índice de símbolos",
+        "zh-CN": "符号索引",
+        "hi": "सिंबल इंडेक्स",
+        "ar": "فهرس الرموز",
+        "fr": "Index des symboles",
+        "ru": "Индекс символов",
+        "ja": "シンボルインデックス",
+        "de": "Symbolindex"
       },
       "summary": {
-        "en": "Claude Code asks JayV's symbol index where things live instead of scanning the folder.",
-        "pt-BR": "O Claude Code pergunta ao índice de símbolos do JayV onde as coisas moram em vez de varrer a pasta.",
-        "es": "Claude Code pregunta al índice de símbolos de JayV dónde está cada cosa en lugar de recorrer la carpeta.",
-        "zh-CN": "Claude Code 会询问 JayV 的符号索引东西在哪里，而不是扫描整个文件夹。",
-        "hi": "Claude Code फ़ोल्डर खँगालने के बजाय JayV के सिंबल इंडेक्स से पूछता है कि चीज़ें कहाँ हैं।",
-        "ar": "يسأل Claude Code فهرس رموز JayV عن مكان الأشياء بدلًا من مسح المجلد.",
-        "fr": "Claude Code demande à l'index des symboles de JayV où se trouvent les choses au lieu de parcourir le dossier.",
-        "ru": "Claude Code спрашивает у индекса символов JayV, где что находится, вместо сканирования папки.",
-        "ja": "Claude Code はフォルダを走査する代わりに、JayV のシンボルインデックスに場所を尋ねます。",
-        "de": "Claude Code fragt den Symbolindex von JayV, wo etwas liegt, statt den Ordner zu durchsuchen."
+        "en": "Claude Code asks the symbol index where things are instead of scanning the folder.",
+        "pt-BR": "O Claude Code consulta o índice de símbolos para achar as coisas em vez de varrer a pasta.",
+        "es": "Claude Code consulta el índice de símbolos para encontrar las cosas en lugar de recorrer la carpeta.",
+        "zh-CN": "Claude Code 通过符号索引查找内容，而不是扫描整个文件夹。",
+        "hi": "Claude Code फ़ोल्डर खँगालने के बजाय सिंबल इंडेक्स से पूछता है कि चीज़ें कहाँ हैं।",
+        "ar": "يسأل Claude Code فهرس الرموز عن مكان الأشياء بدل مسح المجلد.",
+        "fr": "Claude Code interroge l’index des symboles pour trouver les choses au lieu de parcourir le dossier.",
+        "ru": "Claude Code ищет нужное по индексу символов, а не просматривает всю папку.",
+        "ja": "Claude Code はフォルダーを探し回る代わりに、シンボルインデックスで場所を調べます。",
+        "de": "Claude Code fragt den Symbolindex, wo etwas liegt, statt den Ordner zu durchsuchen."
       }
     },
     {

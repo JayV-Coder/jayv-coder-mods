@@ -1,30 +1,30 @@
 {
   "$schema": "../../schema/page.schema.json",
   "about": {
-    "en": "JayV maps where each function, type and class of the project is defined, on your computer and without spending tokens, and Claude Code asks that map instead of scanning the folder.",
-    "pt-BR": "O JayV mapeia onde cada função, tipo e classe do projeto é definida, no seu computador e sem gastar tokens, e o Claude Code consulta esse mapa em vez de vasculhar a pasta.",
-    "es": "JayV mapea dónde se define cada función, tipo y clase del proyecto, en tu equipo y sin gastar tokens, y Claude Code consulta ese mapa en lugar de recorrer la carpeta.",
-    "zh-CN": "JayV 在你的电脑上、不花费任何令牌地记录项目中每个函数、类型和类的定义位置，Claude Code 会查询这张图，而不是翻遍整个文件夹。",
-    "hi": "JayV आपके कंप्यूटर पर, बिना टोकन ख़र्च किए, यह नक्शा बनाता है कि प्रोजेक्ट का हर फ़ंक्शन, टाइप और क्लास कहाँ परिभाषित है, और Claude Code फ़ोल्डर खँगालने के बजाय इसी नक्शे से पूछता है।",
-    "ar": "يرسم JayV خريطة لمكان تعريف كل دالة ونوع وصنف في المشروع، على جهازك ودون إنفاق رموز، ويسأل Claude Code هذه الخريطة بدلًا من تفتيش المجلد.",
-    "fr": "JayV repère où chaque fonction, type et classe du projet est défini, sur votre ordinateur et sans dépenser de tokens, et Claude Code interroge cette carte au lieu de parcourir le dossier.",
-    "ru": "JayV составляет карту того, где определены функции, типы и классы проекта, — на вашем компьютере и без расхода токенов, — и Claude Code обращается к этой карте вместо обхода папки.",
-    "ja": "JayV はプロジェクトの各関数、型、クラスが定義されている場所を、あなたのコンピューター上でトークンを使わずに索引化し、Claude Code はフォルダーを探し回る代わりにその索引に問い合わせます。",
-    "de": "JayV erfasst, wo jede Funktion, jeder Typ und jede Klasse des Projekts definiert ist – auf Ihrem Computer und ohne Tokens zu verbrauchen –, und Claude Code fragt diese Karte, statt den Ordner zu durchsuchen."
+    "en": "The app maps where each function, type and class of the project is defined, on your computer and without spending tokens, and Claude Code asks that map instead of scanning the folder.",
+    "pt-BR": "O app mapeia onde cada função, tipo e classe do projeto é definido, no seu computador e sem gastar tokens, e o Claude Code consulta esse mapa em vez de varrer a pasta.",
+    "es": "La app mapea dónde se define cada función, tipo y clase del proyecto, en tu equipo y sin gastar tokens, y Claude Code consulta ese mapa en lugar de recorrer la carpeta.",
+    "zh-CN": "应用会在你的电脑上、不消耗 token 地记录项目中每个函数、类型和类的定义位置，Claude Code 会查询这张图，而不是扫描整个文件夹。",
+    "hi": "ऐप आपके कंप्यूटर पर, बिना टोकन ख़र्च किए, यह नक्शा बनाता है कि प्रोजेक्ट का हर फ़ंक्शन, टाइप और क्लास कहाँ परिभाषित है, और Claude Code फ़ोल्डर खँगालने के बजाय इसी नक्शे से पूछता है।",
+    "ar": "يرسم التطبيق خريطة لمكان تعريف كل دالة ونوع وصنف في المشروع، على جهازك ودون إنفاق رموز، ويسأل Claude Code هذه الخريطة بدل مسح المجلد.",
+    "fr": "L’app repère où chaque fonction, type et classe du projet est défini, sur votre ordinateur et sans dépenser de tokens, et Claude Code interroge cette carte au lieu de parcourir le dossier.",
+    "ru": "Приложение отмечает, где определены функции, типы и классы проекта, — на вашем компьютере и без расхода токенов, — и Claude Code ищет по этой карте, а не просматривает всю папку.",
+    "ja": "アプリはプロジェクトの各関数、型、クラスが定義されている場所を、トークンを使わずにあなたのコンピューター上で記録し、Claude Code はフォルダーを探し回る代わりにそれを参照します。",
+    "de": "Die App erfasst auf deinem Computer und ohne Tokens zu verbrauchen, wo jede Funktion, jeder Typ und jede Klasse des Projekts definiert ist, und Claude Code fragt diese Karte, statt den Ordner zu durchsuchen."
   },
   "use": [
     {
       "text": {
-        "en": "Turn on JayV symbol tools in the Claude Code tab of Settings.",
-        "pt-BR": "Ligue Ferramentas de símbolos do JayV na aba Claude Code da Configuração.",
-        "es": "Activa Herramientas de símbolos de JayV en la pestaña Claude Code de la Configuración.",
-        "zh-CN": "在“设置”的 Claude Code 标签页中开启“JayV 符号工具”。",
-        "hi": "सेटिंग्स के Claude Code टैब में JayV सिंबल टूल चालू करें।",
-        "ar": "فعّل «أدوات الرموز في JayV» في تبويب Claude Code في الإعدادات.",
-        "fr": "Activez Outils de symboles de JayV dans l’onglet Claude Code de la Configuration.",
-        "ru": "Включите «Инструменты символов JayV» на вкладке Claude Code в Настройках.",
-        "ja": "設定の Claude Code タブで「JayV シンボルツール」をオンにします。",
-        "de": "Schalten Sie JayV-Symbolwerkzeuge im Tab Claude Code der Einstellungen ein."
+        "en": "In Settings › Claude Code, turn on Symbol tools.",
+        "pt-BR": "Em Configuração › Claude Code, ligue Ferramentas de símbolos.",
+        "es": "En Configuración › Claude Code, activa Herramientas de símbolos.",
+        "zh-CN": "在“设置 › Claude Code”中开启“符号工具”。",
+        "hi": "सेटिंग्स › Claude Code में सिंबल टूल चालू करें।",
+        "ar": "في الإعدادات › Claude Code، فعّل «أدوات الرموز».",
+        "fr": "Dans Configuration › Claude Code, activez Outils de symboles.",
+        "ru": "В Настройки › Claude Code включите «Инструменты символов».",
+        "ja": "設定 › Claude Code で「シンボルツール」をオンにします。",
+        "de": "Schalte unter Einstellungen › Claude Code Symbolwerkzeuge ein."
       },
       "image": "settings"
     },
