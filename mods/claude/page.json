@@ -10,7 +10,7 @@
     "fr": "Claude Code est l’agent de programmation d’Anthropic pour le terminal. Avec ce mod, Jev peut lui envoyer des demandes : Claude Code modifie le projet, lance les commandes que vous autorisez et garde sa session dans chaque chat, pendant que JayV s’occupe de la loge, du contexte, du routage et du suivi de consommation.",
     "ru": "Claude Code — агент Anthropic для программирования в терминале. С этим модом Jev может отправлять ему запросы: Claude Code правит проект, выполняет разрешённые вами команды и сохраняет сессию в каждом чате, а JayV берёт на себя проходную, контекст, маршрутизацию и учёт расхода.",
     "ja": "Claude Code は Anthropic のターミナル用コーディングエージェントです。この Mod があると、Jev は依頼を Claude Code に送れます。Claude Code はプロジェクトを編集し、許可したコマンドを実行し、チャットごとにセッションを保ちます。ゲート、コンテキスト、ルーティング、使用量の記録は JayV が担います。",
-    "de": "Claude Code ist der Coding-Agent von Anthropic für das Terminal. Mit diesem Mod kann Jev Anfragen an ihn schicken: Claude Code bearbeitet das Projekt, führt die Befehle aus, die Sie erlauben, und behält seine Sitzung in jedem Chat, während JayV Pforte, Kontext, Routing und Verbrauchsprotokoll übernimmt."
+    "de": "Claude Code ist der Coding-Agent von Anthropic für das Terminal. Mit diesem Mod kann Jev Anfragen an ihn schicken: Claude Code bearbeitet das Projekt, führt die Befehle aus, die du erlaubst, und behält seine Sitzung in jedem Chat, während JayV Pforte, Kontext, Routing und Verbrauchsprotokoll übernimmt."
   },
   "requirements": {
     "en": "Claude Code installed on this computer and signed in to your Anthropic account (a Claude plan or an API key).",
@@ -22,7 +22,7 @@
     "fr": "Claude Code installé sur cet ordinateur et connecté à votre compte Anthropic (un forfait Claude ou une clé d’API).",
     "ru": "Claude Code, установленный на этом компьютере, с входом в вашу учётную запись Anthropic (тариф Claude или ключ API).",
     "ja": "このコンピューターに Claude Code がインストールされ、Anthropic のアカウント（Claude のプランまたは API キー）でサインインしていること。",
-    "de": "Claude Code auf diesem Computer installiert und bei Ihrem Anthropic-Konto angemeldet (ein Claude-Tarif oder ein API-Schlüssel)."
+    "de": "Claude Code auf diesem Computer installiert und bei deinem Anthropic-Konto angemeldet (ein Claude-Tarif oder ein API-Schlüssel)."
   },
   "setup": [
     {
@@ -36,7 +36,7 @@
         "fr": "Installez Claude Code et connectez-vous une fois en lançant claude dans un terminal. JayV trouve le programme tout seul.",
         "ru": "Установите Claude Code и один раз войдите, выполнив claude в терминале. JayV найдёт программу сам.",
         "ja": "Claude Code をインストールし、ターミナルで claude を実行して一度サインインします。JayV はプログラムを自動で見つけます。",
-        "de": "Installieren Sie Claude Code und melden Sie sich einmal an, indem Sie claude in einem Terminal ausführen. JayV findet das Programm von selbst."
+        "de": "Installiere Claude Code und melde dich einmal an, indem du claude in einem Terminal ausführst. JayV findet das Programm von selbst."
       }
     },
     {
@@ -50,7 +50,7 @@
         "fr": "Dans Configuration › Claude Code, vérifiez que le programme a été trouvé, activez les modèles que Jev peut utiliser et réglez les options : permissions, effort et serveurs MCP.",
         "ru": "В Настройки › Claude Code проверьте, что программа найдена, включите модели, которые может использовать Jev, и настройте параметры: разрешения, усилие и серверы MCP.",
         "ja": "設定 › Claude Code で、プログラムが見つかったことを確認し、Jev が使ってよいモデルをオンにして、権限、思考量、MCP サーバーなどのオプションを調整します。",
-        "de": "Prüfen Sie unter Einstellungen › Claude Code, ob das Programm gefunden wurde, schalten Sie die Modelle ein, die Jev nutzen darf, und passen Sie die Optionen an: Berechtigungen, Aufwand und MCP-Server."
+        "de": "Prüfe unter Einstellungen › Claude Code, ob das Programm gefunden wurde, schalte die Modelle ein, die Jev nutzen darf, und passe die Optionen an: Berechtigungen, Aufwand und MCP-Server."
       },
       "image": "settings"
     }
@@ -67,7 +67,7 @@
         "fr": "Écrivez votre demande dans n’importe quel chat. Quand Claude Code est le plus adapté, le panneau Progression montre la route vers lui, et la réponse indique quel modèle l’a écrite.",
         "ru": "Напишите запрос в любом чате. Когда лучше всего подходит Claude Code, панель «Ход работы» показывает маршрут к нему, а в ответе видно, какая модель его написала.",
         "ja": "どのチャットでも依頼を書いてください。Claude Code が最適なとき、進行状況パネルにそこへのルートが表示され、回答にはどのモデルが書いたかが示されます。",
-        "de": "Schreiben Sie Ihre Anfrage in einen beliebigen Chat. Wenn Claude Code am besten passt, zeigt das Fortschritt-Panel die Route zu ihm, und die Antwort nennt das Modell, das sie geschrieben hat."
+        "de": "Schreib deine Anfrage in einen beliebigen Chat. Wenn Claude Code am besten passt, zeigt das Fortschritt-Panel die Route zu ihm, und die Antwort nennt das Modell, das sie geschrieben hat."
       },
       "image": "chat"
     }

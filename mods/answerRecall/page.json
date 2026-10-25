@@ -24,7 +24,7 @@
         "fr": "Il n’y a rien à configurer : ça fonctionne dès que votre forfait l’inclut. Chaque réponse précédente réutilisée est comptée dans le panneau de Jev, dans Statistiques.",
         "ru": "Настраивать ничего не нужно: работает, если ваш тариф это включает. Каждый повторно использованный ответ учитывается на панели Jev в разделе «Статистика».",
         "ja": "設定は不要です。プランに含まれていれば自動で動きます。再利用された過去の回答は、統計の Jev パネルで数えられます。",
-        "de": "Es gibt nichts einzurichten: Es funktioniert, sobald Ihr Tarif es enthält. Jede wiederverwendete frühere Antwort wird im Jev-Panel unter Statistiken gezählt."
+        "de": "Es gibt nichts einzurichten: Es funktioniert, sobald dein Tarif es enthält. Jede wiederverwendete frühere Antwort wird im Jev-Panel unter Statistiken gezählt."
       },
       "image": "stats"
     }

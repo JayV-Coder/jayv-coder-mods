@@ -32,7 +32,7 @@
     "fr": "Votre proxy LiteLLM : les modèles qu’il sert par une seule adresse. Répond par du texte : questions, analyse, revue et planification.",
     "ru": "Ваш прокси LiteLLM: модели, которые он отдаёт по одному адресу. Отвечает текстом: вопросы, анализ, ревью и планирование.",
     "ja": "あなたの LiteLLM プロキシ。1つのアドレスで提供されるモデルを利用します。テキストで答えます：質問、分析、レビュー、計画。",
-    "de": "Ihr LiteLLM-Proxy: die Modelle, die er über eine Adresse bereitstellt. Antwortet mit Text: Fragen, Analyse, Review und Planung."
+    "de": "Dein LiteLLM-Proxy: die Modelle, die er über eine Adresse bereitstellt. Antwortet mit Text: Fragen, Analyse, Review und Planung."
   },
   "contributes": {
     "llmEngines": [

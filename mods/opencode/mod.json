@@ -1,0 +1,56 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "opencode",
+  "version": "1.0.0",
+  "category": "agents",
+  "plan": "customMods",
+  "minApp": "0.108.0",
+  "preinstalled": false,
+  "author": "JayV",
+  "docs": "acpAgents",
+  "homepage": "https://opencode.ai",
+  "icon": "icon.svg",
+  "title": {
+    "en": "OpenCode",
+    "pt-BR": "OpenCode",
+    "es": "OpenCode",
+    "zh-CN": "OpenCode",
+    "hi": "OpenCode",
+    "ar": "OpenCode",
+    "fr": "OpenCode",
+    "ru": "OpenCode",
+    "ja": "OpenCode",
+    "de": "OpenCode"
+  },
+  "summary": {
+    "en": "The open-source coding agent that works with models from many providers. It edits the project and only reads in Planning mode.",
+    "pt-BR": "O agente de programação de código aberto que funciona com modelos de muitos provedores. Edita o projeto e só lê no modo Planejamento.",
+    "es": "El agente de programación de código abierto que funciona con modelos de muchos proveedores. Edita el proyecto y solo lee en el modo Planificación.",
+    "zh-CN": "开源编程代理，可使用多家提供商的模型。它会编辑项目，在规划模式下只读取。",
+    "hi": "ओपन-सोर्स कोडिंग एजेंट जो कई प्रदाताओं के मॉडलों के साथ काम करता है। यह प्रोजेक्ट बदलता है और योजना मोड में सिर्फ़ पढ़ता है।",
+    "ar": "وكيل البرمجة مفتوح المصدر الذي يعمل مع نماذج من مزوّدين كثيرين. يعدّل المشروع ولا يقرأ إلا في وضع التخطيط.",
+    "fr": "L’agent de programmation open source qui fonctionne avec les modèles de nombreux fournisseurs. Il modifie le projet et ne fait que lire en mode Planification.",
+    "ru": "Агент для программирования с открытым исходным кодом, который работает с моделями многих поставщиков. Изменяет проект, а в режиме «Планирование» только читает.",
+    "ja": "多くのプロバイダーのモデルで動くオープンソースのコーディングエージェントです。プロジェクトを編集し、計画モードでは読み取りだけを行います。",
+    "de": "Der quelloffene Coding-Agent, der mit Modellen vieler Anbieter arbeitet. Er bearbeitet das Projekt und liest im Modus Planung nur."
+  },
+  "contributes": {
+    "agents": [
+      {
+        "kind": "acp",
+        "command": "opencode",
+        "args": [
+          "acp"
+        ],
+        "env": {
+          "OPENCODE_PERMISSION": "{\"bash\":\"ask\",\"webfetch\":\"ask\",\"external_directory\":\"ask\"}"
+        },
+        "buildMode": "build",
+        "planMode": "plan",
+        "models": [
+          "default"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "Manus is a general AI agent that works on its own computer in the cloud: it browses, researches and produces documents. With this mod, Jev can hand it a task: the app follows the task until Manus answers, and the next message in the chat continues the same task. Manus doesn't edit the project on your computer.",
+    "pt-BR": "A Manus é um agente de IA de uso geral que trabalha num computador próprio na nuvem: navega, pesquisa e produz documentos. Com este mod, o Jev pode passar uma tarefa a ela: o app acompanha a tarefa até a Manus responder, e a mensagem seguinte do chat continua a mesma tarefa. A Manus não edita o projeto no seu computador.",
+    "es": "Manus es un agente de IA de uso general que trabaja en su propio equipo en la nube: navega, investiga y produce documentos. Con este mod, Jev puede pasarle una tarea: la app sigue la tarea hasta que Manus responde, y el siguiente mensaje del chat continúa la misma tarea. Manus no edita el proyecto en tu equipo.",
+    "zh-CN": "Manus 是一个通用 AI 代理，在云端自己的电脑上工作：浏览网页、做调研并生成文档。有了这个模组，Jev 可以把任务交给它：应用会跟进任务直到 Manus 作答，对话中的下一条消息会继续同一个任务。Manus 不会编辑你电脑上的项目。",
+    "hi": "Manus एक सामान्य उपयोग का AI एजेंट है जो क्लाउड में अपने कंप्यूटर पर काम करता है: वेब देखता है, शोध करता है और दस्तावेज़ बनाता है। इस मॉड से Jev उसे कोई काम सौंप सकता है: ऐप उस काम पर तब तक नज़र रखता है जब तक Manus जवाब न दे, और चैट का अगला संदेश उसी काम को आगे बढ़ाता है। Manus आपके कंप्यूटर का प्रोजेक्ट नहीं बदलता।",
+    "ar": "Manus وكيل ذكاء اصطناعي عام يعمل على جهازه الخاص في السحابة: يتصفح ويبحث وينتج المستندات. بهذه الإضافة يستطيع Jev تسليمه مهمة: يتابع التطبيق المهمة حتى يجيب Manus، والرسالة التالية في المحادثة تواصل المهمة نفسها. لا يعدّل Manus المشروع على جهازك.",
+    "fr": "Manus est un agent d’IA généraliste qui travaille sur son propre ordinateur dans le cloud : il navigue, fait des recherches et produit des documents. Avec ce mod, Jev peut lui confier une tâche : l’app suit la tâche jusqu’à la réponse de Manus, et le message suivant du chat poursuit la même tâche. Manus ne modifie pas le projet sur votre ordinateur.",
+    "ru": "Manus — универсальный ИИ-агент, который работает на собственном компьютере в облаке: просматривает сайты, исследует и создаёт документы. С этим модом Jev может передать ему задачу: приложение следит за задачей, пока Manus не ответит, а следующее сообщение в чате продолжает ту же задачу. Manus не изменяет проект на вашем компьютере.",
+    "ja": "Manus は、クラウド上の自分のコンピューターで作業する汎用 AI エージェントです。ウェブを閲覧し、調査し、ドキュメントを作ります。この Mod があると、Jev はタスクを Manus に任せられます。アプリは Manus が回答するまでタスクを追い、チャットの次のメッセージは同じタスクの続きになります。Manus はあなたのコンピューター上のプロジェクトを編集しません。",
+    "de": "Manus ist ein KI-Agent für alles, der auf seinem eigenen Computer in der Cloud arbeitet: Er surft, recherchiert und erstellt Dokumente. Mit diesem Mod kann Jev ihm eine Aufgabe geben: Die App verfolgt die Aufgabe, bis Manus antwortet, und die nächste Nachricht im Chat setzt dieselbe Aufgabe fort. Manus bearbeitet das Projekt auf deinem Computer nicht."
+  },
+  "requirements": {
+    "en": "A Manus account with credits and an API key.",
+    "pt-BR": "Uma conta da Manus com créditos e uma chave de API.",
+    "es": "Una cuenta de Manus con créditos y una clave de API.",
+    "zh-CN": "一个有额度的 Manus 账号和一个 API 密钥。",
+    "hi": "क्रेडिट वाला Manus खाता और एक API कुंजी।",
+    "ar": "حساب Manus فيه رصيد ومفتاح API.",
+    "fr": "Un compte Manus avec des crédits et une clé d’API.",
+    "ru": "Учётная запись Manus с кредитами и API-ключ.",
+    "ja": "クレジットのある Manus アカウントと API キー。",
+    "de": "Ein Manus-Konto mit Guthaben und ein API-Schlüssel."
+  },
+  "setup": [
+    {
+      "text": {
+        "en": "In Settings › Manus, paste the API key (it stays on this computer) and turn the agent on. The models are Manus's agent profiles: standard, lite and max.",
+        "pt-BR": "Em Configuração › Manus, cole a chave de API (ela fica neste computador) e ligue o agente. Os modelos são os perfis de agente da Manus: standard, lite e max.",
+        "es": "En Configuración › Manus, pega la clave de API (se queda en este equipo) y activa el agente. Los modelos son los perfiles de agente de Manus: standard, lite y max.",
+        "zh-CN": "在“设置 › Manus”中粘贴 API 密钥（它保存在这台电脑上）并启用代理。模型是 Manus 的代理档位：standard、lite 和 max。",
+        "hi": "सेटिंग्स › Manus में API कुंजी चिपकाएँ (यह इसी कंप्यूटर पर रहती है) और एजेंट चालू करें। मॉडल Manus के एजेंट प्रोफ़ाइल हैं: standard, lite और max।",
+        "ar": "في الإعدادات › Manus، الصق مفتاح API (يبقى على هذا الجهاز) وشغّل الوكيل. النماذج هي ملفات الوكيل لدى Manus: standard وlite وmax.",
+        "fr": "Dans Configuration › Manus, collez la clé d’API (elle reste sur cet ordinateur) et activez l’agent. Les modèles sont les profils d’agent de Manus : standard, lite et max.",
+        "ru": "В Настройки › Manus вставьте API-ключ (он остаётся на этом компьютере) и включите агента. Модели — это профили агента Manus: standard, lite и max.",
+        "ja": "設定 › Manus で API キーを貼り付け（キーはこのコンピューターに保存されます）、エージェントをオンにします。モデルは Manus のエージェントプロファイル（standard、lite、max）です。",
+        "de": "Füge unter Einstellungen › Manus den API-Schlüssel ein (er bleibt auf diesem Computer) und schalte den Agenten ein. Die Modelle sind die Agentenprofile von Manus: standard, lite und max."
+      },
+      "image": "settings"
+    }
+  ],
+  "use": [
+    {
+      "text": {
+        "en": "Ask in a chat for research or a document. The Progress panel shows the steps of the task, and the answer brings links to the files Manus made.",
+        "pt-BR": "Peça num chat uma pesquisa ou um documento. O painel Andamento mostra os passos da tarefa, e a resposta traz os links dos arquivos que a Manus fez.",
+        "es": "Pide en un chat una investigación o un documento. El panel Progreso muestra los pasos de la tarea, y la respuesta trae los enlaces de los archivos que hizo Manus.",
+        "zh-CN": "在对话中请求调研或一份文档。进度面板会显示任务的步骤，回答会附上 Manus 生成的文件链接。",
+        "hi": "चैट में कोई शोध या दस्तावेज़ माँगें। प्रगति पैनल काम के चरण दिखाता है, और जवाब में Manus की बनाई फ़ाइलों के लिंक होते हैं।",
+        "ar": "اطلب في محادثة بحثًا أو مستندًا. تعرض لوحة التقدّم خطوات المهمة، ويأتي الرد بروابط الملفات التي أنشأها Manus.",
+        "fr": "Demandez dans un chat une recherche ou un document. Le panneau Progression montre les étapes de la tâche, et la réponse donne les liens des fichiers créés par Manus.",
+        "ru": "Попросите в чате исследование или документ. Панель «Ход работы» показывает шаги задачи, а в ответе будут ссылки на файлы, которые сделал Manus.",
+        "ja": "チャットで調査やドキュメントを依頼してください。進行状況パネルにタスクのステップが表示され、回答には Manus が作ったファイルへのリンクが付きます。",
+        "de": "Bitte in einem Chat um eine Recherche oder ein Dokument. Das Fortschritt-Panel zeigt die Schritte der Aufgabe, und die Antwort bringt Links zu den Dateien, die Manus erstellt hat."
+      },
+      "image": "chat"
+    }
+  ]
+}

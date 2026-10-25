@@ -1,0 +1,51 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "manus",
+  "version": "1.0.0",
+  "category": "agents",
+  "plan": "customMods",
+  "minApp": "0.108.0",
+  "preinstalled": false,
+  "author": "JayV",
+  "docs": "llmMods",
+  "homepage": "https://manus.im",
+  "icon": "icon.svg",
+  "title": {
+    "en": "Manus",
+    "pt-BR": "Manus",
+    "es": "Manus",
+    "zh-CN": "Manus",
+    "hi": "Manus",
+    "ar": "Manus",
+    "fr": "Manus",
+    "ru": "Manus",
+    "ja": "Manus",
+    "de": "Manus"
+  },
+  "summary": {
+    "en": "Manus, the general AI agent: it works on a task in its own cloud and answers with text and files.",
+    "pt-BR": "A Manus, agente de IA de uso geral: trabalha numa tarefa na nuvem dela e responde com texto e arquivos.",
+    "es": "Manus, el agente de IA de uso general: trabaja en una tarea en su propia nube y responde con texto y archivos.",
+    "zh-CN": "Manus 是通用 AI 代理：它在自己的云端处理任务，并以文本和文件作答。",
+    "hi": "Manus, सामान्य उपयोग का AI एजेंट: यह अपने क्लाउड में किसी काम पर काम करता है और टेक्स्ट व फ़ाइलों से जवाब देता है।",
+    "ar": "Manus، وكيل الذكاء الاصطناعي العام: يعمل على مهمة في سحابته الخاصة ويجيب بالنص والملفات.",
+    "fr": "Manus, l’agent d’IA généraliste : il travaille sur une tâche dans son propre cloud et répond avec du texte et des fichiers.",
+    "ru": "Manus — универсальный ИИ-агент: работает над задачей в своём облаке и отвечает текстом и файлами.",
+    "ja": "汎用 AI エージェントの Manus です。自分のクラウドでタスクに取り組み、テキストとファイルで回答します。",
+    "de": "Manus, der KI-Agent für alles: Er arbeitet in seiner eigenen Cloud an einer Aufgabe und antwortet mit Text und Dateien."
+  },
+  "contributes": {
+    "agents": [
+      {
+        "kind": "api",
+        "protocol": "manus",
+        "baseUrl": "https://api.manus.ai/v2",
+        "keyRequired": true,
+        "models": [
+          "standard",
+          "lite"
+        ]
+      }
+    ]
+  }
+}

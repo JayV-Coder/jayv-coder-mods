@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/mod.schema.json",
+  "id": "perplexity",
+  "version": "1.0.0",
+  "category": "agents",
+  "plan": "customMods",
+  "minApp": "0.108.0",
+  "preinstalled": false,
+  "author": "JayV",
+  "docs": "llmMods",
+  "homepage": "https://docs.perplexity.ai",
+  "icon": "icon.svg",
+  "title": {
+    "en": "Perplexity",
+    "pt-BR": "Perplexity",
+    "es": "Perplexity",
+    "zh-CN": "Perplexity",
+    "hi": "Perplexity",
+    "ar": "Perplexity",
+    "fr": "Perplexity",
+    "ru": "Perplexity",
+    "ja": "Perplexity",
+    "de": "Perplexity"
+  },
+  "summary": {
+    "en": "Answers with web search and sources, through Perplexity's agent API. Text only, without editing the project.",
+    "pt-BR": "Respostas com busca na web e fontes, pela API de agentes da Perplexity. Só texto, sem editar o projeto.",
+    "es": "Respuestas con búsqueda web y fuentes, mediante la API de agentes de Perplexity. Solo texto, sin editar el proyecto.",
+    "zh-CN": "通过 Perplexity 的代理 API 获得带网页搜索和来源的回答。只有文本，不编辑项目。",
+    "hi": "Perplexity की एजेंट API से वेब खोज और स्रोतों के साथ जवाब। सिर्फ़ टेक्स्ट, प्रोजेक्ट बदले बिना।",
+    "ar": "إجابات مع بحث في الويب ومصادر، عبر واجهة الوكلاء من Perplexity. نص فقط، دون تعديل المشروع.",
+    "fr": "Des réponses avec recherche web et sources, via l’API d’agents de Perplexity. Du texte seulement, sans modifier le projet.",
+    "ru": "Ответы с поиском в интернете и источниками через API агентов Perplexity. Только текст, без изменения проекта.",
+    "ja": "Perplexity のエージェント API で、ウェブ検索と出典付きの回答を得られます。テキストのみで、プロジェクトは編集しません。",
+    "de": "Antworten mit Websuche und Quellen über die Agenten-API von Perplexity. Nur Text, ohne das Projekt zu bearbeiten."
+  },
+  "contributes": {
+    "agents": [
+      {
+        "kind": "api",
+        "protocol": "responses",
+        "baseUrl": "https://api.perplexity.ai/v1",
+        "keyRequired": true,
+        "modelField": "preset",
+        "models": [
+          "fast",
+          "low",
+          "medium",
+          "high"
+        ]
+      }
+    ]
+  }
+}

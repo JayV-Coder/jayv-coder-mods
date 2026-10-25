@@ -24,7 +24,7 @@
         "fr": "Ouvrez Loge dans le menu latéral d’un projet, cliquez sur le compteur de la barre d’état ou appuyez sur Ctrl+G (⌘G sur Mac).",
         "ru": "Откройте «Проходная» в боковом меню проекта, нажмите на счётчик в строке состояния или нажмите Ctrl+G (⌘G на Mac).",
         "ja": "プロジェクトのサイドメニューでゲートを開くか、ステータスバーの件数をクリックするか、Ctrl+G（Mac では ⌘G）を押します。",
-        "de": "Öffnen Sie Pforte im Seitenmenü eines Projekts, klicken Sie auf die Zahl in der Statusleiste oder drücken Sie Strg+G (⌘G auf dem Mac)."
+        "de": "Öffne Pforte im Seitenmenü eines Projekts, klicke auf die Zahl in der Statusleiste oder drück Strg+G (⌘G auf dem Mac)."
       },
       "image": "gate"
     },
@@ -39,7 +39,7 @@
         "fr": "Les réponses que vous donnez à la loge deviennent des notes du projet, pour qu’elle ne repose pas la même question.",
         "ru": "Ваши ответы проходной становятся заметками проекта, чтобы она не спрашивала одно и то же снова.",
         "ja": "ゲートへのあなたの回答はプロジェクトノートになるので、同じことを二度聞かれません。",
-        "de": "Ihre Antworten an die Pforte werden zu Projektnotizen, damit sie nicht noch einmal dasselbe fragt."
+        "de": "Deine Antworten an die Pforte werden zu Projektnotizen, damit sie nicht noch einmal dasselbe fragt."
       }
     }
   ]

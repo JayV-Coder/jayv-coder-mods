@@ -22,7 +22,7 @@
     "fr": "Codex CLI installé sur cet ordinateur et connecté avec votre compte ChatGPT ou une clé d’API OpenAI.",
     "ru": "Codex CLI, установленный на этом компьютере, с входом через учётную запись ChatGPT или ключ API OpenAI.",
     "ja": "このコンピューターに Codex CLI がインストールされ、ChatGPT アカウントまたは OpenAI の API キーでサインインしていること。",
-    "de": "Die Codex CLI auf diesem Computer installiert und mit Ihrem ChatGPT-Konto oder einem OpenAI-API-Schlüssel angemeldet."
+    "de": "Die Codex CLI auf diesem Computer installiert und mit deinem ChatGPT-Konto oder einem OpenAI-API-Schlüssel angemeldet."
   },
   "setup": [
     {
@@ -36,7 +36,7 @@
         "fr": "Installez Codex CLI et lancez codex login une fois dans un terminal.",
         "ru": "Установите Codex CLI и один раз выполните codex login в терминале.",
         "ja": "Codex CLI をインストールし、ターミナルで codex login を一度実行します。",
-        "de": "Installieren Sie die Codex CLI und führen Sie einmal codex login in einem Terminal aus."
+        "de": "Installiere die Codex CLI und führe einmal codex login in einem Terminal aus."
       }
     },
     {
@@ -50,7 +50,7 @@
         "fr": "Dans Configuration › Codex, vérifiez le programme, activez les modèles que Jev peut utiliser et choisissez le sandbox et l’effort de raisonnement.",
         "ru": "В Настройки › Codex проверьте программу, включите модели, которые может использовать Jev, и выберите песочницу и усилие рассуждения.",
         "ja": "設定 › Codex でプログラムを確認し、Jev が使ってよいモデルをオンにして、サンドボックスと推論の強さを選びます。",
-        "de": "Prüfen Sie unter Einstellungen › Codex das Programm, schalten Sie die Modelle ein, die Jev nutzen darf, und wählen Sie Sandbox und Denkaufwand."
+        "de": "Prüfe unter Einstellungen › Codex das Programm, schalte die Modelle ein, die Jev nutzen darf, und wähle Sandbox und Denkaufwand."
       },
       "image": "settings"
     }
@@ -67,7 +67,7 @@
         "fr": "Envoyez votre demande dans un chat. Quand Jev la confie à Codex, le panneau Progression montre la route et chaque étape de l’agent.",
         "ru": "Отправьте запрос в чате. Когда Jev направляет его в Codex, панель «Ход работы» показывает маршрут и каждый шаг агента.",
         "ja": "チャットで依頼を送ってください。Jev が Codex に回すと、進行状況パネルにルートとエージェントの各ステップが表示されます。",
-        "de": "Senden Sie Ihre Anfrage in einem Chat. Wenn Jev sie an Codex leitet, zeigt das Fortschritt-Panel die Route und jeden Schritt des Agenten."
+        "de": "Sende deine Anfrage in einem Chat. Wenn Jev sie an Codex leitet, zeigt das Fortschritt-Panel die Route und jeden Schritt des Agenten."
       },
       "image": "chat"
     }

@@ -36,7 +36,7 @@
         "fr": "Dans Configuration › OpenRouter, collez votre clé d’API (elle reste sur cet ordinateur) et vérifiez la connexion : JayV charge la liste des modèles. Activez ensuite les modèles que Jev peut utiliser.",
         "ru": "В Настройки › OpenRouter вставьте ключ API (он остаётся на этом компьютере) и проверьте подключение: JayV загрузит список моделей. Затем включите модели, которые может использовать Jev.",
         "ja": "設定 › OpenRouter で API キーを貼り付け（キーはこのコンピューターに保存されます）、接続を確認すると、JayV がモデル一覧を読み込みます。その後、Jev が使ってよいモデルをオンにします。",
-        "de": "Fügen Sie unter Einstellungen › OpenRouter Ihren API-Schlüssel ein (er bleibt auf diesem Computer) und prüfen Sie die Verbindung: JayV lädt die Modellliste. Schalten Sie dann die Modelle ein, die Jev nutzen darf."
+        "de": "Füge unter Einstellungen › OpenRouter deinen API-Schlüssel ein (er bleibt auf diesem Computer) und prüfe die Verbindung: JayV lädt die Modellliste. Schalte dann die Modelle ein, die Jev nutzen darf."
       },
       "image": "settings"
     }
@@ -53,7 +53,7 @@
         "fr": "Demandez dans un chat une analyse, une relecture ou une explication. Quand Jev choisit un modèle OpenRouter, la réponse indique lequel.",
         "ru": "Попросите в чате анализ, ревью или объяснение. Когда Jev выбирает модель OpenRouter, в ответе указано, какую.",
         "ja": "チャットで分析、レビュー、説明を頼んでください。Jev が OpenRouter のモデルを選ぶと、回答にどのモデルかが示されます。",
-        "de": "Bitten Sie in einem Chat um eine Analyse, eine Prüfung oder eine Erklärung. Wenn Jev ein OpenRouter-Modell wählt, nennt die Antwort es."
+        "de": "Bitte in einem Chat um eine Analyse, eine Prüfung oder eine Erklärung. Wenn Jev ein OpenRouter-Modell wählt, nennt die Antwort es."
       },
       "image": "chat"
     }

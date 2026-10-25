@@ -43,9 +43,24 @@ const FIELDS = ["$schema", "id", "version", "category", "plan", "minApp", "prein
 /** A ordem dos campos do formato antigo. */
 const LEGACY_FIELDS = ["id", "kind", "category", "plan", "defaultOn", "minApp", "docs", "homepage", "title", "summary", "template"];
 const AGENT_FIELDS = {
-  api: ["kind", "protocol", "baseUrl", "keyRequired", "models"],
+  api: ["kind", "protocol", "baseUrl", "keyRequired", "modelField", "models"],
   cli: ["kind", "command", "args", "planArgs", "edits", "models"],
+  acp: ["kind", "command", "args", "env", "buildMode", "planMode", "models"],
 };
+/** Os protocolos dos agentes de API: chat da OpenAI, mensagens da Anthropic
+ * e, a partir do app 0.108, Responses da OpenAI e tarefas da Manus. */
+const PROTOCOLS = ["openai", "anthropic", "responses", "manus"];
+/** A versão do app que lê os agentes ACP, os protocolos `responses` e
+ * `manus`, o `modelField` e o `{prompt_file}`. */
+export const AGENTS_V2_SINCE = "0.108.0";
+/** As variáveis que mudam como qualquer programa abre: o agente ACP não as
+ * troca (`mods::custom` no app). */
+const RESERVED_ENV = ["PATH", "HOME", "USERPROFILE", "LD_PRELOAD", "LD_LIBRARY_PATH", "DYLD_INSERT_LIBRARIES", "DYLD_LIBRARY_PATH", "NODE_OPTIONS"];
+const ENV_NAME = /^[A-Za-z_][A-Za-z0-9_]{0,63}$/;
+const MODE = /^[A-Za-z0-9_.:-]{1,64}$/;
+const MODEL_FIELD = /^[a-z_]{1,32}$/;
+const MAX_ENV = 16;
+const MAX_ENV_VALUE = 4000;
 
 const ID = /^[a-z][A-Za-z0-9-]{1,39}$/;
 const ENGINE_ID = /^[a-z][A-Za-z0-9]{1,39}$/;
@@ -114,8 +129,10 @@ function textProblems(where, field, value, max) {
 
 /** A mesma conferência que o app faz numa linha de comando de mod
  * (`mods::custom`): argumentos não vazios, sem quebra de linha, e só
- * `{model}` (em qualquer parte) e `{prompt}` (sozinho num argumento). */
-function lineProblems(label, args) {
+ * `{model}` (em qualquer parte) e `{prompt}` ou `{prompt_file}` (sozinhos
+ * num argumento). O agente ACP recebe o pedido pelo protocolo: na linha dele,
+ * só `{model}`. */
+function lineProblems(label, args, acp = false) {
   if (!Array.isArray(args)) return [`${label} must be a list of arguments`];
   if (args.length > MAX_ARGS) return [`${label} takes at most ${MAX_ARGS} arguments`];
   const found = [];
@@ -125,18 +142,40 @@ function lineProblems(label, args) {
       found.push(`${label} has an empty, multi-line or too long argument`);
       continue;
     }
-    const rest = arg === "{prompt}" ? "" : arg.replaceAll("{model}", "");
-    for (const token of rest.match(PLACEHOLDER) ?? []) found.push(`${label} uses ${token}; only {model} and {prompt} (alone in an argument) are accepted`);
+    const rest = !acp && (arg === "{prompt}" || arg === "{prompt_file}") ? "" : arg.replaceAll("{model}", "");
+    for (const token of rest.match(PLACEHOLDER) ?? []) found.push(acp ? `${label} uses ${token}; an ACP agent gets the request through the protocol, so only {model} is accepted` : `${label} uses ${token}; only {model}, {prompt} and {prompt_file} (alone in an argument) are accepted`);
   }
   return found;
 }
 
-/** Um agente de linha de comando ou de API: a definição de um mod criado, sem
- * o que é da máquina (a chave, a aprovação dos servidores MCP). */
+/** O agente usa o que só o app 0.108 lê: ACP, `responses`, `manus`,
+ * `modelField` ou `{prompt_file}`. */
+export function needsAgentsV2(agent) {
+  if (!isObject(agent)) return false;
+  const lines = [...(agent.args ?? []), ...(agent.planArgs ?? [])];
+  return agent.kind === "acp" || ["responses", "manus"].includes(agent.protocol) || agent.modelField !== undefined || lines.includes("{prompt_file}");
+}
+
+/** As variáveis de um agente ACP: nomes de variável, valores sem quebra de
+ * linha, nenhuma das reservadas. */
+function envProblems(where, env) {
+  if (env === undefined) return [];
+  if (!isObject(env) || Object.keys(env).length > MAX_ENV) return [`${where}.env must be an object with up to ${MAX_ENV} variables`];
+  const found = [];
+  for (const [name, value] of Object.entries(env)) {
+    const reserved = RESERVED_ENV.includes(name.toUpperCase()) || name.toUpperCase().startsWith("DYLD_");
+    // eslint-disable-next-line no-control-regex
+    if (!ENV_NAME.test(name) || reserved || typeof value !== "string" || value.length > MAX_ENV_VALUE || /[\u0000-\u001f\u007f]/.test(value)) found.push(`${where}.env.${name} is not a variable the app accepts`);
+  }
+  return found;
+}
+
+/** Um agente de linha de comando, ACP ou de API: a definição de um mod
+ * criado, sem o que é da máquina (a chave, a aprovação dos servidores MCP). */
 function agentProblems(where, agent) {
   if (!isObject(agent)) return [`${where} must be an object`];
   const fields = AGENT_FIELDS[agent.kind];
-  if (!fields) return [`${where}.kind must be api or cli`];
+  if (!fields) return [`${where}.kind must be api, cli or acp`];
   const found = [];
   for (const key of Object.keys(agent)) if (!fields.includes(key)) found.push(`${where}.${key} is not a field of a ${agent.kind} agent`);
   const models = agent.models ?? [];
@@ -146,9 +185,15 @@ function agentProblems(where, agent) {
     found.push(`${where}.models repeats a model`);
   }
   if (agent.kind === "api") {
-    if (!["openai", "anthropic"].includes(agent.protocol)) found.push(`${where}.protocol must be openai or anthropic`);
+    if (!PROTOCOLS.includes(agent.protocol)) found.push(`${where}.protocol must be one of ${PROTOCOLS.join(", ")}`);
     if (typeof agent.baseUrl !== "string" || !/^https?:\/\/[^\s/@]+/i.test(agent.baseUrl)) found.push(`${where}.baseUrl must be an http(s) address`);
     if (typeof agent.keyRequired !== "boolean") found.push(`${where}.keyRequired must be true or false`);
+    if (agent.modelField !== undefined && (agent.protocol !== "responses" || typeof agent.modelField !== "string" || !MODEL_FIELD.test(agent.modelField))) found.push(`${where}.modelField is only for the responses protocol: lowercase letters and _`);
+  } else if (agent.kind === "acp") {
+    if (typeof agent.command !== "string" || !agent.command.trim() || /\s/.test(agent.command)) found.push(`${where}.command must be the program name, without arguments`);
+    found.push(...lineProblems(`${where}.args`, agent.args ?? [], true));
+    found.push(...envProblems(where, agent.env));
+    for (const field of ["buildMode", "planMode"]) if (agent[field] !== undefined && (typeof agent[field] !== "string" || !MODE.test(agent[field]))) found.push(`${where}.${field} must be the id of a mode the agent offers`);
   } else {
     if (typeof agent.command !== "string" || !agent.command.trim() || /\s/.test(agent.command)) found.push(`${where}.command must be the program name, without arguments`);
     found.push(...lineProblems(`${where}.args`, agent.args ?? []));
@@ -247,15 +292,19 @@ export const POINTS = {
   },
   agents: {
     since: "0.94.0",
-    problems: (where, value, { id }) => {
+    problems: (where, value, { id, minApp }) => {
       if (!Array.isArray(value) || value.length === 0 || value.length > MAX_AGENTS) return [`${where} must be a list of 1 to ${MAX_AGENTS} agents`];
       const found = [];
       if (typeof id !== "string" || !AGENT_MOD_ID.test(id) || id.length > AGENT_MOD_ID_MAX) found.push(`${where}: a mod with agents has an id of lowercase letters, digits and -, up to ${AGENT_MOD_ID_MAX} characters`);
-      value.forEach((agent, index) => found.push(...agentProblems(`${where}[${index}]`, agent)));
+      value.forEach((agent, index) => {
+        found.push(...agentProblems(`${where}[${index}]`, agent));
+        if (needsAgentsV2(agent) && minApp && compareVersions(minApp, AGENTS_V2_SINCE) < 0) found.push(`${where}[${index}] needs minApp ${AGENTS_V2_SINCE} or newer (ACP, the responses and manus protocols, modelField and {prompt_file} are read from that version on)`);
+      });
       return found;
     },
     engines: () => [],
-    legacy: (_mod, value) => (value.length === 1 ? { kind: "template", template: value[0] } : null),
+    // O formato antigo só diz um agente que o app 0.94 lê.
+    legacy: (_mod, value) => (value.length === 1 && !needsAgentsV2(value[0]) ? { kind: "template", template: value[0] } : null),
   },
   skills: {
     since: "0.103.0",
@@ -348,7 +397,7 @@ export function manifestProblems(manifest, folder, engines, dir = null) {
   for (const [key, value] of Object.entries(contributes)) {
     const point = POINTS[key];
     if (!point) { found.push(`${where}: contributes.${key} is not an extension point of the app (${POINT_ORDER.join(", ")})`); continue; }
-    found.push(...point.problems(`${where}: contributes.${key}`, value, { engines, id, folder: dir }));
+    found.push(...point.problems(`${where}: contributes.${key}`, value, { engines, id, folder: dir, minApp }));
     if (minApp && compareVersions(minApp, point.since) < 0) found.push(`${where}: contributes.${key} needs minApp ${point.since} or newer`);
   }
   // O mod com o nome de um motor do app é o mod daquele motor: ele o traz.

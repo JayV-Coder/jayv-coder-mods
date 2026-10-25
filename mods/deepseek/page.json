@@ -1,0 +1,61 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "DeepSeek offers its V4 models through an OpenAI-compatible API. With this mod, Jev can send them questions, analysis and reviews: they answer with text and never edit the project. With Approve MCP servers on, the app also offers them the tools of your MCP servers.",
+    "pt-BR": "A DeepSeek oferece os modelos V4 por uma API compatível com a da OpenAI. Com este mod, o Jev pode mandar a eles perguntas, análises e revisões: respondem por texto e nunca editam o projeto. Com Aprovar servidores MCP ligado, o app também oferece a eles as ferramentas dos seus servidores MCP.",
+    "es": "DeepSeek ofrece sus modelos V4 mediante una API compatible con la de OpenAI. Con este mod, Jev puede enviarles preguntas, análisis y revisiones: responden con texto y nunca editan el proyecto. Con Aprobar servidores MCP activado, la app también les ofrece las herramientas de tus servidores MCP.",
+    "zh-CN": "DeepSeek 通过兼容 OpenAI 的 API 提供 V4 模型。有了这个模组，Jev 可以把提问、分析和审查发给它们：它们以文本作答，从不编辑项目。开启“批准 MCP 服务器”后，应用还会向它们提供你的 MCP 服务器的工具。",
+    "hi": "DeepSeek अपने V4 मॉडल OpenAI के साथ संगत API से देता है। इस मॉड से Jev उन्हें सवाल, विश्लेषण और समीक्षा भेज सकता है: वे टेक्स्ट में जवाब देते हैं और प्रोजेक्ट कभी नहीं बदलते। MCP सर्वर स्वीकृत करें चालू होने पर ऐप उन्हें आपके MCP सर्वरों के टूल भी देता है।",
+    "ar": "تقدّم DeepSeek نماذج V4 عبر واجهة API متوافقة مع OpenAI. بهذه الإضافة يستطيع Jev إرسال الأسئلة والتحليلات والمراجعات إليها: تجيب بالنص ولا تعدّل المشروع أبدًا. وعند تفعيل الموافقة على خوادم MCP، يعرض التطبيق عليها أيضًا أدوات خوادم MCP لديك.",
+    "fr": "DeepSeek propose ses modèles V4 via une API compatible avec celle d’OpenAI. Avec ce mod, Jev peut leur envoyer des questions, des analyses et des revues : ils répondent par du texte et ne modifient jamais le projet. Avec Approuver les serveurs MCP activé, l’app leur propose aussi les outils de vos serveurs MCP.",
+    "ru": "DeepSeek предоставляет модели V4 через API, совместимый с OpenAI. С этим модом Jev может отправлять им вопросы, анализ и ревью: они отвечают текстом и никогда не изменяют проект. Если включено «Одобрять серверы MCP», приложение также предлагает им инструменты ваших серверов MCP.",
+    "ja": "DeepSeek は OpenAI 互換の API で V4 モデルを提供しています。この Mod があると、Jev は質問、分析、レビューをこれらのモデルに送れます。回答はテキストで、プロジェクトは編集しません。「MCP サーバーを承認」をオンにすると、アプリは MCP サーバーのツールも提供します。",
+    "de": "DeepSeek bietet seine V4-Modelle über eine OpenAI-kompatible API an. Mit diesem Mod kann Jev ihnen Fragen, Analysen und Reviews schicken: Sie antworten mit Text und bearbeiten das Projekt nie. Ist MCP-Server freigeben eingeschaltet, bietet die App ihnen auch die Werkzeuge deiner MCP-Server an."
+  },
+  "requirements": {
+    "en": "A DeepSeek platform account and an API key.",
+    "pt-BR": "Uma conta na plataforma da DeepSeek e uma chave de API.",
+    "es": "Una cuenta en la plataforma de DeepSeek y una clave de API.",
+    "zh-CN": "一个 DeepSeek 开放平台账号和一个 API 密钥。",
+    "hi": "DeepSeek प्लेटफ़ॉर्म पर खाता और एक API कुंजी।",
+    "ar": "حساب على منصة DeepSeek ومفتاح API.",
+    "fr": "Un compte sur la plateforme DeepSeek et une clé d’API.",
+    "ru": "Учётная запись на платформе DeepSeek и API-ключ.",
+    "ja": "DeepSeek プラットフォームのアカウントと API キー。",
+    "de": "Ein Konto auf der DeepSeek-Plattform und ein API-Schlüssel."
+  },
+  "setup": [
+    {
+      "text": {
+        "en": "In Settings › DeepSeek, paste the API key (it stays on this computer), turn the agent on and check the connection. Then turn on the models Jev may use.",
+        "pt-BR": "Em Configuração › DeepSeek, cole a chave de API (ela fica neste computador), ligue o agente e confira a conexão. Depois ligue os modelos que o Jev pode usar.",
+        "es": "En Configuración › DeepSeek, pega la clave de API (se queda en este equipo), activa el agente y comprueba la conexión. Después activa los modelos que Jev puede usar.",
+        "zh-CN": "在“设置 › DeepSeek”中粘贴 API 密钥（它保存在这台电脑上），启用代理并检查连接。然后开启 Jev 可以使用的模型。",
+        "hi": "सेटिंग्स › DeepSeek में API कुंजी चिपकाएँ (यह इसी कंप्यूटर पर रहती है), एजेंट चालू करें और कनेक्शन जाँचें। फिर वे मॉडल चालू करें जिन्हें Jev इस्तेमाल कर सकता है।",
+        "ar": "في الإعدادات › DeepSeek، الصق مفتاح API (يبقى على هذا الجهاز)، وشغّل الوكيل، وافحص الاتصال. ثم فعّل النماذج التي يُسمح لـ Jev باستخدامها.",
+        "fr": "Dans Configuration › DeepSeek, collez la clé d’API (elle reste sur cet ordinateur), activez l’agent et vérifiez la connexion. Activez ensuite les modèles que Jev peut utiliser.",
+        "ru": "В Настройки › DeepSeek вставьте API-ключ (он остаётся на этом компьютере), включите агента и проверьте подключение. Затем включите модели, которые может использовать Jev.",
+        "ja": "設定 › DeepSeek で API キーを貼り付け（キーはこのコンピューターに保存されます）、エージェントをオンにして接続を確認します。その後、Jev が使ってよいモデルをオンにします。",
+        "de": "Füge unter Einstellungen › DeepSeek den API-Schlüssel ein (er bleibt auf diesem Computer), schalte den Agenten ein und prüfe die Verbindung. Schalte dann die Modelle ein, die Jev nutzen darf."
+      },
+      "image": "settings"
+    }
+  ],
+  "use": [
+    {
+      "text": {
+        "en": "Ask in a chat for an analysis, a review or an explanation. When Jev picks a DeepSeek model, the answer says which one.",
+        "pt-BR": "Peça num chat uma análise, uma revisão ou uma explicação. Quando o Jev escolhe um modelo da DeepSeek, a resposta diz qual.",
+        "es": "Pide en un chat un análisis, una revisión o una explicación. Cuando Jev elige un modelo de DeepSeek, la respuesta dice cuál.",
+        "zh-CN": "在对话中请求分析、审查或解释。当 Jev 选择 DeepSeek 的模型时，回答会注明是哪一个。",
+        "hi": "चैट में विश्लेषण, समीक्षा या व्याख्या माँगें। जब Jev कोई DeepSeek मॉडल चुनता है, तो जवाब बताता है कि कौन-सा।",
+        "ar": "اطلب في محادثة تحليلًا أو مراجعة أو شرحًا. عندما يختار Jev نموذجًا من DeepSeek، يذكر الرد أيّها.",
+        "fr": "Demandez dans un chat une analyse, une revue ou une explication. Quand Jev choisit un modèle DeepSeek, la réponse indique lequel.",
+        "ru": "Попросите в чате анализ, ревью или объяснение. Когда Jev выбирает модель DeepSeek, в ответе указано, какую.",
+        "ja": "チャットで分析、レビュー、説明を依頼してください。Jev が DeepSeek のモデルを選ぶと、回答にどのモデルかが表示されます。",
+        "de": "Bitte in einem Chat um eine Analyse, ein Review oder eine Erklärung. Wenn Jev ein DeepSeek-Modell wählt, steht in der Antwort, welches."
+      },
+      "image": "chat"
+    }
+  ]
+}

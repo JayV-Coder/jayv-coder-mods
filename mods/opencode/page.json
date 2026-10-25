@@ -1,0 +1,75 @@
+{
+  "$schema": "../../schema/page.schema.json",
+  "about": {
+    "en": "OpenCode is an open-source coding agent for the terminal that works with models from many providers. With this mod, Jev can send requests to it: the app talks to it through the Agent Client Protocol (ACP), picks the model, gives it your MCP servers and answers each permission it asks for.",
+    "pt-BR": "O OpenCode é um agente de programação de código aberto para o terminal que funciona com modelos de muitos provedores. Com este mod, o Jev pode mandar pedidos para ele: o app conversa com ele pelo Agent Client Protocol (ACP), escolhe o modelo, entrega os seus servidores MCP e responde a cada permissão que ele pede.",
+    "es": "OpenCode es un agente de programación de código abierto para la terminal que funciona con modelos de muchos proveedores. Con este mod, Jev puede enviarle solicitudes: la app habla con él mediante el Agent Client Protocol (ACP), elige el modelo, le da tus servidores MCP y responde a cada permiso que pide.",
+    "zh-CN": "OpenCode 是一个开源的终端编程代理，可使用多家提供商的模型。有了这个模组，Jev 可以把请求发给它：应用通过 Agent Client Protocol（ACP）与它通信，选择模型，向它提供你的 MCP 服务器，并回应它请求的每一项权限。",
+    "hi": "OpenCode टर्मिनल के लिए एक ओपन-सोर्स कोडिंग एजेंट है जो कई प्रदाताओं के मॉडलों के साथ काम करता है। इस मॉड से Jev उसे अनुरोध भेज सकता है: ऐप Agent Client Protocol (ACP) के ज़रिए उससे बात करता है, मॉडल चुनता है, उसे आपके MCP सर्वर देता है और उसकी माँगी हर अनुमति का जवाब देता है।",
+    "ar": "OpenCode وكيل برمجة مفتوح المصدر للطرفية يعمل مع نماذج من مزوّدين كثيرين. بهذه الإضافة يستطيع Jev إرسال الطلبات إليه: يتواصل التطبيق معه عبر Agent Client Protocol (ACP)، ويختار النموذج، ويمنحه خوادم MCP لديك، ويردّ على كل إذن يطلبه.",
+    "fr": "OpenCode est un agent de programmation open source pour le terminal qui fonctionne avec les modèles de nombreux fournisseurs. Avec ce mod, Jev peut lui envoyer des demandes : l’app lui parle via l’Agent Client Protocol (ACP), choisit le modèle, lui donne vos serveurs MCP et répond à chaque autorisation qu’il demande.",
+    "ru": "OpenCode — агент для программирования в терминале с открытым исходным кодом, который работает с моделями многих поставщиков. С этим модом Jev может отправлять ему запросы: приложение общается с ним по Agent Client Protocol (ACP), выбирает модель, передаёт ему ваши серверы MCP и отвечает на каждый его запрос разрешения.",
+    "ja": "OpenCode は、多くのプロバイダーのモデルで動くオープンソースのターミナル用コーディングエージェントです。この Mod があると、Jev は依頼を送れます。アプリは Agent Client Protocol（ACP）で通信し、モデルを選び、MCP サーバーを渡し、求められた許可に一つずつ応答します。",
+    "de": "OpenCode ist ein quelloffener Coding-Agent für das Terminal, der mit Modellen vieler Anbieter arbeitet. Mit diesem Mod kann Jev Anfragen an ihn schicken: Die App spricht über das Agent Client Protocol (ACP) mit ihm, wählt das Modell, gibt ihm deine MCP-Server und beantwortet jede Berechtigung, die er anfragt."
+  },
+  "requirements": {
+    "en": "OpenCode installed on this computer, with a model provider set up in it (opencode auth login).",
+    "pt-BR": "O OpenCode instalado neste computador, com um provedor de modelos configurado nele (opencode auth login).",
+    "es": "OpenCode instalado en este equipo, con un proveedor de modelos configurado en él (opencode auth login).",
+    "zh-CN": "这台电脑上已安装 OpenCode，并在其中配置好一个模型提供商（opencode auth login）。",
+    "hi": "इस कंप्यूटर पर OpenCode इंस्टॉल हो, और उसमें कोई मॉडल प्रदाता सेट हो (opencode auth login)।",
+    "ar": "أن يكون OpenCode مثبّتًا على هذا الجهاز، مع مزوّد نماذج مُعدّ فيه (opencode auth login).",
+    "fr": "OpenCode installé sur cet ordinateur, avec un fournisseur de modèles configuré (opencode auth login).",
+    "ru": "OpenCode, установленный на этом компьютере, с настроенным в нём поставщиком моделей (opencode auth login).",
+    "ja": "このコンピューターに OpenCode がインストールされ、モデルプロバイダーが設定されていること（opencode auth login）。",
+    "de": "OpenCode auf diesem Computer installiert, mit einem darin eingerichteten Modellanbieter (opencode auth login)."
+  },
+  "setup": [
+    {
+      "text": {
+        "en": "Install OpenCode (npm install -g opencode-ai) and set up a provider with opencode auth login.",
+        "pt-BR": "Instale o OpenCode (npm install -g opencode-ai) e configure um provedor com opencode auth login.",
+        "es": "Instala OpenCode (npm install -g opencode-ai) y configura un proveedor con opencode auth login.",
+        "zh-CN": "安装 OpenCode（npm install -g opencode-ai），然后用 opencode auth login 配置一个提供商。",
+        "hi": "OpenCode इंस्टॉल करें (npm install -g opencode-ai) और opencode auth login से कोई प्रदाता सेट करें।",
+        "ar": "ثبّت OpenCode (npm install -g opencode-ai) وأعِدّ مزوّدًا بـ opencode auth login.",
+        "fr": "Installez OpenCode (npm install -g opencode-ai) et configurez un fournisseur avec opencode auth login.",
+        "ru": "Установите OpenCode (npm install -g opencode-ai) и настройте поставщика командой opencode auth login.",
+        "ja": "OpenCode をインストールし（npm install -g opencode-ai）、opencode auth login でプロバイダーを設定します。",
+        "de": "Installiere OpenCode (npm install -g opencode-ai) und richte mit opencode auth login einen Anbieter ein."
+      }
+    },
+    {
+      "text": {
+        "en": "In Settings › OpenCode, click Load from the agent and turn on the models Jev may use. The default model keeps the agent's own choice.",
+        "pt-BR": "Em Configuração › OpenCode, clique em Carregar do agente e ligue os modelos que o Jev pode usar. O modelo default mantém a escolha do próprio agente.",
+        "es": "En Configuración › OpenCode, haz clic en Cargar desde el agente y activa los modelos que Jev puede usar. El modelo default mantiene la elección del propio agente.",
+        "zh-CN": "在“设置 › OpenCode”中点击“从代理加载”，并开启 Jev 可以使用的模型。default 模型沿用代理自己的选择。",
+        "hi": "सेटिंग्स › OpenCode में एजेंट से लोड करें पर क्लिक करें और वे मॉडल चालू करें जिन्हें Jev इस्तेमाल कर सकता है। default मॉडल एजेंट की अपनी पसंद रखता है।",
+        "ar": "في الإعدادات › OpenCode، انقر التحميل من الوكيل وفعّل النماذج التي يُسمح لـ Jev باستخدامها. النموذج default يُبقي اختيار الوكيل نفسه.",
+        "fr": "Dans Configuration › OpenCode, cliquez sur Charger depuis l’agent et activez les modèles que Jev peut utiliser. Le modèle default garde le choix de l’agent.",
+        "ru": "В Настройки › OpenCode нажмите «Загрузить из агента» и включите модели, которые может использовать Jev. Модель default оставляет выбор самого агента.",
+        "ja": "設定 › OpenCode で「エージェントから読み込む」をクリックし、Jev が使ってよいモデルをオンにします。default モデルはエージェント自身の選択を使います。",
+        "de": "Klicke unter Einstellungen › OpenCode auf Vom Agenten laden und schalte die Modelle ein, die Jev nutzen darf. Das Modell default behält die Wahl des Agenten."
+      },
+      "image": "settings"
+    }
+  ],
+  "use": [
+    {
+      "text": {
+        "en": "Write the request in a chat. OpenCode asks before each command, and the app refuses the ones your organization blocks.",
+        "pt-BR": "Escreva o pedido num chat. O OpenCode pergunta antes de cada comando, e o app recusa os que a sua organização bloqueia.",
+        "es": "Escribe la solicitud en un chat. OpenCode pregunta antes de cada comando, y la app rechaza los que tu organización bloquea.",
+        "zh-CN": "在对话中写下请求。OpenCode 在执行每条命令前都会询问，应用会拒绝你的组织禁止的命令。",
+        "hi": "चैट में अनुरोध लिखें। OpenCode हर कमांड से पहले पूछता है, और ऐप वे कमांड मना कर देता है जिन्हें आपका संगठन रोकता है।",
+        "ar": "اكتب الطلب في محادثة. يسأل OpenCode قبل كل أمر، ويرفض التطبيق الأوامر التي تحظرها مؤسستك.",
+        "fr": "Écrivez la demande dans un chat. OpenCode demande avant chaque commande, et l’app refuse celles que votre organisation bloque.",
+        "ru": "Напишите запрос в чате. OpenCode спрашивает перед каждой командой, а приложение отклоняет те, что блокирует ваша организация.",
+        "ja": "チャットで依頼を書いてください。OpenCode はコマンドごとに確認し、組織がブロックしているコマンドはアプリが拒否します。",
+        "de": "Schreib die Anfrage in einen Chat. OpenCode fragt vor jedem Befehl, und die App lehnt die ab, die deine Organisation sperrt."
+      },
+      "image": "chat"
+    }
+  ]
+}

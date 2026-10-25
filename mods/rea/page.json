@@ -36,7 +36,7 @@
         "fr": "Activez Approuver les serveurs MCP dans l’onglet de chaque agent qui doit utiliser REA (Configuration › Claude Code, par exemple) et cliquez sur Enregistrer la configuration. À la première utilisation, REA est téléchargé avec npx.",
         "ru": "Включите «Одобрять серверы MCP» на вкладке каждого агента, который должен пользоваться REA (например, Настройки › Claude Code), и нажмите «Сохранить настройки». При первом использовании REA скачивается через npx.",
         "ja": "REA を使わせたい各エージェントのタブ（たとえば設定 › Claude Code）で「MCP サーバーを承認」をオンにし、「設定を保存」をクリックします。初回の利用時に REA は npx でダウンロードされます。",
-        "de": "Schalten Sie im Tab jedes Agenten, der REA nutzen soll (zum Beispiel Einstellungen › Claude Code), MCP-Server freigeben ein und klicken Sie auf Einstellungen speichern. Beim ersten Einsatz wird REA mit npx heruntergeladen."
+        "de": "Schalte im Tab jedes Agenten, der REA nutzen soll (zum Beispiel Einstellungen › Claude Code), MCP-Server freigeben ein und klicke auf Einstellungen speichern. Beim ersten Einsatz wird REA mit npx heruntergeladen."
       },
       "image": "settings"
     }
@@ -53,7 +53,7 @@
         "fr": "Posez une question sur un programme dans un chat en donnant son chemin, par exemple : Comment fonctionne l’export CSV de /Applications/Ledger.app ? Quand Jev choisit la skill reverse-engineering, le panneau Progression affiche l’étape Skill et l’agent utilise les outils de REA.",
         "ru": "Спросите в чате о программе и укажите её путь, например: Как работает экспорт в CSV у /Applications/Ledger.app? Когда Jev выбирает скилл reverse-engineering, панель «Ход работы» показывает шаг «Скилл», и агент пользуется инструментами REA.",
         "ja": "チャットでプログラムについて、その場所を添えて質問してください。例: /Applications/Ledger.app の CSV エクスポートはどう動いていますか？ Jev がスキル reverse-engineering を選ぶと、進行状況パネルに「スキル」のステップが表示され、エージェントは REA のツールを使います。",
-        "de": "Fragen Sie in einem Chat nach einem Programm und nennen Sie seinen Pfad, zum Beispiel: Wie funktioniert der CSV-Export von /Applications/Ledger.app? Wenn Jev den Skill reverse-engineering wählt, zeigt das Fortschritt-Panel den Skill-Schritt, und der Agent nutzt die Werkzeuge von REA."
+        "de": "Frag in einem Chat nach einem Programm und nenne seinen Pfad, zum Beispiel: Wie funktioniert der CSV-Export von /Applications/Ledger.app? Wenn Jev den Skill reverse-engineering wählt, zeigt das Fortschritt-Panel den Skill-Schritt, und der Agent nutzt die Werkzeuge von REA."
       },
       "image": "chat"
     },
@@ -68,7 +68,7 @@
         "fr": "La réponse liste chaque constat avec sa preuve (fonction, adresse, chaîne) et ce qui reste inconnu. Pour construire la même chose dans votre projet, demandez-le dans le même chat.",
         "ru": "В ответе каждая находка указана с доказательством (функция, адрес, строка), а также то, что пока неизвестно. Чтобы сделать то же самое в вашем проекте, попросите об этом в том же чате.",
         "ja": "回答には、各発見とその根拠（関数、アドレス、文字列）、そしてまだわからないことが並びます。同じものをプロジェクトに作りたいときは、同じチャットで頼んでください。",
-        "de": "Die Antwort listet jeden Befund mit seinem Beleg (Funktion, Adresse, String) und was noch unbekannt ist. Um dasselbe in Ihrem Projekt zu bauen, fragen Sie im selben Chat danach."
+        "de": "Die Antwort listet jeden Befund mit seinem Beleg (Funktion, Adresse, String) und was noch unbekannt ist. Um dasselbe in deinem Projekt zu bauen, frag im selben Chat danach."
       }
     }
   ]

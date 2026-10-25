@@ -24,7 +24,7 @@
         "fr": "Cliquez sur Code dans l’en-tête du chat ; il s’ouvre aussi tout seul, sur Fichiers, au premier changement. Choisissez un fichier pour voir ce qui a changé, ou suivez l’agent de fichier en fichier.",
         "ru": "Нажмите «Код» в заголовке чата; при первом изменении панель открывается и сама, на вкладке «Файлы». Выберите файл, чтобы увидеть изменения, или следите за агентом от файла к файлу.",
         "ja": "チャットのヘッダーで「コード」をクリックします。最初の変更で「ファイル」が自動的に開くこともあります。ファイルを選ぶと変更内容がわかり、エージェントを追ってファイルからファイルへ移ることもできます。",
-        "de": "Klicken Sie im Chat-Kopf auf Code; das Panel öffnet sich bei der ersten Änderung auch von selbst, im Tab Dateien. Wählen Sie eine Datei, um zu sehen, was sich geändert hat, oder folgen Sie dem Agenten von Datei zu Datei."
+        "de": "Klicke im Chat-Kopf auf Code; das Panel öffnet sich bei der ersten Änderung auch von selbst, im Tab Dateien. Wähle eine Datei, um zu sehen, was sich geändert hat, oder folge dem Agenten von Datei zu Datei."
       },
       "image": "live"
     },

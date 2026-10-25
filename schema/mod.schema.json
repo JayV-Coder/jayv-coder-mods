@@ -34,7 +34,7 @@
           "type": "array",
           "minItems": 1,
           "maxItems": 4,
-          "description": "Command-line or API agents installed as agents of the person (mod-<id>, mod-<id>-2…).",
+          "description": "Command-line, ACP or API agents installed as agents of the person (mod-<id>, mod-<id>-2…).",
           "items": { "$ref": "#/$defs/agent" }
         },
         "skills": {
@@ -74,9 +74,10 @@
           "required": ["kind", "protocol", "baseUrl", "keyRequired"],
           "properties": {
             "kind": { "const": "api" },
-            "protocol": { "enum": ["openai", "anthropic"] },
+            "protocol": { "enum": ["openai", "anthropic", "responses", "manus"], "description": "responses (OpenAI Responses) and manus (Manus tasks) need minApp 0.108.0." },
             "baseUrl": { "type": "string", "pattern": "^https?://" },
             "keyRequired": { "type": "boolean" },
+            "modelField": { "type": "string", "pattern": "^[a-z_]{1,32}$", "description": "Only for the responses protocol: the request field that names the model (model by default). Needs minApp 0.108.0." },
             "models": { "$ref": "#/$defs/models" }
           }
         },
@@ -92,9 +93,31 @@
             "edits": { "type": "boolean" },
             "models": { "$ref": "#/$defs/models" }
           }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "command", "args"],
+          "description": "An agent the app talks to through the Agent Client Protocol (ACP) over stdio. Needs minApp 0.108.0.",
+          "properties": {
+            "kind": { "const": "acp" },
+            "command": { "type": "string", "pattern": "^\\S+$" },
+            "args": { "$ref": "#/$defs/line", "description": "The arguments that start the ACP server. Only {model} is accepted: the request goes through the protocol." },
+            "env": {
+              "type": "object",
+              "maxProperties": 16,
+              "propertyNames": { "pattern": "^[A-Za-z_][A-Za-z0-9_]{0,63}$" },
+              "additionalProperties": { "type": "string", "maxLength": 4000 },
+              "description": "Variables set for the agent. PATH, HOME, USERPROFILE, LD_*, DYLD_* and NODE_OPTIONS are refused."
+            },
+            "buildMode": { "$ref": "#/$defs/mode", "description": "The mode of the agent used in Development." },
+            "planMode": { "$ref": "#/$defs/mode", "description": "The mode of the agent used in Planning." },
+            "models": { "$ref": "#/$defs/models", "description": "default keeps the model the agent picks; the person loads the others from the agent." }
+          }
         }
       ]
     },
+    "mode": { "type": "string", "pattern": "^[A-Za-z0-9_.:-]{1,64}$" },
     "skill": {
       "type": "object",
       "additionalProperties": false,

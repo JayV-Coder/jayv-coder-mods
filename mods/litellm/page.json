@@ -36,7 +36,7 @@
         "fr": "Dans Configuration › LiteLLM, saisissez l’adresse du proxy et la clé, s’il en faut une, puis vérifiez la connexion. Activez ensuite les modèles que Jev peut utiliser.",
         "ru": "В Настройки › LiteLLM укажите адрес прокси и ключ, если он нужен, и проверьте подключение. Затем включите модели, которые может использовать Jev.",
         "ja": "設定 › LiteLLM でプロキシのアドレスと、必要ならキーを入力し、接続を確認します。その後、Jev が使ってよいモデルをオンにします。",
-        "de": "Geben Sie unter Einstellungen › LiteLLM die Adresse des Proxys und, falls nötig, den Schlüssel ein und prüfen Sie die Verbindung. Schalten Sie dann die Modelle ein, die Jev nutzen darf."
+        "de": "Gib unter Einstellungen › LiteLLM die Adresse des Proxys und, falls nötig, den Schlüssel ein und prüfe die Verbindung. Schalte dann die Modelle ein, die Jev nutzen darf."
       },
       "image": "settings"
     }
@@ -53,7 +53,7 @@
         "fr": "Posez votre question dans un chat. Quand Jev choisit un modèle du proxy, le panneau Progression montre la route et la réponse indique le modèle.",
         "ru": "Спросите в чате. Когда Jev выбирает модель прокси, панель «Ход работы» показывает маршрут, а в ответе указана модель.",
         "ja": "チャットで質問してください。Jev がプロキシのモデルを選ぶと、進行状況パネルにルートが表示され、回答にモデル名が示されます。",
-        "de": "Fragen Sie in einem Chat. Wenn Jev ein Modell des Proxys wählt, zeigt das Fortschritt-Panel die Route und die Antwort nennt das Modell."
+        "de": "Frag in einem Chat. Wenn Jev ein Modell des Proxys wählt, zeigt das Fortschritt-Panel die Route und die Antwort nennt das Modell."
       },
       "image": "chat"
     }

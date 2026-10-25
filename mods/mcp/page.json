@@ -24,7 +24,7 @@
         "fr": "Ouvrez Configuration › MCP et ajoutez un serveur avec le formulaire, ou collez une configuration (le JSON mcpServers, une ligne claude mcp add ou une commande npx). Dans un chat, /mcp suivi d’une description prépare un brouillon pour vous.",
         "ru": "Откройте Настройки › MCP и добавьте сервер через форму или вставьте конфигурацию (JSON mcpServers, строку claude mcp add или команду npx). В чате /mcp с описанием подготовит черновик за вас.",
         "ja": "設定 › MCP を開き、フォームでサーバーを追加するか、設定（mcpServers の JSON、claude mcp add の行、npx コマンド）を貼り付けます。チャットで /mcp に続けて説明を書くと、下書きを作ってくれます。",
-        "de": "Öffnen Sie Einstellungen › MCP und fügen Sie einen Server über das Formular hinzu, oder fügen Sie eine Konfiguration ein (mcpServers-JSON, eine claude-mcp-add-Zeile oder einen npx-Befehl). In einem Chat erstellt /mcp mit einer Beschreibung einen Entwurf für Sie."
+        "de": "Öffne Einstellungen › MCP und füge einen Server über das Formular hinzu, oder füge eine Konfiguration ein (mcpServers-JSON, eine claude-mcp-add-Zeile oder einen npx-Befehl). In einem Chat erstellt /mcp mit einer Beschreibung einen Entwurf für dich."
       },
       "image": "settings"
     },
@@ -39,7 +39,7 @@
         "fr": "Dans l’onglet de chaque agent qui doit utiliser les serveurs, activez Approuver les serveurs MCP. Les changements prennent effet quand vous cliquez sur Enregistrer la configuration.",
         "ru": "На вкладке каждого агента, который должен пользоваться серверами, включите «Одобрять серверы MCP». Изменения вступают в силу после нажатия «Сохранить настройки».",
         "ja": "サーバーを使うべき各エージェントのタブで「MCP サーバーを承認」をオンにします。変更は「設定を保存」をクリックしたときに反映されます。",
-        "de": "Schalten Sie im Tab jedes Agenten, der die Server nutzen soll, MCP-Server freigeben ein. Die Änderungen gelten, wenn Sie auf Einstellungen speichern klicken."
+        "de": "Schalte im Tab jedes Agenten, der die Server nutzen soll, MCP-Server freigeben ein. Die Änderungen gelten, wenn du auf Einstellungen speichern klickst."
       },
       "image": "agent"
     }

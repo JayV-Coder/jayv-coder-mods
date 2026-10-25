@@ -10,7 +10,7 @@
     "fr": "De courtes notes sur le projet — comment tester, où se trouvent les choses, ce qu’il ne faut pas toucher — que l’agent reçoit une fois au début de chaque session, pour que vous n’ayez pas à les répéter.",
     "ru": "Короткие заметки о проекте — как тестировать, где что лежит, чего не трогать, — которые агент получает один раз в начале каждой сессии, чтобы вам не повторять их.",
     "ja": "プロジェクトについての短いメモ（テストの仕方、どこに何があるか、触ってはいけないもの）で、エージェントは各セッションの最初に一度受け取ります。同じことを繰り返し伝える必要がなくなります。",
-    "de": "Kurze Notizen zum Projekt – wie man testet, wo was liegt, was man nicht anfassen soll –, die der Agent einmal zu Beginn jeder Sitzung erhält, damit Sie sie nicht wiederholen müssen."
+    "de": "Kurze Notizen zum Projekt – wie man testet, wo was liegt, was man nicht anfassen soll –, die der Agent einmal zu Beginn jeder Sitzung erhält, damit du sie nicht wiederholen musst."
   },
   "use": [
     {
@@ -24,7 +24,7 @@
         "fr": "Sur l’écran Chats d’un projet, cliquez sur Mémoire du projet et écrivez les notes (jusqu’à 2 200 caractères). Les secrets sont refusés, et les notes se synchronisent avec votre compte.",
         "ru": "На экране «Чаты» проекта нажмите «Память проекта» и напишите заметки (до 2200 символов). Секреты отклоняются, а заметки синхронизируются с вашей учётной записью.",
         "ja": "プロジェクトのチャット画面でプロジェクトメモリーをクリックし、メモを書きます（2,200 文字まで）。秘密情報は受け付けず、メモはあなたのアカウントと同期されます。",
-        "de": "Klicken Sie auf dem Chats-Bildschirm eines Projekts auf Projektgedächtnis und schreiben Sie die Notizen (bis zu 2.200 Zeichen). Geheimnisse werden abgelehnt, und die Notizen synchronisieren sich mit Ihrem Konto."
+        "de": "Klicke auf dem Chats-Bildschirm eines Projekts auf Projektgedächtnis und schreib die Notizen (bis zu 2.200 Zeichen). Geheimnisse werden abgelehnt, und die Notizen synchronisieren sich mit deinem Konto."
       },
       "image": "memory"
     }

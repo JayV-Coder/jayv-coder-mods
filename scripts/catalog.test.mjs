@@ -5,7 +5,7 @@ import { mkdirSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { agentIdOf, buildCatalog, cleanIcon, iconProblems, legacyEntry, LOCALES, manifestProblems, outputs, pageProblems, POINTS } from "./catalog.mjs";
+import { agentIdOf, buildCatalog, cleanIcon, iconProblems, legacyEntry, LOCALES, manifestProblems, needsAgentsV2, outputs, pageProblems, POINTS } from "./catalog.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const engines = { llm: ["claude"], feature: ["stats", "mcp"], withdrawn: [] };
@@ -58,8 +58,11 @@ test("only the essentials come installed; the features are required and readable
   const features = catalog.mods.filter((mod) => "features" in mod.contributes).map((mod) => mod.id).sort();
   assert.deepEqual(required, features, "todo recurso é essencial");
   assert.ok(catalog.mods.filter((mod) => !mod.required).every((mod) => "llmEngines" in mod.contributes || "agents" in mod.contributes || "skills" in mod.contributes), "motores, agentes e skills se desligam");
-  const old = catalog.mods.filter((mod) => !("skills" in mod.contributes));
-  assert.equal(legacy.mods.length, old.length, "todos os de antes cabem no formato antigo; o de skill fica de fora");
+  // O de skill e os agentes que só o app 0.108 lê (ACP, Responses, Manus,
+  // `{prompt_file}`) ficam de fora do formato antigo.
+  const old = catalog.mods.filter((mod) => !("skills" in mod.contributes) && !(mod.contributes.agents ?? []).some(needsAgentsV2));
+  assert.equal(legacy.mods.length, old.length, "todos os de antes cabem no formato antigo; o de skill e os agentes novos ficam de fora");
+  assert.ok(legacy.mods.some((mod) => mod.id === "deepseek"), "o DeepSeek, de API compatível com OpenAI, serve também ao app antigo");
   assert.ok(legacy.mods.filter((mod) => mod.kind === "feature").every((mod) => mod.defaultOn === true));
 });
 
@@ -120,6 +123,24 @@ test("a command-line agent follows the rules of the app", () => {
   assert.ok(manifestProblems(cli({ args: ["{file}"] }), "local-ai", engines).some((problem) => problem.includes("{file}") && problem.includes("agents[0].args")));
   assert.ok(manifestProblems(cli({ edits: true }), "local-ai", engines).some((problem) => problem.includes("planArgs")));
   assert.ok(manifestProblems(cli({ command: "local ai" }), "local-ai", engines).some((problem) => problem.includes("without arguments")));
+});
+
+test("an ACP agent and the new API protocols follow the rules of the app 0.108", () => {
+  const acp = (patch = {}, mod = {}) => localAi({ minApp: "0.108.0", contributes: { agents: [{ kind: "acp", command: "kimi", args: ["acp"], env: { KIMI_X: "1" }, buildMode: "default", planMode: "plan", models: ["default"], ...patch }] }, ...mod });
+  assert.deepEqual(manifestProblems(acp(), "local-ai", engines), []);
+  assert.ok(manifestProblems(acp({}, { minApp: "0.107.0" }), "local-ai", engines).some((problem) => problem.includes("minApp 0.108.0")));
+  assert.ok(manifestProblems(acp({ args: ["acp", "{prompt}"] }), "local-ai", engines).some((problem) => problem.includes("through the protocol")));
+  assert.ok(manifestProblems(acp({ env: { PATH: "/x" } }), "local-ai", engines).some((problem) => problem.includes("env.PATH")));
+  assert.ok(manifestProblems(acp({ planMode: "read only" }), "local-ai", engines).some((problem) => problem.includes("planMode")));
+  assert.ok(manifestProblems(acp({ planArgs: ["x"] }), "local-ai", engines).some((problem) => problem.includes("planArgs is not a field")));
+  const responses = (patch = {}) => localAi({ minApp: "0.108.0", contributes: { agents: [{ ...api, protocol: "responses", modelField: "preset", ...patch }] } });
+  assert.deepEqual(manifestProblems(responses(), "local-ai", engines), []);
+  assert.ok(manifestProblems(responses({ protocol: "openai" }), "local-ai", engines).some((problem) => problem.includes("modelField")));
+  assert.deepEqual(manifestProblems(localAi({ minApp: "0.108.0", contributes: { agents: [{ ...api, protocol: "manus" }] } }), "local-ai", engines), []);
+  const file = localAi({ contributes: { agents: [{ kind: "cli", command: "aider", args: ["--message-file", "{prompt_file}"], planArgs: [], edits: false, models: [] }] } });
+  assert.ok(manifestProblems(file, "local-ai", engines).some((problem) => problem.includes("minApp 0.108.0")), "o {prompt_file} é do app 0.108");
+  assert.equal(legacyEntry(acp()), null, "o app 0.94 não lê o agente ACP");
+  assert.equal(legacyEntry(responses()), null);
 });
 
 test("the old format gets the mods it can say", () => {
